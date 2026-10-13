@@ -1,0 +1,13 @@
+{
+    "name": "hsi.ig.template",
+    "type": "fhir.template",
+    "license": "CC0-1.0",
+    "description": "HSI FHIR IG Template",
+    "author": "https://hsi.pladema.net",
+    "canonical": "https://hsi.pladema.net",
+    "base": "fhir.base.template",
+    "dependencies": {
+        "fhir.base.template": "current"
+    },
+    "version": "0.1.0"
+}

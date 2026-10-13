@@ -1,0 +1,32 @@
+{
+  "package-id": "fhir.mhdig",
+  "title": "Guía MHD para HSI, Provincia de Buenos Aires.",
+  "canonical": "http://mhd.ri.hsisalud.org",
+  "introduction": "Esta guía de implementación describe los esquemas de transacciones FHIR MHD para el intercambio de información de salud en Argentina, asociado a las guías IHE MHD y Core-AR.",
+  "list": [
+    {
+      "version": "current",
+      "desc": "Continuous Integration Build (latest in version control)",
+      "path": "https://mhd-1e4862.pages.lamansys.ar",
+      "status": "ci-build",
+      "current": true
+    },
+    {
+      "version": "0.2.0",
+      "desc": "Documentación de transacciones MHD y correcciones de validación",
+      "path": "https://mhd.ri.hsisalud.org",
+      "status": "draft",
+      "sequence": "Publications",
+      "current": true,
+      "date": "2026-08-19"
+    },
+    {
+      "version": "0.1.0",
+      "desc": "Primera versión publicada",
+      "path": "https://mhd.ri.hsisalud.org/0.1.0",
+      "status": "draft",
+      "sequence": "Publications",
+      "date": "2026-08-11"
+    }
+  ]
+}

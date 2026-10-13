@@ -1,0 +1,17 @@
+== Suppressed Messages ==
+
+# Add warning and/or information messages here after you've confirmed that they aren't really a problem
+# (And include comments like this justifying why)
+# See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
+
+El valor URL 'XDS' no puede resolverse
+El valor URL 'https://repositorio.cl/documentos/ips' no puede resolverse
+El valor URL '/Bundle/ips-xxx' no puede resolverse
+El valor URL '/pba/tndXroad/santamarina/docs/ips-xxx' no puede resolverse
+El valor URL '/pba/tndXroad/santamarina/docs/ips-xxx' no puede resolverse
+El valor URL 'https://repositorio.hsi.ar/documentos/ips' no puede resolverse
+El valor URL 'http://www.renaper.gob.ar/dni' no puede resolverse
+El valor URL 'http://www.dummy.org' no puede resolverse
+El valor URL 'http://refeps.msal.gob.ar' no puede resolverse
+The resource ValueSet/VSTipoDocumento should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+The resource ValueSet/VSCategoriaDoc should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)

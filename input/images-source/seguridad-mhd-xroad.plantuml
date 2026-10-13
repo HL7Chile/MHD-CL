@@ -1,0 +1,84 @@
+@startuml
+title Seguridad para intercambio MHD mediante X-Road
+
+left to right direction
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam componentStyle rectangle
+skinparam ArrowColor #355C7D
+skinparam defaultFontName Arial
+
+actor "Usuario clínico" as User
+
+package "Organización consumidora" #EAF4FC {
+    component "Sistema clínico\nDocument Consumer / Source" as HIS
+    node "Security Server\nX-Road consumidor" as SSConsumer
+}
+
+cloud "Red de confianza X-Road" as XRoad #E8F5E9
+
+package "Organización proveedora" #FFF4E8 {
+    node "Security Server\nX-Road proveedor" as SSProvider
+    component "Servidor FHIR MHD\nDocument Recipient / Responder" as MHD
+    database "Repositorio\ndocumental" as Repository
+    component "Auditoría clínica\nFHIR AuditEvent" as AuditFHIR
+}
+
+package "Servicios centrales X-Road" #F3E5F5 {
+    component "Central Server\nConfiguración global" as Central
+    component "CA / OCSP\nCertificados" as CA
+    component "TSA\nSellado de tiempo" as TSA
+}
+
+User --> HIS : Autenticación del usuario
+
+HIS --> SSConsumer : HTTPS / TLS interno\nSolicitud FHIR MHD\nITI-65, ITI-67 o ITI-68\n\nHeaders X-Road\nAuthorization: Bearer (si aplica)
+
+SSConsumer --> XRoad : Identifica organización\ny subsistema consumidor
+
+XRoad --> SSProvider : Canal TLS autenticado\nentre Security Servers
+
+SSProvider --> MHD : HTTPS / TLS interno\nSolicitud FHIR MHD
+
+MHD --> MHD : Validar token y permisos\nValidar perfiles FHIR\nAplicar consentimiento
+
+MHD --> Repository : Registrar, buscar\no recuperar documento
+
+MHD --> AuditFHIR : Registrar operación clínica\nusuario, paciente, acción y resultado
+
+MHD --> SSProvider : Respuesta FHIR
+SSProvider --> XRoad : Respuesta protegida
+XRoad --> SSConsumer : Respuesta protegida
+SSConsumer --> HIS : Resultado FHIR
+HIS --> User : Mostrar resultado autorizado
+
+Central ..> SSConsumer : Distribuye configuración\nde confianza
+Central ..> SSProvider : Distribuye configuración\nde confianza
+
+CA ..> SSConsumer : Certificados y\nvalidación OCSP
+CA ..> SSProvider : Certificados y\nvalidación OCSP
+
+TSA ..> SSConsumer : Sello de tiempo\npara registros
+TSA ..> SSProvider : Sello de tiempo\npara registros
+
+note bottom of SSConsumer
+Seguridad proporcionada por X-Road:
+• Identificación de organización y subsistema
+• Control de acceso entre miembros
+• Protección del canal
+• Firma y evidencia de intercambio
+• Sellado de tiempo
+• Registro de solicitudes y respuestas
+end note
+
+note bottom of MHD
+Seguridad de aplicación MHD:
+• Autenticación del usuario o aplicación
+• Autorización sobre el paciente
+• Validación de consentimiento
+• Control por operación ITI
+• Protección de las URL documentales
+• Auditoría mediante AuditEvent
+end note
+
+@enduml

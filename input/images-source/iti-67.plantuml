@@ -1,0 +1,25 @@
+@startuml
+title ITI-67 — Buscar referencias documentales
+
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam sequence {
+  ArrowColor #238447
+  LifeLineBorderColor #91C7A3
+  ParticipantBorderColor #238447
+  ParticipantBackgroundColor #ECF8F0
+  ParticipantFontColor #173F28
+}
+
+participant "Document Consumer\n(Sistema clínico)" as Consumer
+participant "Document Responder\n(Servicio MHD)" as Responder
+database "Índice de\ndocumentos" as Index
+
+Consumer -> Responder : GET [base]/DocumentReference\n?patient.identifier=system|value\n&status=current
+activate Responder
+Responder -> Responder : Validar parámetros
+Responder -> Index : Buscar DocumentReference
+Index --> Responder : Coincidencias
+Responder --> Consumer : HTTP 200\nBundle searchset
+deactivate Responder
+@enduml

@@ -1,0 +1,12 @@
+.DS_Store
+Thumbs.db
+/output
+/public
+/temp
+/template
+/fsh-generated
+/Requirements-fromNarrative.json
+.idea
+/input-cache/
+
+/build-full.log

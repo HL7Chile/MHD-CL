@@ -1,0 +1,16 @@
+Extension: ContentDoc
+Id: ContentDoc
+Title: "Extensión para Context asociado al documento almacenado"
+Description: "Extensión para Context asociado al documento almacenado, considerando la asociación de documentos de tipo IPS u otro, almacenado en un repositorio FHIR"
+Context: DocumentReference.content
+
+* ^status = #active
+* ^experimental = false
+
+* value[x] only Attachment
+  * contentType 1..1 MS
+  * url 1..1 MS
+  * title 0..1 MS
+  * hash 0..1 MS
+  * size 0..1 MS
+  * creation 0..1 MS

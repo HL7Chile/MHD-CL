@@ -1,0 +1,25 @@
+@startuml
+title ITI-68 — Recuperar documento
+
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam sequence {
+  ArrowColor #C46A1A
+  LifeLineBorderColor #E5B78D
+  ParticipantBorderColor #C46A1A
+  ParticipantBackgroundColor #FFF4E8
+  ParticipantFontColor #5B3213
+}
+
+participant "Document Consumer\n(Sistema clínico)" as Consumer
+participant "Document Responder\n(Servicio MHD)" as Responder
+database "Repositorio\ndocumental" as Repository
+
+Consumer -> Responder : GET URL indicada en\nDocumentReference.content.attachment.url
+activate Responder
+Responder -> Responder : Verificar autorización
+Responder -> Repository : Solicitar documento
+Repository --> Responder : Contenido documental
+Responder --> Consumer : HTTP 200\nDocumento solicitado
+deactivate Responder
+@enduml

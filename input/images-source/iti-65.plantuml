@@ -1,0 +1,35 @@
+@startuml
+title ITI-65 — Registrar documento
+
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam sequence {
+  ArrowColor #2962A3
+  LifeLineBorderColor #8AAED0
+  ParticipantBorderColor #2962A3
+  ParticipantBackgroundColor #EAF4FC
+  ParticipantFontColor #17324D
+}
+
+participant "Document Source\n(Sistema clínico)" as Source
+participant "Document Recipient\n(Repositorio MHD)" as Recipient
+database "Repositorio\ndocumental" as Repository
+
+Source -> Recipient : POST [base]\nBundle transaction
+activate Recipient
+
+note over Source, Recipient
+  Bundle transaction:
+  • List (SubmissionSet)
+  • DocumentReference
+  • Documento clínico
+  • Recursos Core AR, si corresponde
+end note
+
+Recipient -> Recipient : Validar Bundle y perfiles
+Recipient -> Recipient : Verificar referencias
+Recipient -> Repository : Registrar metadatos y contenido
+Repository --> Recipient : Registro confirmado
+Recipient --> Source : HTTP 200\nBundle transaction-response
+deactivate Recipient
+@enduml

@@ -1,0 +1,23 @@
+@startuml
+title Actores y transacciones MHD
+
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam ArrowColor #2962A3
+skinparam ActorBorderColor #2962A3
+skinparam LifeLineBorderColor #8AAED0
+skinparam ParticipantBorderColor #2962A3
+skinparam ParticipantBackgroundColor #EAF4FC
+skinparam ParticipantFontColor #17324D
+
+participant "Document Source" as Source
+participant "Document Recipient" as Recipient
+participant "Document Consumer" as Consumer
+participant "Document Responder" as Responder
+
+Source -> Recipient : ITI-65\nRegistrar documento
+Consumer -> Responder : ITI-67\nBuscar referencias
+Consumer -> Responder : ITI-68\nRecuperar documento
+
+
+@enduml
