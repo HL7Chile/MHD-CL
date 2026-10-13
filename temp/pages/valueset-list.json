@@ -1,0 +1,20 @@
+{
+  "codeSystems" : [{
+    "url" : "http://mhd.ri.hsisalud.org/ValueSet/VSCategoriaDoc",
+    "version" : "0.3.0",
+    "status" : "active",
+    "name" : "VSCategoriaDoc",
+    "title" : "Categorías de Documento Clínico para DocumentReference",
+    "description" : "Categorías generales de documentos clínicos codificadas en LOINC para ser usadas en DocumentReference.category.",
+    "systems" : ["http://loinc.org"]
+  },
+  {
+    "url" : "http://mhd.ri.hsisalud.org/ValueSet/VSTipoDocumento",
+    "version" : "0.3.0",
+    "status" : "active",
+    "name" : "VSTipoDocumento",
+    "title" : "Tipos de Documento Clínico para DocumentReference",
+    "description" : "Tipos documentales clínicos codificados en LOINC para ser usados en DocumentReference.type.",
+    "systems" : ["http://loinc.org"]
+  }]
+}

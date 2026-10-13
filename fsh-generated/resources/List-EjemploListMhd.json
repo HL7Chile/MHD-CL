@@ -1,0 +1,41 @@
+{
+  "resourceType": "List",
+  "id": "EjemploListMhd",
+  "meta": {
+    "profile": [
+      "http://mhd.ri.hsisalud.org/StructureDefinition/ListMhd"
+    ]
+  },
+  "extension": [
+    {
+      "valueIdentifier": {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:oid:2.16.840.1.113883.3.9999.1"
+      },
+      "url": "https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-sourceId"
+    }
+  ],
+  "subject": {
+    "reference": "urn:uuid:991a7102-d221-498d-9157-c4192934e3b7",
+    "display": "Paciente argentino de ejemplo"
+  },
+  "entry": [
+    {
+      "item": {
+        "reference": "urn:uuid:32ab6cfe-8cdf-4c75-a831-47be8b5668fa",
+        "display": "Referencia documental de ejemplo"
+      }
+    }
+  ],
+  "status": "current",
+  "mode": "working",
+  "code": {
+    "coding": [
+      {
+        "system": "https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes",
+        "code": "submissionset"
+      }
+    ]
+  },
+  "date": "2026-07-06"
+}

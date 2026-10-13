@@ -1,0 +1,839 @@
+{
+  "toc.html" : {
+    "title" : "Table of Contents",
+    "titlelang" : {
+    },
+    "label" : "0.0",
+    "breadcrumb" : "<li><b>Table of Contents</b></li>",
+    "breadcrumblang" : {
+    },
+    "next" : "index.html"
+  },
+  "index.html" : {
+    "title" : "Inicio",
+    "titlelang" : {
+    },
+    "label" : "1",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Inicio</b></li>",
+    "breadcrumblang" : {
+    },
+    "examples" : [],
+    "testplans" : [],
+    "testscripts" : [],
+    "previous" : "toc.html",
+    "next" : "intercambio.html"
+  },
+  "intercambio.html" : {
+    "title" : "Esquemas de transacciones FHIR MHD",
+    "titlelang" : {
+    },
+    "label" : "2",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Esquemas de transacciones FHIR MHD</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "index.html",
+    "next" : "transacciones-mhd.html"
+  },
+  "transacciones-mhd.html" : {
+    "title" : "Transacciones asociadas a MHD",
+    "titlelang" : {
+    },
+    "label" : "3",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Transacciones asociadas a MHD</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "intercambio.html",
+    "next" : "seguridad.html"
+  },
+  "seguridad.html" : {
+    "title" : "Aspectos de Seguridad",
+    "titlelang" : {
+    },
+    "label" : "4",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Aspectos de Seguridad</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "transacciones-mhd.html",
+    "next" : "cambios.html"
+  },
+  "cambios.html" : {
+    "title" : "Historial de Versiones",
+    "titlelang" : {
+    },
+    "label" : "5",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Historial de Versiones</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "seguridad.html",
+    "next" : "artifacts.html"
+  },
+  "artifacts.html" : {
+    "title" : "Artifacts Summary",
+    "titlelang" : {
+    },
+    "label" : "6.0",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "cambios.html",
+    "next" : "CapabilityStatement-MHDCliente.html"
+  },
+  "CapabilityStatement-MHDCliente.html" : {
+    "title" : "Capacidades para Cliente MHD",
+    "titlelang" : {
+    },
+    "label" : "6.1",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Capacidades para Cliente MHD</b></li>",
+    "breadcrumblang" : {
+    },
+    "examples" : [],
+    "testplans" : [],
+    "testscripts" : [],
+    "previous" : "artifacts.html",
+    "next" : "CapabilityStatement-MHDCliente-testing.html"
+  },
+  "CapabilityStatement-MHDCliente-testing.html" : {
+    "title" : "Capacidades para Cliente MHD - Testing",
+    "titlelang" : {
+    },
+    "label" : "6.1",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Capacidades para Cliente MHD</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "CapabilityStatement-MHDCliente.html",
+    "next" : "CapabilityStatement-MHDCliente.xml.html"
+  },
+  "CapabilityStatement-MHDCliente.xml.html" : {
+    "title" : "Capacidades para Cliente MHD - XML Representation",
+    "titlelang" : {
+    },
+    "label" : "6.1",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Capacidades para Cliente MHD</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "CapabilityStatement-MHDCliente-testing.html",
+    "next" : "CapabilityStatement-MHDCliente.json.html"
+  },
+  "CapabilityStatement-MHDCliente.json.html" : {
+    "title" : "Capacidades para Cliente MHD - JSON Representation",
+    "titlelang" : {
+    },
+    "label" : "6.1",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Capacidades para Cliente MHD</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "CapabilityStatement-MHDCliente.xml.html",
+    "next" : "CapabilityStatement-MHDCliente.ttl.html"
+  },
+  "CapabilityStatement-MHDCliente.ttl.html" : {
+    "title" : "Capacidades para Cliente MHD - TTL Representation",
+    "titlelang" : {
+    },
+    "label" : "6.1",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Capacidades para Cliente MHD</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "CapabilityStatement-MHDCliente.json.html",
+    "next" : "CapabilityStatement-MHDResponder.html"
+  },
+  "CapabilityStatement-MHDResponder.html" : {
+    "title" : "MHD Responder",
+    "titlelang" : {
+    },
+    "label" : "6.2",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MHD Responder</b></li>",
+    "breadcrumblang" : {
+    },
+    "examples" : [],
+    "testplans" : [],
+    "testscripts" : [],
+    "previous" : "CapabilityStatement-MHDCliente.ttl.html",
+    "next" : "CapabilityStatement-MHDResponder-testing.html"
+  },
+  "CapabilityStatement-MHDResponder-testing.html" : {
+    "title" : "MHD Responder - Testing",
+    "titlelang" : {
+    },
+    "label" : "6.2",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MHD Responder</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "CapabilityStatement-MHDResponder.html",
+    "next" : "CapabilityStatement-MHDResponder.xml.html"
+  },
+  "CapabilityStatement-MHDResponder.xml.html" : {
+    "title" : "MHD Responder - XML Representation",
+    "titlelang" : {
+    },
+    "label" : "6.2",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MHD Responder</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "CapabilityStatement-MHDResponder-testing.html",
+    "next" : "CapabilityStatement-MHDResponder.json.html"
+  },
+  "CapabilityStatement-MHDResponder.json.html" : {
+    "title" : "MHD Responder - JSON Representation",
+    "titlelang" : {
+    },
+    "label" : "6.2",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MHD Responder</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "CapabilityStatement-MHDResponder.xml.html",
+    "next" : "CapabilityStatement-MHDResponder.ttl.html"
+  },
+  "CapabilityStatement-MHDResponder.ttl.html" : {
+    "title" : "MHD Responder - TTL Representation",
+    "titlelang" : {
+    },
+    "label" : "6.2",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MHD Responder</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "CapabilityStatement-MHDResponder.json.html",
+    "next" : "StructureDefinition-BundleMhd.html"
+  },
+  "StructureDefinition-BundleMhd.html" : {
+    "title" : "BundleMhd",
+    "titlelang" : {
+    },
+    "label" : "6.3",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>BundleMhd</b></li>",
+    "breadcrumblang" : {
+    },
+    "examples" : [{
+      "url" : "Bundle-bundle-mhd-referencia-documental-ejemplo.html",
+      "title" : "Bundle MHD con referencia documental de ejemplo",
+      "titlelang" : {
+      }
+    }],
+    "testplans" : [],
+    "testscripts" : [],
+    "previous" : "CapabilityStatement-MHDResponder.ttl.html",
+    "next" : "StructureDefinition-BundleMhd-definitions.html"
+  },
+  "StructureDefinition-BundleMhd-definitions.html" : {
+    "title" : "BundleMhd - Definitions",
+    "titlelang" : {
+    },
+    "label" : "6.3",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>BundleMhd</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "StructureDefinition-BundleMhd.html",
+    "next" : "StructureDefinition-BundleMhd-mappings.html"
+  },
+  "StructureDefinition-BundleMhd-mappings.html" : {
+    "title" : "BundleMhd - Mappings",
+    "titlelang" : {
+    },
+    "label" : "6.3",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>BundleMhd</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "StructureDefinition-BundleMhd-definitions.html",
+    "next" : "StructureDefinition-BundleMhd-testing.html"
+  },
+  "StructureDefinition-BundleMhd-testing.html" : {
+    "title" : "BundleMhd - Testing",
+    "titlelang" : {
+    },
+    "label" : "6.3",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>BundleMhd</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "StructureDefinition-BundleMhd-mappings.html",
+    "next" : "StructureDefinition-BundleMhd-examples.html"
+  },
+  "StructureDefinition-BundleMhd-examples.html" : {
+    "title" : "BundleMhd - Examples",
+    "titlelang" : {
+    },
+    "label" : "6.3",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>BundleMhd</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "StructureDefinition-BundleMhd-testing.html",
+    "next" : "StructureDefinition-BundleMhd.profile.xml.html"
+  },
+  "StructureDefinition-BundleMhd.profile.xml.html" : {
+    "title" : "BundleMhd - XML Representation",
+    "titlelang" : {
+    },
+    "label" : "6.3",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>BundleMhd</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "StructureDefinition-BundleMhd-examples.html",
+    "next" : "StructureDefinition-BundleMhd.profile.json.html"
+  },
+  "StructureDefinition-BundleMhd.profile.json.html" : {
+    "title" : "BundleMhd - JSON Representation",
+    "titlelang" : {
+    },
+    "label" : "6.3",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>BundleMhd</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "StructureDefinition-BundleMhd.profile.xml.html",
+    "next" : "StructureDefinition-BundleMhd.profile.ttl.html"
+  },
+  "StructureDefinition-BundleMhd.profile.ttl.html" : {
+    "title" : "BundleMhd - TTL Representation",
+    "titlelang" : {
+    },
+    "label" : "6.3",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>BundleMhd</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "StructureDefinition-BundleMhd.profile.json.html",
+    "next" : "StructureDefinition-ListMhd.html"
+  },
+  "StructureDefinition-ListMhd.html" : {
+    "title" : "ListMhd",
+    "titlelang" : {
+    },
+    "label" : "6.4",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ListMhd</b></li>",
+    "breadcrumblang" : {
+    },
+    "examples" : [{
+      "url" : "List-EjemploListMhd.html",
+      "title" : "Ejemplo mínimo de List MHD",
+      "titlelang" : {
+      }
+    }],
+    "testplans" : [],
+    "testscripts" : [],
+    "previous" : "StructureDefinition-BundleMhd.profile.ttl.html",
+    "next" : "StructureDefinition-ListMhd-definitions.html"
+  },
+  "StructureDefinition-ListMhd-definitions.html" : {
+    "title" : "ListMhd - Definitions",
+    "titlelang" : {
+    },
+    "label" : "6.4",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ListMhd</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "StructureDefinition-ListMhd.html",
+    "next" : "StructureDefinition-ListMhd-mappings.html"
+  },
+  "StructureDefinition-ListMhd-mappings.html" : {
+    "title" : "ListMhd - Mappings",
+    "titlelang" : {
+    },
+    "label" : "6.4",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ListMhd</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "StructureDefinition-ListMhd-definitions.html",
+    "next" : "StructureDefinition-ListMhd-testing.html"
+  },
+  "StructureDefinition-ListMhd-testing.html" : {
+    "title" : "ListMhd - Testing",
+    "titlelang" : {
+    },
+    "label" : "6.4",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ListMhd</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "StructureDefinition-ListMhd-mappings.html",
+    "next" : "StructureDefinition-ListMhd-examples.html"
+  },
+  "StructureDefinition-ListMhd-examples.html" : {
+    "title" : "ListMhd - Examples",
+    "titlelang" : {
+    },
+    "label" : "6.4",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ListMhd</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "StructureDefinition-ListMhd-testing.html",
+    "next" : "StructureDefinition-ListMhd.profile.xml.html"
+  },
+  "StructureDefinition-ListMhd.profile.xml.html" : {
+    "title" : "ListMhd - XML Representation",
+    "titlelang" : {
+    },
+    "label" : "6.4",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ListMhd</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "StructureDefinition-ListMhd-examples.html",
+    "next" : "StructureDefinition-ListMhd.profile.json.html"
+  },
+  "StructureDefinition-ListMhd.profile.json.html" : {
+    "title" : "ListMhd - JSON Representation",
+    "titlelang" : {
+    },
+    "label" : "6.4",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ListMhd</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "StructureDefinition-ListMhd.profile.xml.html",
+    "next" : "StructureDefinition-ListMhd.profile.ttl.html"
+  },
+  "StructureDefinition-ListMhd.profile.ttl.html" : {
+    "title" : "ListMhd - TTL Representation",
+    "titlelang" : {
+    },
+    "label" : "6.4",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ListMhd</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "StructureDefinition-ListMhd.profile.json.html",
+    "next" : "StructureDefinition-ReferenciaDocumental.html"
+  },
+  "StructureDefinition-ReferenciaDocumental.html" : {
+    "title" : "ReferenciaDocumental",
+    "titlelang" : {
+    },
+    "label" : "6.5",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ReferenciaDocumental</b></li>",
+    "breadcrumblang" : {
+    },
+    "intro" : "StructureDefinition-ReferenciaDocumental-intro.md",
+    "intro-type" : "md",
+    "notes" : "StructureDefinition-ReferenciaDocumental-notes.md",
+    "notes-type" : "md",
+    "examples" : [{
+      "url" : "DocumentReference-ReferDocEjemplo.html",
+      "title" : "Referencia documental mínima para DocumentoArg",
+      "titlelang" : {
+      }
+    }],
+    "testplans" : [],
+    "testscripts" : [],
+    "previous" : "StructureDefinition-ListMhd.profile.ttl.html",
+    "next" : "StructureDefinition-ReferenciaDocumental-definitions.html"
+  },
+  "StructureDefinition-ReferenciaDocumental-definitions.html" : {
+    "title" : "ReferenciaDocumental - Definitions",
+    "titlelang" : {
+    },
+    "label" : "6.5",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ReferenciaDocumental</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "StructureDefinition-ReferenciaDocumental.html",
+    "next" : "StructureDefinition-ReferenciaDocumental-mappings.html"
+  },
+  "StructureDefinition-ReferenciaDocumental-mappings.html" : {
+    "title" : "ReferenciaDocumental - Mappings",
+    "titlelang" : {
+    },
+    "label" : "6.5",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ReferenciaDocumental</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "StructureDefinition-ReferenciaDocumental-definitions.html",
+    "next" : "StructureDefinition-ReferenciaDocumental-testing.html"
+  },
+  "StructureDefinition-ReferenciaDocumental-testing.html" : {
+    "title" : "ReferenciaDocumental - Testing",
+    "titlelang" : {
+    },
+    "label" : "6.5",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ReferenciaDocumental</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "StructureDefinition-ReferenciaDocumental-mappings.html",
+    "next" : "StructureDefinition-ReferenciaDocumental-examples.html"
+  },
+  "StructureDefinition-ReferenciaDocumental-examples.html" : {
+    "title" : "ReferenciaDocumental - Examples",
+    "titlelang" : {
+    },
+    "label" : "6.5",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ReferenciaDocumental</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "StructureDefinition-ReferenciaDocumental-testing.html",
+    "next" : "StructureDefinition-ReferenciaDocumental.profile.xml.html"
+  },
+  "StructureDefinition-ReferenciaDocumental.profile.xml.html" : {
+    "title" : "ReferenciaDocumental - XML Representation",
+    "titlelang" : {
+    },
+    "label" : "6.5",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ReferenciaDocumental</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "StructureDefinition-ReferenciaDocumental-examples.html",
+    "next" : "StructureDefinition-ReferenciaDocumental.profile.json.html"
+  },
+  "StructureDefinition-ReferenciaDocumental.profile.json.html" : {
+    "title" : "ReferenciaDocumental - JSON Representation",
+    "titlelang" : {
+    },
+    "label" : "6.5",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ReferenciaDocumental</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "StructureDefinition-ReferenciaDocumental.profile.xml.html",
+    "next" : "StructureDefinition-ReferenciaDocumental.profile.ttl.html"
+  },
+  "StructureDefinition-ReferenciaDocumental.profile.ttl.html" : {
+    "title" : "ReferenciaDocumental - TTL Representation",
+    "titlelang" : {
+    },
+    "label" : "6.5",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ReferenciaDocumental</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "StructureDefinition-ReferenciaDocumental.profile.json.html",
+    "next" : "ValueSet-VSCategoriaDoc.html"
+  },
+  "ValueSet-VSCategoriaDoc.html" : {
+    "title" : "Categorías de Documento Clínico para DocumentReference",
+    "titlelang" : {
+    },
+    "label" : "6.6",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Categorías de Documento Clínico para DocumentReference</b></li>",
+    "breadcrumblang" : {
+    },
+    "examples" : [],
+    "testplans" : [],
+    "testscripts" : [],
+    "previous" : "StructureDefinition-ReferenciaDocumental.profile.ttl.html",
+    "next" : "ValueSet-VSCategoriaDoc-testing.html"
+  },
+  "ValueSet-VSCategoriaDoc-testing.html" : {
+    "title" : "Categorías de Documento Clínico para DocumentReference - Testing",
+    "titlelang" : {
+    },
+    "label" : "6.6",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Categorías de Documento Clínico para DocumentReference</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "ValueSet-VSCategoriaDoc.html",
+    "next" : "ValueSet-VSCategoriaDoc.xml.html"
+  },
+  "ValueSet-VSCategoriaDoc.xml.html" : {
+    "title" : "Categorías de Documento Clínico para DocumentReference - XML Representation",
+    "titlelang" : {
+    },
+    "label" : "6.6",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Categorías de Documento Clínico para DocumentReference</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "ValueSet-VSCategoriaDoc-testing.html",
+    "next" : "ValueSet-VSCategoriaDoc.json.html"
+  },
+  "ValueSet-VSCategoriaDoc.json.html" : {
+    "title" : "Categorías de Documento Clínico para DocumentReference - JSON Representation",
+    "titlelang" : {
+    },
+    "label" : "6.6",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Categorías de Documento Clínico para DocumentReference</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "ValueSet-VSCategoriaDoc.xml.html",
+    "next" : "ValueSet-VSCategoriaDoc.ttl.html"
+  },
+  "ValueSet-VSCategoriaDoc.ttl.html" : {
+    "title" : "Categorías de Documento Clínico para DocumentReference - TTL Representation",
+    "titlelang" : {
+    },
+    "label" : "6.6",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Categorías de Documento Clínico para DocumentReference</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "ValueSet-VSCategoriaDoc.json.html",
+    "next" : "ValueSet-VSTipoDocumento.html"
+  },
+  "ValueSet-VSTipoDocumento.html" : {
+    "title" : "Tipos de Documento Clínico para DocumentReference",
+    "titlelang" : {
+    },
+    "label" : "6.7",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Tipos de Documento Clínico para DocumentReference</b></li>",
+    "breadcrumblang" : {
+    },
+    "examples" : [],
+    "testplans" : [],
+    "testscripts" : [],
+    "previous" : "ValueSet-VSCategoriaDoc.ttl.html",
+    "next" : "ValueSet-VSTipoDocumento-testing.html"
+  },
+  "ValueSet-VSTipoDocumento-testing.html" : {
+    "title" : "Tipos de Documento Clínico para DocumentReference - Testing",
+    "titlelang" : {
+    },
+    "label" : "6.7",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Tipos de Documento Clínico para DocumentReference</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "ValueSet-VSTipoDocumento.html",
+    "next" : "ValueSet-VSTipoDocumento.xml.html"
+  },
+  "ValueSet-VSTipoDocumento.xml.html" : {
+    "title" : "Tipos de Documento Clínico para DocumentReference - XML Representation",
+    "titlelang" : {
+    },
+    "label" : "6.7",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Tipos de Documento Clínico para DocumentReference</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "ValueSet-VSTipoDocumento-testing.html",
+    "next" : "ValueSet-VSTipoDocumento.json.html"
+  },
+  "ValueSet-VSTipoDocumento.json.html" : {
+    "title" : "Tipos de Documento Clínico para DocumentReference - JSON Representation",
+    "titlelang" : {
+    },
+    "label" : "6.7",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Tipos de Documento Clínico para DocumentReference</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "ValueSet-VSTipoDocumento.xml.html",
+    "next" : "ValueSet-VSTipoDocumento.ttl.html"
+  },
+  "ValueSet-VSTipoDocumento.ttl.html" : {
+    "title" : "Tipos de Documento Clínico para DocumentReference - TTL Representation",
+    "titlelang" : {
+    },
+    "label" : "6.7",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Tipos de Documento Clínico para DocumentReference</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "ValueSet-VSTipoDocumento.json.html",
+    "next" : "Bundle-bundle-mhd-referencia-documental-ejemplo.html"
+  },
+  "Bundle-bundle-mhd-referencia-documental-ejemplo.html" : {
+    "title" : "Bundle MHD con referencia documental de ejemplo",
+    "titlelang" : {
+    },
+    "label" : "6.8",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Bundle MHD con referencia documental de ejemplo</b></li>",
+    "breadcrumblang" : {
+    },
+    "examples" : [],
+    "testplans" : [],
+    "testscripts" : [],
+    "previous" : "ValueSet-VSTipoDocumento.ttl.html",
+    "next" : "Bundle-bundle-mhd-referencia-documental-ejemplo.xml.html"
+  },
+  "Bundle-bundle-mhd-referencia-documental-ejemplo.xml.html" : {
+    "title" : "Bundle MHD con referencia documental de ejemplo - XML Representation",
+    "titlelang" : {
+    },
+    "label" : "6.8",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Bundle MHD con referencia documental de ejemplo</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "Bundle-bundle-mhd-referencia-documental-ejemplo.html",
+    "next" : "Bundle-bundle-mhd-referencia-documental-ejemplo.json.html"
+  },
+  "Bundle-bundle-mhd-referencia-documental-ejemplo.json.html" : {
+    "title" : "Bundle MHD con referencia documental de ejemplo - JSON Representation",
+    "titlelang" : {
+    },
+    "label" : "6.8",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Bundle MHD con referencia documental de ejemplo</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "Bundle-bundle-mhd-referencia-documental-ejemplo.xml.html",
+    "next" : "Bundle-bundle-mhd-referencia-documental-ejemplo.ttl.html"
+  },
+  "Bundle-bundle-mhd-referencia-documental-ejemplo.ttl.html" : {
+    "title" : "Bundle MHD con referencia documental de ejemplo - TTL Representation",
+    "titlelang" : {
+    },
+    "label" : "6.8",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Bundle MHD con referencia documental de ejemplo</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "Bundle-bundle-mhd-referencia-documental-ejemplo.json.html",
+    "next" : "List-EjemploListMhd.html"
+  },
+  "List-EjemploListMhd.html" : {
+    "title" : "Ejemplo mínimo de List MHD",
+    "titlelang" : {
+    },
+    "label" : "6.9",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Ejemplo mínimo de List MHD</b></li>",
+    "breadcrumblang" : {
+    },
+    "examples" : [],
+    "testplans" : [],
+    "testscripts" : [],
+    "previous" : "Bundle-bundle-mhd-referencia-documental-ejemplo.ttl.html",
+    "next" : "List-EjemploListMhd.xml.html"
+  },
+  "List-EjemploListMhd.xml.html" : {
+    "title" : "Ejemplo mínimo de List MHD - XML Representation",
+    "titlelang" : {
+    },
+    "label" : "6.9",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Ejemplo mínimo de List MHD</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "List-EjemploListMhd.html",
+    "next" : "List-EjemploListMhd.json.html"
+  },
+  "List-EjemploListMhd.json.html" : {
+    "title" : "Ejemplo mínimo de List MHD - JSON Representation",
+    "titlelang" : {
+    },
+    "label" : "6.9",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Ejemplo mínimo de List MHD</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "List-EjemploListMhd.xml.html",
+    "next" : "List-EjemploListMhd.ttl.html"
+  },
+  "List-EjemploListMhd.ttl.html" : {
+    "title" : "Ejemplo mínimo de List MHD - TTL Representation",
+    "titlelang" : {
+    },
+    "label" : "6.9",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Ejemplo mínimo de List MHD</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "List-EjemploListMhd.json.html",
+    "next" : "Patient-Paciente-Interno.html"
+  },
+  "Patient-Paciente-Interno.html" : {
+    "title" : "Paciente-Interno",
+    "titlelang" : {
+    },
+    "label" : "6.10",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Paciente-Interno</b></li>",
+    "breadcrumblang" : {
+    },
+    "examples" : [],
+    "testplans" : [],
+    "testscripts" : [],
+    "previous" : "List-EjemploListMhd.ttl.html",
+    "next" : "Patient-Paciente-Interno.xml.html"
+  },
+  "Patient-Paciente-Interno.xml.html" : {
+    "title" : "Paciente-Interno - XML Representation",
+    "titlelang" : {
+    },
+    "label" : "6.10",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Paciente-Interno</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "Patient-Paciente-Interno.html",
+    "next" : "Patient-Paciente-Interno.json.html"
+  },
+  "Patient-Paciente-Interno.json.html" : {
+    "title" : "Paciente-Interno - JSON Representation",
+    "titlelang" : {
+    },
+    "label" : "6.10",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Paciente-Interno</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "Patient-Paciente-Interno.xml.html",
+    "next" : "Patient-Paciente-Interno.ttl.html"
+  },
+  "Patient-Paciente-Interno.ttl.html" : {
+    "title" : "Paciente-Interno - TTL Representation",
+    "titlelang" : {
+    },
+    "label" : "6.10",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Paciente-Interno</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "Patient-Paciente-Interno.json.html",
+    "next" : "Practitioner-PrestadorArgInline.html"
+  },
+  "Practitioner-PrestadorArgInline.html" : {
+    "title" : "PrestadorArgInline",
+    "titlelang" : {
+    },
+    "label" : "6.11",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>PrestadorArgInline</b></li>",
+    "breadcrumblang" : {
+    },
+    "examples" : [],
+    "testplans" : [],
+    "testscripts" : [],
+    "previous" : "Patient-Paciente-Interno.ttl.html",
+    "next" : "Practitioner-PrestadorArgInline.xml.html"
+  },
+  "Practitioner-PrestadorArgInline.xml.html" : {
+    "title" : "PrestadorArgInline - XML Representation",
+    "titlelang" : {
+    },
+    "label" : "6.11",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>PrestadorArgInline</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "Practitioner-PrestadorArgInline.html",
+    "next" : "Practitioner-PrestadorArgInline.json.html"
+  },
+  "Practitioner-PrestadorArgInline.json.html" : {
+    "title" : "PrestadorArgInline - JSON Representation",
+    "titlelang" : {
+    },
+    "label" : "6.11",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>PrestadorArgInline</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "Practitioner-PrestadorArgInline.xml.html",
+    "next" : "Practitioner-PrestadorArgInline.ttl.html"
+  },
+  "Practitioner-PrestadorArgInline.ttl.html" : {
+    "title" : "PrestadorArgInline - TTL Representation",
+    "titlelang" : {
+    },
+    "label" : "6.11",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>PrestadorArgInline</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "Practitioner-PrestadorArgInline.json.html",
+    "next" : "DocumentReference-ReferDocEjemplo.html"
+  },
+  "DocumentReference-ReferDocEjemplo.html" : {
+    "title" : "Referencia documental mínima para DocumentoArg",
+    "titlelang" : {
+    },
+    "label" : "6.12",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Referencia documental mínima para DocumentoArg</b></li>",
+    "breadcrumblang" : {
+    },
+    "examples" : [],
+    "testplans" : [],
+    "testscripts" : [],
+    "previous" : "Practitioner-PrestadorArgInline.ttl.html",
+    "next" : "DocumentReference-ReferDocEjemplo.xml.html"
+  },
+  "DocumentReference-ReferDocEjemplo.xml.html" : {
+    "title" : "Referencia documental mínima para DocumentoArg - XML Representation",
+    "titlelang" : {
+    },
+    "label" : "6.12",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Referencia documental mínima para DocumentoArg</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "DocumentReference-ReferDocEjemplo.html",
+    "next" : "DocumentReference-ReferDocEjemplo.json.html"
+  },
+  "DocumentReference-ReferDocEjemplo.json.html" : {
+    "title" : "Referencia documental mínima para DocumentoArg - JSON Representation",
+    "titlelang" : {
+    },
+    "label" : "6.12",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Referencia documental mínima para DocumentoArg</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "DocumentReference-ReferDocEjemplo.xml.html",
+    "next" : "DocumentReference-ReferDocEjemplo.ttl.html"
+  },
+  "DocumentReference-ReferDocEjemplo.ttl.html" : {
+    "title" : "Referencia documental mínima para DocumentoArg - TTL Representation",
+    "titlelang" : {
+    },
+    "label" : "6.12",
+    "breadcrumb" : "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Referencia documental mínima para DocumentoArg</b></li>",
+    "breadcrumblang" : {
+    },
+    "previous" : "DocumentReference-ReferDocEjemplo.json.html"
+  }
+}

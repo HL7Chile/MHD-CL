@@ -1,0 +1,64 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ListMhd",
+  "url": "http://mhd.ri.hsisalud.org/StructureDefinition/ListMhd",
+  "name": "ListMhd",
+  "status": "draft",
+  "publisher": "HSI Pladema",
+  "contact": [
+    {
+      "name": "HSI Pladema",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://hsi.pladema.net"
+        }
+      ]
+    }
+  ],
+  "description": "Perfil asociado al listado de documentos referenciados para HSI en un modelo MHD",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "AR",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "List",
+  "baseDefinition": "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.SubmissionSet",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "List.subject",
+        "path": "List.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://ips.ri.hsisalud.org/StructureDefinition/PacienteArg"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "List.entry.item",
+        "path": "List.entry.item",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://mhd.ri.hsisalud.org/StructureDefinition/ReferenciaDocumental"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

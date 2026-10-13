@@ -1,0 +1,40 @@
+# fhir.mhdig#0.3.0: Guía MHD para HSI, Provincia de Buenos Aires.
+
+## Pages
+
+* [FHIR.MHDIG\Inicio - FHIR v4.0.1](index.md)
+* [FHIR.MHDIG\Artifacts Summary - FHIR v4.0.1](artifacts.md)
+* [FHIR.MHDIG\Historial de Versiones - FHIR v4.0.1](cambios.md)
+* [FHIR.MHDIG\Esquemas de transacciones FHIR MHD - FHIR v4.0.1](intercambio.md)
+* [FHIR.MHDIG\Aspectos de Seguridad - FHIR v4.0.1](seguridad.md)
+* [FHIR.MHDIG\Transacciones asociadas a MHD - FHIR v4.0.1](transacciones-mhd.md)
+
+## Resources
+
+### ValueSets
+
+* [Categorías de Documento Clínico para DocumentReference](ValueSet-VSCategoriaDoc.md)
+* [Tipos de Documento Clínico para DocumentReference](ValueSet-VSTipoDocumento.md)
+
+### Resource Profiles
+
+* [BundleMhd](StructureDefinition-BundleMhd.md)
+* [ListMhd](StructureDefinition-ListMhd.md)
+* [ReferenciaDocumental](StructureDefinition-ReferenciaDocumental.md)
+
+### CapabilityStatements
+
+* [Capacidades para Cliente MHD](CapabilityStatement-MHDCliente.md)
+* [MHD Responder](CapabilityStatement-MHDResponder.md)
+
+### ImplementationGuides
+
+* [Guía MHD para HSI, Provincia de Buenos Aires.](index.md)
+
+### Examples
+
+* [bundle-mhd-referencia-documental-ejemplo (Bundle)](Bundle-bundle-mhd-referencia-documental-ejemplo.md)
+* [ReferDocEjemplo (DocumentReference)](DocumentReference-ReferDocEjemplo.md)
+* [EjemploListMhd (List)](List-EjemploListMhd.md)
+* [Paciente-Interno (Patient)](Patient-Paciente-Interno.md)
+* [PrestadorArgInline (Practitioner)](Practitioner-PrestadorArgInline.md)

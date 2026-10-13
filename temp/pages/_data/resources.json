@@ -1,0 +1,294 @@
+{
+  "ImplementationGuide/fhir.mhdig" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 0,
+    "source" : "C:\\fhir_ig\\mhd\\fsh-generated\\resources\\ImplementationGuide-fhir.mhdig.json",
+    "sourceTail" : "ImplementationGuide-fhir.mhdig.json",
+    "path" : "index.html",
+    "url" : "http://mhd.ri.hsisalud.org/ImplementationGuide/fhir.mhdig",
+    "version" : "0.3.0",
+    "name" : "MHDTransIG",
+    "title" : "Guía MHD para HSI, Provincia de Buenos Aires.",
+    "titlelang" : {
+    },
+    "date" : "2026-09-02T10:42:41-04:00",
+    "description" : "Esta guía de implementación describe los esquemas de transacciones FHIR MHD para el intercambio de información de salud en Argentina, asociado a las guías IHE MHD y Core-AR.",
+    "descriptionlang" : {
+    },
+    "jurisdictions" : [{
+      "code" : "AR",
+      "name" : "Argentina",
+      "flag" : "arg"
+    }],
+    "status" : {
+      "class" : "colsd",
+      "owner" : "HSI Pladema",
+      "link" : "https://hsi.pladema.net",
+      "status" : "Draft"
+    }
+  },
+  "Bundle/bundle-mhd-referencia-documental-ejemplo" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 1,
+    "source" : "fsh-generated/resources/Bundle-bundle-mhd-referencia-documental-ejemplo.json",
+    "sourceTail" : "Bundle-bundle-mhd-referencia-documental-ejemplo.json",
+    "path" : "Bundle-bundle-mhd-referencia-documental-ejemplo.html"
+  },
+  "CapabilityStatement/MHDCliente" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 2,
+    "source" : "fsh-generated/resources/CapabilityStatement-MHDCliente.json",
+    "sourceTail" : "CapabilityStatement-MHDCliente.json",
+    "path" : "CapabilityStatement-MHDCliente.html",
+    "url" : "http://mhd.ri.hsisalud.org/CapabilityStatement/MHDCliente",
+    "version" : "0.3.0",
+    "name" : "MHDCliente",
+    "title" : "Capacidades para Cliente MHD",
+    "titlelang" : {
+    },
+    "experimental" : false,
+    "date" : "2026-09-02",
+    "description" : "CapabilityStatement que define las capacidades requeridas para los\nsistemas cliente que interactúan con el MHD Responder definido por\nesta guía.\n\nEl cliente implementa las funciones de Document Source y Document\nConsumer definidas por IHE MHD 4.2.2, adaptadas a los perfiles y\nrestricciones de esta implementación local.\n\nEl cliente puede publicar documentos mediante ITI-65, consultar\nSubmissionSets mediante ITI-66, localizar referencias documentales\nmediante ITI-67 y recuperar documentos mediante ITI-68.",
+    "descriptionlang" : {
+    },
+    "jurisdictions" : [{
+      "code" : "AR",
+      "name" : "Argentina",
+      "flag" : "arg"
+    }],
+    "status" : {
+      "class" : "colsd",
+      "owner" : "HSI Pladema",
+      "link" : "https://hsi.pladema.net",
+      "status" : "Draft"
+    }
+  },
+  "CapabilityStatement/MHDResponder" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 3,
+    "source" : "fsh-generated/resources/CapabilityStatement-MHDResponder.json",
+    "sourceTail" : "CapabilityStatement-MHDResponder.json",
+    "path" : "CapabilityStatement-MHDResponder.html",
+    "url" : "http://mhd.ri.hsisalud.org/CapabilityStatement/MHDResponder",
+    "version" : "0.3.0",
+    "name" : "MHDResponder",
+    "title" : "MHD Responder",
+    "titlelang" : {
+    },
+    "experimental" : false,
+    "date" : "2026-09-02",
+    "description" : "CapabilityStatement que define las capacidades requeridas para un servidor\nMHD conforme a la Guía MHD para HSI.\n\nEl servidor implementa las funciones de Document Recipient y Document\nResponder definidas por IHE MHD 4.2.2, adaptadas a los perfiles locales\nde esta guía.",
+    "descriptionlang" : {
+    },
+    "jurisdictions" : [{
+      "code" : "AR",
+      "name" : "Argentina",
+      "flag" : "arg"
+    }],
+    "status" : {
+      "class" : "colsd",
+      "owner" : "HSI Pladema",
+      "link" : "https://hsi.pladema.net",
+      "status" : "Draft"
+    }
+  },
+  "DocumentReference/ReferDocEjemplo" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 4,
+    "source" : "fsh-generated/resources/DocumentReference-ReferDocEjemplo.json",
+    "sourceTail" : "DocumentReference-ReferDocEjemplo.json",
+    "path" : "DocumentReference-ReferDocEjemplo.html",
+    "status" : {
+      "class" : "colsi"
+    }
+  },
+  "List/EjemploListMhd" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 5,
+    "source" : "fsh-generated/resources/List-EjemploListMhd.json",
+    "sourceTail" : "List-EjemploListMhd.json",
+    "path" : "List-EjemploListMhd.html",
+    "status" : {
+      "class" : "colsi"
+    }
+  },
+  "Patient/Paciente-Interno" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 6,
+    "source" : "fsh-generated/resources/Patient-Paciente-Interno.json",
+    "sourceTail" : "Patient-Paciente-Interno.json",
+    "path" : "Patient-Paciente-Interno.html",
+    "status" : {
+      "class" : "colsi"
+    }
+  },
+  "Practitioner/PrestadorArgInline" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 7,
+    "source" : "fsh-generated/resources/Practitioner-PrestadorArgInline.json",
+    "sourceTail" : "Practitioner-PrestadorArgInline.json",
+    "path" : "Practitioner-PrestadorArgInline.html",
+    "status" : {
+      "class" : "colsi"
+    }
+  },
+  "StructureDefinition/BundleMhd" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 8,
+    "source" : "fsh-generated/resources/StructureDefinition-BundleMhd.json",
+    "sourceTail" : "StructureDefinition-BundleMhd.json",
+    "path" : "StructureDefinition-BundleMhd.html",
+    "url" : "http://mhd.ri.hsisalud.org/StructureDefinition/BundleMhd",
+    "version" : "0.3.0",
+    "name" : "BundleMhd",
+    "date" : "2026-06-22",
+    "description" : "Perfil asociado al bundle de transacciones MHD, considerando la asociación de documentos de tipo IPS, referenciados a la Guía Core Argentna AR.FHIR.CORE",
+    "descriptionlang" : {
+    },
+    "jurisdictions" : [{
+      "code" : "AR",
+      "name" : "Argentina",
+      "flag" : "arg"
+    }],
+    "status" : {
+      "class" : "colsd",
+      "owner" : "HSI Pladema",
+      "link" : "https://hsi.pladema.net",
+      "status" : "Draft"
+    }
+  },
+  "StructureDefinition/ListMhd" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 9,
+    "source" : "fsh-generated/resources/StructureDefinition-ListMhd.json",
+    "sourceTail" : "StructureDefinition-ListMhd.json",
+    "path" : "StructureDefinition-ListMhd.html",
+    "url" : "http://mhd.ri.hsisalud.org/StructureDefinition/ListMhd",
+    "version" : "0.3.0",
+    "name" : "ListMhd",
+    "date" : "2026-09-02T10:42:41-04:00",
+    "description" : "Perfil asociado al listado de documentos referenciados para HSI en un modelo MHD",
+    "descriptionlang" : {
+    },
+    "jurisdictions" : [{
+      "code" : "AR",
+      "name" : "Argentina",
+      "flag" : "arg"
+    }],
+    "status" : {
+      "class" : "colsd",
+      "owner" : "HSI Pladema",
+      "link" : "https://hsi.pladema.net",
+      "status" : "Draft"
+    }
+  },
+  "StructureDefinition/ReferenciaDocumental" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 10,
+    "source" : "fsh-generated/resources/StructureDefinition-ReferenciaDocumental.json",
+    "sourceTail" : "StructureDefinition-ReferenciaDocumental.json",
+    "path" : "StructureDefinition-ReferenciaDocumental.html",
+    "url" : "http://mhd.ri.hsisalud.org/StructureDefinition/ReferenciaDocumental",
+    "version" : "0.3.0",
+    "name" : "ReferenciaDocumental",
+    "date" : "2026-09-02T10:42:41-04:00",
+    "description" : "Perfil asociado al la refetrencia documental para HSI en un modelo MHD, consderado para transacciones asociadas a una ITI-65 e ITI-67. Se considera en el perfil la asociación de documentos de tipo IPS, referenciados a la Guía Core Argentna AR.FHIR.CORE",
+    "descriptionlang" : {
+    },
+    "jurisdictions" : [{
+      "code" : "AR",
+      "name" : "Argentina",
+      "flag" : "arg"
+    }],
+    "status" : {
+      "class" : "colsd",
+      "owner" : "HSI Pladema",
+      "link" : "https://hsi.pladema.net",
+      "status" : "Draft"
+    }
+  },
+  "ValueSet/VSCategoriaDoc" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 11,
+    "source" : "fsh-generated/resources/ValueSet-VSCategoriaDoc.json",
+    "sourceTail" : "ValueSet-VSCategoriaDoc.json",
+    "path" : "ValueSet-VSCategoriaDoc.html",
+    "url" : "http://mhd.ri.hsisalud.org/ValueSet/VSCategoriaDoc",
+    "version" : "0.3.0",
+    "name" : "VSCategoriaDoc",
+    "title" : "Categorías de Documento Clínico para DocumentReference",
+    "titlelang" : {
+    },
+    "experimental" : false,
+    "date" : "2026-09-02T10:42:41-04:00",
+    "description" : "Categorías generales de documentos clínicos codificadas en LOINC para ser usadas en DocumentReference.category.",
+    "descriptionlang" : {
+    },
+    "jurisdictions" : [{
+      "code" : "AR",
+      "name" : "Argentina",
+      "flag" : "arg"
+    }],
+    "status" : {
+      "class" : "colsi",
+      "owner" : "HSI Pladema",
+      "link" : "https://hsi.pladema.net",
+      "status" : "Active"
+    }
+  },
+  "ValueSet/VSTipoDocumento" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 12,
+    "source" : "fsh-generated/resources/ValueSet-VSTipoDocumento.json",
+    "sourceTail" : "ValueSet-VSTipoDocumento.json",
+    "path" : "ValueSet-VSTipoDocumento.html",
+    "url" : "http://mhd.ri.hsisalud.org/ValueSet/VSTipoDocumento",
+    "version" : "0.3.0",
+    "name" : "VSTipoDocumento",
+    "title" : "Tipos de Documento Clínico para DocumentReference",
+    "titlelang" : {
+    },
+    "experimental" : false,
+    "date" : "2026-09-02T10:42:41-04:00",
+    "description" : "Tipos documentales clínicos codificados en LOINC para ser usados en DocumentReference.type.",
+    "descriptionlang" : {
+    },
+    "jurisdictions" : [{
+      "code" : "AR",
+      "name" : "Argentina",
+      "flag" : "arg"
+    }],
+    "status" : {
+      "class" : "colsi",
+      "owner" : "HSI Pladema",
+      "link" : "https://hsi.pladema.net",
+      "status" : "Active"
+    }
+  }
+}

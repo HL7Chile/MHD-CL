@@ -1,0 +1,58 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://mhd.ri.hsisalud.org/List/EjemploListMhd> a fhir:List ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "EjemploListMhd"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://mhd.ri.hsisalud.org/StructureDefinition/ListMhd" ;
+       fhir:index 0 ;
+       fhir:link <http://mhd.ri.hsisalud.org/StructureDefinition/ListMhd>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Lista EjemploListMhd</b></p><a name=\"EjemploListMhd\"> </a><a name=\"hcEjemploListMhd\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ListMhd.html\">ListMhd</a></p></div><table class=\"clstu\"><tr><td>Date: 2026-07-06 </td><td>Mode: Working List </td><td>Status: Current </td><td>Code: SubmissionSet as a FHIR List </td></tr><tr><td>Subject: <a href=\"Bundle-bundle-mhd-referencia-documental-ejemplo.html#urn-uuid-991a7102-d221-498d-9157-c4192934e3b7\">Paciente argentino de ejemplo</a></td></tr></table><table class=\"grid\"><tr style=\"backgound-color: #eeeeee\"><td><b>Items</b></td></tr><tr><td><a href=\"Bundle-bundle-mhd-referencia-documental-ejemplo.html#urn-uuid-32ab6cfe-8cdf-4c75-a831-47be8b5668fa\">Referencia documental de ejemplo</a></td></tr></table></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-sourceId" ] ;
+     fhir:Extension.valueIdentifier [
+       fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ] ;
+       fhir:Identifier.value [ fhir:value "urn:oid:2.16.840.1.113883.3.9999.1" ]
+     ]
+  ] ;
+  fhir:List.status [ fhir:value "current"] ;
+  fhir:List.mode [ fhir:value "working"] ;
+  fhir:List.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes" ] ;
+       fhir:Coding.code [ fhir:value "submissionset" ]
+     ]
+  ] ;
+  fhir:List.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:991a7102-d221-498d-9157-c4192934e3b7" ] ;
+     fhir:Reference.display [ fhir:value "Paciente argentino de ejemplo" ]
+  ] ;
+  fhir:List.date [ fhir:value "2026-07-06"^^xsd:date] ;
+  fhir:List.entry [
+     fhir:index 0 ;
+     fhir:List.entry.item [
+       fhir:Reference.reference [ fhir:value "urn:uuid:32ab6cfe-8cdf-4c75-a831-47be8b5668fa" ] ;
+       fhir:Reference.display [ fhir:value "Referencia documental de ejemplo" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://mhd.ri.hsisalud.org/List/EjemploListMhd.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

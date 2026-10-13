@@ -1,0 +1,58 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "ReferDocEjemplo",
+  "meta": {
+    "profile": [
+      "http://mhd.ri.hsisalud.org/StructureDefinition/ReferenciaDocumental"
+    ]
+  },
+  "masterIdentifier": {
+    "system": "https://repositorio.hsi.ar/documentos/ips",
+    "value": "IPS-ARG-2026-00001"
+  },
+  "category": [
+    {
+      "text": "Resumen clínico de paciente",
+      "coding": [
+        {
+          "code": "60591-5",
+          "system": "http://loinc.org"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "urn:uuid:991a7102-d221-498d-9157-c4192934e3b7"
+  },
+  "author": [
+    {
+      "reference": "Practitioner/PrestadorArgInline"
+    }
+  ],
+  "content": [
+    {
+      "attachment": {
+        "contentType": "application/fhir+json",
+        "url": "https://SecServerPEPE:2012/pba/santamarina/docs/ips-123",
+        "title": "Documento IPS argentino mínimo",
+        "creation": "2026-07-06T10:30:00-03:00"
+      }
+    }
+  ],
+  "context": {
+    "period": {
+      "start": "2026-07-06T10:30:00-03:00"
+    }
+  },
+  "status": "current",
+  "type": {
+    "coding": [
+      {
+        "code": "34133-9",
+        "system": "http://loinc.org",
+        "display": "Summary of episode note"
+      }
+    ]
+  },
+  "date": "2026-07-06T10:30:00-03:00"
+}

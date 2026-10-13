@@ -1,0 +1,103 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://mhd.ri.hsisalud.org/Practitioner/PrestadorArgInline> a fhir:Practitioner ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "PrestadorArgInline"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ips.ri.hsisalud.org/StructureDefinition/PrestadorArg" ;
+       fhir:index 0 ;
+       fhir:link <http://ips.ri.hsisalud.org/StructureDefinition/PrestadorArg>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practicante / Profesional PrestadorArgInline</b></p><a name=\"PrestadorArgInline\"> </a><a name=\"hcPrestadorArgInline\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"file:///builds/interoperabilidad/ips/output/StructureDefinition-PrestadorArg.html\">Profesional Argentino</a></p></div><p><b>identifier</b>: National unique individual identifier/12345678 (use: official, ), Accreditation/Certification Identifier/REFEPS-987654 (use: usual, period: 2020-01-15 00:00:00-0300 --&gt; (ongoing))</p><p><b>active</b>: true</p><p><b>name</b>: María Laura Pérez (Official)</p><p><b>telecom</b>: <a href=\"tel:+54115555-1234\">+54 11 5555-1234</a>, <a href=\"mailto:maria.perez@example.org\">maria.perez@example.org</a></p><p><b>gender</b>: Female</p><p><b>birthDate</b>: 1980-05-12</p><h3>Qualifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:\">Médica</span></td></tr></table></div>"
+  ] ;
+  fhir:Practitioner.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.use [ fhir:value "official" ] ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+         fhir:Coding.code [ fhir:value "NI" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "http://www.renaper.gob.ar/dni" ] ;
+     fhir:Identifier.value [ fhir:value "12345678" ] ;
+     fhir:Identifier.assigner [
+       fhir:Reference.display [ fhir:value "RENAPER" ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:Identifier.use [ fhir:value "usual" ] ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+         fhir:Coding.code [ fhir:value "AC" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "http://refeps.msal.gob.ar" ] ;
+     fhir:Identifier.value [ fhir:value "REFEPS-987654" ] ;
+     fhir:Identifier.period [
+       fhir:Period.start [ fhir:value "2020-01-15T00:00:00-03:00"^^xsd:dateTime ]
+     ]
+  ] ;
+  fhir:Practitioner.active [ fhir:value "true"^^xsd:boolean] ;
+  fhir:Practitioner.name [
+     fhir:index 0 ;
+     fhir:HumanName.use [ fhir:value "official" ] ;
+     fhir:HumanName.family [
+       fhir:value "Pérez" ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/humanname-fathers-family" ] ;
+         fhir:Extension.valueString [ fhir:value "Pérez" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/humanname-mothers-family" ] ;
+         fhir:Extension.valueString [ fhir:value "Gómez" ]
+       ]
+     ] ;
+     fhir:HumanName.given [
+       fhir:value "María" ;
+       fhir:index 0
+     ], [
+       fhir:value "Laura" ;
+       fhir:index 1
+     ]
+  ] ;
+  fhir:Practitioner.telecom [
+     fhir:index 0 ;
+     fhir:ContactPoint.system [ fhir:value "phone" ] ;
+     fhir:ContactPoint.value [ fhir:value "+54 11 5555-1234" ] ;
+     fhir:ContactPoint.use [ fhir:value "work" ]
+  ], [
+     fhir:index 1 ;
+     fhir:ContactPoint.system [ fhir:value "email" ] ;
+     fhir:ContactPoint.value [ fhir:value "maria.perez@example.org" ] ;
+     fhir:ContactPoint.use [ fhir:value "work" ]
+  ] ;
+  fhir:Practitioner.gender [ fhir:value "female"] ;
+  fhir:Practitioner.birthDate [ fhir:value "1980-05-12"^^xsd:date] ;
+  fhir:Practitioner.qualification [
+     fhir:index 0 ;
+     fhir:Practitioner.qualification.code [
+       fhir:CodeableConcept.text [ fhir:value "Médica" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://mhd.ri.hsisalud.org/Practitioner/PrestadorArgInline.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

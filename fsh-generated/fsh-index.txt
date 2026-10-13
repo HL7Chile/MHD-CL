@@ -1,0 +1,13 @@
+Output File                                           Name                  Type      FSH File                        Lines
+Bundle-bundle-mhd-referencia-documental-ejemplo.json  BundleMhdEjemplo      Instance  ejemplos\bundleMhdEj.fsh        1 - 29
+CapabilityStatement-MHDCliente.json                   MHDCliente            Instance  capStatCliente.fsh              1 - 259
+CapabilityStatement-MHDResponder.json                 MHDResponder          Instance  capStatResponder.fsh            1 - 225
+DocumentReference-ReferDocEjemplo.json                ReferDocEjemplo       Instance  ejemplos\indiceDocEj.fsh        3 - 58
+List-EjemploListMhd.json                              EjemploListMhd        Instance  ejemplos\list.fsh               1 - 28
+Patient-Paciente-Interno.json                         Paciente-Interno      Instance  ejemplos\pacienteAr.fsh         1 - 24
+Practitioner-PrestadorArgInline.json                  PrestadorArgInline    Instance  ejemplos\prestadorAr.fsh        6 - 47
+StructureDefinition-BundleMhd.json                    BundleMhd             Profile   bundleMhd.fsh                   6 - 49
+StructureDefinition-ListMhd.json                      ListMhd               Profile   listado.fsh                     3 - 16
+StructureDefinition-ReferenciaDocumental.json         ReferenciaDocumental  Profile   docRef.fsh                      5 - 126
+ValueSet-VSCategoriaDoc.json                          VSCategoriaDoc        ValueSet  terminologias\terminologia.fsh  3 - 16
+ValueSet-VSTipoDocumento.json                         VSTipoDocumento       ValueSet  terminologias\terminologia.fsh  20 - 34

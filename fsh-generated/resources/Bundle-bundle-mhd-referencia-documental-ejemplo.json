@@ -1,0 +1,185 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-mhd-referencia-documental-ejemplo",
+  "meta": {
+    "profile": [
+      "http://mhd.ri.hsisalud.org/StructureDefinition/BundleMhd"
+    ]
+  },
+  "entry": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "List"
+      },
+      "fullUrl": "urn:uuid:bfc14381-eb19-49fe-b1ea-834e7fce07f9",
+      "resource": {
+        "resourceType": "List",
+        "id": "EjemploListMhd",
+        "meta": {
+          "profile": [
+            "http://mhd.ri.hsisalud.org/StructureDefinition/ListMhd"
+          ]
+        },
+        "extension": [
+          {
+            "valueIdentifier": {
+              "system": "urn:ietf:rfc:3986",
+              "value": "urn:oid:2.16.840.1.113883.3.9999.1"
+            },
+            "url": "https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-sourceId"
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:991a7102-d221-498d-9157-c4192934e3b7",
+          "display": "Paciente argentino de ejemplo"
+        },
+        "entry": [
+          {
+            "item": {
+              "reference": "urn:uuid:32ab6cfe-8cdf-4c75-a831-47be8b5668fa",
+              "display": "Referencia documental de ejemplo"
+            }
+          }
+        ],
+        "status": "current",
+        "mode": "working",
+        "code": {
+          "coding": [
+            {
+              "system": "https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes",
+              "code": "submissionset"
+            }
+          ]
+        },
+        "date": "2026-07-06"
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "url": "/DocumentReference"
+      },
+      "fullUrl": "urn:uuid:32ab6cfe-8cdf-4c75-a831-47be8b5668fa",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "ReferDocEjemplo",
+        "meta": {
+          "profile": [
+            "http://mhd.ri.hsisalud.org/StructureDefinition/ReferenciaDocumental"
+          ]
+        },
+        "masterIdentifier": {
+          "system": "https://repositorio.hsi.ar/documentos/ips",
+          "value": "IPS-ARG-2026-00001"
+        },
+        "category": [
+          {
+            "text": "Resumen clínico de paciente",
+            "coding": [
+              {
+                "code": "60591-5",
+                "system": "http://loinc.org"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:991a7102-d221-498d-9157-c4192934e3b7"
+        },
+        "author": [
+          {
+            "reference": "Practitioner/PrestadorArgInline"
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/fhir+json",
+              "url": "https://SecServerPEPE:2012/pba/santamarina/docs/ips-123",
+              "title": "Documento IPS argentino mínimo",
+              "creation": "2026-07-06T10:30:00-03:00"
+            }
+          }
+        ],
+        "context": {
+          "period": {
+            "start": "2026-07-06T10:30:00-03:00"
+          }
+        },
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "code": "34133-9",
+              "system": "http://loinc.org",
+              "display": "Summary of episode note"
+            }
+          ]
+        },
+        "date": "2026-07-06T10:30:00-03:00"
+      }
+    },
+    {
+      "request": {
+        "url": "Patient",
+        "method": "POST"
+      },
+      "fullUrl": "urn:uuid:991a7102-d221-498d-9157-c4192934e3b7",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Paciente-Interno",
+        "meta": {
+          "profile": [
+            "http://ips.ri.hsisalud.org/StructureDefinition/PacienteArg"
+          ]
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "http://www.renaper.gob.ar/dni",
+            "value": "99999999"
+          },
+          {
+            "use": "usual",
+            "system": "http://www.dummy.org",
+            "value": "1234567"
+          }
+        ],
+        "name": [
+          {
+            "given": [
+              "Pablo"
+            ],
+            "use": "official",
+            "text": "Pablo Fernandez Perez",
+            "family": "Fernandez Perez",
+            "_family": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-fathers-family",
+                  "valueString": "Fernandez"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-mothers-family",
+                  "valueString": "Perez"
+                }
+              ]
+            }
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "1141233100"
+          }
+        ],
+        "active": true,
+        "gender": "male",
+        "birthDate": "1912-06-12"
+      }
+    }
+  ],
+  "type": "transaction",
+  "timestamp": "2026-07-06T12:00:00-03:00"
+}

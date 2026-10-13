@@ -1,0 +1,55 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "VSTipoDocumento",
+  "id": "VSTipoDocumento",
+  "title": "Tipos de Documento Clínico para DocumentReference",
+  "description": "Tipos documentales clínicos codificados en LOINC para ser usados en DocumentReference.type.",
+  "url": "http://mhd.ri.hsisalud.org/ValueSet/VSTipoDocumento",
+  "experimental": false,
+  "publisher": "HSI Pladema",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "AR",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Argentina"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "11502-2",
+            "display": "Laboratory report"
+          },
+          {
+            "code": "18748-4",
+            "display": "Diagnostic imaging study"
+          },
+          {
+            "code": "34131-3",
+            "display": "Outpatient Progress note"
+          },
+          {
+            "code": "34105-7",
+            "display": "Hospital Discharge summary"
+          },
+          {
+            "code": "59258-4",
+            "display": "Emergency department Discharge summary"
+          },
+          {
+            "code": "34133-9",
+            "display": "Summary of episode note"
+          }
+        ]
+      }
+    ]
+  }
+}

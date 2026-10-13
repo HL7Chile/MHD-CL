@@ -1,0 +1,211 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://mhd.ri.hsisalud.org/Bundle/bundle-mhd-referencia-documental-ejemplo> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "bundle-mhd-referencia-documental-ejemplo"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://mhd.ri.hsisalud.org/StructureDefinition/BundleMhd" ;
+       fhir:index 0 ;
+       fhir:link <http://mhd.ri.hsisalud.org/StructureDefinition/BundleMhd>
+     ]
+  ] ;
+  fhir:Bundle.type [ fhir:value "transaction"] ;
+  fhir:Bundle.timestamp [ fhir:value "2026-07-06T12:00:00-03:00"^^xsd:dateTime] ;
+  fhir:Bundle.entry [
+     fhir:index 0 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:bfc14381-eb19-49fe-b1ea-834e7fce07f9" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:bfc14381-eb19-49fe-b1ea-834e7fce07f9> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "List" ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:32ab6cfe-8cdf-4c75-a831-47be8b5668fa" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:32ab6cfe-8cdf-4c75-a831-47be8b5668fa> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "/DocumentReference" ]
+     ]
+  ], [
+     fhir:index 2 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:991a7102-d221-498d-9157-c4192934e3b7" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:991a7102-d221-498d-9157-c4192934e3b7> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Patient" ]
+     ]
+  ] .
+
+<urn:uuid:bfc14381-eb19-49fe-b1ea-834e7fce07f9> a fhir:List ;
+  fhir:Resource.id [ fhir:value "EjemploListMhd"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://mhd.ri.hsisalud.org/StructureDefinition/ListMhd" ;
+       fhir:index 0 ;
+       fhir:link <http://mhd.ri.hsisalud.org/StructureDefinition/ListMhd>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"List_EjemploListMhd\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Lista EjemploListMhd</b></p><a name=\"EjemploListMhd\"> </a><a name=\"hcEjemploListMhd\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ListMhd.html\">ListMhd</a></p></div><table class=\"clstu\"><tr><td>Date: 2026-07-06 </td><td>Mode: Working List </td><td>Status: Current </td><td>Code: SubmissionSet as a FHIR List </td></tr><tr><td>Subject: <a href=\"Bundle-bundle-mhd-referencia-documental-ejemplo.html#urn-uuid-991a7102-d221-498d-9157-c4192934e3b7\">Paciente argentino de ejemplo</a></td></tr></table><table class=\"grid\"><tr style=\"backgound-color: #eeeeee\"><td><b>Items</b></td></tr><tr><td><a href=\"Bundle-bundle-mhd-referencia-documental-ejemplo.html#urn-uuid-32ab6cfe-8cdf-4c75-a831-47be8b5668fa\">Referencia documental de ejemplo</a></td></tr></table></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-sourceId" ] ;
+     fhir:Extension.valueIdentifier [
+       fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ] ;
+       fhir:Identifier.value [ fhir:value "urn:oid:2.16.840.1.113883.3.9999.1" ]
+     ]
+  ] ;
+  fhir:List.status [ fhir:value "current"] ;
+  fhir:List.mode [ fhir:value "working"] ;
+  fhir:List.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes" ] ;
+       fhir:Coding.code [ fhir:value "submissionset" ]
+     ]
+  ] ;
+  fhir:List.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:991a7102-d221-498d-9157-c4192934e3b7" ] ;
+     fhir:Reference.display [ fhir:value "Paciente argentino de ejemplo" ]
+  ] ;
+  fhir:List.date [ fhir:value "2026-07-06"^^xsd:date] ;
+  fhir:List.entry [
+     fhir:index 0 ;
+     fhir:List.entry.item [
+       fhir:Reference.reference [ fhir:value "urn:uuid:32ab6cfe-8cdf-4c75-a831-47be8b5668fa" ] ;
+       fhir:Reference.display [ fhir:value "Referencia documental de ejemplo" ]
+     ]
+  ] .
+
+<urn:uuid:32ab6cfe-8cdf-4c75-a831-47be8b5668fa> a fhir:DocumentReference ;
+  fhir:Resource.id [ fhir:value "ReferDocEjemplo"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://mhd.ri.hsisalud.org/StructureDefinition/ReferenciaDocumental" ;
+       fhir:index 0 ;
+       fhir:link <http://mhd.ri.hsisalud.org/StructureDefinition/ReferenciaDocumental>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DocumentReference_ReferDocEjemplo\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ReferenciaDocumento ReferDocEjemplo</b></p><a name=\"ReferDocEjemplo\"> </a><a name=\"hcReferDocEjemplo\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ReferenciaDocumental.html\">ReferenciaDocumental</a></p></div><p><b>masterIdentifier</b>: <code>https://repositorio.hsi.ar/documentos/ips</code>/IPS-ARG-2026-00001</p><p><b>status</b>: Current</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 34133-9}\">Summary of episode note</span></p><p><b>category</b>: <span title=\"Codes:{http://loinc.org 60591-5}\">Resumen clínico de paciente</span></p><p><b>subject</b>: <a href=\"Bundle-bundle-mhd-referencia-documental-ejemplo.html#urn-uuid-991a7102-d221-498d-9157-c4192934e3b7\">Pablo Fernandez Perez(official) Male, DoB: 1912-06-12 ( http://www.dummy.org#1234567 (use: usual, ))</a></p><p><b>date</b>: 2026-07-06 10:30:00-0300</p><p><b>author</b>: <a href=\"Practitioner-PrestadorArgInline.html\">Practitioner María Laura Pérez (official)</a></p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Url</b></td><td><b>Title</b></td><td><b>Creation</b></td></tr><tr><td style=\"display: none\">*</td><td>application/fhir+json</td><td><a href=\"https://SecServerPEPE:2012/pba/santamarina/docs/ips-123\">https://SecServerPEPE:2012/pba/santamarina/docs/ips-123</a></td><td>Documento IPS argentino mínimo</td><td>2026-07-06 10:30:00-0300</td></tr></table></blockquote><h3>Contexts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Period</b></td></tr><tr><td style=\"display: none\">*</td><td>2026-07-06 10:30:00-0300 --&gt; (ongoing)</td></tr></table></div>"
+  ] ;
+  fhir:DocumentReference.masterIdentifier [
+     fhir:Identifier.system [ fhir:value "https://repositorio.hsi.ar/documentos/ips" ] ;
+     fhir:Identifier.value [ fhir:value "IPS-ARG-2026-00001" ]
+  ] ;
+  fhir:DocumentReference.status [ fhir:value "current"] ;
+  fhir:DocumentReference.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a loinc:34133-9 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "34133-9" ] ;
+       fhir:Coding.display [ fhir:value "Summary of episode note" ]
+     ]
+  ] ;
+  fhir:DocumentReference.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a loinc:60591-5 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "60591-5" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Resumen clínico de paciente" ]
+  ] ;
+  fhir:DocumentReference.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:991a7102-d221-498d-9157-c4192934e3b7" ]
+  ] ;
+  fhir:DocumentReference.date [ fhir:value "2026-07-06T10:30:00-03:00"^^xsd:dateTime] ;
+  fhir:DocumentReference.author [
+     fhir:index 0 ;
+     fhir:link <http://mhd.ri.hsisalud.org/Practitioner/PrestadorArgInline> ;
+     fhir:Reference.reference [ fhir:value "Practitioner/PrestadorArgInline" ]
+  ] ;
+  fhir:DocumentReference.content [
+     fhir:index 0 ;
+     fhir:DocumentReference.content.attachment [
+       fhir:Attachment.contentType [ fhir:value "application/fhir+json" ] ;
+       fhir:Attachment.url [ fhir:value "https://SecServerPEPE:2012/pba/santamarina/docs/ips-123" ] ;
+       fhir:Attachment.title [ fhir:value "Documento IPS argentino mínimo" ] ;
+       fhir:Attachment.creation [ fhir:value "2026-07-06T10:30:00-03:00"^^xsd:dateTime ]
+     ]
+  ] ;
+  fhir:DocumentReference.context [
+     fhir:DocumentReference.context.period [
+       fhir:Period.start [ fhir:value "2026-07-06T10:30:00-03:00"^^xsd:dateTime ]
+     ]
+  ] .
+
+<urn:uuid:991a7102-d221-498d-9157-c4192934e3b7> a fhir:Patient ;
+  fhir:Resource.id [ fhir:value "Paciente-Interno"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ips.ri.hsisalud.org/StructureDefinition/PacienteArg" ;
+       fhir:index 0 ;
+       fhir:link <http://ips.ri.hsisalud.org/StructureDefinition/PacienteArg>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_Paciente-Interno\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Paciente Paciente-Interno</b></p><a name=\"Paciente-Interno\"> </a><a name=\"hcPaciente-Interno\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"file:///builds/interoperabilidad/ips/output/StructureDefinition-PacienteArg.html\">Paciente Argentino</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Pablo Fernandez Perez(official) Male, DoB: 1912-06-12 ( http://www.dummy.org#1234567 (use: usual, ))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\"><code>http://www.renaper.gob.ar/dni</code>/99999999 (use: official, )</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\">ph: 1141233100</td></tr></table></div>"
+  ] ;
+  fhir:Patient.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.use [ fhir:value "official" ] ;
+     fhir:Identifier.system [ fhir:value "http://www.renaper.gob.ar/dni" ] ;
+     fhir:Identifier.value [ fhir:value "99999999" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Identifier.use [ fhir:value "usual" ] ;
+     fhir:Identifier.system [ fhir:value "http://www.dummy.org" ] ;
+     fhir:Identifier.value [ fhir:value "1234567" ]
+  ] ;
+  fhir:Patient.active [ fhir:value "true"^^xsd:boolean] ;
+  fhir:Patient.name [
+     fhir:index 0 ;
+     fhir:HumanName.use [ fhir:value "official" ] ;
+     fhir:HumanName.text [ fhir:value "Pablo Fernandez Perez" ] ;
+     fhir:HumanName.family [
+       fhir:value "Fernandez Perez" ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/humanname-fathers-family" ] ;
+         fhir:Extension.valueString [ fhir:value "Fernandez" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/humanname-mothers-family" ] ;
+         fhir:Extension.valueString [ fhir:value "Perez" ]
+       ]
+     ] ;
+     fhir:HumanName.given [
+       fhir:value "Pablo" ;
+       fhir:index 0
+     ]
+  ] ;
+  fhir:Patient.telecom [
+     fhir:index 0 ;
+     fhir:ContactPoint.system [ fhir:value "phone" ] ;
+     fhir:ContactPoint.value [ fhir:value "1141233100" ]
+  ] ;
+  fhir:Patient.gender [ fhir:value "male"] ;
+  fhir:Patient.birthDate [ fhir:value "1912-06-12"^^xsd:date] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://mhd.ri.hsisalud.org/Bundle/bundle-mhd-referencia-documental-ejemplo.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Seguridad para el intercambio MHD mediante X-Road</title>
+  <desc id="desc">Arquitectura ordenada del flujo de una transacción FHIR MHD desde una organización consumidora, a través de X-Road, hasta una organización proveedora, mostrando los controles de seguridad y auditoría.</desc>
+
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#183B56" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563A6"/>
+    </marker>
+    <marker id="arrowGray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B"/>
+    </marker>
+    <style>
+      .font { font-family: Inter, Arial, Helvetica, sans-serif; fill: #17324D; }
+      .title { font-size: 30px; font-weight: 700; }
+      .subtitle { font-size: 16px; fill: #536779; }
+      .zone-title { font-size: 18px; font-weight: 700; }
+      .box-title { font-size: 16px; font-weight: 700; }
+      .body { font-size: 14px; }
+      .small { font-size: 12px; fill: #536779; }
+      .flow-label { font-size: 13px; font-weight: 600; fill: #24445F; }
+      .panel-title { font-size: 17px; font-weight: 700; }
+      .panel-body { font-size: 13px; }
+      .line { fill: none; stroke: #2563A6; stroke-width: 2.6; marker-end: url(#arrowBlue); }
+      .return-line { fill: none; stroke: #64748B; stroke-width: 2.2; marker-end: url(#arrowGray); }
+      .trust-line { fill: none; stroke: #7C6AA6; stroke-width: 2; stroke-dasharray: 7 6; marker-end: url(#arrowGray); }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="#F8FAFC"/>
+
+  <text x="800" y="48" text-anchor="middle" class="font title">Seguridad para el intercambio MHD mediante X-Road</text>
+  <text x="800" y="78" text-anchor="middle" class="font subtitle">Separación clara entre la seguridad de infraestructura y la autorización clínica</text>
+
+  <!-- Usuario -->
+  <g transform="translate(34 268)">
+    <circle cx="38" cy="22" r="17" fill="#FFFFFF" stroke="#315B7A" stroke-width="2"/>
+    <path d="M11 88 C12 55, 64 55, 65 88" fill="#DCEAF5" stroke="#315B7A" stroke-width="2"/>
+    <text x="38" y="113" text-anchor="middle" class="font box-title">Usuario</text>
+    <text x="38" y="131" text-anchor="middle" class="font small">clínico</text>
+  </g>
+
+  <!-- Zonas principales -->
+  <rect x="120" y="140" width="410" height="375" rx="18" fill="#EAF4FC" stroke="#5B91BB" stroke-width="2"/>
+  <rect x="570" y="140" width="460" height="375" rx="18" fill="#EAF8F0" stroke="#5A9B74" stroke-width="2"/>
+  <rect x="1070" y="140" width="470" height="375" rx="18" fill="#FFF4E8" stroke="#C98846" stroke-width="2"/>
+
+  <rect x="120" y="140" width="410" height="55" rx="18" fill="#D9ECFA"/>
+  <path d="M120 177 V158 Q120 140 138 140 H512 Q530 140 530 158 V177 Z" fill="#D9ECFA"/>
+  <text x="145" y="174" class="font zone-title">Organización consumidora</text>
+
+  <rect x="570" y="140" width="460" height="55" rx="18" fill="#D8F0E1"/>
+  <path d="M570 177 V158 Q570 140 588 140 H1012 Q1030 140 1030 158 V177 Z" fill="#D8F0E1"/>
+  <text x="595" y="174" class="font zone-title">Capa de intercambio X-Road</text>
+
+  <rect x="1070" y="140" width="470" height="55" rx="18" fill="#FDE7CE"/>
+  <path d="M1070 177 V158 Q1070 140 1088 140 H1522 Q1540 140 1540 158 V177 Z" fill="#FDE7CE"/>
+  <text x="1095" y="174" class="font zone-title">Organización proveedora</text>
+
+  <!-- Componentes organización consumidora -->
+  <g filter="url(#shadow)">
+    <rect x="155" y="245" width="165" height="150" rx="12" fill="#FFFFFF" stroke="#5B91BB" stroke-width="2"/>
+    <rect x="355" y="245" width="140" height="150" rx="12" fill="#FFFFFF" stroke="#5B91BB" stroke-width="2"/>
+  </g>
+
+  <rect x="185" y="270" width="105" height="55" rx="7" fill="#D9ECFA" stroke="#5B91BB"/>
+  <rect x="193" y="278" width="89" height="35" rx="3" fill="#FFFFFF" stroke="#5B91BB"/>
+  <line x1="215" y1="333" x2="260" y2="333" stroke="#5B91BB" stroke-width="3"/>
+  <text x="237" y="355" text-anchor="middle" class="font box-title">Sistema clínico</text>
+  <text x="237" y="374" text-anchor="middle" class="font small">Document Consumer / Source</text>
+
+  <path d="M425 268 L460 281 V311 C460 337 446 355 425 365 C404 355 390 337 390 311 V281 Z" fill="#DCEAF5" stroke="#315B7A" stroke-width="2"/>
+  <path d="M407 314 L419 326 L444 296" fill="none" stroke="#238447" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="425" y="378" text-anchor="middle" class="font box-title">Security Server</text>
+  <text x="425" y="394" text-anchor="middle" class="font small">X-Road consumidor</text>
+
+  <!-- X-Road -->
+  <g filter="url(#shadow)">
+    <rect x="620" y="235" width="360" height="175" rx="18" fill="#FFFFFF" stroke="#5A9B74" stroke-width="2"/>
+  </g>
+  <path d="M800 252 L835 265 V296 C835 323 821 341 800 352 C779 341 765 323 765 296 V265 Z" fill="#D8F0E1" stroke="#327553" stroke-width="2"/>
+  <path d="M783 298 L795 310 L820 280" fill="none" stroke="#238447" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="800" y="376" text-anchor="middle" class="font box-title">Canal X-Road seguro</text>
+  <text x="800" y="398" text-anchor="middle" class="font body">Identidad de organización y subsistema</text>
+  <text x="800" y="419" text-anchor="middle" class="font body">TLS autenticado • evidencia • trazabilidad</text>
+
+  <!-- Componentes organización proveedora -->
+  <g filter="url(#shadow)">
+    <rect x="1100" y="245" width="135" height="150" rx="12" fill="#FFFFFF" stroke="#C98846" stroke-width="2"/>
+    <rect x="1260" y="245" width="145" height="150" rx="12" fill="#FFFFFF" stroke="#C98846" stroke-width="2"/>
+    <rect x="1430" y="215" width="85" height="85" rx="10" fill="#FFFFFF" stroke="#C98846" stroke-width="2"/>
+    <rect x="1430" y="340" width="85" height="85" rx="10" fill="#FFFFFF" stroke="#C98846" stroke-width="2"/>
+  </g>
+
+  <path d="M1168 268 L1202 281 V311 C1202 337 1188 355 1168 365 C1147 355 1133 337 1133 311 V281 Z" fill="#FDE7CE" stroke="#A86524" stroke-width="2"/>
+  <path d="M1150 314 L1162 326 L1186 296" fill="none" stroke="#238447" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1168" y="378" text-anchor="middle" class="font box-title">Security Server</text>
+  <text x="1168" y="394" text-anchor="middle" class="font small">X-Road proveedor</text>
+
+  <rect x="1292" y="269" width="81" height="62" rx="8" fill="#FDE7CE" stroke="#A86524"/>
+  <path d="M1305 285 H1360 M1305 299 H1360 M1305 313 H1345" stroke="#A86524" stroke-width="3" stroke-linecap="round"/>
+  <text x="1332" y="354" text-anchor="middle" class="font box-title">Servidor FHIR</text>
+  <text x="1332" y="374" text-anchor="middle" class="font box-title">MHD</text>
+  <text x="1332" y="392" text-anchor="middle" class="font small">Recipient / Responder</text>
+
+  <ellipse cx="1472" cy="239" rx="28" ry="9" fill="#FDE7CE" stroke="#A86524"/>
+  <path d="M1444 239 V269 C1444 281 1500 281 1500 269 V239" fill="#FFF4E8" stroke="#A86524"/>
+  <ellipse cx="1472" cy="269" rx="28" ry="9" fill="#FFF4E8" stroke="#A86524"/>
+  <text x="1472" y="291" text-anchor="middle" class="font small">Repositorio</text>
+
+  <circle cx="1472" cy="365" r="15" fill="#FDE7CE" stroke="#A86524"/>
+  <path d="M1452 401 C1454 376, 1490 376, 1492 401" fill="#FFF4E8" stroke="#A86524"/>
+  <text x="1472" y="417" text-anchor="middle" class="font small">AuditEvent</text>
+
+  <!-- Flujo principal sin cruces -->
+  <path d="M100 320 H155" class="line"/>
+  <path d="M320 320 H355" class="line"/>
+  <path d="M495 320 H620" class="line"/>
+  <path d="M980 320 H1100" class="line"/>
+  <path d="M1235 320 H1260" class="line"/>
+  <path d="M1405 285 H1430" class="line"/>
+  <path d="M1405 365 H1430" class="line"/>
+
+  <text x="128" y="303" text-anchor="middle" class="font flow-label">Acceso</text>
+  <text x="338" y="303" text-anchor="middle" class="font flow-label">FHIR REST</text>
+  <text x="557" y="302" text-anchor="middle" class="font flow-label">Solicitud MHD</text>
+  <text x="1040" y="302" text-anchor="middle" class="font flow-label">Canal seguro</text>
+  <text x="1248" y="303" text-anchor="middle" class="font flow-label">FHIR</text>
+
+  <path d="M1332 395 V490 H237 V395" class="return-line"/>
+  <rect x="515" y="442" width="570" height="34" rx="17" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="800" y="464" text-anchor="middle" class="font flow-label">Respuesta FHIR protegida y trazable</text>
+
+  <!-- Servicios centrales -->
+  <g filter="url(#shadow)">
+    <rect x="590" y="565" width="420" height="145" rx="16" fill="#F4EDFA" stroke="#8D74A7" stroke-width="2"/>
+  </g>
+  <text x="800" y="595" text-anchor="middle" class="font zone-title">Servicios de confianza X-Road</text>
+
+  <rect x="615" y="615" width="112" height="58" rx="9" fill="#FFFFFF" stroke="#8D74A7"/>
+  <rect x="744" y="615" width="112" height="58" rx="9" fill="#FFFFFF" stroke="#8D74A7"/>
+  <rect x="873" y="615" width="112" height="58" rx="9" fill="#FFFFFF" stroke="#8D74A7"/>
+  <text x="671" y="639" text-anchor="middle" class="font box-title">Central Server</text>
+  <text x="671" y="658" text-anchor="middle" class="font small">Configuración</text>
+  <text x="800" y="639" text-anchor="middle" class="font box-title">CA / OCSP</text>
+  <text x="800" y="658" text-anchor="middle" class="font small">Certificados</text>
+  <text x="929" y="639" text-anchor="middle" class="font box-title">TSA</text>
+  <text x="929" y="658" text-anchor="middle" class="font small">Sellado de tiempo</text>
+  <text x="800" y="696" text-anchor="middle" class="font small">Soportan la confianza de ambos Security Servers</text>
+
+  <path d="M590 642 H548 V535 H425 V395" class="trust-line"/>
+  <path d="M1010 642 H1050 V535 H1168 V395" class="trust-line"/>
+
+  <!-- Responsabilidades de seguridad -->
+  <rect x="120" y="760" width="700" height="110" rx="15" fill="#E8F5F0" stroke="#4B9570" stroke-width="2"/>
+  <rect x="850" y="760" width="690" height="110" rx="15" fill="#FFF3D9" stroke="#C38A2E" stroke-width="2"/>
+
+  <text x="145" y="793" class="font panel-title">X-Road protege el intercambio entre organizaciones</text>
+  <text x="145" y="821" class="font panel-body">Identidad del miembro y subsistema • canal protegido • control de acceso entre servicios</text>
+  <text x="145" y="846" class="font panel-body">firma y evidencia del intercambio • sellado de tiempo • registro de solicitudes y respuestas</text>
+
+  <text x="875" y="793" class="font panel-title">MHD protege el acceso clínico y el contenido</text>
+  <text x="875" y="821" class="font panel-body">Autenticación del usuario o aplicación • autorización por paciente • consentimiento</text>
+  <text x="875" y="846" class="font panel-body">validación FHIR • protección de URL documentales • auditoría clínica mediante AuditEvent</text>
+</svg>

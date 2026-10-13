@@ -1,0 +1,98 @@
+[
+  {
+    "outputFile": "Bundle-bundle-mhd-referencia-documental-ejemplo.json",
+    "fshName": "BundleMhdEjemplo",
+    "fshType": "Instance",
+    "fshFile": "ejemplos\\bundleMhdEj.fsh",
+    "startLine": 1,
+    "endLine": 29
+  },
+  {
+    "outputFile": "CapabilityStatement-MHDCliente.json",
+    "fshName": "MHDCliente",
+    "fshType": "Instance",
+    "fshFile": "capStatCliente.fsh",
+    "startLine": 1,
+    "endLine": 259
+  },
+  {
+    "outputFile": "CapabilityStatement-MHDResponder.json",
+    "fshName": "MHDResponder",
+    "fshType": "Instance",
+    "fshFile": "capStatResponder.fsh",
+    "startLine": 1,
+    "endLine": 225
+  },
+  {
+    "outputFile": "DocumentReference-ReferDocEjemplo.json",
+    "fshName": "ReferDocEjemplo",
+    "fshType": "Instance",
+    "fshFile": "ejemplos\\indiceDocEj.fsh",
+    "startLine": 3,
+    "endLine": 58
+  },
+  {
+    "outputFile": "List-EjemploListMhd.json",
+    "fshName": "EjemploListMhd",
+    "fshType": "Instance",
+    "fshFile": "ejemplos\\list.fsh",
+    "startLine": 1,
+    "endLine": 28
+  },
+  {
+    "outputFile": "Patient-Paciente-Interno.json",
+    "fshName": "Paciente-Interno",
+    "fshType": "Instance",
+    "fshFile": "ejemplos\\pacienteAr.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
+    "outputFile": "Practitioner-PrestadorArgInline.json",
+    "fshName": "PrestadorArgInline",
+    "fshType": "Instance",
+    "fshFile": "ejemplos\\prestadorAr.fsh",
+    "startLine": 6,
+    "endLine": 47
+  },
+  {
+    "outputFile": "StructureDefinition-BundleMhd.json",
+    "fshName": "BundleMhd",
+    "fshType": "Profile",
+    "fshFile": "bundleMhd.fsh",
+    "startLine": 6,
+    "endLine": 49
+  },
+  {
+    "outputFile": "StructureDefinition-ListMhd.json",
+    "fshName": "ListMhd",
+    "fshType": "Profile",
+    "fshFile": "listado.fsh",
+    "startLine": 3,
+    "endLine": 16
+  },
+  {
+    "outputFile": "StructureDefinition-ReferenciaDocumental.json",
+    "fshName": "ReferenciaDocumental",
+    "fshType": "Profile",
+    "fshFile": "docRef.fsh",
+    "startLine": 5,
+    "endLine": 126
+  },
+  {
+    "outputFile": "ValueSet-VSCategoriaDoc.json",
+    "fshName": "VSCategoriaDoc",
+    "fshType": "ValueSet",
+    "fshFile": "terminologias\\terminologia.fsh",
+    "startLine": 3,
+    "endLine": 16
+  },
+  {
+    "outputFile": "ValueSet-VSTipoDocumento.json",
+    "fshName": "VSTipoDocumento",
+    "fshType": "ValueSet",
+    "fshFile": "terminologias\\terminologia.fsh",
+    "startLine": 20,
+    "endLine": 34
+  }
+]

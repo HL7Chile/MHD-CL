@@ -1,0 +1,176 @@
+# FHIR.MHDIG\Bundle MHD con referencia documental de ejemplo - FHIR v4.0.1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Bundle MHD con referencia documental de ejemplo**
+
+## Example Bundle: Bundle MHD con referencia documental de ejemplo
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Bundle",
+  "id" : "bundle-mhd-referencia-documental-ejemplo",
+  "meta" : {
+    "profile" : ["http://mhd.ri.hsisalud.org/StructureDefinition/BundleMhd"]
+  },
+  "type" : "transaction",
+  "timestamp" : "2026-07-06T12:00:00-03:00",
+  "entry" : [{
+    "fullUrl" : "urn:uuid:bfc14381-eb19-49fe-b1ea-834e7fce07f9",
+    "resource" : {
+      "resourceType" : "List",
+      "id" : "EjemploListMhd",
+      "meta" : {
+        "profile" : ["http://mhd.ri.hsisalud.org/StructureDefinition/ListMhd"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"List_EjemploListMhd\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Lista EjemploListMhd</b></p><a name=\"EjemploListMhd\"> </a><a name=\"hcEjemploListMhd\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ListMhd.html\">ListMhd</a></p></div><table class=\"clstu\"><tr><td>Date: 2026-07-06 </td><td>Mode: Working List </td><td>Status: Current </td><td>Code: SubmissionSet as a FHIR List </td></tr><tr><td>Subject: <a href=\"Bundle-bundle-mhd-referencia-documental-ejemplo.html#urn-uuid-991a7102-d221-498d-9157-c4192934e3b7\">Paciente argentino de ejemplo</a></td></tr></table><table class=\"grid\"><tr style=\"backgound-color: #eeeeee\"><td><b>Items</b></td></tr><tr><td><a href=\"Bundle-bundle-mhd-referencia-documental-ejemplo.html#urn-uuid-32ab6cfe-8cdf-4c75-a831-47be8b5668fa\">Referencia documental de ejemplo</a></td></tr></table></div>"
+      },
+      "extension" : [{
+        "url" : "https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-sourceId",
+        "valueIdentifier" : {
+          "system" : "urn:ietf:rfc:3986",
+          "value" : "urn:oid:2.16.840.1.113883.3.9999.1"
+        }
+      }],
+      "status" : "current",
+      "mode" : "working",
+      "code" : {
+        "coding" : [{
+          "system" : "https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes",
+          "code" : "submissionset"
+        }]
+      },
+      "subject" : {
+        "reference" : "urn:uuid:991a7102-d221-498d-9157-c4192934e3b7",
+        "display" : "Paciente argentino de ejemplo"
+      },
+      "date" : "2026-07-06",
+      "entry" : [{
+        "item" : {
+          "reference" : "urn:uuid:32ab6cfe-8cdf-4c75-a831-47be8b5668fa",
+          "display" : "Referencia documental de ejemplo"
+        }
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "List"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:32ab6cfe-8cdf-4c75-a831-47be8b5668fa",
+    "resource" : {
+      "resourceType" : "DocumentReference",
+      "id" : "ReferDocEjemplo",
+      "meta" : {
+        "profile" : ["http://mhd.ri.hsisalud.org/StructureDefinition/ReferenciaDocumental"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DocumentReference_ReferDocEjemplo\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ReferenciaDocumento ReferDocEjemplo</b></p><a name=\"ReferDocEjemplo\"> </a><a name=\"hcReferDocEjemplo\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ReferenciaDocumental.html\">ReferenciaDocumental</a></p></div><p><b>masterIdentifier</b>: <code>https://repositorio.hsi.ar/documentos/ips</code>/IPS-ARG-2026-00001</p><p><b>status</b>: Current</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 34133-9}\">Summary of episode note</span></p><p><b>category</b>: <span title=\"Codes:{http://loinc.org 60591-5}\">Resumen clínico de paciente</span></p><p><b>subject</b>: <a href=\"Bundle-bundle-mhd-referencia-documental-ejemplo.html#urn-uuid-991a7102-d221-498d-9157-c4192934e3b7\">Pablo Fernandez Perez(official) Male, DoB: 1912-06-12 ( http://www.dummy.org#1234567 (use: usual, ))</a></p><p><b>date</b>: 2026-07-06 10:30:00-0300</p><p><b>author</b>: <a href=\"Practitioner-PrestadorArgInline.html\">Practitioner María Laura Pérez (official)</a></p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Url</b></td><td><b>Title</b></td><td><b>Creation</b></td></tr><tr><td style=\"display: none\">*</td><td>application/fhir+json</td><td><a href=\"https://SecServerPEPE:2012/pba/santamarina/docs/ips-123\">https://SecServerPEPE:2012/pba/santamarina/docs/ips-123</a></td><td>Documento IPS argentino mínimo</td><td>2026-07-06 10:30:00-0300</td></tr></table></blockquote><h3>Contexts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Period</b></td></tr><tr><td style=\"display: none\">*</td><td>2026-07-06 10:30:00-0300 --&gt; (ongoing)</td></tr></table></div>"
+      },
+      "masterIdentifier" : {
+        "system" : "https://repositorio.hsi.ar/documentos/ips",
+        "value" : "IPS-ARG-2026-00001"
+      },
+      "status" : "current",
+      "type" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "34133-9",
+          "display" : "Summary of episode note"
+        }]
+      },
+      "category" : [{
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "60591-5"
+        }],
+        "text" : "Resumen clínico de paciente"
+      }],
+      "subject" : {
+        "reference" : "urn:uuid:991a7102-d221-498d-9157-c4192934e3b7"
+      },
+      "date" : "2026-07-06T10:30:00-03:00",
+      "author" : [{
+        "reference" : "Practitioner/PrestadorArgInline"
+      }],
+      "content" : [{
+        "attachment" : {
+          "contentType" : "application/fhir+json",
+          "url" : "https://SecServerPEPE:2012/pba/santamarina/docs/ips-123",
+          "title" : "Documento IPS argentino mínimo",
+          "creation" : "2026-07-06T10:30:00-03:00"
+        }
+      }],
+      "context" : {
+        "period" : {
+          "start" : "2026-07-06T10:30:00-03:00"
+        }
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "/DocumentReference"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:991a7102-d221-498d-9157-c4192934e3b7",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "Paciente-Interno",
+      "meta" : {
+        "profile" : ["http://ips.ri.hsisalud.org/StructureDefinition/PacienteArg"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_Paciente-Interno\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Paciente Paciente-Interno</b></p><a name=\"Paciente-Interno\"> </a><a name=\"hcPaciente-Interno\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"file:///builds/interoperabilidad/ips/output/StructureDefinition-PacienteArg.html\">Paciente Argentino</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Pablo Fernandez Perez(official) Male, DoB: 1912-06-12 ( http://www.dummy.org#1234567 (use: usual, ))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\"><code>http://www.renaper.gob.ar/dni</code>/99999999 (use: official, )</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\">ph: 1141233100</td></tr></table></div>"
+      },
+      "identifier" : [{
+        "use" : "official",
+        "system" : "http://www.renaper.gob.ar/dni",
+        "value" : "99999999"
+      },
+      {
+        "use" : "usual",
+        "system" : "http://www.dummy.org",
+        "value" : "1234567"
+      }],
+      "active" : true,
+      "name" : [{
+        "use" : "official",
+        "text" : "Pablo Fernandez Perez",
+        "family" : "Fernandez Perez",
+        "_family" : {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/humanname-fathers-family",
+            "valueString" : "Fernandez"
+          },
+          {
+            "url" : "http://hl7.org/fhir/StructureDefinition/humanname-mothers-family",
+            "valueString" : "Perez"
+          }]
+        },
+        "given" : ["Pablo"]
+      }],
+      "telecom" : [{
+        "system" : "phone",
+        "value" : "1141233100"
+      }],
+      "gender" : "male",
+      "birthDate" : "1912-06-12"
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Patient"
+    }
+  }]
+}
+
+```
