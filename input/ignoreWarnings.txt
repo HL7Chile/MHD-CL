@@ -15,3 +15,12 @@ El valor URL 'http://www.dummy.org' no puede resolverse
 El valor URL 'http://refeps.msal.gob.ar' no puede resolverse
 The resource ValueSet/VSTipoDocumento should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 The resource ValueSet/VSCategoriaDoc should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+
+# Mensajes en inglés (el publisher los emite así). URLs de ejemplo ficticias, no deben resolverse.
+No definition could be found for URL value 'https://repositorio.cl/documentos/ips'
+No definition could be found for URL value '/pba/tndXroad/santamarina/docs/ips-xxx'
+# No se asignan OIDs a los ValueSet (no hay raíz OID oficial definida para este IG).
+The resource ValueSet/VSTipoDocumento should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+The resource ValueSet/VSCategoriaDoc should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+# Dependencia deliberada con la versión 4.2.5-comment de IHE MHD.
+The ImplementationGuide uses package ihe.iti.mhd#4.2.5-comment released on 2026-06-16, but the most recent appropriate version is 5.0.0. This reference is getting old and the more recent version should be considered

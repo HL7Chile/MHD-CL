@@ -1,7 +1,7 @@
 {
   "codeSystems" : [{
-    "url" : "http://mhd.ri.hsisalud.org/ValueSet/VSCategoriaDoc",
-    "version" : "0.3.0",
+    "url" : "https://hl7chile.cl/fhir/ig/mhd/ValueSet/VSCategoriaDoc",
+    "version" : "0.1.0",
     "status" : "active",
     "name" : "VSCategoriaDoc",
     "title" : "Categorías de Documento Clínico para DocumentReference",
@@ -12,8 +12,8 @@
     "StructureDefinition-ReferenciaDocumental.html" : "ReferenciaDocumental"
   },
   {
-    "url" : "http://mhd.ri.hsisalud.org/ValueSet/VSTipoDocumento",
-    "version" : "0.3.0",
+    "url" : "https://hl7chile.cl/fhir/ig/mhd/ValueSet/VSTipoDocumento",
+    "version" : "0.1.0",
     "status" : "active",
     "name" : "VSTipoDocumento",
     "title" : "Tipos de Documento Clínico para DocumentReference",

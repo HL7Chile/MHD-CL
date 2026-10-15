@@ -1,4 +1,4 @@
-## Uso de `content`
+### Uso de `content`
 
 `DocumentReference.content` describe la representación del documento y la forma de acceder a ella. En JSON siempre se representa como un arreglo, aunque este perfil limite su cardinalidad a exactamente una repetición (`1..1`):
 
@@ -23,11 +23,11 @@ La cardinalidad `1..1` implica que:
 
 El elemento opcional `content.format`, heredado de FHIR/MHD, puede utilizarse para declarar una estructura, plantilla o formato documental más específico que el MIME type. No debe utilizarse para describir el mecanismo de transporte X-Road ni reemplaza a `attachment.contentType`.
 
-## Uso de `attachment`
+### Uso de `attachment`
 
 `content.attachment` es un dato complejo de tipo `Attachment`. En este perfil actúa como descriptor técnico del documento recuperable.
 
-### Reglas efectivas
+#### Reglas efectivas
 
 | Sub-elemento | Cardinalidad efectiva | Regla de uso |
 | --- | ---: | --- |
@@ -48,7 +48,7 @@ La prohibición de `data` y la obligación de `url` provienen del perfil padre M
 }
 ```
 
-### `attachment.contentType`
+#### `attachment.contentType`
 
 El valor `application/fhir+json` está fijado en el perfil. Esto indica que el contenido obtenido mediante la URL debe poder entregarse como JSON FHIR.
 
@@ -68,7 +68,7 @@ Si el destino es un recurso FHIR, la ruta debe coincidir con el tipo real:
 
 No debe utilizarse una ruta `Binary/{id}` para identificar un recurso que en realidad es un `Bundle`.
 
-### `attachment.url`
+#### `attachment.url`
 
 La URL debe identificar una ubicación desde la cual se obtenga el contenido real del documento. Además, debe ser estable para esa versión: no debe reutilizarse más adelante para devolver bytes correspondientes a otro documento o a otra versión.
 
@@ -85,7 +85,7 @@ Ejemplos:
 
 Una URL relativa **no debe interpretarse respecto de la ubicación del archivo JSON ni de la página HTML de la guía**.
 
-### `attachment.hash`
+#### `attachment.hash`
 
 En FHIR R4, `Attachment.hash` corresponde al SHA-1 de los bytes originales y se expresa en Base64. Es útil para detectar cambios accidentales o verificar que se obtuvo la representación esperada.
 
@@ -99,9 +99,9 @@ El hash se calcula sobre los bytes recuperados para el MIME type declarado, no s
 
 En documentos generados bajo demanda, o cuando el contenido es un `Bundle` FHIR publicado mediante las reglas específicas de MHD, `hash` y `size` pueden requerir tratamiento especial o estar ausentes.
 
-## Uso de una referencia relativa con X-Road
+### Uso de una referencia relativa con X-Road
 
-### Qué aporta X-Road
+#### Qué aporta X-Road
 
 X-Road actúa como una capa segura de intercambio entre el sistema consumidor y el sistema proveedor. En una llamada REST, el servicio se codifica en la ruta de la solicitud y el consumidor se identifica mediante el encabezado obligatorio `X-Road-Client`.
 
@@ -124,7 +124,7 @@ Accept: application/fhir+json
 
 `X-Road-Client` no se almacena en `DocumentReference`. Se determina en tiempo de ejecución a partir de la identidad del sistema que recupera el documento.
 
-### La ruta del perfil
+#### La ruta del perfil
 
 El perfil incluye el siguiente ejemplo:
 
@@ -142,7 +142,7 @@ Esta ruta puede utilizarse si la arquitectura define un *gateway* o proxy capaz 
 - el MIME type que debe devolver el servicio;
 - la política de autorización y los códigos de error esperados.
 
-### Diferencia entre validez FHIR y conformidad MHD
+#### Diferencia entre validez FHIR y conformidad MHD
 
 Este punto es fundamental:
 
@@ -152,7 +152,7 @@ Este punto es fundamental:
 
 Por lo tanto, una ruta relativa usada como convención interna puede no cumplir estrictamente la regla transaccional de ITI-67, aunque el recurso sea estructuralmente válido.
 
-### Alternativa recomendada
+#### Alternativa recomendada
 
 Para conservar la interoperabilidad MHD y utilizar X-Road, se recomienda que el `DocumentReference` entregado al consumidor contenga una URL absoluta de un endpoint recuperable:
 
@@ -180,7 +180,7 @@ URL efectiva = baseXRoad + attachment.url
 
 Esta regla debe considerarse una convención de la guía o del ecosistema, porque la base X-Road no puede deducirse únicamente desde el `DocumentReference`.
 
-## 7. Flujo de recuperación del documento
+### 7. Flujo de recuperación del documento
 
 1. El consumidor obtiene el `DocumentReference`, por ejemplo mediante ITI-67.
 2. Verifica que el recurso declara el perfil `ReferenciaDocumental`.
@@ -195,7 +195,7 @@ Esta regla debe considerarse una convención de la guía o del ecosistema, porqu
 
 Conforme a ITI-68, una recuperación exitosa devuelve HTTP `200`. Entre las respuestas posibles se encuentran `404` para una ubicación desconocida, `410` para un documento ya no disponible, `406` si no se puede entregar el formato solicitado y `403` cuando la solicitud no está permitida.
 
-## 8. Ejemplo completo en JSON
+### 8. Ejemplo completo en JSON
 
 El siguiente ejemplo usa una URL absoluta de gateway, que es la alternativa recomendada para mantener una ubicación directamente resoluble:
 
@@ -261,7 +261,7 @@ El siguiente ejemplo usa una URL absoluta de gateway, que es la alternativa reco
 }
 ```
 
-## Ejemplo de instancia FSH con ruta relativa
+### Ejemplo de instancia FSH con ruta relativa
 
 Este ejemplo representa la convención de proxy incluida en el perfil. Solo debe utilizarse si la guía define formalmente su base y mecanismo de resolución:
 
@@ -299,7 +299,7 @@ Title: "Referencia documental recuperable mediante X-Road"
 * context.period.end = "2026-08-20T18:00:00-03:00"
 ```
 
-## Recomendaciones de seguridad
+### Recomendaciones de seguridad
 
 - No incorporar tokens, contraseñas ni credenciales en `attachment.url`.
 - Evitar URL firmadas de corta duración como identificador documental permanente.
@@ -311,7 +311,7 @@ Title: "Referencia documental recuperable mediante X-Road"
 - Usar `securityLabel` cuando el dominio de intercambio requiera comunicar sensibilidad o restricciones de manejo.
 - Utilizar mecanismos de firma, por ejemplo `Provenance.signature`, cuando se necesite autenticidad o no repudio; `attachment.hash` solo comprueba integridad técnica.
 
-## Lista de verificación
+### Lista de verificación
 
 - [ ] La instancia declara el canonical correcto de `ReferenciaDocumental` en `meta.profile`.
 - [ ] `masterIdentifier` es único, estable y específico de la versión documental.

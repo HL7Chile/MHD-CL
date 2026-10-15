@@ -1,6 +1,6 @@
-# Guía de Implementación MHD
+### Guía de Implementación MHD
 
-## Introducción
+#### Introducción
 
 Esta Guía de Implementación define los requisitos para el intercambio de documentos clínicos mediante el estándar HL7® FHIR®, utilizando como base el perfil **Mobile access to Health Documents (MHD)** desarrollado por IHE.
 
@@ -8,7 +8,7 @@ La guía adapta los perfiles, actores y transacciones definidos por IHE MHD al c
 
 Su propósito es facilitar el registro, consulta y recuperación interoperable de documentos clínicos entre sistemas de información de salud.
 
-## Objetivo
+#### Objetivo
 
 El objetivo de esta guía es establecer una implementación común para:
 
@@ -19,7 +19,7 @@ El objetivo de esta guía es establecer una implementación común para:
 - Identificar pacientes, profesionales y organizaciones de acuerdo con las definiciones nacionales.
 - Facilitar la interoperabilidad entre sistemas clínicos, repositorios documentales y plataformas de intercambio de información sanitaria.
 
-## Alcance
+#### Alcance
 
 Esta guía cubre el intercambio de documentos clínicos mediante recursos FHIR, incluyendo principalmente:
 
@@ -32,11 +32,11 @@ Esta guía cubre el intercambio de documentos clínicos mediante recursos FHIR, 
 
 El contenido clínico del documento se encontrará almacenado en un repositorio externo. En estos casos, el recurso `DocumentReference` contiene la URL necesaria para acceder al documento.
 
-## Dependencias
+#### Dependencias
 
 Esta guía utiliza las siguientes Guías de Implementación como dependencias:
 
-### IHE Mobile access to Health Documents (MHD)
+##### IHE Mobile access to Health Documents (MHD)
 
 IHE MHD proporciona los perfiles, actores y transacciones necesarios para compartir documentos clínicos utilizando recursos y operaciones FHIR.
 
@@ -50,7 +50,7 @@ Esta guía reutiliza y restringe los perfiles definidos por IHE MHD, principalme
 
 La implementación local mantiene la compatibilidad con las transacciones definidas por IHE MHD.
 
-### Core Argentina (Core AR)
+##### Core Argentina (Core AR)
 
 Core AR proporciona las definiciones nacionales utilizadas para representar las entidades fundamentales del sistema de salud argentino.
 
@@ -64,7 +64,7 @@ Esta guía utiliza perfiles y terminologías de Core AR para:
 
 Cuando un recurso definido por IHE MHD referencia a un paciente, profesional u organización, se deben utilizar los perfiles correspondientes definidos por Core AR, siempre que sean aplicables.
 
-## Relación entre las guías
+#### Relación entre las guías
 
 La relación entre las Guías de Implementación puede resumirse de la siguiente manera:
 

@@ -12,6 +12,7 @@
   <sch:pattern>
     <sch:title>f:DocumentReference</sch:title>
     <sch:rule context="f:DocumentReference">
+      <sch:assert test="count(f:extension[@url = 'https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-HomeCommunityId']) &lt;= 1">extension with URL = 'https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-HomeCommunityId': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
       <sch:assert test="count(f:category) &gt;= 1">category: minimum cardinality of 'category' is 1</sch:assert>
       <sch:assert test="count(f:subject) &gt;= 1">subject: minimum cardinality of 'subject' is 1</sch:assert>

@@ -1,7 +1,7 @@
 {
   "resourceType": "CapabilityStatement",
   "id": "MHDCliente",
-  "url": "http://mhd.ri.hsisalud.org/CapabilityStatement/MHDCliente",
+  "url": "https://hl7chile.cl/fhir/ig/mhd/CapabilityStatement/MHDCliente",
   "title": "Capacidades para Cliente MHD",
   "description": "CapabilityStatement que define las capacidades requeridas para los\nsistemas cliente que interactúan con el MHD Responder definido por\nesta guía.\n\nEl cliente implementa las funciones de Document Source y Document\nConsumer definidas por IHE MHD 4.2.2, adaptadas a los perfiles y\nrestricciones de esta implementación local.\n\nEl cliente puede publicar documentos mediante ITI-65, consultar\nSubmissionSets mediante ITI-66, localizar referencias documentales\nmediante ITI-67 y recuperar documentos mediante ITI-68.",
   "contact": [
@@ -9,17 +9,17 @@
       "telecom": [
         {
           "system": "url",
-          "value": "https://hsi.pladema.net"
+          "value": "https://hl7chile.cl"
         }
       ],
-      "name": "HSI Pladema"
+      "name": "HL7 Chile"
     }
   ],
   "jurisdiction": [
     {
       "coding": [
         {
-          "code": "AR",
+          "code": "CL",
           "system": "urn:iso:std:iso:3166"
         }
       ]
@@ -34,7 +34,7 @@
     "https://profiles.ihe.net/ITI/MHD/CapabilityStatement/IHE.MHD.DocumentConsumer"
   ],
   "implementationGuide": [
-    "http://mhd.ri.hsisalud.org/ImplementationGuide/fhir.mhdig"
+    "https://hl7chile.cl/fhir/ig/mhd/ImplementationGuide/hl7.fhir.cl.mhdig"
   ],
   "rest": [
     {
@@ -44,7 +44,7 @@
       "interaction": [
         {
           "code": "transaction",
-          "documentation": "ITI-65 Provide Document Bundle.\n\nEl cliente SHALL poder generar y enviar un Bundle transaction\nconforme al perfil BundleMhd definido por esta guía:\n\nhttp://mhd.ri.hsisalud.org/StructureDefinition/BundleMhd"
+          "documentation": "ITI-65 Provide Document Bundle.\n\nEl cliente SHALL poder generar y enviar un Bundle transaction\nconforme al perfil BundleMhd definido por esta guía:\n\nhttps://hl7chile.cl/fhir/ig/mhd/StructureDefinition/BundleMhd"
         },
         {
           "code": "search-system",
@@ -141,7 +141,7 @@
             }
           ],
           "type": "DocumentReference",
-          "profile": "http://mhd.ri.hsisalud.org/StructureDefinition/ReferenciaDocumental"
+          "profile": "https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/ReferenciaDocumental"
         },
         {
           "interaction": [
@@ -204,14 +204,14 @@
             }
           ],
           "type": "List",
-          "profile": "http://mhd.ri.hsisalud.org/StructureDefinition/ListMhd"
+          "profile": "https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/ListMhd"
         }
       ],
       "mode": "client",
       "documentation": "Cliente MHD local que permite publicar, localizar y recuperar\ndocumentos clínicos mediante las transacciones definidas por\nIHE MHD y los perfiles definidos por esta guía."
     }
   ],
-  "publisher": "HSI Pladema",
+  "publisher": "HL7 Chile",
   "name": "MHDCliente",
   "status": "draft",
   "experimental": false,

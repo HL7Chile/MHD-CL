@@ -5,28 +5,28 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://mhd.ri.hsisalud.org/ValueSet/VSCategoriaDoc> a fhir:ValueSet ;
+<https://hl7chile.cl/fhir/ig/mhd/ValueSet/VSCategoriaDoc> a fhir:ValueSet ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:Resource.id [ fhir:value "VSCategoriaDoc"] ;
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ] ;
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores VSCategoriaDoc</b></p><a name=\"VSCategoriaDoc\"> </a><a name=\"hcVSCategoriaDoc\"> </a><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/26436-6/\">26436-6</a></td><td>Laboratory studies (set)</td></tr><tr><td><a href=\"https://loinc.org/18726-0/\">18726-0</a></td><td>Radiology studies (set)</td></tr><tr><td><a href=\"https://loinc.org/11506-3/\">11506-3</a></td><td>Progress note</td></tr><tr><td><a href=\"https://loinc.org/18842-5/\">18842-5</a></td><td>Discharge summary</td></tr><tr><td><a href=\"https://loinc.org/60591-5/\">60591-5</a></td><td>Patient summary document</td></tr></table></li></ul></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet VSCategoriaDoc</b></p><a name=\"VSCategoriaDoc\"> </a><a name=\"hcVSCategoriaDoc\"> </a><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/26436-6/\">26436-6</a></td><td>Laboratory studies (set)</td></tr><tr><td><a href=\"https://loinc.org/18726-0/\">18726-0</a></td><td>Radiology studies (set)</td></tr><tr><td><a href=\"https://loinc.org/11506-3/\">11506-3</a></td><td>Progress note</td></tr><tr><td><a href=\"https://loinc.org/18842-5/\">18842-5</a></td><td>Discharge summary</td></tr><tr><td><a href=\"https://loinc.org/60591-5/\">60591-5</a></td><td>Patient summary document</td></tr></table></li></ul></div>"
   ] ;
-  fhir:ValueSet.url [ fhir:value "http://mhd.ri.hsisalud.org/ValueSet/VSCategoriaDoc"] ;
-  fhir:ValueSet.version [ fhir:value "0.3.0"] ;
+  fhir:ValueSet.url [ fhir:value "https://hl7chile.cl/fhir/ig/mhd/ValueSet/VSCategoriaDoc"] ;
+  fhir:ValueSet.version [ fhir:value "0.1.0"] ;
   fhir:ValueSet.name [ fhir:value "VSCategoriaDoc"] ;
   fhir:ValueSet.title [ fhir:value "Categorías de Documento Clínico para DocumentReference"] ;
   fhir:ValueSet.status [ fhir:value "active"] ;
   fhir:ValueSet.experimental [ fhir:value "false"^^xsd:boolean] ;
-  fhir:ValueSet.date [ fhir:value "2026-09-02T10:42:41-04:00"^^xsd:dateTime] ;
-  fhir:ValueSet.publisher [ fhir:value "HSI Pladema"] ;
+  fhir:ValueSet.date [ fhir:value "2026-10-15T12:40:59-03:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "Hl7 Chile"] ;
   fhir:ValueSet.contact [
      fhir:index 0 ;
-     fhir:ContactDetail.name [ fhir:value "HSI Pladema" ] ;
+     fhir:ContactDetail.name [ fhir:value "Hl7 Chile" ] ;
      fhir:ContactDetail.telecom [
        fhir:index 0 ;
        fhir:ContactPoint.system [ fhir:value "url" ] ;
-       fhir:ContactPoint.value [ fhir:value "https://hsi.pladema.net" ]
+       fhir:ContactPoint.value [ fhir:value "https://hl7chile.cl/" ]
      ]
   ] ;
   fhir:ValueSet.description [ fhir:value "Categorías generales de documentos clínicos codificadas en LOINC para ser usadas en DocumentReference.category."] ;
@@ -35,8 +35,8 @@
      fhir:CodeableConcept.coding [
        fhir:index 0 ;
        fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
-       fhir:Coding.code [ fhir:value "AR" ] ;
-       fhir:Coding.display [ fhir:value "Argentina" ]
+       fhir:Coding.code [ fhir:value "CL" ] ;
+       fhir:Coding.display [ fhir:value "Chile" ]
      ]
   ] ;
   fhir:ValueSet.compose [
@@ -69,7 +69,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://mhd.ri.hsisalud.org/ValueSet/VSCategoriaDoc.ttl> a owl:Ontology ;
+<https://hl7chile.cl/fhir/ig/mhd/ValueSet/VSCategoriaDoc.ttl> a owl:Ontology ;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

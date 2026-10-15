@@ -1,17 +1,17 @@
 {
   "resourceType": "StructureDefinition",
   "id": "ListMhd",
-  "url": "http://mhd.ri.hsisalud.org/StructureDefinition/ListMhd",
+  "url": "https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/ListMhd",
   "name": "ListMhd",
   "status": "draft",
-  "publisher": "HSI Pladema",
+  "publisher": "HL7 Chile",
   "contact": [
     {
-      "name": "HSI Pladema",
+      "name": "HL7 Chile",
       "telecom": [
         {
           "system": "url",
-          "value": "https://hsi.pladema.net"
+          "value": "https://hl7chile.cl"
         }
       ]
     }
@@ -21,8 +21,9 @@
     {
       "coding": [
         {
-          "code": "AR",
-          "system": "urn:iso:std:iso:3166"
+          "code": "CL",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Chile"
         }
       ]
     }
@@ -42,7 +43,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://ips.ri.hsisalud.org/StructureDefinition/PacienteArg"
+              "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CorePacienteCl"
             ]
           }
         ]
@@ -54,7 +55,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://mhd.ri.hsisalud.org/StructureDefinition/ReferenciaDocumental"
+              "https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/ReferenciaDocumental"
             ]
           }
         ]

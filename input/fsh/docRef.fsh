@@ -8,11 +8,12 @@ Parent: MinimalDocumentReference
 Description: "Perfil asociado al la refetrencia documental para HSI en un modelo MHD, consderado para transacciones asociadas a una ITI-65 e ITI-67. Se considera en el perfil la asociación de documentos de tipo IPS, referenciados a la Guía Core Argentna AR.FHIR.CORE"
 
 * ^status = #draft
-* ^publisher = "HSI Pladema"
-* ^contact.name = "HSI Pladema"
+* ^publisher = "HL7 Chile"
+* ^contact.name =  "HL7 Chile"
 * ^contact.telecom.system = #url
-* ^contact.telecom.value = "https://hsi.pladema.net"
-* ^jurisdiction = urn:iso:std:iso:3166#AR
+* ^contact.telecom.value = "https://hl7chile.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
 
 
 * masterIdentifier 1..1 MS
@@ -68,7 +69,7 @@ Description: "Perfil asociado al la refetrencia documental para HSI en un modelo
 * subject 1..1 MS
   * ^short = "Paciente al que se refiere el documento IPS nacional referenciado"
   * ^definition = "Paciente al que se refiere el documento IPS nacional referenciado. Se define como un campo obligatorio, y se recomienda usar el valor 'Patient' para indicar que el documento referenciado es un informe clínico de un paciente."
-* subject only Reference(PacienteArg)
+* subject only Reference(PacienteCl)
   
  
 

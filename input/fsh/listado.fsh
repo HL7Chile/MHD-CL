@@ -5,14 +5,15 @@ Parent: SubmissionSet
 Id: ListMhd
 Description: "Perfil asociado al listado de documentos referenciados para HSI en un modelo MHD"
 * ^status = #draft
-* ^publisher = "HSI Pladema"
-* ^contact.name = "HSI Pladema"
+* ^publisher = "HL7 Chile"
+* ^contact.name =  "HL7 Chile"
 * ^contact.telecom.system = #url
-* ^contact.telecom.value = "https://hsi.pladema.net"
-* ^jurisdiction = urn:iso:std:iso:3166#AR
+* ^contact.telecom.value = "https://hl7chile.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
 
-* subject only Reference(PacienteArg)
+
+* subject only Reference(PacienteCl)
 * entry.item only Reference(ReferenciaDocumental)
 
 /*

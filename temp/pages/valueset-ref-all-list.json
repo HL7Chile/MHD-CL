@@ -53,8 +53,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.79"],
     "uses" : {
     },
-    "StructureDefinition-ListMhd.html" : "ListMhd",
     "StructureDefinition-ReferenciaDocumental.html" : "ReferenciaDocumental",
+    "StructureDefinition-ListMhd.html" : "ListMhd",
     "StructureDefinition-BundleMhd.html" : "BundleMhd"
   },
   {
@@ -111,8 +111,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
-    "StructureDefinition-ListMhd.html" : "ListMhd",
     "StructureDefinition-ReferenciaDocumental.html" : "ReferenciaDocumental",
+    "StructureDefinition-ListMhd.html" : "ListMhd",
     "StructureDefinition-BundleMhd.html" : "BundleMhd"
   },
   {
@@ -211,8 +211,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.27"],
     "uses" : {
     },
-    "StructureDefinition-ListMhd.html" : "ListMhd",
-    "StructureDefinition-ReferenciaDocumental.html" : "ReferenciaDocumental"
+    "StructureDefinition-ReferenciaDocumental.html" : "ReferenciaDocumental",
+    "StructureDefinition-ListMhd.html" : "ListMhd"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/search-entry-mode",
@@ -244,46 +244,23 @@
     "sources" : ["2.16.840.1.113883.4.642.3.47"],
     "uses" : {
     },
-    "StructureDefinition-ListMhd.html" : "ListMhd",
     "StructureDefinition-ReferenciaDocumental.html" : "ReferenciaDocumental",
+    "StructureDefinition-ListMhd.html" : "ListMhd",
     "StructureDefinition-BundleMhd.html" : "BundleMhd"
   },
   {
     "url" : "http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode",
-    "version" : "1.2.0",
+    "version" : "1.5.0",
     "status" : "active",
     "name" : "IHE_FormatCode_vs",
     "title" : "IHE ValueSet of Format Codes for use with Document Sharing",
     "description" : "The IHE FormatCode Value set is defined to be the set of FormatCode(s) defined by IHE, DICOM and HL7. These codes are intended to be preferred.",
-    "systems" : ["http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
-    "http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes",
-    "http://dicom.nema.org/resources/ontology/DCM"],
+    "systems" : ["urn:ietf:rfc:3986",
+    "http://dicom.nema.org/resources/ontology/DCMUID",
+    "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+    "http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes"],
     "oids" : ["1.3.6.1.4.1.19376.1.2.7.1"],
     "sources" : ["1.3.6.1.4.1.19376.1.2.7.1"],
-    "uses" : {
-    },
-    "StructureDefinition-ReferenciaDocumental.html" : "ReferenciaDocumental"
-  },
-  {
-    "url" : "http://mhd.ri.hsisalud.org/ValueSet/VSCategoriaDoc",
-    "version" : "0.3.0",
-    "status" : "active",
-    "name" : "VSCategoriaDoc",
-    "title" : "Categorías de Documento Clínico para DocumentReference",
-    "description" : "Categorías generales de documentos clínicos codificadas en LOINC para ser usadas en DocumentReference.category.",
-    "systems" : ["http://loinc.org"],
-    "uses" : {
-    },
-    "StructureDefinition-ReferenciaDocumental.html" : "ReferenciaDocumental"
-  },
-  {
-    "url" : "http://mhd.ri.hsisalud.org/ValueSet/VSTipoDocumento",
-    "version" : "0.3.0",
-    "status" : "active",
-    "name" : "VSTipoDocumento",
-    "title" : "Tipos de Documento Clínico para DocumentReference",
-    "description" : "Tipos documentales clínicos codificados en LOINC para ser usados en DocumentReference.type.",
-    "systems" : ["http://loinc.org"],
     "uses" : {
     },
     "StructureDefinition-ReferenciaDocumental.html" : "ReferenciaDocumental"
@@ -301,8 +278,32 @@
     "StructureDefinition-ReferenciaDocumental.html" : "ReferenciaDocumental"
   },
   {
+    "url" : "https://hl7chile.cl/fhir/ig/mhd/ValueSet/VSCategoriaDoc",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "VSCategoriaDoc",
+    "title" : "Categorías de Documento Clínico para DocumentReference",
+    "description" : "Categorías generales de documentos clínicos codificadas en LOINC para ser usadas en DocumentReference.category.",
+    "systems" : ["http://loinc.org"],
+    "uses" : {
+    },
+    "StructureDefinition-ReferenciaDocumental.html" : "ReferenciaDocumental"
+  },
+  {
+    "url" : "https://hl7chile.cl/fhir/ig/mhd/ValueSet/VSTipoDocumento",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "VSTipoDocumento",
+    "title" : "Tipos de Documento Clínico para DocumentReference",
+    "description" : "Tipos documentales clínicos codificados en LOINC para ser usados en DocumentReference.type.",
+    "systems" : ["http://loinc.org"],
+    "uses" : {
+    },
+    "StructureDefinition-ReferenciaDocumental.html" : "ReferenciaDocumental"
+  },
+  {
     "url" : "https://profiles.ihe.net/ITI/MHD/ValueSet/DocumentReferenceStats",
-    "version" : "4.2.2",
+    "version" : "4.2.5-comment",
     "status" : "active",
     "name" : "DocumentReferenceStats",
     "title" : "MHD DocumentReference status codes",
@@ -314,7 +315,7 @@
   },
   {
     "url" : "https://profiles.ihe.net/ITI/MHD/ValueSet/MHDlistTypesVS",
-    "version" : "4.2.2",
+    "version" : "4.2.5-comment",
     "status" : "active",
     "name" : "MHDlistTypesVS",
     "title" : "MHD List Types ValueSet",
@@ -326,7 +327,7 @@
   },
   {
     "url" : "https://profiles.ihe.net/ITI/MHD/ValueSet/MHDprovideFolderActions",
-    "version" : "4.2.2",
+    "version" : "4.2.5-comment",
     "status" : "active",
     "name" : "MHDprovideFolderActions",
     "title" : "MHD Folder List Types ValueSet",
@@ -338,7 +339,7 @@
   },
   {
     "url" : "https://profiles.ihe.net/ITI/MHD/ValueSet/MHDprovidePatientActions",
-    "version" : "4.2.2",
+    "version" : "4.2.5-comment",
     "status" : "active",
     "name" : "MHDprovidePatientActions",
     "title" : "MHD Patient Types ValueSet",

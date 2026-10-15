@@ -11,14 +11,14 @@ Responder definidas por IHE MHD 4.2.2, adaptadas a los perfiles locales
 de esta guía.
 """
 
-* publisher = "HSI Pladema"
-* contact[0].name = "HSI Pladema"
+* publisher = "HL7 Chile"
+* contact[0].name = "HL7 Chile"
 * contact[0].telecom.system = #url
-* contact[0].telecom.value = "https://hsi.pladema.net"
-* jurisdiction = urn:iso:std:iso:3166#AR
+* contact[0].telecom.value = "https://hl7chile.cl"
+* jurisdiction = urn:iso:std:iso:3166#CL
 
 
-* url = "http://mhd.ri.hsisalud.org/CapabilityStatement/MHDResponder"
+* url = Canonical(MHDResponder)
 
 * name = "MHDResponder"
 * title = "MHD Responder"
@@ -27,14 +27,12 @@ de esta guía.
 * experimental = false
 * date = "2026-09-02"
 
-* publisher = "HSI Pladema"
-
 * kind = #requirements
 
 * instantiates[0] = "https://profiles.ihe.net/ITI/MHD/CapabilityStatement/IHE.MHD.DocumentRecipient"
 * instantiates[+] = "https://profiles.ihe.net/ITI/MHD/CapabilityStatement/IHE.MHD.DocumentResponder"
 
-* implementationGuide = "http://mhd.ri.hsisalud.org/ImplementationGuide/fhir.mhdig"
+* implementationGuide = "https://hl7chile.cl/fhir/ig/mhd/ImplementationGuide/hl7.fhir.cl.mhdig"
 
 * fhirVersion = #4.0.1
 
@@ -72,7 +70,7 @@ ITI-65 Provide Document Bundle.
 El servidor SHALL aceptar un Bundle transaction conforme al perfil
 BundleMhd:
 
-http://mhd.ri.hsisalud.org/StructureDefinition/BundleMhd
+https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/BundleMhd
 """
 
 
@@ -95,7 +93,7 @@ definidas para IHE MHD Document Responder.
 * rest.resource[0].type = #DocumentReference
 
 * rest.resource[0].profile =
-    "http://mhd.ri.hsisalud.org/StructureDefinition/ReferenciaDocumental"
+    "https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/ReferenciaDocumental"
 
 * rest.resource[0].interaction[0].code = #read
 * rest.resource[0].interaction[+].code = #search-type
@@ -177,7 +175,7 @@ de búsqueda definidos por IHE MHD y esta guía.
 * rest.resource[1].type = #List
 
 * rest.resource[1].profile =
-    "http://mhd.ri.hsisalud.org/StructureDefinition/ListMhd"
+    "https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/ListMhd"
 
 * rest.resource[1].interaction[0].code = #read
 * rest.resource[1].interaction[+].code = #search-type

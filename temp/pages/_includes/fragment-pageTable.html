@@ -1,19 +1,27 @@
-{% if site.data.pages[page.path].status or site.data.pages[page.path].fmm %}
-  <table class="{{site.data.pages[page.path].statusclass}}">
+{% if site.data.pages[localPage].status or site.data.pages[localPage].fmm %}
+  <table class="{{site.data.pages[localPage].statusclass}}" data-fhir="generated">
     <tr>
-  {% if site.data.pages[page.path].status %}
+  {% if site.data.pages[localPage].status %}
       <td>
-        <i>Page standards status:</i> <a href="{{site.data.fhir.path}}versions.html#std-process" title="Standard Status">{{site.data.pages[page.path].status|capitalize}}</a>
-        {% if site.data.pages[page.path].normativeVersion %}
-          (from v{{site.data.pages[page.path].normativeVersion}})
+        <i>{{site.data.stringsBase[include.lang]['PageStandardsStatus']}}:</i> <a href="{{site.data.fhir.path}}versions.html#std-process" title="{{site.data.stringsBase[include.lang]['StandardsStatus']}}">{{site.data.pages[localPage].status|capitalize}}</a>
+        {% if site.data.pages[localPage].normativeVersion %}
+          ({{site.data.stringsBase[include.lang]['FromNormative'] | replace: "%NORMVER%", site.data.pages[localPage].normativeVersion}})
         {% endif %}
       </td>
   {% endif %}
-  {% if site.data.pages[page.path].fmm %}
+  {% if site.data.pages[localPage].fmm %}
       <td>
-        <a href="{{site.data.info.fmm-definition}}">Maturity Level</a>: {{site.data.pages[page.path].fmm}}
+        <a href="{{site.data.info.fmm-definition}}">{{site.data.stringsBase[include.lang]['MaturityLevel']}}</a>: {{site.data.pages[localPage].fmm}}
       </td>
   {% endif %}
+      <td id="toggle-change-display" style="text-align: right;border-left-style: hidden" title="{{site.data.stringsBase[include.lang]['HighlightChangesHelp']}}">
+        <label style="margin:0;font-weight:normal" for="showChanges">{{site.data.stringsBase[include.lang]['HighlightChanges']}}</label>
+  {% if site.data.info.togglechanges == 'y' %}
+        <input style="margin:0" type="checkbox" id="showChanges" checked="checked" onchange="toggleChanges()"/>
+  {% else %}
+        <input style="margin:0" type="checkbox" id="showChanges" onchange="toggleChanges()"/>
+  {% endif %}
+      </td>
     </tr>
   </table>
 {% endif %}

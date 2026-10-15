@@ -1,6 +1,6 @@
-# Aspectos de seguridad
+### Aspectos de seguridad
 
-## Introducción
+#### Introducción
 
 El intercambio de documentos clínicos mediante **IHE Mobile access to Health Documents (MHD)** involucra información personal y sanitaria sensible. Por esta razón, la implementación debe aplicar controles de seguridad en todas las capas: aplicación, API FHIR, transporte, infraestructura de intercambio, repositorios y auditoría.
 
@@ -11,7 +11,7 @@ Esta guía contempla dos formas de acceso al servicio MHD:
 
 X-Road agrega identidad organizacional, control de acceso entre subsistemas, protección del transporte, firma de mensajes, sellado de tiempo y evidencia del intercambio. Sin embargo, **X-Road no reemplaza la autenticación del usuario ni la autorización clínica aplicada por el servicio MHD**.
 
-## Principios generales
+#### Principios generales
 
 La arquitectura debe aplicar los siguientes principios:
 
@@ -24,7 +24,7 @@ La arquitectura debe aplicar los siguientes principios:
 - **minimización de datos:** las respuestas y registros deben contener únicamente la información necesaria;
 - **seguridad desde el diseño:** los controles deben formar parte de la arquitectura y no incorporarse solamente al final del desarrollo.
 
-## Modelo de seguridad por capas
+#### Modelo de seguridad por capas
 
 | Capa | Controles principales | Responsabilidad |
 |---|---|---|
@@ -37,7 +37,7 @@ La arquitectura debe aplicar los siguientes principios:
 | Protección del repositorio | Cifrado, control de acceso, respaldo y gestión de claves | Repositorio FHIR y documental |
 | Auditoría clínica y de seguridad | `AuditEvent`, registros ATNA/BALP, SIEM y correlación con X-Road | Aplicaciones e infraestructura |
 
-## Arquitectura de seguridad propuesta
+#### Arquitectura de seguridad propuesta
 
 El siguiente esquema muestra la separación entre la seguridad provista por X-Road y los controles propios del servicio MHD.
 
@@ -54,9 +54,9 @@ El siguiente esquema muestra la separación entre la seguridad provista por X-Ro
 
 
 
-## Autenticación
+#### Autenticación
 
-### Identificación proporcionada por X-Road
+##### Identificación proporcionada por X-Road
 
 X-Road identifica a las organizaciones participantes, sus servidores de seguridad y los subsistemas que consumen o proporcionan servicios. Esta identidad se sustenta en certificados emitidos por autoridades de certificación reconocidas por la instancia X-Road.
 
@@ -71,7 +71,7 @@ Esta autenticación permite responder preguntas como:
 
 No permite determinar por sí sola qué persona utilizó el sistema ni si esa persona puede acceder a los documentos clínicos del paciente.
 
-### Autenticación de usuarios y aplicaciones
+##### Autenticación de usuarios y aplicaciones
 
 Las solicitudes MHD deben incorporar una identidad de aplicación y, cuando corresponda, la identidad del usuario que originó la operación.
 
@@ -91,7 +91,7 @@ Los tokens deben ser de corta duración y no deben almacenarse en registros, URL
 
 X-Road permite transportar encabezados HTTP hacia el servicio proveedor. Por lo tanto, un token puede acompañar la solicitud a través del bus, pero debe ser validado por el componente de autorización o por el servicio MHD receptor.
 
-## Autorización
+#### Autorización
 
 La autorización debe evaluarse nuevamente en el punto de acceso al servicio MHD. No es suficiente que el subsistema consumidor esté autorizado en X-Road.
 
@@ -119,7 +119,7 @@ Cuando se utilice IUA, pueden definirse ámbitos asociados a las transacciones M
 
 Estos ámbitos no impiden aplicar restricciones adicionales por paciente, usuario, organización, tipo documental o propósito de uso.
 
-## Protección del transporte
+#### Protección del transporte
 
 Todas las comunicaciones deben utilizar HTTPS.
 
@@ -133,9 +133,9 @@ El tramo entre servidores de seguridad es protegido por X-Road mediante TLS mutu
 
 Los endpoints internos del servicio MHD no deberían quedar expuestos directamente a Internet cuando el acceso se haya definido exclusivamente mediante X-Road.
 
-## Seguridad específica de las transacciones MHD
+#### Seguridad específica de las transacciones MHD
 
-### ITI-65: registro de documentos
+##### ITI-65: registro de documentos
 
 Antes de aceptar un `Bundle` de tipo `transaction`, el Document Recipient debe:
 
@@ -153,7 +153,7 @@ Antes de aceptar un `Bundle` de tipo `transaction`, el Document Recipient debe:
 
 Si `DocumentReference.content.attachment.url` apunta a una dirección externa, el receptor debe prevenir ataques de tipo **Server-Side Request Forgery (SSRF)**. Para ello debe utilizar una lista de dominios o repositorios permitidos, bloquear redes internas no autorizadas, impedir redirecciones inseguras y aplicar límites de tiempo y tamaño.
 
-### ITI-67: búsqueda de documentos
+##### ITI-67: búsqueda de documentos
 
 La búsqueda puede revelar la existencia de pacientes o documentos incluso cuando no entrega el contenido clínico. Por lo tanto, el Document Responder debe:
 
@@ -167,7 +167,7 @@ La búsqueda puede revelar la existencia de pacientes o documentos incluso cuand
 
 Los identificadores del paciente incluidos en una URL pueden quedar almacenados en historiales, proxies o registros. Cuando sea apropiado, puede utilizarse una búsqueda FHIR mediante `POST [base]/DocumentReference/_search`, manteniendo los parámetros fuera de la URL. Esto no reemplaza el uso de HTTPS ni la protección de los registros.
 
-### ITI-68: recuperación de documentos
+##### ITI-68: recuperación de documentos
 
 La autorización debe comprobarse nuevamente al recuperar el documento. Haber obtenido previamente un `DocumentReference` no constituye autorización suficiente para acceder a su contenido.
 
@@ -185,7 +185,7 @@ El Document Responder debe:
 
 Cuando se utilicen URLs temporales, estas deben tener una vigencia breve, alcance restringido y no deben reutilizarse como mecanismo permanente de autorización.
 
-## Seguridad aportada por X-Road
+#### Seguridad aportada por X-Road
 
 Cuando las transacciones MHD circulan mediante X-Road, la infraestructura aporta:
 
@@ -209,17 +209,17 @@ Estas capacidades permiten demostrar qué organizaciones intercambiaron informac
 - la protección del repositorio; ni
 - la auditoría clínica detallada.
 
-## Registros y auditoría
+#### Registros y auditoría
 
 La solución debe mantener dos niveles complementarios de trazabilidad:
 
-### Evidencia de intercambio X-Road
+##### Evidencia de intercambio X-Road
 
 Los servidores de seguridad registran las solicitudes y respuestas y pueden generar evidencia firmada y sellada en el tiempo. Estos registros permiten acreditar el intercambio entre organizaciones.
 
 Debido a que los mensajes pueden contener información clínica, se debe revisar la configuración de los registros X-Road. Cuando el cuerpo de los mensajes sea almacenado, los registros deben cifrarse y protegerse con controles equivalentes a los aplicados al repositorio clínico. Si la política permite registrar solamente metadatos, debe conservarse suficiente información para la trazabilidad sin duplicar innecesariamente los documentos clínicos.
 
-### Auditoría FHIR y clínica
+##### Auditoría FHIR y clínica
 
 El servicio MHD debe registrar los eventos relevantes mediante `AuditEvent` o un mecanismo equivalente compatible con ATNA/BALP.
 
@@ -242,7 +242,7 @@ Los eventos de auditoría no deben admitir modificaciones o eliminaciones ordina
 
 `AuditEvent` registra el uso o acceso a la información. `Provenance`, en cambio, documenta el origen y las transformaciones que dieron lugar al estado actual de un recurso. Ambos recursos cumplen funciones diferentes y pueden utilizarse de manera complementaria.
 
-## Correlación de solicitudes
+#### Correlación de solicitudes
 
 Cada operación debe contar con un identificador de correlación único que acompañe la solicitud durante todo su recorrido:
 
@@ -261,7 +261,7 @@ El identificador debe permitir relacionar:
 
 El identificador no debe contener RUT, DNI, nombre del paciente u otra información clínica.
 
-## Protección de datos almacenados
+#### Protección de datos almacenados
 
 Los documentos, metadatos, índices, respaldos y registros deben protegerse mediante:
 
@@ -276,7 +276,7 @@ Los documentos, metadatos, índices, respaldos y registros deben protegerse medi
 
 Las claves privadas utilizadas para firma, autenticación o cifrado deberían almacenarse en dispositivos o servicios especializados de gestión de claves. El acceso a estas claves debe ser restringido y auditado.
 
-## Manejo de errores
+#### Manejo de errores
 
 Los errores deben representarse mediante códigos HTTP apropiados y, cuando corresponda, mediante un recurso FHIR `OperationOutcome`.
 
@@ -299,7 +299,7 @@ La respuesta frente a una denegación debe definirse mediante una política cons
 | `404 Not Found` | Se desea evitar revelar la existencia del recurso. |
 | `200 OK` con resultados filtrados o vacíos | Búsquedas donde revelar la existencia de registros no autorizados produciría una fuga de información. |
 
-## Amenazas y controles
+#### Amenazas y controles
 
 | Amenaza | Controles principales |
 |---|---|
@@ -315,7 +315,7 @@ La respuesta frente a una denegación debe definirse mediante una política cons
 | Robo de credenciales o tokens | HTTPS, almacenamiento seguro, corta vigencia y rotación de secretos. |
 | Denegación de servicio | Límites de tamaño, tiempo, frecuencia, concurrencia y monitoreo. |
 
-## Requisitos mínimos de conformidad
+#### Requisitos mínimos de conformidad
 
 Una implementación conforme con esta guía debe, como mínimo:
 
@@ -332,7 +332,7 @@ Una implementación conforme con esta guía debe, como mínimo:
 11. evitar que los errores revelen información clínica o técnica sensible; y
 12. realizar análisis de riesgos y pruebas periódicas de seguridad.
 
-## Referencias
+#### Referencias
 
 - [IHE MHD — Security Considerations](https://profiles.ihe.net/ITI/MHD/1335_security_considerations.html)
 - [IHE MHD — Provide Document Bundle ITI-65](https://profiles.ihe.net/ITI/MHD/ITI-65.html)

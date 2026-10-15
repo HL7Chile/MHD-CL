@@ -15,17 +15,13 @@ El cliente puede publicar documentos mediante ITI-65, consultar
 SubmissionSets mediante ITI-66, localizar referencias documentales
 mediante ITI-67 y recuperar documentos mediante ITI-68.
 """
-* publisher = "HSI Pladema"
-* contact[0].name = "HSI Pladema"
+* publisher = "HL7 Chile"
+* contact[0].name = "HL7 Chile"
 * contact[0].telecom.system = #url
-* contact[0].telecom.value = "https://hsi.pladema.net"
-* jurisdiction = urn:iso:std:iso:3166#AR
+* contact[0].telecom.value = "https://hl7chile.cl"
+* jurisdiction = urn:iso:std:iso:3166#CL
 
-
-
-* url = "http://mhd.ri.hsisalud.org/CapabilityStatement/MHDCliente"
-
-
+* url = Canonical(MHDCliente)
 
 * name = "MHDCliente"
 
@@ -60,7 +56,7 @@ mediante ITI-67 y recuperar documentos mediante ITI-68.
 // =====================================================
 
 * implementationGuide =
-    "http://mhd.ri.hsisalud.org/ImplementationGuide/fhir.mhdig"
+    "https://hl7chile.cl/fhir/ig/mhd/ImplementationGuide/hl7.fhir.cl.mhdig"
 
 
 // =====================================================
@@ -95,7 +91,7 @@ ITI-65 Provide Document Bundle.
 El cliente SHALL poder generar y enviar un Bundle transaction
 conforme al perfil BundleMhd definido por esta guía:
 
-http://mhd.ri.hsisalud.org/StructureDefinition/BundleMhd
+https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/BundleMhd
 """
 
 
@@ -119,7 +115,7 @@ a las capacidades definidas para el Document Consumer de IHE MHD.
 * rest.resource[0].type = #DocumentReference
 
 * rest.resource[0].profile =
-    "http://mhd.ri.hsisalud.org/StructureDefinition/ReferenciaDocumental"
+    "https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/ReferenciaDocumental"
 
 * rest.resource[0].interaction[0].code = #read
 
@@ -204,7 +200,7 @@ por esta guía.
 * rest.resource[1].type = #List
 
 * rest.resource[1].profile =
-    "http://mhd.ri.hsisalud.org/StructureDefinition/ListMhd"
+    "https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/ListMhd"
 
 * rest.resource[1].interaction[0].code = #read
 

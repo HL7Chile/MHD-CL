@@ -7,14 +7,14 @@
       "name": "Creative Commons Zero v1.0 Universal",
       "url": "http://spdx.org/licenses/CC0-1.0.html"
     },
-    "version": "0.3.0",
+    "version": "0.1.0",
     "contact": {
-      "name": "HSI Pladema",
-      "url": "https://hsi.pladema.net"
+      "name": "Hl7 Chile",
+      "url": "https://hl7chile.cl/"
     }
   },
   "externalDocs": {
-    "url": "http://mhd.ri.hsisalud.org/CapabilityStatement/MHDResponder",
+    "url": "https://hl7chile.cl/fhir/ig/mhd/CapabilityStatement/MHDResponder",
     "description": "FHIR CapabilityStatement"
   },
   "paths": {

@@ -8,12 +8,13 @@ Parent: MinimalProvideDocumentBundle
 Id: BundleMhd
 Description: "Perfil asociado al bundle de transacciones MHD, considerando la asociación de documentos de tipo IPS, referenciados a la Guía Core Argentna AR.FHIR.CORE"
 * ^status = #draft
-* ^date = "2026-06-22"
-* ^publisher = "HSI Pladema"
-* ^contact.name = "HSI Pladema"
+* ^date = "2026-10-14"
+* ^publisher = "HL7 Chile"
+* ^contact.name =  "HL7 Chile"
 * ^contact.telecom.system = #url
-* ^contact.telecom.value = "https://hsi.pladema.net"
-* ^jurisdiction = urn:iso:std:iso:3166#AR
+* ^contact.telecom.value = "https://hl7chile.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
 
 * meta
   * profile 1..* MS
@@ -40,11 +41,11 @@ Description: "Perfil asociado al bundle de transacciones MHD, considerando la as
 * entry[SubmissionSet].request.url = "List"
 * entry[DocumentRefs].resource only ReferenciaDocumental
 * entry[DocumentRefs].request.method = #POST
-* entry[DocumentRefs].request.url = "/DocumentReference"
-* entry[FhirDocuments].resource only BundleDocArg
+* entry[DocumentRefs].request.url = "DocumentReference"
+* entry[FhirDocuments].resource only Bundle
 * entry[FhirDocuments].request.method = #POST
 * entry[FhirDocuments].request.url = "Bundle"
-* entry[Patient].resource only PacienteArg
+* entry[Patient].resource only PacienteCl
 * entry[Patient].request.method ^short = "GET|POST|PUT|DELETE|PATCH"
 * entry[Patient].request.url = "Patient"
 

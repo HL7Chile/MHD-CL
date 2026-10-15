@@ -1,4 +1,4 @@
-{% raw %}<table class="list" data-fhir="generated">
+{% raw %}<table data-filter-table="ext-Media" id="ext-Media" class="list" data-fhir="generated">
   <tr>
     <td>Identity</td>
     <td>Card.</td>
@@ -9,22 +9,22 @@
   </tr>
   <tr>
     <td>
-      <input size="15" id="filter-identity" type="text" class="filter-input"/>
+      <input size="15" data-filter="identity" id="ext-Media-filter-identity" type="text" class="filter-input" aria-label="identity"/>
     </td>
     <td>
-      <input size="3" id="filter-card" type="text" class="filter-input"/>
+      <input size="3" data-filter="card" id="ext-Media-filter-card" type="text" class="filter-input" aria-label="cardinality"/>
     </td>
     <td>
-      <input size="8" id="filter-type" type="text" class="filter-input"/>
+      <input size="8" data-filter="type" id="ext-Media-filter-type" type="text" class="filter-input" aria-label="type"/>
     </td>
     <td>
-      <input size="20" id="filter-context" type="text" class="filter-input"/>
+      <input size="20" data-filter="context" id="ext-Media-filter-context" type="text" class="filter-input" aria-label="context"/>
     </td>
     <td>
-      <input size="3" id="filter-wg" type="text" class="filter-input"/>
+      <input size="3" data-filter="wg" id="ext-Media-filter-wg" type="text" class="filter-input" aria-label="wg"/>
     </td>
     <td>
-      <input size="6" id="filter-status" type="text" class="filter-input"/>
+      <input size="6" data-filter="status" id="ext-Media-filter-status" type="text" class="filter-input" aria-label="status"/>
     </td>
     <td colspan="6">None found</td>
   </tr>
@@ -60,5 +60,5 @@
 </table>
 <p>8 Extensions</p>
 <script src="assets/js/table.js"> </script>
-<button onclick="clearAllFilters()" style="padding: 8px 16px; background-color: #f0f0f0; border: 1px solid #ccc; border-radius: 4px; cursor: pointer;">Clear All Filters</button>
+<button onclick="clearAllFilters('ext-Media')" style="padding: 8px 16px; background-color: #f0f0f0; border: 1px solid #ccc; border-radius: 4px; cursor: pointer;" aria-label="copy">Clear All Filters</button>
 {% endraw %}

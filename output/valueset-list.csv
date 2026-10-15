@@ -1,3 +1,3 @@
 URL,Version,Status,OIDs,Name,Title,Description,Uses,Used,Sources
-http://mhd.ri.hsisalud.org/ValueSet/VSCategoriaDoc,0.3.0,active,,VSCategoriaDoc,Categorías de Documento Clínico para DocumentReference,"Categorías generales de documentos clínicos codificadas en LOINC para ser usadas en DocumentReference.category.",,"LOINC"
-http://mhd.ri.hsisalud.org/ValueSet/VSTipoDocumento,0.3.0,active,,VSTipoDocumento,Tipos de Documento Clínico para DocumentReference,"Tipos documentales clínicos codificados en LOINC para ser usados en DocumentReference.type.",,"LOINC"
+https://hl7chile.cl/fhir/ig/mhd/ValueSet/VSCategoriaDoc,0.1.0,active,,VSCategoriaDoc,Categorías de Documento Clínico para DocumentReference,"Categorías generales de documentos clínicos codificadas en LOINC para ser usadas en DocumentReference.category.",,"LOINC"
+https://hl7chile.cl/fhir/ig/mhd/ValueSet/VSTipoDocumento,0.1.0,active,,VSTipoDocumento,Tipos de Documento Clínico para DocumentReference,"Tipos documentales clínicos codificados en LOINC para ser usados en DocumentReference.type.",,"LOINC"

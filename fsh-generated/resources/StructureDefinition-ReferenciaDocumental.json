@@ -1,17 +1,17 @@
 {
   "resourceType": "StructureDefinition",
   "id": "ReferenciaDocumental",
-  "url": "http://mhd.ri.hsisalud.org/StructureDefinition/ReferenciaDocumental",
+  "url": "https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/ReferenciaDocumental",
   "name": "ReferenciaDocumental",
   "status": "draft",
-  "publisher": "HSI Pladema",
+  "publisher": "HL7 Chile",
   "contact": [
     {
-      "name": "HSI Pladema",
+      "name": "HL7 Chile",
       "telecom": [
         {
           "system": "url",
-          "value": "https://hsi.pladema.net"
+          "value": "https://hl7chile.cl"
         }
       ]
     }
@@ -21,8 +21,9 @@
     {
       "coding": [
         {
-          "code": "AR",
-          "system": "urn:iso:std:iso:3166"
+          "code": "CL",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Chile"
         }
       ]
     }
@@ -58,12 +59,6 @@
         "definition": "Identificador alternativo para el documento IPS nacional referenciado. Se usa comunmente cuando el document se ha almacenado en varios dominios, y cada uno de ellos le ha asignado un identificador diferente."
       },
       {
-        "id": "DocumentReference.identifier:entryUUID",
-        "path": "DocumentReference.identifier",
-        "sliceName": "entryUUID",
-        "mustSupport": true
-      },
-      {
         "id": "DocumentReference.status",
         "path": "DocumentReference.status",
         "short": "Estado de la referencia al documento IPS: current|superseded|entered-in-error",
@@ -78,7 +73,7 @@
         "min": 1,
         "binding": {
           "strength": "extensible",
-          "valueSet": "http://mhd.ri.hsisalud.org/ValueSet/VSTipoDocumento"
+          "valueSet": "https://hl7chile.cl/fhir/ig/mhd/ValueSet/VSTipoDocumento"
         }
       },
       {
@@ -119,7 +114,7 @@
         "min": 1,
         "binding": {
           "strength": "extensible",
-          "valueSet": "http://mhd.ri.hsisalud.org/ValueSet/VSCategoriaDoc"
+          "valueSet": "https://hl7chile.cl/fhir/ig/mhd/ValueSet/VSCategoriaDoc"
         }
       },
       {
@@ -167,7 +162,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://ips.ri.hsisalud.org/StructureDefinition/PacienteArg"
+              "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CorePacienteCl"
             ]
           }
         ]

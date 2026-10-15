@@ -1,6 +1,6 @@
 {
-  "version" : "0.3.0",
-  "date" : "20260902104241",
+  "version" : "0.1.0",
+  "date" : "20261015124059",
   "notForPublication" : true,
-  "name" : "fhir.mhdig.r4b"
+  "name" : "hl7.fhir.cl.mhdig.r4b"
 }

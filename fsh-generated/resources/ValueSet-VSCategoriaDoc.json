@@ -5,16 +5,16 @@
   "id": "VSCategoriaDoc",
   "title": "Categorías de Documento Clínico para DocumentReference",
   "description": "Categorías generales de documentos clínicos codificadas en LOINC para ser usadas en DocumentReference.category.",
-  "url": "http://mhd.ri.hsisalud.org/ValueSet/VSCategoriaDoc",
+  "url": "https://hl7chile.cl/fhir/ig/mhd/ValueSet/VSCategoriaDoc",
   "experimental": false,
-  "publisher": "HSI Pladema",
+  "publisher": "HL7 Chile",
   "jurisdiction": [
     {
       "coding": [
         {
-          "code": "AR",
+          "code": "CL",
           "system": "urn:iso:std:iso:3166",
-          "display": "Argentina"
+          "display": "Chile"
         }
       ]
     }

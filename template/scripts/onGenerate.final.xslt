@@ -17,6 +17,7 @@
     </xsl:copy>
   </xsl:template>
   <xsl:template match="f:extension[@url='http://hl7.org/fhir/StructureDefinition/igpublisher-spreadsheet']"/>
+  <xsl:template match="f:translations|f:artifactTranslations"/>
   <xsl:template match="f:grouping">
     <xsl:if test="parent::f:definition/f:resource/f:groupingId[@value=current()/@id]">
       <xsl:copy>
@@ -66,7 +67,18 @@
         </xsl:when>
         <xsl:otherwise>
           <nameUrl xmlns="http://hl7.org/fhir" value="toc.html"/>
-          <title xmlns="http://hl7.org/fhir" value="Table of Contents"/>
+          <title xmlns="http://hl7.org/fhir" value="Table of Contents">
+            <xsl:for-each select="parent::f:definition/f:translations/f:translation[@name='TableOfContents']/@*[not(local-name(.)='name')]">
+              <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                <extension url="lang">
+                  <valueCode value="{local-name(.)}"/>
+                </extension>
+                <extension url="content">
+                  <valueString value="{.}"/>
+                </extension>
+              </extension>
+            </xsl:for-each>
+          </title>
           <generation xmlns="http://hl7.org/fhir" value="html"/>
           <page xmlns="http://hl7.org/fhir">
             <xsl:apply-templates select="@*|node()[not(self::f:page)]"/>
@@ -82,13 +94,24 @@
           <xsl:if test="not(descendant-or-self::f:page[f:nameUrl/@value='artifacts.html'])">
             <page xmlns="http://hl7.org/fhir">
               <nameUrl value="artifacts.html"/>
-              <title value="Artifacts Summary"/>
+              <title value="Artifacts Summary">
+                <xsl:for-each select="ancestor::f:definition/f:translations/f:translation[@name='ArtifactsSummary']/@*[not(local-name(.)='name')]">
+                  <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                      <valueCode value="{local-name(.)}"/>
+                    </extension>
+                    <extension url="content">
+                      <valueString value="{.}"/>
+                    </extension>
+                  </extension>
+                </xsl:for-each>
+              </title>
               <generation value="html"/>
               <xsl:call-template name="artifactPages"/>
             </page>
           </xsl:if>
         </xsl:otherwise>
-      </xsl:choose>      
+      </xsl:choose>
     </xsl:copy>
   </xsl:template>
   <xsl:template match="f:page[f:nameUrl/@value='artifacts.html']">
@@ -106,14 +129,18 @@
           <xsl:variable name="id" select="substring-after(f:reference/f:reference/@value, '/')"/>
           <page xmlns="http://hl7.org/fhir">
             <nameUrl value="{f:extension[@url='http://hl7.org/fhir/StructureDefinition/implementationguide-page']/f:valueUri/@value}"/>
-            <title value="{f:name/@value}"/>
+            <title value="{f:name/@value}">
+              <xsl:copy-of select="f:name/f:extension"/>
+            </title>
             <generation value="generated"/>
             <xsl:for-each select="f:extension[@url='http://hl7.org/fhir/tools/StructureDefinition/contained-resource-information']">
               <page xmlns="http://hl7.org/fhir">
                 <xsl:variable name="url" select="concat(f:extension[@url='type']/f:valueCode/@value, '-', $id, '_', f:extension[@url='id']/f:valueId/@value, '.html')"/>
                 <nameUrl value="{$url}"/>
                 <xsl:for-each select="f:extension[@url='title']/f:valueString">
-                  <title value="{@value}"/>
+                  <title value="{@value}">
+                    <xsl:copy-of select="f:extension"/>
+                  </title>
                 </xsl:for-each>
                 <generation value="generated"/>
               </page>

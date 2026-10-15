@@ -1,10 +1,11 @@
-<html>
+<html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>IP Review</title>
     <link rel="stylesheet" href="fhir.css"/>
   </head>
   <body>
+    <h1>IP Review</h1>
     <h2>Unattributed Code Systems</h2>
     <ul>
       <li>
@@ -14,7 +15,7 @@
     </ul>
     <h2>Copyright Fragment</h2>
     <p>
-This fragment is available on       <a href="index.html">index.html</a>
+This fragment is available on       <a href="en/index.html">en/index.html</a>
     </p>
     <div>
       <p>This publication includes IP covered under the following statements.</p>
@@ -23,8 +24,8 @@ This fragment is available on       <a href="index.html">index.html</a>
 
         <li>
 ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page:           <a href="https://www.iso.org/iso-3166-country-codes.html">https://www.iso.org/iso-3166-country-codes.html</a>
-          <div onClick="if (document.getElementById('ipp2_1').innerHTML != '') {document.getElementById('ipp_1').innerHTML = document.getElementById('ipp2_1').innerHTML; document.getElementById('ipp2_1').innerHTML = ''}" id="ipp_1" data-fhir="generated">
-             <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span>
+          <div id="ipp_1" data-fhir="generated">
+             <button onClick="var t = document.getElementById('ipp_1'); var s = document.getElementById('ipp2_1'); if (s.innerHTML != '') { t.innerHTML = s.innerHTML; s.innerHTML = ''; var a = t.querySelector('a, button'); if (a) a.focus(); }" style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding: 0 3px; margin: 0; color: black; font: inherit" type="button">Show Usage</button>
           </div>
           <div style="display: none" id="ipp2_1">
 
@@ -34,10 +35,10 @@ ISO maintains the copyright on the country codes, and controls its use carefully
                 <a href="http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>
 :                 <a href="StructureDefinition-BundleMhd.html">BundleMhd</a>
 ,                 <a href="StructureDefinition-ListMhd.html">ListMhd</a>
-                <span onClick="document.getElementById('ips_1').innerHTML = document.getElementById('ips2_1').innerHTML" id="ips_1">
-... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 6 more</span>                </span>
+                <span id="ips_1">
+... <button onClick="var s = document.getElementById('ips_1'); s.innerHTML = document.getElementById('ips2_1').innerHTML; var a = s.querySelector('a'); if (a) a.focus();" style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding: 0 3px; margin: 0; color: black; font: inherit" type="button">Show 6 more</button>                </span>
                 <span style="display: none" id="ips2_1">
-, <a href="CapabilityStatement-MHDCliente.html">MHDCliente</a>, <a href="CapabilityStatement-MHDResponder.html">MHDResponder</a>, <a href="index.html">MHDTransIG</a>, <a href="StructureDefinition-ReferenciaDocumental.html">ReferenciaDocumental</a>, <a href="ValueSet-VSCategoriaDoc.html">VSCategoriaDoc</a> and <a href="ValueSet-VSTipoDocumento.html">VSTipoDocumento</a>                </span>
+, <a href="CapabilityStatement-MHDCliente.html">MHDCliente</a>, <a href="CapabilityStatement-MHDResponder.html">MHDResponder</a>, <a href="index.html">MHDTransIGChile</a>, <a href="StructureDefinition-ReferenciaDocumental.html">ReferenciaDocumental</a>, <a href="ValueSet-VSCategoriaDoc.html">VSCategoriaDoc</a> and <a href="ValueSet-VSTipoDocumento.html">VSTipoDocumento</a>                </span>
               </li>
 
 
@@ -50,8 +51,8 @@ ISO maintains the copyright on the country codes, and controls its use carefully
         <li>
 This material contains content from           <a href="http://loinc.org">LOINC</a>
 . LOINC is copyright &copy; 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the           <a href="http://loinc.org/license">license</a>
-. LOINC&reg; is a registered United States trademark of Regenstrief Institute, Inc.          <div onClick="if (document.getElementById('ipp2_2').innerHTML != '') {document.getElementById('ipp_2').innerHTML = document.getElementById('ipp2_2').innerHTML; document.getElementById('ipp2_2').innerHTML = ''}" id="ipp_2" data-fhir="generated">
-             <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span>
+. LOINC&reg; is a registered United States trademark of Regenstrief Institute, Inc.          <div id="ipp_2" data-fhir="generated">
+             <button onClick="var t = document.getElementById('ipp_2'); var s = document.getElementById('ipp2_2'); if (s.innerHTML != '') { t.innerHTML = s.innerHTML; s.innerHTML = ''; var a = t.querySelector('a, button'); if (a) a.focus(); }" style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding: 0 3px; margin: 0; color: black; font: inherit" type="button">Show Usage</button>
           </div>
           <div style="display: none" id="ipp2_2">
 
@@ -59,32 +60,9 @@ This material contains content from           <a href="http://loinc.org">LOINC</
 
               <li>
                 <a href="http://terminology.hl7.org/6.5.0/CodeSystem-v3-loinc.html">LOINC</a>
-:                 <a href="Bundle-bundle-mhd-referencia-documental-ejemplo.html">Bundle/bundle-mhd-referencia-documental-ejemplo</a>
-,                 <a href="DocumentReference-ReferDocEjemplo.html">DocumentReference/ReferDocEjemplo</a>
-,                 <a href="StructureDefinition-ReferenciaDocumental.html">ReferenciaDocumental</a>
+:                 <a href="StructureDefinition-ReferenciaDocumental.html">ReferenciaDocumental</a>
 ,                 <a href="ValueSet-VSCategoriaDoc.html">VSCategoriaDoc</a>
  and                 <a href="ValueSet-VSTipoDocumento.html">VSTipoDocumento</a>
-              </li>
-
-
-            </ul>
-
-
-          </div>
-        </li>
-
-        <li>
-This material derives from the HL7 Terminology (THO). THO is copyright &copy;1989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see:           <a href="https://terminology.hl7.org/license.html">https://terminology.hl7.org/license.html</a>
-          <div onClick="if (document.getElementById('ipp2_3').innerHTML != '') {document.getElementById('ipp_3').innerHTML = document.getElementById('ipp2_3').innerHTML; document.getElementById('ipp2_3').innerHTML = ''}" id="ipp_3" data-fhir="generated">
-             <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span>
-          </div>
-          <div style="display: none" id="ipp2_3">
-
-            <ul>
-
-              <li>
-                <a href="http://terminology.hl7.org/7.3.0/CodeSystem-v2-0203.html">identifierType</a>
-:                 <a href="Practitioner-PrestadorArgInline.html">Practitioner/PrestadorArgInline</a>
               </li>
 
 
@@ -103,7 +81,16 @@ This material derives from the HL7 Terminology (THO). THO is copyright &copy;198
     <ul>
       <li>
 
-          IG &copy; 2026+ HSI Pladema.  Package fhir.mhdig#0.3.0 based on FHIR 4.0.1. Generated 2026-09-02
+
+
+
+          IG &copy; 2026+ Hl7 Chile.  
+          Package hl7.fhir.cl.mhdig#0.1.0 based on FHIR 4.0.1.
+          Generated 
+  
+    2026-10-15
+  
+
           
           
              Links: Tabla de contenidos |
@@ -111,51 +98,39 @@ Reporte QA |
 Historial de versiones
 
           
-         (        <a href="transacciones-mhd.html">src</a>
+         (        <a href="en/transacciones-mhd.html">src</a>
 )
       </li>
       <li>
 
-          hl7.fhir.us.hai: Healthcare Associated Infection Implementation Guide  &reg;&copy; HL7 |
+          Guía MHD para el Intercambio de Información de Salud en Chile  &reg;&copy; HL7 |
              
-                CC0
+                Creative Commons 0
          (        <a href="searchform.html">src</a>
 )
       </li>
       <li>
-Esta Guía de Implementación define los requisitos para el intercambio de documentos clínicos mediante el estándar HL7&reg; FHIR&reg;, utilizando como base el perfil Mobile access to Health Documents (MHD) desarrollado por IHE. (        <a href="index.html">src</a>
+Esta Guía de Implementación define los requisitos para el intercambio de documentos clínicos mediante el estándar HL7&reg; FHIR&reg;, utilizando como base el perfil Mobile access to Health Documents (MHD) desarrollado por IHE. (        <a href="en/index.html">src</a>
 )
       </li>
       <li>
-Guía MHD para HSI, Provincia de Buenos Aires. - Local Development build (v0.3.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the Directory of published versions (        <a href="transacciones-mhd.html">src</a>
+Guía MHD para el Intercambio de Información de Salud en Chile - Local Development build (v0.1.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the Directory of published versions (        <a href="transacciones-mhd.html">src</a>
 )
       </li>
       <li>
 This material contains content from LOINC. LOINC is copyright &copy; 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license. LOINC&reg; is a registered United States trademark of Regenstrief Institute, Inc. Show Usage
 
 
-* LOINC: Bundle/bundle-mhd-referencia-documental-ejemplo, DocumentReference/ReferDocEjemplo, ReferenciaDocumental, VSCategoriaDoc and VSTipoDocumento
+* LOINC: ReferenciaDocumental, VSCategoriaDoc and VSTipoDocumento
 
 
 
 
- (        <a href="index.html">src</a>
+ (        <a href="en/index.html">src</a>
 )
       </li>
       <li>
-This material derives from the HL7 Terminology (THO). THO is copyright &copy;1989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: https://terminology.hl7.org/license.html Show Usage
-
-
-* identifierType: Practitioner/PrestadorArgInline
-
-
-
-
- (        <a href="index.html">src</a>
-)
-      </li>
-      <li>
-&reg; (        <a href="assets\images\LOGO_FHIR.svg">src</a>
+&reg; (        <a href="en/assets/images/LOGO_FHIR.svg">src</a>
 )
       </li>
     </ul>
@@ -174,40 +149,16 @@ This material derives from the HL7 Terminology (THO). THO is copyright &copy;198
       </tr>
       <tr>
         <td>
-          <a href="DocumentReference-ReferDocEjemplo.html">web</a>
+          <a href="en/CapabilityStatement-MHDCliente-testing.html">web</a>
         </td>
         <td>
-          <a href="https://SecServerPEPE:2012/pba/santamarina/docs/ips-123">SecServerPEPE</a>
-        </td>
-        <td>
-          <a href="https://SecServerPEPE:2012/pba/santamarina/docs/ips-123">https://SecServerPEPE:2012/pba/santamarina/docs/ips-123</a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="Practitioner-PrestadorArgInline.html">web</a>
-        </td>
-        <td>
-          <a href="tel:+54115555-1234">tel:+54115555-1234</a>
-        </td>
-        <td>
-          <b>telecom</b>
-:           <a href="tel:+54115555-1234">+54 11 5555-1234</a>
-,           <a href="mailto:maria.perez@example.org">maria.perez@example.org</a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="Bundle-bundle-mhd-referencia-documental-ejemplo.change.history.html">web</a>
-        </td>
-        <td>
-          <a href="https://hsi.pladema.net/">hsi.pladema.net</a>
+          <a href="http://hl7chile.cl">hl7chile.cl</a>
         </td>
         <td>
 
-              <a no-external="true" id="HSI-logo" href="https://hsi.pladema.net/">
+              <a no-external="true" id="hl7chile-logo" href="http://hl7chile.cl">
 
-        <img src="assets/images/HSI-logo.png" width="200" alt="Visitar HSI" height="45"/>
+        <img src="assets/images/hl7chile-logo.png" alt="Visitar HL7 Chile" height="71"/>
     
           </a>
 
@@ -216,16 +167,25 @@ This material derives from the HL7 Terminology (THO). THO is copyright &copy;198
       </tr>
       <tr>
         <td>
-          <a href="Bundle-bundle-mhd-referencia-documental-ejemplo.change.history.html">web</a>
+          <a href="en/CapabilityStatement-MHDCliente-testing.html">web</a>
         </td>
         <td>
-          <a href="https://hsi.pladema.net">hsi.pladema.net</a>
+          <a href="https://hl7chile.cl/">hl7chile.cl</a>
         </td>
         <td>
 
-          IG &copy; 2026+           <a style="color:var(--footer-hyperlink-text-color)" href="https://hsi.pladema.net">HSI Pladema</a>
-.  Package fhir.mhdig#0.3.0 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
-. Generated           <span title="Wed, Sep 2, 2026 10:42-0400">2026-09-02</span>
+
+
+
+          IG &copy; 2026+           <a style="color:var(--footer-hyperlink-text-color)" href="https://hl7chile.cl/">Hl7 Chile</a>
+.  
+          Package hl7.fhir.cl.mhdig#0.1.0 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
+.
+          Generated 
+            <span title="2026-10-15 12:40:00 -0300">
+    2026-10-15
+  </span>
+
 
                     <br/>
 
@@ -233,7 +193,7 @@ This material derives from the HL7 Terminology (THO). THO is copyright &copy;198
 
              Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Tabla de contenidos</a> |
 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">Reporte QA</a> |
-<a style="color: var(--footer-hyperlink-text-color)" href="http://mhd.ri.hsisalud.org/history.html" target="_blank">Historial de versiones</a>
+<a style="color: var(--footer-hyperlink-text-color)" href="https://hl7chile.cl/fhir/ig/mhd/history.html" target="_blank">Historial de versiones</a>
 
           
           </span>
@@ -243,7 +203,7 @@ This material derives from the HL7 Terminology (THO). THO is copyright &copy;198
       </tr>
       <tr>
         <td>
-          <a href="StructureDefinition-BundleMhd-definitions.html">web</a>
+          <a href="en/StructureDefinition-BundleMhd-definitions.html">web</a>
         </td>
         <td>
           <a href="http://en.wikipedia.org/wiki/HATEOAS">en.wikipedia.org</a>
@@ -255,15 +215,28 @@ Both Bundle.link and Bundle.entry.link are defined to support providing addition
       </tr>
       <tr>
         <td>
-          <a href="index.html">web</a>
+          <a href="en/StructureDefinition-ReferenciaDocumental-mappings.html">web</a>
+        </td>
+        <td>
+          <a href="http://ihe.net/xds">ihe.net</a>
+        </td>
+        <td>
+          <a href="http://ihe.net/xds" title="http://ihe.net/xds">XDS metadata equivalent</a>
+          <span style="float: right">
+<a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="http://hl7.org/fhir/R4/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a>          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/index.html">web</a>
         </td>
         <td>
           <a href="https://www.iso.org/iso-3166-country-codes.html">www.iso.org</a>
         </td>
         <td>
 ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page:           <a href="https://www.iso.org/iso-3166-country-codes.html">https://www.iso.org/iso-3166-country-codes.html</a>
-          <div onclick="if (document.getElementById('ipp2_1').innerHTML != '') {document.getElementById('ipp_1').innerHTML = document.getElementById('ipp2_1').innerHTML; document.getElementById('ipp2_1').innerHTML = ''}" id="ipp_1" data-fhir="generated">
-             <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span>
+          <div id="ipp_1" data-fhir="generated">
+             <button onclick="var t = document.getElementById('ipp_1'); var s = document.getElementById('ipp2_1'); if (s.innerHTML != '') { t.innerHTML = s.innerHTML; s.innerHTML = ''; var a = t.querySelector('a, button'); if (a) a.focus(); }" style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding: 0 3px; margin: 0; color: black; font: inherit" type="button">Show Usage</button>
           </div>
           <div style="display: none" id="ipp2_1">
 
@@ -273,10 +246,10 @@ ISO maintains the copyright on the country codes, and controls its use carefully
                 <a href="http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>
 :                 <a href="StructureDefinition-BundleMhd.html">BundleMhd</a>
 ,                 <a href="StructureDefinition-ListMhd.html">ListMhd</a>
-                <span onclick="document.getElementById('ips_1').innerHTML = document.getElementById('ips2_1').innerHTML" id="ips_1">
-... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 6 more</span>                </span>
+                <span id="ips_1">
+... <button onclick="var s = document.getElementById('ips_1'); s.innerHTML = document.getElementById('ips2_1').innerHTML; var a = s.querySelector('a'); if (a) a.focus();" style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding: 0 3px; margin: 0; color: black; font: inherit" type="button">Show 6 more</button>                </span>
                 <span style="display: none" id="ips2_1">
-, <a href="CapabilityStatement-MHDCliente.html">MHDCliente</a>, <a href="CapabilityStatement-MHDResponder.html">MHDResponder</a>, <a href="index.html">MHDTransIG</a>, <a href="StructureDefinition-ReferenciaDocumental.html">ReferenciaDocumental</a>, <a href="ValueSet-VSCategoriaDoc.html">VSCategoriaDoc</a> and <a href="ValueSet-VSTipoDocumento.html">VSTipoDocumento</a>                </span>
+, <a href="CapabilityStatement-MHDCliente.html">MHDCliente</a>, <a href="CapabilityStatement-MHDResponder.html">MHDResponder</a>, <a href="index.html">MHDTransIGChile</a>, <a href="StructureDefinition-ReferenciaDocumental.html">ReferenciaDocumental</a>, <a href="ValueSet-VSCategoriaDoc.html">VSCategoriaDoc</a> and <a href="ValueSet-VSTipoDocumento.html">VSTipoDocumento</a>                </span>
               </li>
 
 
@@ -288,7 +261,7 @@ ISO maintains the copyright on the country codes, and controls its use carefully
       </tr>
       <tr>
         <td>
-          <a href="seguridad.html">web</a>
+          <a href="en/seguridad.html">web</a>
         </td>
         <td>
           <a href="https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#Z.8">profiles.ihe.net</a>
@@ -299,7 +272,7 @@ ISO maintains the copyright on the country codes, and controls its use carefully
       </tr>
       <tr>
         <td>
-          <a href="seguridad.html">web</a>
+          <a href="en/seguridad.html">web</a>
         </td>
         <td>
           <a href="https://profiles.ihe.net/ITI/IUA/index.html">profiles.ihe.net</a>
@@ -310,7 +283,7 @@ ISO maintains the copyright on the country codes, and controls its use carefully
       </tr>
       <tr>
         <td>
-          <a href="seguridad.html">web</a>
+          <a href="en/seguridad.html">web</a>
         </td>
         <td>
           <a href="https://docs.x-road.global/Architecture/arc-sec_x_road_security_architecture.html">docs.x-road.global</a>
@@ -321,7 +294,7 @@ ISO maintains the copyright on the country codes, and controls its use carefully
       </tr>
       <tr>
         <td>
-          <a href="seguridad.html">web</a>
+          <a href="en/seguridad.html">web</a>
         </td>
         <td>
           <a href="https://docs.x-road.global/Protocols/pr-rest_x-road_message_protocol_for_rest.html">docs.x-road.global</a>

@@ -1,56 +1,56 @@
 [{
   "id" : "MHDCliente",
   "type" : "CapabilityStatement",
-  "url" : "http://mhd.ri.hsisalud.org/CapabilityStatement/MHDCliente",
-  "version" : "0.3.0",
+  "url" : "https://hl7chile.cl/fhir/ig/mhd/CapabilityStatement/MHDCliente",
+  "version" : "0.1.0",
   "name" : "MHDCliente"
 },
 {
   "id" : "MHDResponder",
   "type" : "CapabilityStatement",
-  "url" : "http://mhd.ri.hsisalud.org/CapabilityStatement/MHDResponder",
-  "version" : "0.3.0",
+  "url" : "https://hl7chile.cl/fhir/ig/mhd/CapabilityStatement/MHDResponder",
+  "version" : "0.1.0",
   "name" : "MHDResponder"
 },
 {
-  "id" : "fhir.mhdig",
+  "id" : "hl7.fhir.cl.mhdig",
   "type" : "ImplementationGuide",
-  "url" : "http://mhd.ri.hsisalud.org/ImplementationGuide/fhir.mhdig",
-  "version" : "0.3.0",
-  "name" : "MHDTransIG"
+  "url" : "https://hl7chile.cl/fhir/ig/mhd/ImplementationGuide/hl7.fhir.cl.mhdig",
+  "version" : "0.1.0",
+  "name" : "MHDTransIGChile"
 },
 {
   "id" : "BundleMhd",
   "type" : "StructureDefinition",
-  "url" : "http://mhd.ri.hsisalud.org/StructureDefinition/BundleMhd",
-  "version" : "0.3.0",
+  "url" : "https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/BundleMhd",
+  "version" : "0.1.0",
   "name" : "BundleMhd"
 },
 {
   "id" : "ListMhd",
   "type" : "StructureDefinition",
-  "url" : "http://mhd.ri.hsisalud.org/StructureDefinition/ListMhd",
-  "version" : "0.3.0",
+  "url" : "https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/ListMhd",
+  "version" : "0.1.0",
   "name" : "ListMhd"
 },
 {
   "id" : "ReferenciaDocumental",
   "type" : "StructureDefinition",
-  "url" : "http://mhd.ri.hsisalud.org/StructureDefinition/ReferenciaDocumental",
-  "version" : "0.3.0",
+  "url" : "https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/ReferenciaDocumental",
+  "version" : "0.1.0",
   "name" : "ReferenciaDocumental"
 },
 {
   "id" : "VSCategoriaDoc",
   "type" : "ValueSet",
-  "url" : "http://mhd.ri.hsisalud.org/ValueSet/VSCategoriaDoc",
-  "version" : "0.3.0",
+  "url" : "https://hl7chile.cl/fhir/ig/mhd/ValueSet/VSCategoriaDoc",
+  "version" : "0.1.0",
   "name" : "VSCategoriaDoc"
 },
 {
   "id" : "VSTipoDocumento",
   "type" : "ValueSet",
-  "url" : "http://mhd.ri.hsisalud.org/ValueSet/VSTipoDocumento",
-  "version" : "0.3.0",
+  "url" : "https://hl7chile.cl/fhir/ig/mhd/ValueSet/VSTipoDocumento",
+  "version" : "0.1.0",
   "name" : "VSTipoDocumento"
 }]

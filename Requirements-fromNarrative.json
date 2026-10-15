@@ -1,7 +1,7 @@
 {
   "resourceType" : "Requirements",
   "id" : "fromNarrative",
-  "url" : "http://hsisalud.org/fhir/mhd/Requirements/fromNarrative",
+  "url" : "https://hl7chile.cl/fhir/ig/mhd/Requirements/fromNarrative",
   "name" : "FromNarrative",
   "title" : "Narrative Conformance Statements",
   "status" : "active",

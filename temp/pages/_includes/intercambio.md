@@ -1,4 +1,4 @@
-# Arquitectura MHD para la publicación, búsqueda y recuperación de un documento IPS
+### Arquitectura MHD para la publicación, búsqueda y recuperación de un documento IPS
 
 
 <div style="display:block; clear:both; width:100%; text-align:center; margin-bottom:25px;">
@@ -13,7 +13,7 @@
 
 
 
-## Introducción
+#### Introducción
 
 La arquitectura presentada describe cómo utilizar el perfil **Mobile access to Health Documents (MHD)** de IHE para publicar, localizar y recuperar un **International Patient Summary (IPS)** representado mediante recursos HL7 FHIR.
 
@@ -30,7 +30,7 @@ La arquitectura considera tres actores principales:
 2. **MHD Responder**, que registra los metadatos y conserva el contenido recuperable.
 3. **Document Consumer**, que busca y recupera el IPS para utilizarlo clínicamente.
 
-## Visión general del proceso
+#### Visión general del proceso
 
 El flujo completo se desarrolla en tres etapas:
 
@@ -42,9 +42,9 @@ En términos generales, el proceso puede resumirse de la siguiente manera:
 
 > El recurso `List` agrupa los elementos correspondientes a un envío documental; `DocumentReference` describe e identifica el IPS; y el recurso `Bundle` o `Binary` contiene el documento clínico completo que podrá ser recuperado por el consumidor.
 
-## Actores de la arquitectura
+#### Actores de la arquitectura
 
-### Document Source
+##### Document Source
 
 El **Document Source** es el sistema que produce y publica el documento clínico. Puede corresponder, por ejemplo, a una ficha clínica electrónica, una plataforma hospitalaria o cualquier aplicación capaz de generar un IPS conforme a FHIR.
 
@@ -57,7 +57,7 @@ Sus principales responsabilidades son:
 - Crear el `List` que representa el conjunto de envío o `SubmissionSet`.
 - Enviar estos recursos al MHD Responder mediante ITI-65.
 
-### MHD Responder
+##### MHD Responder
 
 El **MHD Responder** recibe la publicación documental y proporciona los servicios de búsqueda y recuperación. Conceptualmente, está formado por dos componentes:
 
@@ -66,7 +66,7 @@ El **MHD Responder** recibe la publicación documental y proporciona los servici
 
 Esta separación es lógica. Una implementación puede mantener ambos componentes en una misma plataforma o distribuirlos en servicios diferentes.
 
-### Document Consumer
+##### Document Consumer
 
 El **Document Consumer** es el sistema que necesita consultar documentos clínicos previamente publicados. Puede ser una ficha clínica electrónica, una aplicación clínica, un portal profesional u otro sistema autorizado.
 
@@ -79,9 +79,9 @@ Sus responsabilidades son:
 - Recuperar el IPS completo mediante ITI-68.
 - Procesar el IPS y presentar su información clínica al usuario correspondiente.
 
-## Componentes del MHD Responder
+#### Componentes del MHD Responder
 
-### Índice o registro documental
+##### Índice o registro documental
 
 El índice almacena la información necesaria para organizar y localizar los documentos. En la arquitectura se representa mediante los recursos `List` y `DocumentReference`.
 
@@ -96,7 +96,7 @@ El índice no necesita contener toda la información clínica del IPS. Su propó
 - Relación con el conjunto de envío.
 - Dirección desde la que se puede recuperar el contenido completo.
 
-### Repositorio de documentos
+##### Repositorio de documentos
 
 El repositorio conserva el contenido completo del IPS. La arquitectura muestra dos alternativas:
 
@@ -105,9 +105,9 @@ El repositorio conserva el contenido completo del IPS. La arquitectura muestra d
 
 En ambos casos, `DocumentReference.content.attachment.url` debe conducir al recurso que contiene el documento recuperable.
 
-## Recursos FHIR involucrados
+#### Recursos FHIR involucrados
 
-### List como SubmissionSet
+##### List como SubmissionSet
 
 El recurso `List` representa el **conjunto de envío documental** o `SubmissionSet`. No contiene directamente el documento clínico; su función es agrupar las referencias documentales publicadas como parte de una misma operación.
 
@@ -126,7 +126,7 @@ La relación principal se expresa de la siguiente manera:
 List.entry.item.reference -> DocumentReference/{id}
 ```
 
-### DocumentReference como metadato del IPS
+##### DocumentReference como metadato del IPS
 
 El recurso `DocumentReference` representa la descripción documental del IPS. Contiene los datos utilizados por los consumidores para buscarlo, reconocerlo y determinar cómo recuperarlo.
 
@@ -164,7 +164,7 @@ o bien:
 DocumentReference.content.attachment.url -> Binary/ips-bin-001
 ```
 
-### Bundle IPS
+##### Bundle IPS
 
 Cuando se utiliza la opción FHIR nativa, el IPS se conserva como un recurso `Bundle` cuyo tipo es `document`:
 
@@ -191,7 +191,7 @@ Bundle IPS
 
 El perfil IPS aplicable debe declararse en `Bundle.meta.profile`. Además, el `Bundle.identifier` permite identificar de manera persistente el documento. Para facilitar la trazabilidad, dicho identificador debe ser coherente con el identificador maestro declarado en el `DocumentReference`.
 
-### Composition IPS
+##### Composition IPS
 
 La `Composition` es la raíz clínica y narrativa del documento. Define su organización interna y establece el contexto clínico del IPS.
 
@@ -214,7 +214,7 @@ Las secciones pueden incluir, entre otros antecedentes:
 
 Cada sección referencia los recursos clínicos incorporados en el mismo `Bundle` documental.
 
-### Binary como documento serializado
+##### Binary como documento serializado
 
 En la segunda alternativa, el IPS completo se serializa en JSON o XML y se almacena en un recurso `Binary`.
 
@@ -238,7 +238,7 @@ DocumentReference.content.attachment.url -> Binary/{id}
 
 Al recuperar el `Binary`, el consumidor debe decodificar `Binary.data` y procesar el `Bundle` IPS contenido en él.
 
-## Relación entre los recursos
+#### Relación entre los recursos
 
 La arquitectura establece la siguiente cadena de relaciones:
 
@@ -260,7 +260,7 @@ List
            -> recursos clínicos del paciente
 ```
 
-## Publicación mediante ITI-65 Provide Document Bundle
+#### Publicación mediante ITI-65 Provide Document Bundle
 
 La transacción **ITI-65 Provide Document Bundle** permite que el Document Source publique el conjunto documental en el MHD Responder.
 
@@ -282,7 +282,7 @@ El proceso de publicación es el siguiente:
 
 El propósito de esta transacción es que el envío se procese como una unidad coherente, manteniendo las relaciones entre el conjunto de envío, los metadatos y el contenido documental.
 
-## Búsqueda mediante ITI-67 Find Document References
+#### Búsqueda mediante ITI-67 Find Document References
 
 La transacción **ITI-67 Find Document References** permite buscar documentos utilizando los metadatos almacenados en el índice.
 
@@ -316,13 +316,13 @@ Cada resultado entrega los metadatos necesarios para que el consumidor evalúe e
 
 La búsqueda no devuelve necesariamente el IPS completo. Devuelve principalmente los recursos `DocumentReference` que permiten identificarlo y localizarlo.
 
-## Búsqueda opcional del SubmissionSet mediante ITI-66
+#### Búsqueda opcional del SubmissionSet mediante ITI-66
 
 La transacción **ITI-66 Find Document Lists** permite buscar los recursos `List` utilizados como conjuntos de envío. Esta búsqueda es útil cuando se requiere conocer qué documentos fueron publicados conjuntamente o recuperar información sobre el contexto del envío.
 
 ITI-66 complementa la búsqueda documental, pero no reemplaza la búsqueda de `DocumentReference` mediante ITI-67.
 
-## Recuperación mediante ITI-68 Retrieve Document
+#### Recuperación mediante ITI-68 Retrieve Document
 
 Después de seleccionar un `DocumentReference`, el consumidor obtiene la dirección indicada en:
 
@@ -346,7 +346,7 @@ GET [base]/Binary/ips-bin-001
 
 Si se recupera un `Bundle`, el consumidor puede procesar directamente el documento FHIR. Si se recupera un `Binary`, debe decodificar su contenido y reconstruir el IPS serializado.
 
-## Alternativas de almacenamiento del IPS
+#### Alternativas de almacenamiento del IPS
 
 | Aspecto | Opción A: Bundle FHIR | Opción B: Binary |
 | --- | --- | --- |
@@ -358,23 +358,23 @@ Si se recupera un `Bundle`, el consumidor puede procesar directamente el documen
 
 La alternativa seleccionada debe aplicarse de manera coherente en el `DocumentReference`, el repositorio y las capacidades declaradas por el servidor.
 
-## Identificadores y trazabilidad
+#### Identificadores y trazabilidad
 
 Los identificadores permiten correlacionar el envío, los metadatos y el documento clínico.
 
-### Identificador del SubmissionSet
+##### Identificador del SubmissionSet
 
 `List.identifier` identifica el conjunto de envío. Su alcance corresponde a la publicación que agrupa uno o más documentos.
 
-### Identificador maestro del documento
+##### Identificador maestro del documento
 
 `DocumentReference.masterIdentifier` identifica de manera persistente el documento IPS descrito. No corresponde necesariamente al identificador técnico del recurso FHIR.
 
-### Identificador del Bundle documental
+##### Identificador del Bundle documental
 
 `Bundle.identifier` identifica el documento FHIR completo. Debe mantenerse una correspondencia clara entre este valor y el identificador maestro del `DocumentReference`.
 
-### Identificadores adicionales
+##### Identificadores adicionales
 
 `DocumentReference.identifier` puede utilizarse para registrar identificadores locales, institucionales o asignados por el repositorio.
 
@@ -384,9 +384,9 @@ Es importante distinguir entre:
 - El identificador de negocio o documental, como `masterIdentifier` o `Bundle.identifier`.
 - La URL utilizada para recuperar una instancia concreta del documento.
 
-## Flujo completo de extremo a extremo
+#### Flujo completo de extremo a extremo
 
-### Etapa 1: producción y publicación
+##### Etapa 1: producción y publicación
 
 1. El sistema productor reúne la información clínica del paciente.
 2. Genera una `Composition` IPS.
@@ -396,28 +396,28 @@ Es importante distinguir entre:
 6. Crea el `List` que representa el conjunto de envío.
 7. Publica los recursos mediante ITI-65.
 
-### Etapa 2: registro y almacenamiento
+##### Etapa 2: registro y almacenamiento
 
 1. El MHD Responder recibe el paquete de publicación.
 2. Registra el `List` y los `DocumentReference` en el índice documental.
 3. Almacena el contenido IPS en el repositorio.
 4. Mantiene las referencias necesarias entre los recursos.
 
-### Etapa 3: búsqueda
+##### Etapa 3: búsqueda
 
 1. El consumidor consulta `DocumentReference` mediante ITI-67.
 2. El MHD Responder devuelve un `Bundle` de tipo `searchset`.
 3. El consumidor examina los metadatos y selecciona el documento apropiado.
 4. Obtiene la URL desde `content.attachment.url`.
 
-### Etapa 4: recuperación y uso
+##### Etapa 4: recuperación y uso
 
 1. El consumidor invoca la URL de recuperación mediante ITI-68.
 2. El repositorio devuelve el `Bundle` IPS o el `Binary` correspondiente.
 3. El consumidor procesa el documento.
 4. La información del IPS queda disponible para su uso clínico.
 
-## Resumen de transacciones
+#### Resumen de transacciones
 
 | Transacción | Nombre | Propósito |
 | --- | --- | --- |
@@ -426,7 +426,7 @@ Es importante distinguir entre:
 | ITI-67 | Find Document References | Buscar los metadatos de documentos registrados. |
 | ITI-68 | Retrieve Document | Recuperar el contenido completo de un documento seleccionado. |
 
-## Consideraciones de implementación
+#### Consideraciones de implementación
 
 Para mantener la coherencia de la arquitectura, una implementación debe asegurar que:
 
@@ -441,14 +441,14 @@ Para mantener la coherencia de la arquitectura, una implementación debe asegura
 - La recuperación entregue el documento asociado al `DocumentReference` seleccionado.
 - Los servicios apliquen los controles de autenticación, autorización, auditoría y protección de datos requeridos por el contexto de uso.
 
-## Conclusión
+#### Conclusión
 
 La arquitectura MHD permite administrar documentos IPS separando claramente la función de **registro y búsqueda de metadatos** de la función de **almacenamiento y recuperación del contenido clínico completo**.
 
 El `List` representa el conjunto de envío, el `DocumentReference` describe el documento y proporciona su dirección de recuperación, y el `Bundle` o `Binary` contiene el IPS. Mediante ITI-65 el documento se publica, mediante ITI-67 se localiza y mediante ITI-68 se recupera para su utilización clínica. ITI-66 puede utilizarse adicionalmente cuando se requiere buscar los conjuntos de envío representados por recursos `List`.
 
 
-# DocumentReference e IPS en una arquitectura MHD
+### DocumentReference e IPS en una arquitectura MHD
 
 <div style="display:block; clear:both; width:100%; text-align:center; margin-bottom:25px;">
   <img
@@ -462,7 +462,7 @@ El `List` representa el conjunto de envío, el `DocumentReference` describe el d
 
 
 
-## Introducción
+#### Introducción
 
 La arquitectura presentada explica la relación entre un recurso `DocumentReference` y un documento **International Patient Summary (IPS)** dentro del perfil **Mobile access to Health Documents (MHD)** de IHE.
 
@@ -476,7 +476,7 @@ El IPS propiamente tal se conserva como un documento FHIR compuesto por:
 
 Como alternativa, el `Bundle` IPS completo puede almacenarse serializado dentro de un recurso `Binary`.
 
-## Principio fundamental
+#### Principio fundamental
 
 La arquitectura separa claramente dos elementos:
 
@@ -497,7 +497,7 @@ DocumentReference.content.attachment.url
 
 Este elemento debe apuntar al documento completo recuperable y no solamente a la `Composition`.
 
-## Participantes de la arquitectura
+#### Participantes de la arquitectura
 
 La arquitectura considera tres participantes principales:
 
@@ -505,7 +505,7 @@ La arquitectura considera tres participantes principales:
 2. **Servidor MHD o Document Recipient**.
 3. **Consumidor o Document Consumer**.
 
-### Sistema fuente o Document Source
+##### Sistema fuente o Document Source
 
 El **Document Source** es el sistema que crea y publica el IPS. Puede corresponder a una ficha clínica electrónica, un sistema hospitalario o cualquier plataforma capaz de construir un documento IPS válido.
 
@@ -524,7 +524,7 @@ El producto clínico generado por este actor es un `Bundle` FHIR cuyo tipo debe 
 Bundle.type = document
 ```
 
-### Servidor MHD o Document Recipient
+##### Servidor MHD o Document Recipient
 
 El **Document Recipient** recibe la publicación y proporciona los servicios necesarios para registrar, buscar y recuperar documentos.
 
@@ -535,7 +535,7 @@ En la arquitectura se distinguen dos funciones internas:
 
 Ambas funciones pueden implementarse en un mismo servidor o distribuirse en componentes diferentes. Lo relevante es que las referencias entre los metadatos y el contenido sean válidas y resolubles.
 
-### Consumidor o Document Consumer
+##### Consumidor o Document Consumer
 
 El **Document Consumer** corresponde al sistema que necesita localizar y utilizar el IPS. Puede ser un HIS, un portal clínico, una ficha clínica electrónica, una aplicación móvil u otro sistema autorizado.
 
@@ -548,7 +548,7 @@ Sus responsabilidades son:
 - Recuperar el IPS completo mediante ITI-68.
 - Procesar y presentar la información clínica.
 
-## El índice documental
+#### El índice documental
 
 El índice documental almacena los recursos `DocumentReference`. Estos recursos contienen información que permite clasificar y localizar los documentos disponibles sin tener que recuperar todo su contenido clínico.
 
@@ -564,9 +564,9 @@ En la arquitectura, el `DocumentReference` del IPS incluye al menos los siguient
 
 También puede incorporar categorías, fechas, formatos, contexto clínico y otros identificadores necesarios para la búsqueda y trazabilidad.
 
-## Elementos principales de DocumentReference
+#### Elementos principales de DocumentReference
 
-### Estado documental
+##### Estado documental
 
 El estado del documento se registra en:
 
@@ -582,7 +582,7 @@ DocumentReference.status = current
 
 Esto indica que el documento corresponde a la versión vigente dentro del ciclo documental definido por el sistema.
 
-### Tipo documental
+##### Tipo documental
 
 El tipo permite reconocer que el documento corresponde a un resumen clínico del paciente o IPS:
 
@@ -598,7 +598,7 @@ La imagen utiliza como ejemplo el código LOINC:
 
 Este código permite expresar semánticamente que el contenido corresponde a un documento de resumen del paciente.
 
-### Paciente
+##### Paciente
 
 La relación con el paciente se expresa mediante:
 
@@ -608,7 +608,7 @@ DocumentReference.subject -> Patient/{id}
 
 Este elemento es fundamental para buscar todos los documentos asociados a una persona determinada.
 
-### Autor y custodio
+##### Autor y custodio
 
 El `DocumentReference` puede identificar quién creó el documento y qué organización es responsable de su custodia.
 
@@ -626,7 +626,7 @@ Conceptualmente:
 - El **autor** representa a quien participa en la creación del documento.
 - El **custodio** representa a la organización responsable de mantenerlo y ponerlo a disposición.
 
-### Identificador maestro
+##### Identificador maestro
 
 El identificador maestro del documento se registra en:
 
@@ -654,7 +654,7 @@ Bundle.identifier.value  = IPS-2026-0001
 
 Esta concordancia permite demostrar que el `DocumentReference` describe precisamente el `Bundle` documental recuperado.
 
-### Dirección del documento completo
+##### Dirección del documento completo
 
 La dirección de recuperación se declara en:
 
@@ -676,7 +676,7 @@ Binary/ips-bin-001
 
 El destino debe contener el IPS completo.
 
-## Representación del IPS mediante Bundle
+#### Representación del IPS mediante Bundle
 
 La primera alternativa consiste en almacenar el IPS como un recurso `Bundle` FHIR nativo.
 
@@ -706,7 +706,7 @@ Bundle/ips-001
 
 El perfil IPS aplicable debe declararse mediante su URL canónica en `Bundle.meta.profile`.
 
-## La Composition dentro del IPS
+#### La Composition dentro del IPS
 
 La `Composition` es la cabecera clínica y organizativa del documento. Define el paciente, los autores, el custodio, el estado y las secciones clínicas que conforman el resumen.
 
@@ -727,7 +727,7 @@ Las secciones de la `Composition` pueden referenciar recursos como:
 - `Organization` para organizaciones participantes.
 - Otros recursos exigidos o permitidos por el perfil IPS.
 
-### Por qué no se debe apuntar solamente a Composition
+##### Por qué no se debe apuntar solamente a Composition
 
 La `Composition` no constituye por sí sola el documento IPS completo. Es solamente la estructura clínica que encabeza y organiza el documento.
 
@@ -754,7 +754,7 @@ La regla se puede resumir así:
 
 > `Composition` encabeza el IPS, pero el IPS clínico completo vive en el `Bundle` de tipo `document`.
 
-## Representación del IPS mediante Binary
+#### Representación del IPS mediante Binary
 
 La segunda alternativa consiste en serializar el `Bundle` IPS completo en JSON o XML y almacenarlo dentro de un recurso `Binary`.
 
@@ -784,7 +784,7 @@ Después de recuperar el `Binary`, el consumidor debe:
 
 Aunque se utilice `Binary`, el contenido clínico sigue siendo un `Bundle` IPS de tipo `document`; solamente cambia la manera en que se almacena y entrega.
 
-## Comparación de las dos opciones
+#### Comparación de las dos opciones
 
 | Aspecto | Bundle FHIR nativo | IPS serializado en Binary |
 | --- | --- | --- |
@@ -796,7 +796,7 @@ Aunque se utilice `Binary`, el contenido clínico sigue siendo un `Bundle` IPS d
 
 La alternativa seleccionada debe declararse de forma coherente en `DocumentReference.content.attachment.contentType` y `DocumentReference.content.attachment.url`.
 
-## Publicación mediante ITI-65
+#### Publicación mediante ITI-65
 
 El sistema fuente publica el IPS en el servidor MHD mediante la transacción:
 
@@ -816,7 +816,7 @@ El proceso conceptual es el siguiente:
 
 El resultado esperado es que el IPS quede disponible tanto para búsquedas documentales como para recuperación posterior.
 
-## Búsqueda mediante ITI-67
+#### Búsqueda mediante ITI-67
 
 El consumidor localiza los documentos mediante:
 
@@ -854,7 +854,7 @@ Bundle (type = searchset)
 
 El consumidor recibe metadatos, no necesariamente el documento IPS completo. Luego debe examinar los resultados, seleccionar el documento adecuado y utilizar su URL de recuperación.
 
-## Recuperación mediante ITI-68
+#### Recuperación mediante ITI-68
 
 Una vez seleccionado el `DocumentReference`, el consumidor utiliza:
 
@@ -882,9 +882,9 @@ GET [base]/Binary/ips-bin-001
 
 El resultado final debe permitir al consumidor obtener el documento IPS FHIR completo.
 
-## Flujo completo de extremo a extremo
+#### Flujo completo de extremo a extremo
 
-### 1. Generación
+##### 1. Generación
 
 1. El sistema fuente reúne la información clínica.
 2. Genera la `Composition` IPS.
@@ -892,7 +892,7 @@ El resultado final debe permitir al consumidor obtener el documento IPS FHIR com
 4. Incluye la `Composition` como primera entrada.
 5. Incorpora los recursos clínicos referenciados.
 
-### 2. Indexación
+##### 2. Indexación
 
 1. El sistema fuente crea el `DocumentReference`.
 2. Declara el paciente en `subject`.
@@ -901,45 +901,45 @@ El resultado final debe permitir al consumidor obtener el documento IPS FHIR com
 5. Asigna el identificador maestro.
 6. Configura la URL hacia el IPS completo.
 
-### 3. Publicación
+##### 3. Publicación
 
 1. El Document Source envía los recursos mediante ITI-65.
 2. El MHD Recipient registra el `DocumentReference`.
 3. El contenido IPS queda almacenado como `Bundle` o `Binary`.
 
-### 4. Búsqueda
+##### 4. Búsqueda
 
 1. El consumidor ejecuta ITI-67.
 2. El servidor devuelve un `Bundle` de tipo `searchset`.
 3. El consumidor revisa los `DocumentReference` encontrados.
 4. Selecciona el documento correspondiente.
 
-### 5. Recuperación
+##### 5. Recuperación
 
 1. El consumidor obtiene `content.attachment.url`.
 2. Ejecuta ITI-68 sobre esa dirección.
 3. Recupera el `Bundle` IPS o el `Binary`.
 4. Procesa el documento para su uso clínico.
 
-## Reglas clave
+#### Reglas clave
 
-### Regla 1: DocumentReference indexa el IPS
+##### Regla 1: DocumentReference indexa el IPS
 
 `DocumentReference` contiene metadatos y facilita la búsqueda, pero no reemplaza al documento clínico.
 
-### Regla 2: attachment.url apunta al documento completo
+##### Regla 2: attachment.url apunta al documento completo
 
 `DocumentReference.content.attachment.url` debe apuntar al `Bundle` IPS completo o al `Binary` que lo contiene.
 
-### Regla 3: los identificadores deben concordar
+##### Regla 3: los identificadores deben concordar
 
 El par `system` y `value` de `DocumentReference.masterIdentifier` debe concordar con el identificador documental expresado en `Bundle.identifier`.
 
-### Regla 4: el IPS vive en el Bundle
+##### Regla 4: el IPS vive en el Bundle
 
 La `Composition` encabeza y estructura el documento, pero el IPS clínico completo corresponde al `Bundle` de tipo `document`.
 
-## Lista de verificación para la implementación
+#### Lista de verificación para la implementación
 
 Antes de publicar un IPS, se debe comprobar que:
 
@@ -960,7 +960,7 @@ Antes de publicar un IPS, se debe comprobar que:
 - El documento pueda encontrarse mediante ITI-67.
 - El documento pueda recuperarse mediante ITI-68.
 
-## Conclusión
+#### Conclusión
 
 En una arquitectura MHD, el `DocumentReference` actúa como el registro documental del IPS. Permite describirlo, identificarlo, asociarlo con un paciente y proporcionar la URL desde la que puede recuperarse.
 

@@ -3,29 +3,29 @@
   "id" : "VSCategoriaDoc",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores VSCategoriaDoc</b></p><a name=\"VSCategoriaDoc\"> </a><a name=\"hcVSCategoriaDoc\"> </a><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/26436-6/\">26436-6</a></td><td>Laboratory studies (set)</td></tr><tr><td><a href=\"https://loinc.org/18726-0/\">18726-0</a></td><td>Radiology studies (set)</td></tr><tr><td><a href=\"https://loinc.org/11506-3/\">11506-3</a></td><td>Progress note</td></tr><tr><td><a href=\"https://loinc.org/18842-5/\">18842-5</a></td><td>Discharge summary</td></tr><tr><td><a href=\"https://loinc.org/60591-5/\">60591-5</a></td><td>Patient summary document</td></tr></table></li></ul></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet VSCategoriaDoc</b></p><a name=\"VSCategoriaDoc\"> </a><a name=\"hcVSCategoriaDoc\"> </a><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/26436-6/\">26436-6</a></td><td>Laboratory studies (set)</td></tr><tr><td><a href=\"https://loinc.org/18726-0/\">18726-0</a></td><td>Radiology studies (set)</td></tr><tr><td><a href=\"https://loinc.org/11506-3/\">11506-3</a></td><td>Progress note</td></tr><tr><td><a href=\"https://loinc.org/18842-5/\">18842-5</a></td><td>Discharge summary</td></tr><tr><td><a href=\"https://loinc.org/60591-5/\">60591-5</a></td><td>Patient summary document</td></tr></table></li></ul></div>"
   },
-  "url" : "http://mhd.ri.hsisalud.org/ValueSet/VSCategoriaDoc",
-  "version" : "0.3.0",
+  "url" : "https://hl7chile.cl/fhir/ig/mhd/ValueSet/VSCategoriaDoc",
+  "version" : "0.1.0",
   "name" : "VSCategoriaDoc",
   "title" : "Categorías de Documento Clínico para DocumentReference",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T10:42:41-04:00",
-  "publisher" : "HSI Pladema",
+  "date" : "2026-10-15T12:40:59-03:00",
+  "publisher" : "Hl7 Chile",
   "contact" : [{
-    "name" : "HSI Pladema",
+    "name" : "Hl7 Chile",
     "telecom" : [{
       "system" : "url",
-      "value" : "https://hsi.pladema.net"
+      "value" : "https://hl7chile.cl/"
     }]
   }],
   "description" : "Categorías generales de documentos clínicos codificadas en LOINC para ser usadas en DocumentReference.category.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
-      "code" : "AR",
-      "display" : "Argentina"
+      "code" : "CL",
+      "display" : "Chile"
     }]
   }],
   "compose" : {

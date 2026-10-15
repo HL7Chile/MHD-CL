@@ -1,4 +1,8 @@
-/output
-.index.json
+
+output/
 .index.db
-.DS_Store
+.index.json
+
+.index.json
+
+.index.db

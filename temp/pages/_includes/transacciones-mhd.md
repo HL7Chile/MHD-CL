@@ -1,10 +1,10 @@
-# Transacciones MHD
+### Transacciones MHD
 
 Esta página describe las transacciones utilizadas para registrar, buscar y recuperar documentos clínicos mediante **IHE Mobile access to Health Documents (MHD)** sobre **HL7 FHIR R4**.
 
 La implementación utiliza los perfiles de **IHE MHD** para el intercambio documental y los perfiles de **Core AR** para representar las entidades nacionales, como pacientes, profesionales y organizaciones.
 
-## Contenido
+#### Contenido
 
 - [Actores MHD](#actores-mhd)
 - [Transacción 1: Registrar un documento — ITI-65](#transacción-1-registrar-un-documento--iti-65)
@@ -15,7 +15,7 @@ La implementación utiliza los perfiles de **IHE MHD** para el intercambio docum
 
 ---
 
-## Actores MHD
+#### Actores MHD
 
 | Actor | Función |
 |---|---|
@@ -31,17 +31,17 @@ La implementación utiliza los perfiles de **IHE MHD** para el intercambio docum
 
 ---
 
-## Transacción 1: Registrar un documento — ITI-65
+#### Transacción 1: Registrar un documento — ITI-65
 
 **Nombre IHE:** Provide Document Bundle  
 **Actores:** Document Source → Document Recipient  
 **Método HTTP:** `POST [base]`
 
-### Descripción
+##### Descripción
 
 La transacción **ITI-65** permite enviar documentos clínicos y sus metadatos al receptor documental. La solicitud se representa mediante un `Bundle` FHIR de tipo `transaction`, que debe procesarse de manera atómica: todas las entradas se procesan correctamente o la transacción completa es rechazada.
 
-### Recursos de la transacción
+##### Recursos de la transacción
 
 | Recurso | Uso |
 |---|---|
@@ -54,7 +54,7 @@ La transacción **ITI-65** permite enviar documentos clínicos y sus metadatos a
 
 > La guía local debe declarar expresamente si el contenido se envía como `Binary`, como un `Bundle` FHIR de tipo `document` o se mantiene en un repositorio externo mediante la opción de referencias no contenidas.
 
-### Solicitud
+##### Solicitud
 
 ```http
 POST [base]
@@ -105,7 +105,7 @@ Accept: application/fhir+json
 }
 ```
 
-### Diagrama de secuencia
+##### Diagrama de secuencia
 
 
 <div align="center" >
@@ -114,7 +114,7 @@ Accept: application/fhir+json
 <br clear="all"/>
 
 
-### Respuesta exitosa
+##### Respuesta exitosa
 
 El éxito de la transacción se informa mediante un estado HTTP general `200 OK`. Cada entrada del `Bundle` de respuesta indica el resultado individual de su operación, normalmente `201 Created` para los recursos creados.
 
@@ -147,7 +147,7 @@ El éxito de la transacción se informa mediante un estado HTTP general `200 OK`
 
 ---
 
-## Transacción 2: Buscar documentos — ITI-67
+#### Transacción 2: Buscar documentos — ITI-67
 
 La transacción **ITI-67 Find Document References** permite al *Document Consumer* buscar referencias documentales en el *Document Responder* mediante el recurso `DocumentReference`.
 
@@ -158,7 +158,7 @@ Entre los parámetros utilizados se incluyen, entre otros: `patient`, `patient.i
 Los parámetros y requisitos detallados que debe soportar el servidor se especifican formalmente en el **CapabilityStatement MHD Responder** de esta guía.
 
 
-### Solicitud por identificador del paciente
+##### Solicitud por identificador del paciente
 
 ```http
 GET [base]/DocumentReference?patient.identifier=[system]|[value]&status=current
@@ -171,7 +171,7 @@ Ejemplo:
 GET [base]/DocumentReference?patient.identifier=http://www.renaper.gob.ar/dni|25486731&status=current
 ```
 
-### Diagrama de secuencia
+##### Diagrama de secuencia
 
 
 <div align="center" >
@@ -180,7 +180,7 @@ GET [base]/DocumentReference?patient.identifier=http://www.renaper.gob.ar/dni|25
 <br clear="all"/>
 
 
-### Respuesta exitosa
+##### Respuesta exitosa
 
 La respuesta será `200 OK`, incluso cuando no se encuentren documentos. En ese caso, el `Bundle.total` será `0` y no contendrá entradas de resultados.
 
@@ -219,13 +219,13 @@ La respuesta será `200 OK`, incluso cuando no se encuentren documentos. En ese 
 
 ---
 
-## Transacción 3: Recuperar un documento — ITI-68
+#### Transacción 3: Recuperar un documento — ITI-68
 
 **Nombre IHE:** Retrieve Document  
 **Actores:** Document Consumer → Document Responder  
 **Método HTTP:** `GET [URL del documento]`
 
-### Descripción
+##### Descripción
 
 La transacción **ITI-68** permite recuperar el documento previamente localizado mediante ITI-67. El consumidor debe utilizar la dirección indicada en `DocumentReference.content.attachment.url`.
 
@@ -237,7 +237,7 @@ GET [base]/Bundle/[id]
 
 Si el documento se almacena como `Binary` o en un repositorio documental externo, se utiliza directamente la URL informada en el `DocumentReference`.
 
-### Encabezados
+##### Encabezados
 
 El consumidor puede utilizar el encabezado `Accept` para indicar el formato requerido:
 
@@ -248,7 +248,7 @@ Accept: application/fhir+json
 
 El formato solicitado debe ser compatible con el tipo informado en `DocumentReference.content.attachment.contentType`.
 
-### Diagrama de secuencia
+##### Diagrama de secuencia
 
 
 <div align="center" >
@@ -257,7 +257,7 @@ El formato solicitado debe ser compatible con el tipo informado en `DocumentRefe
 <br clear="all"/>
 
 
-### Respuesta exitosa: documento FHIR
+##### Respuesta exitosa: documento FHIR
 
 ```json
 {
@@ -285,7 +285,7 @@ El formato solicitado debe ser compatible con el tipo informado en `DocumentRefe
 
 ---
 
-## Códigos de respuesta HTTP
+#### Códigos de respuesta HTTP
 
 | Código | Escenario | Descripción |
 |---|---|---|
@@ -316,7 +316,7 @@ Cuando se produce un error, el servidor debería entregar un recurso `OperationO
 
 ---
 
-## Seguridad
+#### Seguridad
 
 Las transacciones deben ejecutarse mediante HTTPS y aplicar los mecanismos de autenticación, autorización, control de acceso y auditoría definidos por la infraestructura nacional o institucional.
 
@@ -329,7 +329,7 @@ Como mínimo, la implementación debe considerar:
 - trazabilidad de accesos y recuperaciones;
 - cumplimiento de las políticas de consentimiento aplicables.
 
-## Referencias
+#### Referencias
 
 - [IHE MHD — Provide Document Bundle ITI-65](https://profiles.ihe.net/ITI/MHD/ITI-65.html)
 - [IHE MHD — Find Document References ITI-67](https://profiles.ihe.net/ITI/MHD/ITI-67.html)

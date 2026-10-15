@@ -7,6 +7,10 @@
   "excludettl":"N",
   "excludelogbinaryformat":"y",
   "excludemap":"N",
+  "excludeflags":"",
+  "openehr":"N",
   "fcpspec":"",
+  "togglechanges":"N",
+  "oldartifacts":"N",
   "fmm-definition":"http://hl7.org/fhir/versions.html#maturity"
 }

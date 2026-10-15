@@ -1,6 +1,6 @@
 
 
-##  Propósito
+###  Propósito
 
 El perfil `ReferenciaDocumental` se utiliza para registrar los metadatos de un documento clínico y señalar dónde puede recuperarse su contenido. Está derivado de `MinimalDocumentReference` de IHE MHD y está pensado para escenarios de publicación, búsqueda y recuperación documental relacionados con las transacciones ITI-65, ITI-67 e ITI-68.
 

@@ -1,18 +1,18 @@
 {
   "resourceType": "StructureDefinition",
   "id": "BundleMhd",
-  "url": "http://mhd.ri.hsisalud.org/StructureDefinition/BundleMhd",
+  "url": "https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/BundleMhd",
   "name": "BundleMhd",
   "status": "draft",
-  "date": "2026-06-22",
-  "publisher": "HSI Pladema",
+  "date": "2026-10-14",
+  "publisher": "HL7 Chile",
   "contact": [
     {
-      "name": "HSI Pladema",
+      "name": "HL7 Chile",
       "telecom": [
         {
           "system": "url",
-          "value": "https://hsi.pladema.net"
+          "value": "https://hl7chile.cl"
         }
       ]
     }
@@ -22,8 +22,9 @@
     {
       "coding": [
         {
-          "code": "AR",
-          "system": "urn:iso:std:iso:3166"
+          "code": "CL",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Chile"
         }
       ]
     }
@@ -44,7 +45,7 @@
         "example": [
           {
             "label": "Ejemplo de perfil asociado al bundle de transacciones MHD",
-            "valueUri": "http://mhd.ri.hsisalud.org/StructureDefinition/BundleMhd"
+            "valueUri": "https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/BundleMhd"
           }
         ],
         "mustSupport": true
@@ -68,7 +69,7 @@
           {
             "code": "List",
             "profile": [
-              "http://mhd.ri.hsisalud.org/StructureDefinition/ListMhd"
+              "https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/ListMhd"
             ]
           }
         ]
@@ -91,7 +92,7 @@
           {
             "code": "DocumentReference",
             "profile": [
-              "http://mhd.ri.hsisalud.org/StructureDefinition/ReferenciaDocumental"
+              "https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/ReferenciaDocumental"
             ]
           }
         ]
@@ -99,7 +100,7 @@
       {
         "id": "Bundle.entry:DocumentRefs.request.url",
         "path": "Bundle.entry.request.url",
-        "patternUri": "/DocumentReference"
+        "patternUri": "DocumentReference"
       },
       {
         "id": "Bundle.entry:UpdateDocumentRefs",
@@ -118,18 +119,6 @@
         "path": "Bundle.entry",
         "sliceName": "FhirDocuments",
         "mustSupport": true
-      },
-      {
-        "id": "Bundle.entry:FhirDocuments.resource",
-        "path": "Bundle.entry.resource",
-        "type": [
-          {
-            "code": "Bundle",
-            "profile": [
-              "http://ips.ri.hsisalud.org/StructureDefinition/BundleDocArg"
-            ]
-          }
-        ]
       },
       {
         "id": "Bundle.entry:FhirDocuments.request.url",
@@ -155,7 +144,7 @@
           {
             "code": "Patient",
             "profile": [
-              "http://ips.ri.hsisalud.org/StructureDefinition/PacienteArg"
+              "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CorePacienteCl"
             ]
           }
         ]
