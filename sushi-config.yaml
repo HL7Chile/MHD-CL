@@ -71,6 +71,7 @@ pages:
 #
 parameters:
   pin-canonicals: pin-multiples
+  auto-oid-root: 2.16.840.1.113883.2.22.40.14
 #   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]
 #
