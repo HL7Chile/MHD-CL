@@ -25,7 +25,7 @@
    <name value="MHDTransIGChile"/>
    <title value="Guía MHD para el Intercambio de Información de Salud en Chile"/>
    <status value="draft"/>
-   <date value="2026-10-15T12:40:59-03:00"/>
+   <date value="2026-10-16T16:15:28-03:00"/>
    <publisher value="Hl7 Chile"/>
    <contact>
       <name value="Hl7 Chile"/>
@@ -442,6 +442,24 @@
             <valueInteger value="999999999"/>
          </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Bundle"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Bundle-bundle-mhd-referencia-documental-ejemplo.html"/>
+         </extension>
+         <reference>
+            <reference value="Bundle/bundle-mhd-referencia-documental-ejemplo"/>
+         </reference>
+         <name value="Bundle MHD con referencia documental de ejemplo"/>
+         <description value="Bundle transaction que vincula el DocumentReference generado previamente."/>
+         <exampleCanonical value="https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/BundleMhd"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
@@ -496,6 +514,24 @@
             <valueInteger value="999999999"/>
          </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="List"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="List-EjemploListMhd.html"/>
+         </extension>
+         <reference>
+            <reference value="List/EjemploListMhd"/>
+         </reference>
+         <name value="Ejemplo mínimo de List MHD"/>
+         <description value="Ejemplo mínimo de List como SubmissionSet MHD con una referencia documental."/>
+         <exampleCanonical value="https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/ListMhd"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
@@ -526,6 +562,60 @@
          <description value="CapabilityStatement que define las capacidades requeridas para un servidor&#xA;MHD conforme a la Guía MHD para HSI.&#xA;&#xA;El servidor implementa las funciones de Document Recipient y Document&#xA;Responder definidas por IHE MHD 4.2.2, adaptadas a los perfiles locales&#xA;de esta guía."/>
          <exampleBoolean value="false"/>
          <groupingId value="-dyn-capabilitystatement"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Patient"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Patient-Paciente-Interno.html"/>
+         </extension>
+         <reference>
+            <reference value="Patient/Paciente-Interno"/>
+         </reference>
+         <name value="Paciente-Interno"/>
+         <description value="Ejemplo de paciente Chileno conforme al perfil PacienteCLIps, con rut y nombre oficial."/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Practitioner"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Practitioner-PrestadorCLInline.html"/>
+         </extension>
+         <reference>
+            <reference value="Practitioner/PrestadorCLInline"/>
+         </reference>
+         <name value="PrestadorCLInline"/>
+         <description value="Ejemplo inline de profesional argentino conforme al perfil PrestadorArg."/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DocumentReference"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DocumentReference-ReferDocEjemplo.html"/>
+         </extension>
+         <reference>
+            <reference value="DocumentReference/ReferDocEjemplo"/>
+         </reference>
+         <name value="Referencia documental mínima para DocumentoArg"/>
+         <description value="Ejemplo de DocumentReference MHD que referencia un documento clínico FHIR DocumentoArg."/>
+         <exampleCanonical value="https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/ReferenciaDocumental"/>
+         <groupingId value="-ex-example"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
@@ -575,7 +665,7 @@
                <valueUrl value="index.html"/>
             </extension>
             <nameUrl value="index.html"/>
-            <title value="Inicio"/>
+            <title value="1. Inicio"/>
             <generation value="markdown"/>
          </page>
          <page>
@@ -583,7 +673,7 @@
                <valueUrl value="intercambio.html"/>
             </extension>
             <nameUrl value="intercambio.html"/>
-            <title value="Esquemas de transacciones FHIR MHD"/>
+            <title value="2. Esquemas de transacciones FHIR MHD"/>
             <generation value="markdown"/>
          </page>
          <page>
@@ -591,7 +681,7 @@
                <valueUrl value="transacciones-mhd.html"/>
             </extension>
             <nameUrl value="transacciones-mhd.html"/>
-            <title value="Transacciones asociadas a MHD"/>
+            <title value="3. Transacciones asociadas a MHD"/>
             <generation value="markdown"/>
          </page>
          <page>
@@ -599,7 +689,7 @@
                <valueUrl value="seguridad.html"/>
             </extension>
             <nameUrl value="seguridad.html"/>
-            <title value="Aspectos de Seguridad"/>
+            <title value="4. Aspectos de Seguridad"/>
             <generation value="markdown"/>
          </page>
          <page>
@@ -607,7 +697,7 @@
                <valueUrl value="cambios.html"/>
             </extension>
             <nameUrl value="cambios.html"/>
-            <title value="Historial de Versiones"/>
+            <title value="5. Historial de Versiones"/>
             <generation value="markdown"/>
          </page>
       </page>
@@ -686,6 +776,10 @@
       <parameter>
          <code value="pin-canonicals"/>
          <value value="pin-multiples"/>
+      </parameter>
+      <parameter>
+         <code value="auto-oid-root"/>
+         <value value="2.16.840.1.113883.2.22.40.14"/>
       </parameter>
       <parameter>
          <code value="autoload-resources"/>

@@ -57,8 +57,8 @@
     "oids" : ["2.16.840.1.113883.4.642.4.625"],
     "uses" : {
     },
-    "https://profiles.ihe.net/ITI/MHD/4.2.5-comment/ValueSet-MHDprovidePatientActions.html" : "MHD Patient Types ValueSet",
     "https://profiles.ihe.net/ITI/MHD/4.2.5-comment/ValueSet-MHDprovideFolderActions.html" : "MHD Folder List Types ValueSet",
+    "https://profiles.ihe.net/ITI/MHD/4.2.5-comment/ValueSet-MHDprovidePatientActions.html" : "MHD Patient Types ValueSet",
     "http://hl7.org/fhir/R4/valueset-http-verb.html" : "HTTPVerb"
   },
   {
@@ -130,8 +130,8 @@
     "oids" : ["2.16.840.1.113883.6.1"],
     "uses" : {
     },
-    "ValueSet-VSTipoDocumento.html" : "Tipos de Documento Clínico para DocumentReference",
-    "ValueSet-VSCategoriaDoc.html" : "Categorías de Documento Clínico para DocumentReference"
+    "ValueSet-VSCategoriaDoc.html" : "Categorías de Documento Clínico para DocumentReference",
+    "ValueSet-VSTipoDocumento.html" : "Tipos de Documento Clínico para DocumentReference"
   },
   {
     "url" : "http://snomed.info/sct",

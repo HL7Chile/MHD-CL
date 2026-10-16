@@ -53,9 +53,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.79"],
     "uses" : {
     },
-    "StructureDefinition-ReferenciaDocumental.html" : "ReferenciaDocumental",
     "StructureDefinition-ListMhd.html" : "ListMhd",
-    "StructureDefinition-BundleMhd.html" : "BundleMhd"
+    "StructureDefinition-BundleMhd.html" : "BundleMhd",
+    "StructureDefinition-ReferenciaDocumental.html" : "ReferenciaDocumental"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/composition-status",
@@ -111,9 +111,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
-    "StructureDefinition-ReferenciaDocumental.html" : "ReferenciaDocumental",
     "StructureDefinition-ListMhd.html" : "ListMhd",
-    "StructureDefinition-BundleMhd.html" : "BundleMhd"
+    "StructureDefinition-BundleMhd.html" : "BundleMhd",
+    "StructureDefinition-ReferenciaDocumental.html" : "ReferenciaDocumental"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/list-empty-reason",
@@ -211,8 +211,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.27"],
     "uses" : {
     },
-    "StructureDefinition-ReferenciaDocumental.html" : "ReferenciaDocumental",
-    "StructureDefinition-ListMhd.html" : "ListMhd"
+    "StructureDefinition-ListMhd.html" : "ListMhd",
+    "StructureDefinition-ReferenciaDocumental.html" : "ReferenciaDocumental"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/search-entry-mode",
@@ -244,9 +244,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.47"],
     "uses" : {
     },
-    "StructureDefinition-ReferenciaDocumental.html" : "ReferenciaDocumental",
     "StructureDefinition-ListMhd.html" : "ListMhd",
-    "StructureDefinition-BundleMhd.html" : "BundleMhd"
+    "StructureDefinition-BundleMhd.html" : "BundleMhd",
+    "StructureDefinition-ReferenciaDocumental.html" : "ReferenciaDocumental"
   },
   {
     "url" : "http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode",
@@ -285,6 +285,8 @@
     "title" : "Categorías de Documento Clínico para DocumentReference",
     "description" : "Categorías generales de documentos clínicos codificadas en LOINC para ser usadas en DocumentReference.category.",
     "systems" : ["http://loinc.org"],
+    "oids" : ["2.16.840.1.113883.2.22.40.14.48.1"],
+    "sources" : ["2.16.840.1.113883.2.22.40.14.48.1"],
     "uses" : {
     },
     "StructureDefinition-ReferenciaDocumental.html" : "ReferenciaDocumental"
@@ -297,6 +299,8 @@
     "title" : "Tipos de Documento Clínico para DocumentReference",
     "description" : "Tipos documentales clínicos codificados en LOINC para ser usados en DocumentReference.type.",
     "systems" : ["http://loinc.org"],
+    "oids" : ["2.16.840.1.113883.2.22.40.14.48.2"],
+    "sources" : ["2.16.840.1.113883.2.22.40.14.48.2"],
     "uses" : {
     },
     "StructureDefinition-ReferenciaDocumental.html" : "ReferenciaDocumental"

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="1ed80e1e-ce73-4500-98b4-ee72316bb239"/>
+  <id value="faf79a18-01ed-46f6-9e12-81c23ea4cbc3"/>
   <meta>
-    <lastUpdated value="2026-10-15T12:40:59.905-03:00"/>
+    <lastUpdated value="2026-10-16T16:15:28.224-03:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -142,12 +142,16 @@
           </div>
         </text>
         <url value="https://hl7chile.cl/fhir/ig/mhd/ValueSet/VSCategoriaDoc"/>
+        <identifier>
+          <system value="urn:ietf:rfc:3986"/>
+          <value value="urn:oid:2.16.840.1.113883.2.22.40.14.48.1"/>
+        </identifier>
         <version value="0.1.0"/>
         <name value="VSCategoriaDoc"/>
         <title value="Categorías de Documento Clínico para DocumentReference"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-10-15T12:40:59-03:00"/>
+        <date value="2026-10-16T16:15:28-03:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -156,8 +160,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:44881d50-b60c-4754-8d3f-66c138aced85"/>
-          <timestamp value="2026-10-15T12:56:35-03:00"/>
+          <identifier value="urn:uuid:74c45193-7e71-418e-b7b4-2fad26ef4d20"/>
+          <timestamp value="2026-10-16T16:32:28-03:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -353,12 +357,16 @@
           </div>
         </text>
         <url value="https://hl7chile.cl/fhir/ig/mhd/ValueSet/VSCategoriaDoc"/>
+        <identifier>
+          <system value="urn:ietf:rfc:3986"/>
+          <value value="urn:oid:2.16.840.1.113883.2.22.40.14.48.1"/>
+        </identifier>
         <version value="0.1.0"/>
         <name value="VSCategoriaDoc"/>
         <title value="Categorías de Documento Clínico para DocumentReference"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-10-15T12:40:59-03:00"/>
+        <date value="2026-10-16T16:15:28-03:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -367,8 +375,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:32218686-1a7a-4a73-83d7-0abbd9d93694"/>
-          <timestamp value="2026-10-15T12:56:36-03:00"/>
+          <identifier value="urn:uuid:b5d1ace0-b98e-4a02-94d8-d16357d5fe5a"/>
+          <timestamp value="2026-10-16T16:32:29-03:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -584,12 +592,16 @@
           </div>
         </text>
         <url value="https://hl7chile.cl/fhir/ig/mhd/ValueSet/VSTipoDocumento"/>
+        <identifier>
+          <system value="urn:ietf:rfc:3986"/>
+          <value value="urn:oid:2.16.840.1.113883.2.22.40.14.48.2"/>
+        </identifier>
         <version value="0.1.0"/>
         <name value="VSTipoDocumento"/>
         <title value="Tipos de Documento Clínico para DocumentReference"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-10-15T12:40:59-03:00"/>
+        <date value="2026-10-16T16:15:28-03:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -598,8 +610,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:7c53ee4f-a575-4735-b6c6-38d9c93d4eb7"/>
-          <timestamp value="2026-10-15T12:56:36-03:00"/>
+          <identifier value="urn:uuid:ab924be6-5ee2-4c43-91d9-e15346171c14"/>
+          <timestamp value="2026-10-16T16:32:30-03:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -820,12 +832,16 @@
           </div>
         </text>
         <url value="https://hl7chile.cl/fhir/ig/mhd/ValueSet/VSTipoDocumento"/>
+        <identifier>
+          <system value="urn:ietf:rfc:3986"/>
+          <value value="urn:oid:2.16.840.1.113883.2.22.40.14.48.2"/>
+        </identifier>
         <version value="0.1.0"/>
         <name value="VSTipoDocumento"/>
         <title value="Tipos de Documento Clínico para DocumentReference"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-10-15T12:40:59-03:00"/>
+        <date value="2026-10-16T16:15:28-03:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -834,8 +850,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:46300944-bc87-4011-91a6-0e2f3c7f4428"/>
-          <timestamp value="2026-10-15T12:56:37-03:00"/>
+          <identifier value="urn:uuid:183591fa-b2f5-4ac0-ac5a-4715be91ac68"/>
+          <timestamp value="2026-10-16T16:32:31-03:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>

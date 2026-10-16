@@ -8,13 +8,14 @@
     "sourceTail" : "ImplementationGuide-hl7.fhir.cl.mhdig.json",
     "path" : "index.html",
     "url" : "https://hl7chile.cl/fhir/ig/mhd/ImplementationGuide/hl7.fhir.cl.mhdig",
+    "identifiers" : "OID:2.16.840.1.113883.2.22.40.14",
     "version" : "0.1.0",
     "name" : "MHDTransIGChile",
     "title" : "Guía MHD para el Intercambio de Información de Salud en Chile",
     "titlelang" : {
       "en" : "Guía MHD para el Intercambio de Información de Salud en Chile"
     },
-    "date" : "2026-10-15T12:40:59-03:00",
+    "date" : "2026-10-16T16:15:28-03:00",
     "description" : "Esta guía de implementación describe los esquemas de transacciones FHIR MHD para el intercambio de información de salud en Chile, asociado a las guías IHE MHD y Core-AR.",
     "descriptionlang" : {
       "en" : "Esta guía de implementación describe los esquemas de transacciones FHIR MHD para el intercambio de información de salud en Chile, asociado a las guías IHE MHD y Core-AR."
@@ -31,15 +32,25 @@
       "status" : "Draft"
     }
   },
-  "CapabilityStatement/MHDCliente" : {
+  "Bundle/bundle-mhd-referencia-documental-ejemplo" : {
     "history" : false,
     "testplan" : false,
     "testscript" : false,
     "index" : 1,
+    "source" : "fsh-generated/resources/Bundle-bundle-mhd-referencia-documental-ejemplo.json",
+    "sourceTail" : "Bundle-bundle-mhd-referencia-documental-ejemplo.json",
+    "path" : "Bundle-bundle-mhd-referencia-documental-ejemplo.html"
+  },
+  "CapabilityStatement/MHDCliente" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 2,
     "source" : "fsh-generated/resources/CapabilityStatement-MHDCliente.json",
     "sourceTail" : "CapabilityStatement-MHDCliente.json",
     "path" : "CapabilityStatement-MHDCliente.html",
     "url" : "https://hl7chile.cl/fhir/ig/mhd/CapabilityStatement/MHDCliente",
+    "identifiers" : "OID:2.16.840.1.113883.2.22.40.14.13.1",
     "version" : "0.1.0",
     "name" : "MHDCliente",
     "title" : "Capacidades para Cliente MHD",
@@ -68,11 +79,12 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 2,
+    "index" : 3,
     "source" : "fsh-generated/resources/CapabilityStatement-MHDResponder.json",
     "sourceTail" : "CapabilityStatement-MHDResponder.json",
     "path" : "CapabilityStatement-MHDResponder.html",
     "url" : "https://hl7chile.cl/fhir/ig/mhd/CapabilityStatement/MHDResponder",
+    "identifiers" : "OID:2.16.840.1.113883.2.22.40.14.13.2",
     "version" : "0.1.0",
     "name" : "MHDResponder",
     "title" : "MHD Responder",
@@ -97,15 +109,64 @@
       "status" : "Draft"
     }
   },
+  "DocumentReference/ReferDocEjemplo" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 4,
+    "source" : "fsh-generated/resources/DocumentReference-ReferDocEjemplo.json",
+    "sourceTail" : "DocumentReference-ReferDocEjemplo.json",
+    "path" : "DocumentReference-ReferDocEjemplo.html",
+    "status" : {
+      "class" : "colsi"
+    }
+  },
+  "List/EjemploListMhd" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 5,
+    "source" : "fsh-generated/resources/List-EjemploListMhd.json",
+    "sourceTail" : "List-EjemploListMhd.json",
+    "path" : "List-EjemploListMhd.html",
+    "status" : {
+      "class" : "colsi"
+    }
+  },
+  "Patient/Paciente-Interno" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 6,
+    "source" : "fsh-generated/resources/Patient-Paciente-Interno.json",
+    "sourceTail" : "Patient-Paciente-Interno.json",
+    "path" : "Patient-Paciente-Interno.html",
+    "status" : {
+      "class" : "colsi"
+    }
+  },
+  "Practitioner/PrestadorCLInline" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 7,
+    "source" : "fsh-generated/resources/Practitioner-PrestadorCLInline.json",
+    "sourceTail" : "Practitioner-PrestadorCLInline.json",
+    "path" : "Practitioner-PrestadorCLInline.html",
+    "status" : {
+      "class" : "colsi"
+    }
+  },
   "StructureDefinition/BundleMhd" : {
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 3,
+    "index" : 8,
     "source" : "fsh-generated/resources/StructureDefinition-BundleMhd.json",
     "sourceTail" : "StructureDefinition-BundleMhd.json",
     "path" : "StructureDefinition-BundleMhd.html",
     "url" : "https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/BundleMhd",
+    "identifiers" : "OID:2.16.840.1.113883.2.22.40.14.42.1",
     "version" : "0.1.0",
     "name" : "BundleMhd",
     "date" : "2026-10-14",
@@ -129,14 +190,15 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 4,
+    "index" : 9,
     "source" : "fsh-generated/resources/StructureDefinition-ListMhd.json",
     "sourceTail" : "StructureDefinition-ListMhd.json",
     "path" : "StructureDefinition-ListMhd.html",
     "url" : "https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/ListMhd",
+    "identifiers" : "OID:2.16.840.1.113883.2.22.40.14.42.2",
     "version" : "0.1.0",
     "name" : "ListMhd",
-    "date" : "2026-10-15T12:40:59-03:00",
+    "date" : "2026-10-16T16:15:28-03:00",
     "description" : "Perfil asociado al listado de documentos referenciados para HSI en un modelo MHD",
     "descriptionlang" : {
       "en" : "Perfil asociado al listado de documentos referenciados para HSI en un modelo MHD"
@@ -157,14 +219,15 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 5,
+    "index" : 10,
     "source" : "fsh-generated/resources/StructureDefinition-ReferenciaDocumental.json",
     "sourceTail" : "StructureDefinition-ReferenciaDocumental.json",
     "path" : "StructureDefinition-ReferenciaDocumental.html",
     "url" : "https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/ReferenciaDocumental",
+    "identifiers" : "OID:2.16.840.1.113883.2.22.40.14.42.3",
     "version" : "0.1.0",
     "name" : "ReferenciaDocumental",
-    "date" : "2026-10-15T12:40:59-03:00",
+    "date" : "2026-10-16T16:15:28-03:00",
     "description" : "Perfil asociado al la refetrencia documental para HSI en un modelo MHD, consderado para transacciones asociadas a una ITI-65 e ITI-67. Se considera en el perfil la asociación de documentos de tipo IPS, referenciados a la Guía Core Argentna AR.FHIR.CORE",
     "descriptionlang" : {
       "en" : "Perfil asociado al la refetrencia documental para HSI en un modelo MHD, consderado para transacciones asociadas a una ITI-65 e ITI-67. Se considera en el perfil la asociación de documentos de tipo IPS, referenciados a la Guía Core Argentna AR.FHIR.CORE"
@@ -185,11 +248,12 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 6,
+    "index" : 11,
     "source" : "fsh-generated/resources/ValueSet-VSCategoriaDoc.json",
     "sourceTail" : "ValueSet-VSCategoriaDoc.json",
     "path" : "ValueSet-VSCategoriaDoc.html",
     "url" : "https://hl7chile.cl/fhir/ig/mhd/ValueSet/VSCategoriaDoc",
+    "identifiers" : "OID:2.16.840.1.113883.2.22.40.14.48.1",
     "version" : "0.1.0",
     "name" : "VSCategoriaDoc",
     "title" : "Categorías de Documento Clínico para DocumentReference",
@@ -197,7 +261,7 @@
       "en" : "Categorías de Documento Clínico para DocumentReference"
     },
     "experimental" : false,
-    "date" : "2026-10-15T12:40:59-03:00",
+    "date" : "2026-10-16T16:15:28-03:00",
     "description" : "Categorías generales de documentos clínicos codificadas en LOINC para ser usadas en DocumentReference.category.",
     "descriptionlang" : {
       "en" : "Categorías generales de documentos clínicos codificadas en LOINC para ser usadas en DocumentReference.category."
@@ -218,11 +282,12 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 7,
+    "index" : 12,
     "source" : "fsh-generated/resources/ValueSet-VSTipoDocumento.json",
     "sourceTail" : "ValueSet-VSTipoDocumento.json",
     "path" : "ValueSet-VSTipoDocumento.html",
     "url" : "https://hl7chile.cl/fhir/ig/mhd/ValueSet/VSTipoDocumento",
+    "identifiers" : "OID:2.16.840.1.113883.2.22.40.14.48.2",
     "version" : "0.1.0",
     "name" : "VSTipoDocumento",
     "title" : "Tipos de Documento Clínico para DocumentReference",
@@ -230,7 +295,7 @@
       "en" : "Tipos de Documento Clínico para DocumentReference"
     },
     "experimental" : false,
-    "date" : "2026-10-15T12:40:59-03:00",
+    "date" : "2026-10-16T16:15:28-03:00",
     "description" : "Tipos documentales clínicos codificados en LOINC para ser usados en DocumentReference.type.",
     "descriptionlang" : {
       "en" : "Tipos documentales clínicos codificados en LOINC para ser usados en DocumentReference.type."

@@ -84,7 +84,7 @@ flowchart TB
     FHIR --> MHD
     CORE --> LOCAL
     MHD --> LOCAL
-
+```
 
 Los requerimientos de conformidad establecen las funcionalidades esperadas para aplicaciones cliente y servidor, identificando los perfiles y las interacciones que deben implementar.
 

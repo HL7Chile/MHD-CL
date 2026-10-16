@@ -7,6 +7,8 @@
     "title" : "Categorías de Documento Clínico para DocumentReference",
     "description" : "Categorías generales de documentos clínicos codificadas en LOINC para ser usadas en DocumentReference.category.",
     "systems" : ["http://loinc.org"],
+    "oids" : ["2.16.840.1.113883.2.22.40.14.48.1"],
+    "sources" : ["2.16.840.1.113883.2.22.40.14.48.1"],
     "uses" : {
     },
     "StructureDefinition-ReferenciaDocumental.html" : "ReferenciaDocumental"
@@ -19,6 +21,8 @@
     "title" : "Tipos de Documento Clínico para DocumentReference",
     "description" : "Tipos documentales clínicos codificados en LOINC para ser usados en DocumentReference.type.",
     "systems" : ["http://loinc.org"],
+    "oids" : ["2.16.840.1.113883.2.22.40.14.48.2"],
+    "sources" : ["2.16.840.1.113883.2.22.40.14.48.2"],
     "uses" : {
     },
     "StructureDefinition-ReferenciaDocumental.html" : "ReferenciaDocumental"

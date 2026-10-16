@@ -3,54 +3,62 @@
   "type" : "CapabilityStatement",
   "url" : "https://hl7chile.cl/fhir/ig/mhd/CapabilityStatement/MHDCliente",
   "version" : "0.1.0",
-  "name" : "MHDCliente"
+  "name" : "MHDCliente",
+  "oids" : ["2.16.840.1.113883.2.22.40.14.13.1"]
 },
 {
   "id" : "MHDResponder",
   "type" : "CapabilityStatement",
   "url" : "https://hl7chile.cl/fhir/ig/mhd/CapabilityStatement/MHDResponder",
   "version" : "0.1.0",
-  "name" : "MHDResponder"
+  "name" : "MHDResponder",
+  "oids" : ["2.16.840.1.113883.2.22.40.14.13.2"]
 },
 {
   "id" : "hl7.fhir.cl.mhdig",
   "type" : "ImplementationGuide",
   "url" : "https://hl7chile.cl/fhir/ig/mhd/ImplementationGuide/hl7.fhir.cl.mhdig",
   "version" : "0.1.0",
-  "name" : "MHDTransIGChile"
+  "name" : "MHDTransIGChile",
+  "oids" : ["2.16.840.1.113883.2.22.40.14"]
 },
 {
   "id" : "BundleMhd",
   "type" : "StructureDefinition",
   "url" : "https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/BundleMhd",
   "version" : "0.1.0",
-  "name" : "BundleMhd"
+  "name" : "BundleMhd",
+  "oids" : ["2.16.840.1.113883.2.22.40.14.42.1"]
 },
 {
   "id" : "ListMhd",
   "type" : "StructureDefinition",
   "url" : "https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/ListMhd",
   "version" : "0.1.0",
-  "name" : "ListMhd"
+  "name" : "ListMhd",
+  "oids" : ["2.16.840.1.113883.2.22.40.14.42.2"]
 },
 {
   "id" : "ReferenciaDocumental",
   "type" : "StructureDefinition",
   "url" : "https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/ReferenciaDocumental",
   "version" : "0.1.0",
-  "name" : "ReferenciaDocumental"
+  "name" : "ReferenciaDocumental",
+  "oids" : ["2.16.840.1.113883.2.22.40.14.42.3"]
 },
 {
   "id" : "VSCategoriaDoc",
   "type" : "ValueSet",
   "url" : "https://hl7chile.cl/fhir/ig/mhd/ValueSet/VSCategoriaDoc",
   "version" : "0.1.0",
-  "name" : "VSCategoriaDoc"
+  "name" : "VSCategoriaDoc",
+  "oids" : ["2.16.840.1.113883.2.22.40.14.48.1"]
 },
 {
   "id" : "VSTipoDocumento",
   "type" : "ValueSet",
   "url" : "https://hl7chile.cl/fhir/ig/mhd/ValueSet/VSTipoDocumento",
   "version" : "0.1.0",
-  "name" : "VSTipoDocumento"
+  "name" : "VSTipoDocumento",
+  "oids" : ["2.16.840.1.113883.2.22.40.14.48.2"]
 }]

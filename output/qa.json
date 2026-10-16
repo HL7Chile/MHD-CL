@@ -6,15 +6,15 @@
   "status" : "draft",
   "package-id" : "hl7.fhir.cl.mhdig",
   "ig-ver" : "0.1.0",
-  "date" : "Thu, 15 Oct, 2026 12:40:59 -0300",
-  "dateISO8601" : "2026-10-15T12:40:59-03:00",
+  "date" : "Fri, 16 Oct, 2026 16:15:28 -0300",
+  "dateISO8601" : "2026-10-16T16:15:28-03:00",
   "errs" : 0,
-  "warnings" : 3,
-  "hints" : 8,
+  "warnings" : 7,
+  "hints" : 3,
   "broken-links" : 0,
   "suppressed-hints" : 0,
-  "suppressed-warnings" : 7,
+  "suppressed-warnings" : 5,
   "version" : "4.0.1",
   "tool" : "6.0.0-snapshot1 (3)",
-  "maxMemory" : 2794775864
+  "maxMemory" : 1758805320
 }

@@ -30,3 +30,11 @@
 ### ImplementationGuides
 
 * [Guía MHD para el Intercambio de Información de Salud en Chile](en/ImplementationGuide-hl7.fhir.cl.mhdig.md)
+
+### Examples
+
+* [bundle-mhd-referencia-documental-ejemplo (Bundle)](en/Bundle-bundle-mhd-referencia-documental-ejemplo.md)
+* [ReferDocEjemplo (DocumentReference)](en/DocumentReference-ReferDocEjemplo.md)
+* [EjemploListMhd (List)](en/List-EjemploListMhd.md)
+* [Paciente-Interno (Patient)](en/Patient-Paciente-Interno.md)
+* [PrestadorCLInline (Practitioner)](en/Practitioner-PrestadorCLInline.md)

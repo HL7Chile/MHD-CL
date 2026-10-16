@@ -9,7 +9,7 @@
     "oids" : ["2.16.840.1.113883.6.1"],
     "uses" : {
     },
-    "ValueSet-VSTipoDocumento.html" : "Tipos de Documento Clínico para DocumentReference",
-    "ValueSet-VSCategoriaDoc.html" : "Categorías de Documento Clínico para DocumentReference"
+    "ValueSet-VSCategoriaDoc.html" : "Categorías de Documento Clínico para DocumentReference",
+    "ValueSet-VSTipoDocumento.html" : "Tipos de Documento Clínico para DocumentReference"
   }]
 }
