@@ -3,15 +3,19 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="VSTipoDocumento"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet VSTipoDocumento</b></p><a name="VSTipoDocumento"> </a><a name="hcVSTipoDocumento"> </a><ul><li>Include these codes as defined in <a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="https://loinc.org/11502-2/">11502-2</a></td><td>Laboratory report</td></tr><tr><td><a href="https://loinc.org/18748-4/">18748-4</a></td><td>Diagnostic imaging study</td></tr><tr><td><a href="https://loinc.org/34131-3/">34131-3</a></td><td>Outpatient Progress note</td></tr><tr><td><a href="https://loinc.org/34105-7/">34105-7</a></td><td>Hospital Discharge summary</td></tr><tr><td><a href="https://loinc.org/59258-4/">59258-4</a></td><td>Emergency department Discharge summary</td></tr><tr><td><a href="https://loinc.org/34133-9/">34133-9</a></td><td>Summary of episode note</td></tr></table></li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores VSTipoDocumento</b></p><a name="VSTipoDocumento"> </a><a name="hcVSTipoDocumento"> </a><ul><li>Include these codes as defined in <a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> versión Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="https://loinc.org/11502-2/">11502-2</a></td><td>Laboratory report</td></tr><tr><td><a href="https://loinc.org/18748-4/">18748-4</a></td><td>Diagnostic imaging study</td></tr><tr><td><a href="https://loinc.org/34131-3/">34131-3</a></td><td>Outpatient Progress note</td></tr><tr><td><a href="https://loinc.org/34105-7/">34105-7</a></td><td>Hospital Discharge summary</td></tr><tr><td><a href="https://loinc.org/59258-4/">59258-4</a></td><td>Emergency department Discharge summary</td></tr><tr><td><a href="https://loinc.org/34133-9/">34133-9</a></td><td>Summary of episode note</td></tr></table></li></ul></div>
   </text>
   <url value="https://hl7chile.cl/fhir/ig/mhd/ValueSet/VSTipoDocumento"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.2.22.40.14.48.2"/>
+  </identifier>
   <version value="0.1.0"/>
   <name value="VSTipoDocumento"/>
   <title value="Tipos de Documento Clínico para DocumentReference"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2026-10-15T12:40:59-03:00"/>
+  <date value="2026-10-22T10:20:43-03:00"/>
   <publisher value="Hl7 Chile"/>
   <contact>
     <name value="Hl7 Chile"/>

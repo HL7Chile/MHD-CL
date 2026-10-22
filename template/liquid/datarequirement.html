@@ -32,15 +32,7 @@
     <br /> 
   {% endif %}
   {% if codeFilter.code.exists() %}
-    <span class="tab-one"><em>Code(s)</em>: 
-    {% for code in codeFilter.code %}
-      {% if code.code != codeFilter.code.last().code %}
-      {{code}}, 
-      {% else %}
-      {{code}}
-      {% endif %}
-    {% endfor %}
-    </span>
+    <span class="tab-one"><em>Code</em>: {{codeFilter.code.join(', ')}}</span>
     <br />
   {% endif %}
   {% endfor %}

@@ -217,26 +217,19 @@
     <xsl:call-template name="setParameter">
       <xsl:with-param name="code" select="'path-pages'"/>
       <xsl:with-param name="system" select="$toolsSystem"/>
-      <xsl:with-param name="value" select="'input/assets'"/>
-      <xsl:with-param name="supplement" select="'Y'"/>
-      <xsl:with-param name="extensionMode" select="$extensionMode"/>
-    </xsl:call-template>
-    <xsl:call-template name="setParameter">
-      <xsl:with-param name="code" select="'path-pages'"/>
-      <xsl:with-param name="system" select="$toolsSystem"/>
       <xsl:with-param name="value" select="'input/images'"/>
       <xsl:with-param name="supplement" select="'Y'"/>
       <xsl:with-param name="extensionMode" select="$extensionMode"/>
     </xsl:call-template>
     <xsl:call-template name="setParameter">
-      <xsl:with-param name="code" select="'path-liquid-template'"/>
+      <xsl:with-param name="code" select="'path-liquid'"/>
       <xsl:with-param name="system" select="$toolsSystem"/>
       <xsl:with-param name="value" select="'template/liquid'"/>
       <xsl:with-param name="supplement" select="'Y'"/>
       <xsl:with-param name="extensionMode" select="$extensionMode"/>
     </xsl:call-template>
     <xsl:call-template name="setParameter">
-      <xsl:with-param name="code" select="'path-liquid-template'"/>
+      <xsl:with-param name="code" select="'path-liquid'"/>
       <xsl:with-param name="system" select="$toolsSystem"/>
       <xsl:with-param name="value" select="'input/liquid'"/>
       <xsl:with-param name="supplement" select="'Y'"/>
@@ -368,54 +361,6 @@
       <xsl:with-param name="value" select="'true'"/>
       <xsl:with-param name="extensionMode" select="$extensionMode"/>
     </xsl:call-template>
-    <xsl:call-template name="setParameter">
-      <xsl:with-param name="code" select="'i18n-default-lang'"/>
-      <xsl:with-param name="system" select="$toolsSystem"/>
-      <xsl:with-param name="value" select="'en'"/>
-      <xsl:with-param name="extensionMode" select="$extensionMode"/>
-    </xsl:call-template>
-    <xsl:if test="f:parameter[f:code/@value='excludejson']/f:value/@value='true'">
-      <xsl:call-template name="setParameter">
-        <xsl:with-param name="code" select="'wantGen-json'"/>
-        <xsl:with-param name="system" select="$toolsSystem"/>
-        <xsl:with-param name="value" select="'false'"/>
-        <xsl:with-param name="extensionMode" select="$extensionMode"/>
-      </xsl:call-template>
-      <xsl:call-template name="setParameter">
-        <xsl:with-param name="code" select="'wantGen-json-html'"/>
-        <xsl:with-param name="system" select="$toolsSystem"/>
-        <xsl:with-param name="value" select="'false'"/>
-        <xsl:with-param name="extensionMode" select="$extensionMode"/>
-      </xsl:call-template>
-    </xsl:if>
-    <xsl:if test="f:parameter[f:code/@value='excludettl']/f:value/@value='true'">
-      <xsl:call-template name="setParameter">
-        <xsl:with-param name="code" select="'wantGen-ttl'"/>
-        <xsl:with-param name="system" select="$toolsSystem"/>
-        <xsl:with-param name="value" select="'false'"/>
-        <xsl:with-param name="extensionMode" select="$extensionMode"/>
-      </xsl:call-template>
-      <xsl:call-template name="setParameter">
-        <xsl:with-param name="code" select="'wantGen-ttl-html'"/>
-        <xsl:with-param name="system" select="$toolsSystem"/>
-        <xsl:with-param name="value" select="'false'"/>
-        <xsl:with-param name="extensionMode" select="$extensionMode"/>
-      </xsl:call-template>
-    </xsl:if>
-    <xsl:if test="f:parameter[f:code/@value='excludexml']/f:value/@value='true'">
-      <xsl:call-template name="setParameter">
-        <xsl:with-param name="code" select="'wantGen-xml'"/>
-        <xsl:with-param name="system" select="$toolsSystem"/>
-        <xsl:with-param name="value" select="'false'"/>
-        <xsl:with-param name="extensionMode" select="$extensionMode"/>
-      </xsl:call-template>
-      <xsl:call-template name="setParameter">
-        <xsl:with-param name="code" select="'wantGen-xml-html'"/>
-        <xsl:with-param name="system" select="$toolsSystem"/>
-        <xsl:with-param name="value" select="'false'"/>
-        <xsl:with-param name="extensionMode" select="$extensionMode"/>
-      </xsl:call-template>
-    </xsl:if>
   </xsl:template>
 	<xsl:template name="getParameter">
 	  <xsl:param name="name"/>

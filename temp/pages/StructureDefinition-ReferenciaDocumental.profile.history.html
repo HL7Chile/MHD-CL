@@ -1,10 +1,21 @@
 ---
 ---
-<html lang="en"><title>Redirect File</title><body>
-<!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
-<script type="text/javascript">
-// 7ee24a23-ba72-432f-816a-76a4817c0528
-langs=["en"]
-</script>
-<script type="text/javascript" src="{{site.data.info.assets}}assets/js/lang-redirects.js"></script>
-</body></html>
+<!-- get modelType -->
+{% include fragment-modelType.html id='ReferenciaDocumental' %}
+
+{% include fragment-pagebegin.html %}
+
+<div style="counter-reset: section 10" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-profile-navtabs.html type='StructureDefinition' id='ReferenciaDocumental' active='history' %}
+
+  <a name="root"> </a>
+  <h2 id="root">{{modelType}}: ReferenciaDocumental - Change History</h2>
+{% include fragment-simpletable.html %}
+  <p>Changes in the ReferenciaDocumental {{modelType | downcase}}.</p>
+
+  {%include StructureDefinition-ReferenciaDocumental-history.xhtml%}
+
+</div>
+{% assign includetabscripts = 'true' %}
+{% include fragment-pageend.html %}

@@ -1,5 +1,21 @@
 [
   {
+    "outputFile": "Bundle-BundleDocumentoIpsEjemplo.json",
+    "fshName": "BundleDocumentoIpsEjemplo",
+    "fshType": "Instance",
+    "fshFile": "ejemplos/documentoIPS.fsh",
+    "startLine": 14,
+    "endLine": 45
+  },
+  {
+    "outputFile": "Bundle-bundle-mhd-referencia-documental-ejemplo.json",
+    "fshName": "BundleMhdEjemplo",
+    "fshType": "Instance",
+    "fshFile": "ejemplos/bundleMhdEj.fsh",
+    "startLine": 1,
+    "endLine": 29
+  },
+  {
     "outputFile": "CapabilityStatement-MHDCliente.json",
     "fshName": "MHDCliente",
     "fshType": "Instance",
@@ -14,6 +30,38 @@
     "fshFile": "capStatResponder.fsh",
     "startLine": 1,
     "endLine": 223
+  },
+  {
+    "outputFile": "DocumentReference-ReferDocEjemplo.json",
+    "fshName": "ReferDocEjemplo",
+    "fshType": "Instance",
+    "fshFile": "ejemplos/indiceDocEj.fsh",
+    "startLine": 3,
+    "endLine": 60
+  },
+  {
+    "outputFile": "List-EjemploListMhd.json",
+    "fshName": "EjemploListMhd",
+    "fshType": "Instance",
+    "fshFile": "ejemplos/list.fsh",
+    "startLine": 1,
+    "endLine": 28
+  },
+  {
+    "outputFile": "Patient-Paciente-Interno.json",
+    "fshName": "Paciente-Interno",
+    "fshType": "Instance",
+    "fshFile": "ejemplos/pacienteCL.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
+    "outputFile": "Practitioner-PrestadorCLInline.json",
+    "fshName": "PrestadorCLInline",
+    "fshType": "Instance",
+    "fshFile": "ejemplos/prestadorCL.fsh",
+    "startLine": 6,
+    "endLine": 46
   },
   {
     "outputFile": "StructureDefinition-BundleMhd.json",
@@ -37,7 +85,7 @@
     "fshType": "Profile",
     "fshFile": "docRef.fsh",
     "startLine": 5,
-    "endLine": 127
+    "endLine": 140
   },
   {
     "outputFile": "ValueSet-VSCategoriaDoc.json",

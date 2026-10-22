@@ -3,15 +3,19 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="VSCategoriaDoc"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet VSCategoriaDoc</b></p><a name="VSCategoriaDoc"> </a><a name="hcVSCategoriaDoc"> </a><ul><li>Include these codes as defined in <a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="https://loinc.org/26436-6/">26436-6</a></td><td>Laboratory studies (set)</td></tr><tr><td><a href="https://loinc.org/18726-0/">18726-0</a></td><td>Radiology studies (set)</td></tr><tr><td><a href="https://loinc.org/11506-3/">11506-3</a></td><td>Progress note</td></tr><tr><td><a href="https://loinc.org/18842-5/">18842-5</a></td><td>Discharge summary</td></tr><tr><td><a href="https://loinc.org/60591-5/">60591-5</a></td><td>Patient summary document</td></tr></table></li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores VSCategoriaDoc</b></p><a name="VSCategoriaDoc"> </a><a name="hcVSCategoriaDoc"> </a><ul><li>Include these codes as defined in <a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> versión Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="https://loinc.org/26436-6/">26436-6</a></td><td>Laboratory studies (set)</td></tr><tr><td><a href="https://loinc.org/18726-0/">18726-0</a></td><td>Radiology studies (set)</td></tr><tr><td><a href="https://loinc.org/11506-3/">11506-3</a></td><td>Progress note</td></tr><tr><td><a href="https://loinc.org/18842-5/">18842-5</a></td><td>Discharge summary</td></tr><tr><td><a href="https://loinc.org/60591-5/">60591-5</a></td><td>Patient summary document</td></tr></table></li></ul></div>
   </text>
   <url value="https://hl7chile.cl/fhir/ig/mhd/ValueSet/VSCategoriaDoc"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.2.22.40.14.48.1"/>
+  </identifier>
   <version value="0.1.0"/>
   <name value="VSCategoriaDoc"/>
   <title value="Categorías de Documento Clínico para DocumentReference"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2026-10-15T12:40:59-03:00"/>
+  <date value="2026-10-22T10:20:43-03:00"/>
   <publisher value="Hl7 Chile"/>
   <contact>
     <name value="Hl7 Chile"/>

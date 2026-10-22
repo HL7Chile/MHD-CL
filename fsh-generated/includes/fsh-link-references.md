@@ -1,7 +1,13 @@
+[BundleDocumentoIpsEjemplo]: Bundle-BundleDocumentoIpsEjemplo.html
+[bundle-mhd-referencia-documental-ejemplo]: Bundle-bundle-mhd-referencia-documental-ejemplo.html
 [BundleMhd]: StructureDefinition-BundleMhd.html
 [MHDCliente]: CapabilityStatement-MHDCliente.html
 [VSCategoriaDoc]: ValueSet-VSCategoriaDoc.html
+[EjemploListMhd]: List-EjemploListMhd.html
 [ListMhd]: StructureDefinition-ListMhd.html
 [MHDResponder]: CapabilityStatement-MHDResponder.html
+[Paciente-Interno]: Patient-Paciente-Interno.html
+[PrestadorCLInline]: Practitioner-PrestadorCLInline.html
+[ReferDocEjemplo]: DocumentReference-ReferDocEjemplo.html
 [ReferenciaDocumental]: StructureDefinition-ReferenciaDocumental.html
 [VSTipoDocumento]: ValueSet-VSTipoDocumento.html

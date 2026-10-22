@@ -65,6 +65,11 @@
     "http://hl7.org/fhir/tools/StructureDefinition/type-profile-constraints": [
       "StructureDefinition.snapshot.element.type.profile"
     ],
+    "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/SegundoApellido": [
+      "Bundle.entry.resource.name.family",
+      "Patient.name.family",
+      "Practitioner.name.family"
+    ],
     "https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-HomeCommunityId": [
       "DocumentReference",
       "List"
@@ -79,6 +84,7 @@
       "List"
     ],
     "https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-sourceId": [
+      "Bundle.entry.resource",
       "List"
     ]
   }

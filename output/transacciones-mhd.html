@@ -1,8 +1,684 @@
-<html lang="en"><title>Redirect File</title><body>
-<!--ReleaseHeader--><p id="publish-box">Guía MHD para el Intercambio de Información de Salud en Chile - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://hl7chile.cl/fhir/ig/mhd/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
-<script type="text/javascript">
-// 7ee24a23-ba72-432f-816a-76a4817c0528
-langs=["en"]
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>HL7.FHIR.CL.MHDIG\Transacciones asociadas a MHD - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <link href="fhir.css" rel="stylesheet" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet" />
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet" />
+    <link href="assets/css/pygments-manni.css" rel="stylesheet" />
+    <link href="assets/css/jquery-ui.css" rel="stylesheet" />
+    <link href="assets/css/prism.css" rel="stylesheet" /> <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/hl7chile.css" rel="stylesheet" />
+<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-HLBNC861DJ" async>
 </script>
-<script type="text/javascript" src="assets/js/lang-redirects.js"></script>
-</body></html>
+
+    <script type="text/javascript" src="fhir-table-scripts.js">
+    </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png" />
+    <link rel="shortcut icon" href="assets/ico/favicon.png" />
+</head>
+
+<!-- JORGE MANSILLA -->
+<!-- Google tag (gtag.js) -->
+<!-- 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KDP1SHWXWT"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-KDP1SHWXWT');
+</script>
+-->
+<!-- Franco: Nota Para Mansilla Revisa este script genera errores al subir en Build -->
+
+
+
+<body onload="document.body.style.opacity='1'">
+    
+    <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">
+        h2 {
+            --heading-prefix:"3"
+        }
+        
+        h3,
+        h4,
+        h5,
+        h6 {
+            --heading-prefix:"3"
+        }
+    </style>
+    <div id="segment-header" class="segment">
+        <!-- segment-header -->
+        <div class="container">
+            <!-- container -->
+            <!-- Placeholder for child template header declarations -->
+
+<div id="project-nav">
+    <a id="hl7chile-logo" no-external="true" href="http://hl7chile.cl">
+        <img height="71" alt="Visitar HL7 Chile" src="assets/images/hl7chile-logo.png" />
+    </a>
+</div>
+<div id="family-nav">
+    <a id="hl7-fhir-logo" no-external="true" href="https://www.hl7.org/"><img height="60" alt="Visitar HL7 FHIR Internacional" src="assets/images/LOGO_FHIR.svg" /> </a>
+</div>
+
+<!--
+<div id="hl7-search">
+  <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+</div>
+--> 
+            <div id="ig-status">
+                <p><span style="font-size:12pt;font-weight:bold">Guía MHD para el Intercambio de Información de Salud en Chile</span>
+                    <br/>
+                    <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img alt="Chile flag" src="assets/images/chl.svg" height="16" title="Chile"/>
+ 
+                    </span>
+                </p>
+            </div>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">
+        <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">
+            <!-- container -->
+            <!-- HEADER CONTENT -->
+
+            <nav class="navbar navbar-inverse">
+                <!--status-bar-->
+                <div class="container">
+                    <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+                    <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+                    <div class="nav-collapse collapse navbar-inverse-collapse">
+                        <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="intercambio.html">Intercambio</a>
+  </li>
+  <li>
+    <a href="transacciones-mhd.html">Transacciones</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="seguridad.html">Aspectos de Seguridad</a>
+  </li>
+  <li>
+    <a href="cambios.html">Historial de Versiones</a>
+  </li>
+</ul>
+                    </div>
+                    <!-- /.nav-collapse -->
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- /.navbar -->
+            <!-- /HEADER CONTENT -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /segment-navbar -->
+    <!--status-bar-->
+    
+    <div id="segment-breadcrumb" class="segment">
+        <!-- segment-breadcrumb -->
+        <div class="container">
+            <!-- container -->
+            <ul class="breadcrumb">
+                <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Transacciones asociadas a MHD</b></li> 
+            </ul>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">
+        <!-- segment-content -->
+        <div class="container">
+            <!-- container -->
+            <div class="row">
+                <div class="inner-wrapper">
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Guía MHD para el Intercambio de Información de Salud en Chile - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://hl7chile.cl/fhir/ig/mhd/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Transacciones asociadas a MHD</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<h3 id="transacciones-mhd">Transacciones MHD</h3>
+
+<p>Esta página describe las transacciones utilizadas para registrar, buscar y recuperar documentos clínicos mediante <strong>IHE Mobile access to Health Documents (MHD)</strong> sobre <strong>HL7 FHIR R4</strong>.</p>
+
+<p>La implementación utiliza los perfiles de <strong>IHE MHD</strong> para el intercambio documental y los perfiles de <strong>Core AR</strong> para representar las entidades nacionales, como pacientes, profesionales y organizaciones.</p>
+
+<h4 id="contenido">Contenido</h4>
+
+<ul>
+  <li><a href="#actores-mhd">Actores MHD</a></li>
+  <li><a href="#transacción-1-registrar-un-documento--iti-65">Transacción 1: Registrar un documento — ITI-65</a></li>
+  <li><a href="#transacción-2-buscar-documentos--iti-67">Transacción 2: Buscar documentos — ITI-67</a></li>
+  <li><a href="#transacción-3-recuperar-un-documento--iti-68">Transacción 3: Recuperar un documento — ITI-68</a></li>
+  <li><a href="#códigos-de-respuesta-http">Códigos de respuesta HTTP</a></li>
+  <li><a href="#seguridad">Seguridad</a></li>
+</ul>
+
+<hr />
+
+<h4 id="actores-mhd">Actores MHD</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Actor</th>
+      <th>Función</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Document Source</strong></td>
+      <td>Genera y envía documentos clínicos con sus metadatos.</td>
+    </tr>
+    <tr>
+      <td><strong>Document Recipient</strong></td>
+      <td>Recibe, valida y registra los documentos enviados.</td>
+    </tr>
+    <tr>
+      <td><strong>Document Consumer</strong></td>
+      <td>Busca referencias documentales y solicita los documentos.</td>
+    </tr>
+    <tr>
+      <td><strong>Document Responder</strong></td>
+      <td>Responde las búsquedas y entrega los documentos solicitados.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div align="center">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="SEQUENCE" height="261px" preserveAspectRatio="none" style="width:668px;height:261px;background:#FFFFFF;" version="1.1" viewBox="0 0 668 261" width="668px" zoomAndPan="magnify"><title>Actores y transacciones MHD</title><defs /><g><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="230.7949" x="217.9397" y="27.9951">Actores y transacciones MHD</text><g><title>Document Source</title><rect fill="#000000" fill-opacity="0.00000" height="152.7969" width="8" x="70.6855" y="73.5938" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="74" x2="74" y1="73.5938" y2="226.3906" /></g><g><title>Document Recipient</title><rect fill="#000000" fill-opacity="0.00000" height="152.7969" width="8" x="231.7822" y="73.5938" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="235.4526" x2="235.4526" y1="73.5938" y2="226.3906" /></g><g><title>Document Consumer</title><rect fill="#000000" fill-opacity="0.00000" height="152.7969" width="8" x="401.2954" y="73.5938" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="405.1118" x2="405.1118" y1="73.5938" y2="226.3906" /></g><g><title>Document Responder</title><rect fill="#000000" fill-opacity="0.00000" height="152.7969" width="8" x="575.5767" y="73.5938" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="579.479" x2="579.479" y1="73.5938" y2="226.3906" /></g><g class="participant participant-head" data-participant="Source"><rect fill="#EAF4FC" height="30.2969" rx="2.5" ry="2.5" style="stroke:#2962A3;stroke-width:0.5;" width="139.3711" x="5" y="42.2969" /><text fill="#17324D" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125.3711" x="12" y="62.292">Document Source</text></g><g class="participant participant-tail" data-participant="Source"><rect fill="#EAF4FC" height="30.2969" rx="2.5" ry="2.5" style="stroke:#2962A3;stroke-width:0.5;" width="139.3711" x="5" y="225.3906" /><text fill="#17324D" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125.3711" x="12" y="245.3857">Document Source</text></g><g class="participant participant-head" data-participant="Recipient"><rect fill="#EAF4FC" height="30.2969" rx="2.5" ry="2.5" style="stroke:#2962A3;stroke-width:0.5;" width="156.6592" x="157.4526" y="42.2969" /><text fill="#17324D" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142.6592" x="164.4526" y="62.292">Document Recipient</text></g><g class="participant participant-tail" data-participant="Recipient"><rect fill="#EAF4FC" height="30.2969" rx="2.5" ry="2.5" style="stroke:#2962A3;stroke-width:0.5;" width="156.6592" x="157.4526" y="225.3906" /><text fill="#17324D" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142.6592" x="164.4526" y="245.3857">Document Recipient</text></g><g class="participant participant-head" data-participant="Consumer"><rect fill="#EAF4FC" height="30.2969" rx="2.5" ry="2.5" style="stroke:#2962A3;stroke-width:0.5;" width="162.3672" x="324.1118" y="42.2969" /><text fill="#17324D" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="148.3672" x="331.1118" y="62.292">Document Consumer</text></g><g class="participant participant-tail" data-participant="Consumer"><rect fill="#EAF4FC" height="30.2969" rx="2.5" ry="2.5" style="stroke:#2962A3;stroke-width:0.5;" width="162.3672" x="324.1118" y="225.3906" /><text fill="#17324D" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="148.3672" x="331.1118" y="245.3857">Document Consumer</text></g><g class="participant participant-head" data-participant="Responder"><rect fill="#EAF4FC" height="30.2969" rx="2.5" ry="2.5" style="stroke:#2962A3;stroke-width:0.5;" width="166.1953" x="496.479" y="42.2969" /><text fill="#17324D" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="152.1953" x="503.479" y="62.292">Document Responder</text></g><g class="participant participant-tail" data-participant="Responder"><rect fill="#EAF4FC" height="30.2969" rx="2.5" ry="2.5" style="stroke:#2962A3;stroke-width:0.5;" width="166.1953" x="496.479" y="225.3906" /><text fill="#17324D" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="152.1953" x="503.479" y="245.3857">Document Responder</text></g><g class="message" data-participant-1="Source" data-participant-2="Recipient"><polygon fill="#2962A3" points="223.7822,115.8594,233.7822,119.8594,223.7822,123.8594,227.7822,119.8594" style="stroke:#2962A3;stroke-width:1;" /><line style="stroke:#2962A3;stroke-width:1;" x1="74.6855" x2="229.7822" y1="119.8594" y2="119.8594" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="36.8418" x="81.6855" y="99.6606">ITI-65</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="137.0967" x="81.6855" y="114.7935">Registrar documento</text></g><g class="message" data-participant-1="Consumer" data-participant-2="Responder"><polygon fill="#2962A3" points="567.5767,160.125,577.5767,164.125,567.5767,168.125,571.5767,164.125" style="stroke:#2962A3;stroke-width:1;" /><line style="stroke:#2962A3;stroke-width:1;" x1="405.2954" x2="573.5767" y1="164.125" y2="164.125" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="36.8418" x="412.2954" y="143.9263">ITI-67</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="121.5195" x="412.2954" y="159.0591">Buscar referencias</text></g><g class="message" data-participant-1="Consumer" data-participant-2="Responder"><polygon fill="#2962A3" points="567.5767,204.3906,577.5767,208.3906,567.5767,212.3906,571.5767,208.3906" style="stroke:#2962A3;stroke-width:1;" /><line style="stroke:#2962A3;stroke-width:1;" x1="405.2954" x2="573.5767" y1="208.3906" y2="208.3906" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="36.8418" x="412.2954" y="188.1919">ITI-68</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="144.9995" x="412.2954" y="203.3247">Recuperar documento</text></g></g></svg>
+</div>
+<p><br clear="all" /></p>
+
+<hr />
+
+<h4 id="transacción-1-registrar-un-documento--iti-65">Transacción 1: Registrar un documento — ITI-65</h4>
+
+<p><strong>Nombre IHE:</strong> Provide Document Bundle<br />
+<strong>Actores:</strong> Document Source → Document Recipient<br />
+<strong>Método HTTP:</strong> <code class="language-plaintext highlighter-rouge">POST [base]</code></p>
+
+<h5 id="descripción">Descripción</h5>
+
+<p>La transacción <strong>ITI-65</strong> permite enviar documentos clínicos y sus metadatos al receptor documental. La solicitud se representa mediante un <code class="language-plaintext highlighter-rouge">Bundle</code> FHIR de tipo <code class="language-plaintext highlighter-rouge">transaction</code>, que debe procesarse de manera atómica: todas las entradas se procesan correctamente o la transacción completa es rechazada.</p>
+
+<h5 id="recursos-de-la-transacción">Recursos de la transacción</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Recurso</th>
+      <th>Uso</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Bundle</code> de tipo <code class="language-plaintext highlighter-rouge">transaction</code></td>
+      <td>Contenedor de la transacción.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">List</code> tipo SubmissionSet</td>
+      <td>Agrupa los documentos pertenecientes a una misma presentación.</td>
+    </tr>
+    <tr>
+      <td>Uno o más <code class="language-plaintext highlighter-rouge">DocumentReference</code></td>
+      <td>Contienen los metadatos y la referencia al contenido documental.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Binary</code> o <code class="language-plaintext highlighter-rouge">Bundle</code> tipo <code class="language-plaintext highlighter-rouge">document</code></td>
+      <td>Representan el documento, según la opción MHD implementada.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Patient</code> basado en Core AR</td>
+      <td>Identifica al paciente cuando debe incluirse o registrarse en la misma transacción.</td>
+    </tr>
+    <tr>
+      <td>Otros recursos Core AR</td>
+      <td>Representan profesionales u organizaciones cuando corresponda.</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>La guía local debe declarar expresamente si el contenido se envía como <code class="language-plaintext highlighter-rouge">Binary</code>, como un <code class="language-plaintext highlighter-rouge">Bundle</code> FHIR de tipo <code class="language-plaintext highlighter-rouge">document</code> o se mantiene en un repositorio externo mediante la opción de referencias no contenidas.</p>
+</blockquote>
+
+<h5 id="solicitud">Solicitud</h5>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">POST [base]
+Content-Type: application/fhir+json
+Accept: application/fhir+json
+</span></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bundle"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transaction"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"entry"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"fullUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:uuid:submission-set"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"resource"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"List"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"current"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"mode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"working"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"request"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"List"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"fullUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:uuid:document-reference"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"resource"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DocumentReference"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"current"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"request"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DocumentReference"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"fullUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:uuid:clinical-document"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"resource"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bundle"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"document"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"request"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bundle"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h5 id="diagrama-de-secuencia">Diagrama de secuencia</h5>
+
+<div align="center">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="SEQUENCE" height="562px" preserveAspectRatio="none" style="width:579px;height:562px;background:#FFFFFF;" version="1.1" viewBox="0 0 579 562" width="579px" zoomAndPan="magnify"><title>ITI-65 &#8212; Registrar documento</title><defs /><g><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="235.5254" x="173.666" y="27.9951">ITI-65 &#8212; Registrar documento</text><g><title>Document Recipient</title><rect fill="#FFFFFF" height="282.4609" style="stroke:#8AAED0;stroke-width:1;" width="10" x="286.5352" y="167.1563" /></g><g><title>Document Source</title><rect fill="#000000" fill-opacity="0.00000" height="346.7266" width="8" x="71.6855" y="120.8906" /><line style="stroke:#8AAED0;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="75" x2="75" y1="120.8906" y2="467.6172" /></g><g><title>Document Recipient</title><rect fill="#000000" fill-opacity="0.00000" height="346.7266" width="8" x="287.5352" y="120.8906" /><line style="stroke:#8AAED0;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="291.2056" x2="291.2056" y1="120.8906" y2="467.6172" /></g><g><title>Repositorio</title><rect fill="#000000" fill-opacity="0.00000" height="346.7266" width="8" x="530.3052" y="120.8906" /><line style="stroke:#8AAED0;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="533.7529" x2="533.7529" y1="120.8906" y2="467.6172" /></g><g class="participant participant-head" data-participant="Source"><rect fill="#EAF4FC" height="46.5938" rx="2.5" ry="2.5" style="stroke:#2962A3;stroke-width:0.5;" width="139.3711" x="6" y="73.2969" /><text fill="#17324D" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125.3711" x="13" y="93.292">Document Source</text><text fill="#17324D" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="116.2656" x="17.5527" y="109.5889">(Sistema cl&#237;nico)</text></g><g class="participant participant-tail" data-participant="Source"><rect fill="#EAF4FC" height="46.5938" rx="2.5" ry="2.5" style="stroke:#2962A3;stroke-width:0.5;" width="139.3711" x="6" y="466.6172" /><text fill="#17324D" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125.3711" x="13" y="486.6123">Document Source</text><text fill="#17324D" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="116.2656" x="17.5527" y="502.9092">(Sistema cl&#237;nico)</text></g><g class="participant participant-head" data-participant="Recipient"><rect fill="#EAF4FC" height="46.5938" rx="2.5" ry="2.5" style="stroke:#2962A3;stroke-width:0.5;" width="156.6592" x="213.2056" y="73.2969" /><text fill="#17324D" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142.6592" x="220.2056" y="93.292">Document Recipient</text><text fill="#17324D" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="128.0029" x="227.5337" y="109.5889">(Repositorio MHD)</text></g><g class="participant participant-tail" data-participant="Recipient"><rect fill="#EAF4FC" height="46.5938" rx="2.5" ry="2.5" style="stroke:#2962A3;stroke-width:0.5;" width="156.6592" x="213.2056" y="466.6172" /><text fill="#17324D" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142.6592" x="220.2056" y="486.6123">Document Recipient</text><text fill="#17324D" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="128.0029" x="227.5337" y="502.9092">(Repositorio MHD)</text></g><g class="participant participant-head" data-participant="Repository"><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79.2422" x="491.6841" y="101.292">Repositorio</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83.1045" x="489.7529" y="117.5889">documental</text><path d="M516.3052,52.2969 C516.3052,42.2969 534.3052,42.2969 534.3052,42.2969 C534.3052,42.2969 552.3052,42.2969 552.3052,52.2969 L552.3052,78.2969 C552.3052,88.2969 534.3052,88.2969 534.3052,88.2969 C534.3052,88.2969 516.3052,88.2969 516.3052,78.2969 L516.3052,52.2969" fill="#E2E2F0" style="stroke:#181818;stroke-width:1.5;" /><path d="M516.3052,52.2969 C516.3052,62.2969 534.3052,62.2969 534.3052,62.2969 C534.3052,62.2969 552.3052,62.2969 552.3052,52.2969" fill="none" style="stroke:#181818;stroke-width:1.5;" /></g><g class="participant participant-tail" data-participant="Repository"><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79.2422" x="491.6841" y="479.6123">Repositorio</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83.1045" x="489.7529" y="495.9092">documental</text><path d="M516.3052,509.2109 C516.3052,499.2109 534.3052,499.2109 534.3052,499.2109 C534.3052,499.2109 552.3052,499.2109 552.3052,509.2109 L552.3052,535.2109 C552.3052,545.2109 534.3052,545.2109 534.3052,545.2109 C534.3052,545.2109 516.3052,545.2109 516.3052,535.2109 L516.3052,509.2109" fill="#E2E2F0" style="stroke:#181818;stroke-width:1.5;" /><path d="M516.3052,509.2109 C516.3052,519.2109 534.3052,519.2109 534.3052,519.2109 C534.3052,519.2109 552.3052,519.2109 552.3052,509.2109" fill="none" style="stroke:#181818;stroke-width:1.5;" /></g><g><title>Document Recipient</title><rect fill="#FFFFFF" height="282.4609" style="stroke:#8AAED0;stroke-width:1;" width="10" x="286.5352" y="167.1563" /></g><g class="message" data-participant-1="Source" data-participant-2="Recipient"><polygon fill="#2962A3" points="274.5352,163.1563,284.5352,167.1563,274.5352,171.1563,278.5352,167.1563" style="stroke:#2962A3;stroke-width:1;" /><line style="stroke:#2962A3;stroke-width:1;" x1="75.6855" x2="280.5352" y1="167.1563" y2="167.1563" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="79.5298" x="82.6855" y="146.9575">POST [base]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="122.8271" x="82.6855" y="162.0903">Bundle transaction</text></g><path d="M5,180.1563 L5,265.1563 L363,265.1563 L363,190.1563 L353,180.1563 L5,180.1563" fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;" /><path d="M353,180.1563 L353,190.1563 L363,190.1563 L353,180.1563" fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="127.207" x="64.1003" y="197.2231">Bundle transaction:</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="144.5171" x="64.1003" y="212.356">&#8226; List (SubmissionSet)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="145.4819" x="64.1003" y="227.4888">&#8226; DocumentReference</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="132.5581" x="64.1003" y="242.6216">&#8226; Documento cl&#237;nico</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="231.6641" x="64.1003" y="257.7544">&#8226; Recursos Core AR, si corresponde</text><g class="message" data-participant-1="Recipient" data-participant-2="Recipient"><line style="stroke:#2962A3;stroke-width:1;" x1="296.5352" x2="338.5352" y1="291.9531" y2="291.9531" /><line style="stroke:#2962A3;stroke-width:1;" x1="338.5352" x2="338.5352" y1="291.9531" y2="304.9531" /><line style="stroke:#2962A3;stroke-width:1;" x1="297.5352" x2="338.5352" y1="304.9531" y2="304.9531" /><polygon fill="#2962A3" points="307.5352,300.9531,297.5352,304.9531,307.5352,308.9531,303.5352,304.9531" style="stroke:#2962A3;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="159.1611" x="303.5352" y="286.8872">Validar Bundle y perfiles</text></g><g class="message" data-participant-1="Recipient" data-participant-2="Recipient"><line style="stroke:#2962A3;stroke-width:1;" x1="296.5352" x2="338.5352" y1="334.0859" y2="334.0859" /><line style="stroke:#2962A3;stroke-width:1;" x1="338.5352" x2="338.5352" y1="334.0859" y2="347.0859" /><line style="stroke:#2962A3;stroke-width:1;" x1="297.5352" x2="338.5352" y1="347.0859" y2="347.0859" /><polygon fill="#2962A3" points="307.5352,343.0859,297.5352,347.0859,307.5352,351.0859,303.5352,347.0859" style="stroke:#2962A3;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="131.625" x="303.5352" y="329.02">Verificar referencias</text></g><g class="message" data-participant-1="Recipient" data-participant-2="Repository"><polygon fill="#2962A3" points="522.3052,372.2188,532.3052,376.2188,522.3052,380.2188,526.3052,376.2188" style="stroke:#2962A3;stroke-width:1;" /><line style="stroke:#2962A3;stroke-width:1;" x1="296.5352" x2="528.3052" y1="376.2188" y2="376.2188" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="213.77" x="303.5352" y="371.1528">Registrar metadatos y contenido</text></g><g class="message" data-participant-1="Repository" data-participant-2="Recipient"><polygon fill="#2962A3" points="307.5352,401.3516,297.5352,405.3516,307.5352,409.3516,303.5352,405.3516" style="stroke:#2962A3;stroke-width:1;" /><line style="stroke:#2962A3;stroke-width:1;stroke-dasharray:2.0,2.0;" x1="301.5352" x2="533.3052" y1="405.3516" y2="405.3516" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="131.9043" x="313.5352" y="400.2856">Registro confirmado</text></g><g class="message" data-participant-1="Recipient" data-participant-2="Source"><polygon fill="#2962A3" points="86.6855,445.6172,76.6855,449.6172,86.6855,453.6172,82.6855,449.6172" style="stroke:#2962A3;stroke-width:1;" /><line style="stroke:#2962A3;stroke-width:1;stroke-dasharray:2.0,2.0;" x1="80.6855" x2="290.5352" y1="449.6172" y2="449.6172" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="62.4419" x="92.6855" y="429.4185">HTTP 200</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="186.8496" x="92.6855" y="444.5513">Bundle transaction-response</text></g></g></svg>
+</div>
+<p><br clear="all" /></p>
+
+<h5 id="respuesta-exitosa">Respuesta exitosa</h5>
+
+<p>El éxito de la transacción se informa mediante un estado HTTP general <code class="language-plaintext highlighter-rouge">200 OK</code>. Cada entrada del <code class="language-plaintext highlighter-rouge">Bundle</code> de respuesta indica el resultado individual de su operación, normalmente <code class="language-plaintext highlighter-rouge">201 Created</code> para los recursos creados.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bundle"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transaction-response"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"entry"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"response"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"201 Created"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"List/123/_history/1"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"response"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"201 Created"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DocumentReference/456/_history/1"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"response"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"201 Created"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bundle/789/_history/1"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<hr />
+
+<h4 id="transacción-2-buscar-documentos--iti-67">Transacción 2: Buscar documentos — ITI-67</h4>
+
+<p>La transacción <strong>ITI-67 Find Document References</strong> permite al <em>Document Consumer</em> buscar referencias documentales en el <em>Document Responder</em> mediante el recurso <code class="language-plaintext highlighter-rouge">DocumentReference</code>.</p>
+
+<p>El servidor <strong>DEBE soportar los parámetros de búsqueda obligatorios definidos por IHE MHD para ITI-67</strong>. La presente guía puede además establecer restricciones, combinaciones recomendadas o parámetros adicionales para responder a las necesidades de la implementación local.</p>
+
+<p>Entre los parámetros utilizados se incluyen, entre otros: <code class="language-plaintext highlighter-rouge">patient</code>, <code class="language-plaintext highlighter-rouge">patient.identifier</code>, <code class="language-plaintext highlighter-rouge">status</code>, <code class="language-plaintext highlighter-rouge">type</code>, <code class="language-plaintext highlighter-rouge">category</code>, <code class="language-plaintext highlighter-rouge">date</code>, <code class="language-plaintext highlighter-rouge">creation</code>, <code class="language-plaintext highlighter-rouge">identifier</code>, <code class="language-plaintext highlighter-rouge">format</code>, <code class="language-plaintext highlighter-rouge">facility</code>, <code class="language-plaintext highlighter-rouge">event</code>, <code class="language-plaintext highlighter-rouge">security-label</code> y los parámetros de identificación del autor.</p>
+
+<p>Los parámetros y requisitos detallados que debe soportar el servidor se especifican formalmente en el <strong>CapabilityStatement MHD Responder</strong> de esta guía.</p>
+
+<h5 id="solicitud-por-identificador-del-paciente">Solicitud por identificador del paciente</h5>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET [base]/DocumentReference?patient.identifier=[system]|[value]&amp;status=current
+Accept: application/fhir+json
+</span></code></pre></div></div>
+
+<p>Ejemplo:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET [base]/DocumentReference?patient.identifier=http://www.renaper.gob.ar/dni|25486731&amp;status=current
+</span></code></pre></div></div>
+
+<h5 id="diagrama-de-secuencia-1">Diagrama de secuencia</h5>
+
+<div align="center">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="SEQUENCE" height="439px" preserveAspectRatio="none" style="width:582px;height:439px;background:#FFFFFF;" version="1.1" viewBox="0 0 582 439" width="582px" zoomAndPan="magnify"><title>ITI-67 &#8212; Buscar referencias documentales</title><defs /><g><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="332.3291" x="126.3599" y="27.9951">ITI-67 &#8212; Buscar referencias documentales</text><g><title>Document Responder</title><rect fill="#FFFFFF" height="144.6641" style="stroke:#91C7A3;stroke-width:1;" width="10" x="318.5981" y="182.2891" /></g><g><title>Document Consumer</title><rect fill="#000000" fill-opacity="0.00000" height="224.0625" width="8" x="82.1836" y="120.8906" /><line style="stroke:#91C7A3;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="86" x2="86" y1="120.8906" y2="344.9531" /></g><g><title>Document Responder</title><rect fill="#000000" fill-opacity="0.00000" height="224.0625" width="8" x="319.5981" y="120.8906" /><line style="stroke:#91C7A3;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="323.5005" x2="323.5005" y1="120.8906" y2="344.9531" /></g><g><title>&#205;ndice de</title><rect fill="#000000" fill-opacity="0.00000" height="224.0625" width="8" x="530.8013" y="120.8906" /><line style="stroke:#91C7A3;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="534.5537" x2="534.5537" y1="120.8906" y2="344.9531" /></g><g class="participant participant-head" data-participant="Consumer"><rect fill="#ECF8F0" height="46.5938" rx="2.5" ry="2.5" style="stroke:#238447;stroke-width:0.5;" width="162.3672" x="5" y="73.2969" /><text fill="#173F28" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="148.3672" x="12" y="93.292">Document Consumer</text><text fill="#173F28" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="116.2656" x="28.0508" y="109.5889">(Sistema cl&#237;nico)</text></g><g class="participant participant-tail" data-participant="Consumer"><rect fill="#ECF8F0" height="46.5938" rx="2.5" ry="2.5" style="stroke:#238447;stroke-width:0.5;" width="162.3672" x="5" y="343.9531" /><text fill="#173F28" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="148.3672" x="12" y="363.9482">Document Consumer</text><text fill="#173F28" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="116.2656" x="28.0508" y="380.2451">(Sistema cl&#237;nico)</text></g><g class="participant participant-head" data-participant="Responder"><rect fill="#ECF8F0" height="46.5938" rx="2.5" ry="2.5" style="stroke:#238447;stroke-width:0.5;" width="166.1953" x="240.5005" y="73.2969" /><text fill="#173F28" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="152.1953" x="247.5005" y="93.292">Document Responder</text><text fill="#173F28" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104.3438" x="271.4263" y="109.5889">(Servicio MHD)</text></g><g class="participant participant-tail" data-participant="Responder"><rect fill="#ECF8F0" height="46.5938" rx="2.5" ry="2.5" style="stroke:#238447;stroke-width:0.5;" width="166.1953" x="240.5005" y="343.9531" /><text fill="#173F28" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="152.1953" x="247.5005" y="363.9482">Document Responder</text><text fill="#173F28" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104.3438" x="271.4263" y="380.2451">(Servicio MHD)</text></g><g class="participant participant-head" data-participant="Index"><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64.0391" x="499.7817" y="101.292">&#205;ndice de</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86.4951" x="488.5537" y="117.5889">documentos</text><path d="M516.8013,52.2969 C516.8013,42.2969 534.8013,42.2969 534.8013,42.2969 C534.8013,42.2969 552.8013,42.2969 552.8013,52.2969 L552.8013,78.2969 C552.8013,88.2969 534.8013,88.2969 534.8013,88.2969 C534.8013,88.2969 516.8013,88.2969 516.8013,78.2969 L516.8013,52.2969" fill="#E2E2F0" style="stroke:#181818;stroke-width:1.5;" /><path d="M516.8013,52.2969 C516.8013,62.2969 534.8013,62.2969 534.8013,62.2969 C534.8013,62.2969 552.8013,62.2969 552.8013,52.2969" fill="none" style="stroke:#181818;stroke-width:1.5;" /></g><g class="participant participant-tail" data-participant="Index"><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64.0391" x="499.7817" y="356.9482">&#205;ndice de</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86.4951" x="488.5537" y="373.2451">documentos</text><path d="M516.8013,386.5469 C516.8013,376.5469 534.8013,376.5469 534.8013,376.5469 C534.8013,376.5469 552.8013,376.5469 552.8013,386.5469 L552.8013,412.5469 C552.8013,422.5469 534.8013,422.5469 534.8013,422.5469 C534.8013,422.5469 516.8013,422.5469 516.8013,412.5469 L516.8013,386.5469" fill="#E2E2F0" style="stroke:#181818;stroke-width:1.5;" /><path d="M516.8013,386.5469 C516.8013,396.5469 534.8013,396.5469 534.8013,396.5469 C534.8013,396.5469 552.8013,396.5469 552.8013,386.5469" fill="none" style="stroke:#181818;stroke-width:1.5;" /></g><g><title>Document Responder</title><rect fill="#FFFFFF" height="144.6641" style="stroke:#91C7A3;stroke-width:1;" width="10" x="318.5981" y="182.2891" /></g><g class="message" data-participant-1="Consumer" data-participant-2="Responder"><polygon fill="#238447" points="306.5981,178.2891,316.5981,182.2891,306.5981,186.2891,310.5981,182.2891" style="stroke:#238447;stroke-width:1;" /><line style="stroke:#238447;stroke-width:1;" x1="86.1836" x2="312.5981" y1="182.2891" y2="182.2891" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="209.5552" x="93.1836" y="146.9575">GET [base]/DocumentReference</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="213.4146" x="93.1836" y="162.0903">?patient.identifier=system|value</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="108.3862" x="93.1836" y="177.2231">&amp;status=current</text></g><g class="message" data-participant-1="Responder" data-participant-2="Responder"><line style="stroke:#238447;stroke-width:1;" x1="328.5981" x2="370.5981" y1="211.4219" y2="211.4219" /><line style="stroke:#238447;stroke-width:1;" x1="370.5981" x2="370.5981" y1="211.4219" y2="224.4219" /><line style="stroke:#238447;stroke-width:1;" x1="329.5981" x2="370.5981" y1="224.4219" y2="224.4219" /><polygon fill="#238447" points="339.5981,220.4219,329.5981,224.4219,339.5981,228.4219,335.5981,224.4219" style="stroke:#238447;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="125.1377" x="335.5981" y="206.356">Validar par&#225;metros</text></g><g class="message" data-participant-1="Responder" data-participant-2="Index"><polygon fill="#238447" points="522.8013,249.5547,532.8013,253.5547,522.8013,257.5547,526.8013,253.5547" style="stroke:#238447;stroke-width:1;" /><line style="stroke:#238447;stroke-width:1;" x1="328.5981" x2="528.8013" y1="253.5547" y2="253.5547" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="182.2031" x="335.5981" y="248.4888">Buscar DocumentReference</text></g><g class="message" data-participant-1="Index" data-participant-2="Responder"><polygon fill="#238447" points="339.5981,278.6875,329.5981,282.6875,339.5981,286.6875,335.5981,282.6875" style="stroke:#238447;stroke-width:1;" /><line style="stroke:#238447;stroke-width:1;stroke-dasharray:2.0,2.0;" x1="333.5981" x2="533.8013" y1="282.6875" y2="282.6875" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="89.6289" x="345.5981" y="277.6216">Coincidencias</text></g><g class="message" data-participant-1="Responder" data-participant-2="Consumer"><polygon fill="#238447" points="97.1836,322.9531,87.1836,326.9531,97.1836,330.9531,93.1836,326.9531" style="stroke:#238447;stroke-width:1;" /><line style="stroke:#238447;stroke-width:1;stroke-dasharray:2.0,2.0;" x1="91.1836" x2="322.5981" y1="326.9531" y2="326.9531" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="62.4419" x="103.1836" y="306.7544">HTTP 200</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="112.728" x="103.1836" y="321.8872">Bundle searchset</text></g></g></svg>
+</div>
+<p><br clear="all" /></p>
+
+<h5 id="respuesta-exitosa-1">Respuesta exitosa</h5>
+
+<p>La respuesta será <code class="language-plaintext highlighter-rouge">200 OK</code>, incluso cuando no se encuentren documentos. En ese caso, el <code class="language-plaintext highlighter-rouge">Bundle.total</code> será <code class="language-plaintext highlighter-rouge">0</code> y no contendrá entradas de resultados.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bundle"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"searchset"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"entry"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"fullUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://servidor.example.org/fhir/DocumentReference/456"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"resource"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DocumentReference"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"456"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"current"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"subject"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient/123"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"attachment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"contentType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"application/fhir+json"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://servidor.example.org/fhir/Bundle/789"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Documento clínico"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"search"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"mode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"match"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<hr />
+
+<h4 id="transacción-3-recuperar-un-documento--iti-68">Transacción 3: Recuperar un documento — ITI-68</h4>
+
+<p><strong>Nombre IHE:</strong> Retrieve Document<br />
+<strong>Actores:</strong> Document Consumer → Document Responder<br />
+<strong>Método HTTP:</strong> <code class="language-plaintext highlighter-rouge">GET [URL del documento]</code></p>
+
+<h5 id="descripción-1">Descripción</h5>
+
+<p>La transacción <strong>ITI-68</strong> permite recuperar el documento previamente localizado mediante ITI-67. El consumidor debe utilizar la dirección indicada en <code class="language-plaintext highlighter-rouge">DocumentReference.content.attachment.url</code>.</p>
+
+<p>Cuando el documento se representa como un <code class="language-plaintext highlighter-rouge">Bundle</code> FHIR de tipo <code class="language-plaintext highlighter-rouge">document</code>, la dirección puede corresponder a un endpoint como:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET [base]/Bundle/[id]
+</span></code></pre></div></div>
+
+<p>Si el documento se almacena como <code class="language-plaintext highlighter-rouge">Binary</code> o en un repositorio documental externo, se utiliza directamente la URL informada en el <code class="language-plaintext highlighter-rouge">DocumentReference</code>.</p>
+
+<h5 id="encabezados">Encabezados</h5>
+
+<p>El consumidor puede utilizar el encabezado <code class="language-plaintext highlighter-rouge">Accept</code> para indicar el formato requerido:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET [DocumentReference.content.attachment.url]
+Accept: application/fhir+json
+</span></code></pre></div></div>
+
+<p>El formato solicitado debe ser compatible con el tipo informado en <code class="language-plaintext highlighter-rouge">DocumentReference.content.attachment.contentType</code>.</p>
+
+<h5 id="diagrama-de-secuencia-2">Diagrama de secuencia</h5>
+
+<div align="center">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="SEQUENCE" height="424px" preserveAspectRatio="none" style="width:621px;height:424px;background:#FFFFFF;" version="1.1" viewBox="0 0 621 424" width="621px" zoomAndPan="magnify"><title>ITI-68 &#8212; Recuperar documento</title><defs /><g><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="243.4619" x="190.2773" y="27.9951">ITI-68 &#8212; Recuperar documento</text><g><title>Document Responder</title><rect fill="#FFFFFF" height="144.6641" style="stroke:#E5B78D;stroke-width:1;" width="10" x="393.7417" y="167.1563" /></g><g><title>Document Consumer</title><rect fill="#000000" fill-opacity="0.00000" height="208.9297" width="8" x="82.1836" y="120.8906" /><line style="stroke:#E5B78D;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="86" x2="86" y1="120.8906" y2="329.8203" /></g><g><title>Document Responder</title><rect fill="#000000" fill-opacity="0.00000" height="208.9297" width="8" x="394.7417" y="120.8906" /><line style="stroke:#E5B78D;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="398.644" x2="398.644" y1="120.8906" y2="329.8203" /></g><g><title>Repositorio</title><rect fill="#000000" fill-opacity="0.00000" height="208.9297" width="8" x="571.4644" y="120.8906" /><line style="stroke:#E5B78D;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="574.9121" x2="574.9121" y1="120.8906" y2="329.8203" /></g><g class="participant participant-head" data-participant="Consumer"><rect fill="#FFF4E8" height="46.5938" rx="2.5" ry="2.5" style="stroke:#C46A1A;stroke-width:0.5;" width="162.3672" x="5" y="73.2969" /><text fill="#5B3213" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="148.3672" x="12" y="93.292">Document Consumer</text><text fill="#5B3213" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="116.2656" x="28.0508" y="109.5889">(Sistema cl&#237;nico)</text></g><g class="participant participant-tail" data-participant="Consumer"><rect fill="#FFF4E8" height="46.5938" rx="2.5" ry="2.5" style="stroke:#C46A1A;stroke-width:0.5;" width="162.3672" x="5" y="328.8203" /><text fill="#5B3213" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="148.3672" x="12" y="348.8154">Document Consumer</text><text fill="#5B3213" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="116.2656" x="28.0508" y="365.1123">(Sistema cl&#237;nico)</text></g><g class="participant participant-head" data-participant="Responder"><rect fill="#FFF4E8" height="46.5938" rx="2.5" ry="2.5" style="stroke:#C46A1A;stroke-width:0.5;" width="166.1953" x="315.644" y="73.2969" /><text fill="#5B3213" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="152.1953" x="322.644" y="93.292">Document Responder</text><text fill="#5B3213" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104.3438" x="346.5698" y="109.5889">(Servicio MHD)</text></g><g class="participant participant-tail" data-participant="Responder"><rect fill="#FFF4E8" height="46.5938" rx="2.5" ry="2.5" style="stroke:#C46A1A;stroke-width:0.5;" width="166.1953" x="315.644" y="328.8203" /><text fill="#5B3213" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="152.1953" x="322.644" y="348.8154">Document Responder</text><text fill="#5B3213" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104.3438" x="346.5698" y="365.1123">(Servicio MHD)</text></g><g class="participant participant-head" data-participant="Repository"><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79.2422" x="532.8433" y="101.292">Repositorio</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83.1045" x="530.9121" y="117.5889">documental</text><path d="M557.4644,52.2969 C557.4644,42.2969 575.4644,42.2969 575.4644,42.2969 C575.4644,42.2969 593.4644,42.2969 593.4644,52.2969 L593.4644,78.2969 C593.4644,88.2969 575.4644,88.2969 575.4644,88.2969 C575.4644,88.2969 557.4644,88.2969 557.4644,78.2969 L557.4644,52.2969" fill="#E2E2F0" style="stroke:#181818;stroke-width:1.5;" /><path d="M557.4644,52.2969 C557.4644,62.2969 575.4644,62.2969 575.4644,62.2969 C575.4644,62.2969 593.4644,62.2969 593.4644,52.2969" fill="none" style="stroke:#181818;stroke-width:1.5;" /></g><g class="participant participant-tail" data-participant="Repository"><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79.2422" x="532.8433" y="341.8154">Repositorio</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83.1045" x="530.9121" y="358.1123">documental</text><path d="M557.4644,371.4141 C557.4644,361.4141 575.4644,361.4141 575.4644,361.4141 C575.4644,361.4141 593.4644,361.4141 593.4644,371.4141 L593.4644,397.4141 C593.4644,407.4141 575.4644,407.4141 575.4644,407.4141 C575.4644,407.4141 557.4644,407.4141 557.4644,397.4141 L557.4644,371.4141" fill="#E2E2F0" style="stroke:#181818;stroke-width:1.5;" /><path d="M557.4644,371.4141 C557.4644,381.4141 575.4644,381.4141 575.4644,381.4141 C575.4644,381.4141 593.4644,381.4141 593.4644,371.4141" fill="none" style="stroke:#181818;stroke-width:1.5;" /></g><g><title>Document Responder</title><rect fill="#FFFFFF" height="144.6641" style="stroke:#E5B78D;stroke-width:1;" width="10" x="393.7417" y="167.1563" /></g><g class="message" data-participant-1="Consumer" data-participant-2="Responder"><polygon fill="#C46A1A" points="381.7417,163.1563,391.7417,167.1563,381.7417,171.1563,385.7417,167.1563" style="stroke:#C46A1A;stroke-width:1;" /><line style="stroke:#C46A1A;stroke-width:1;" x1="86.1836" x2="387.7417" y1="167.1563" y2="167.1563" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="135.7002" x="93.1836" y="146.9575">GET URL indicada en</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="288.5581" x="93.1836" y="162.0903">DocumentReference.content.attachment.url</text></g><g class="message" data-participant-1="Responder" data-participant-2="Responder"><line style="stroke:#C46A1A;stroke-width:1;" x1="403.7417" x2="445.7417" y1="196.2891" y2="196.2891" /><line style="stroke:#C46A1A;stroke-width:1;" x1="445.7417" x2="445.7417" y1="196.2891" y2="209.2891" /><line style="stroke:#C46A1A;stroke-width:1;" x1="404.7417" x2="445.7417" y1="209.2891" y2="209.2891" /><polygon fill="#C46A1A" points="414.7417,205.2891,404.7417,209.2891,414.7417,213.2891,410.7417,209.2891" style="stroke:#C46A1A;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="138.582" x="410.7417" y="191.2231">Verificar autorizaci&#243;n</text></g><g class="message" data-participant-1="Responder" data-participant-2="Repository"><polygon fill="#C46A1A" points="563.4644,234.4219,573.4644,238.4219,563.4644,242.4219,567.4644,238.4219" style="stroke:#C46A1A;stroke-width:1;" /><line style="stroke:#C46A1A;stroke-width:1;" x1="403.7417" x2="569.4644" y1="238.4219" y2="238.4219" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="130.2729" x="410.7417" y="233.356">Solicitar documento</text></g><g class="message" data-participant-1="Repository" data-participant-2="Responder"><polygon fill="#C46A1A" points="414.7417,263.5547,404.7417,267.5547,414.7417,271.5547,410.7417,267.5547" style="stroke:#C46A1A;stroke-width:1;" /><line style="stroke:#C46A1A;stroke-width:1;stroke-dasharray:2.0,2.0;" x1="408.7417" x2="574.4644" y1="267.5547" y2="267.5547" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="147.7227" x="420.7417" y="262.4888">Contenido documental</text></g><g class="message" data-participant-1="Responder" data-participant-2="Consumer"><polygon fill="#C46A1A" points="97.1836,307.8203,87.1836,311.8203,97.1836,315.8203,93.1836,311.8203" style="stroke:#C46A1A;stroke-width:1;" /><line style="stroke:#C46A1A;stroke-width:1;stroke-dasharray:2.0,2.0;" x1="91.1836" x2="397.7417" y1="311.8203" y2="311.8203" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="62.4419" x="103.1836" y="291.6216">HTTP 200</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="141.4131" x="103.1836" y="306.7544">Documento solicitado</text></g></g></svg>
+</div>
+<p><br clear="all" /></p>
+
+<h5 id="respuesta-exitosa-documento-fhir">Respuesta exitosa: documento FHIR</h5>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bundle"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"789"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"document"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-08-17T10:30:00-03:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"entry"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"resource"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Composition"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"composition-1"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"final"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"resource"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"patient-1"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<hr />
+
+<h4 id="códigos-de-respuesta-http">Códigos de respuesta HTTP</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Código</th>
+      <th>Escenario</th>
+      <th>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">200 OK</code></td>
+      <td>Operación exitosa</td>
+      <td>Transacción procesada, búsqueda ejecutada o documento recuperado correctamente.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">201 Created</code></td>
+      <td>Recurso creado</td>
+      <td>Se utiliza en las respuestas individuales de las entradas de una transacción exitosa.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">400 Bad Request</code></td>
+      <td>Solicitud incorrecta</td>
+      <td>La sintaxis, los parámetros o la estructura de la solicitud son inválidos.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">401 Unauthorized</code></td>
+      <td>Sin autenticación</td>
+      <td>No se presentaron credenciales válidas.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">403 Forbidden</code></td>
+      <td>Sin autorización</td>
+      <td>La identidad autenticada no tiene permisos para realizar la operación.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">404 Not Found</code></td>
+      <td>Recurso inexistente</td>
+      <td>La referencia o el documento solicitado no existe o no puede ser revelado.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">409 Conflict</code></td>
+      <td>Conflicto</td>
+      <td>Existe una colisión de identificadores, versiones o reglas de negocio.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">422 Unprocessable Entity</code></td>
+      <td>Error de validación</td>
+      <td>El contenido puede procesarse, pero no cumple los perfiles o restricciones FHIR.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">500 Internal Server Error</code></td>
+      <td>Error interno</td>
+      <td>El servidor no pudo completar la operación.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Cuando se produce un error, el servidor debería entregar un recurso <code class="language-plaintext highlighter-rouge">OperationOutcome</code> con información suficiente para identificar la causa.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OperationOutcome"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"issue"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"severity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"error"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"invalid"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"diagnostics"</span><span class="p">:</span><span class="w"> </span><span class="s2">"El recurso no cumple con el perfil declarado."</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<hr />
+
+<h4 id="seguridad">Seguridad</h4>
+
+<p>Las transacciones deben ejecutarse mediante HTTPS y aplicar los mecanismos de autenticación, autorización, control de acceso y auditoría definidos por la infraestructura nacional o institucional.</p>
+
+<p>Como mínimo, la implementación debe considerar:</p>
+
+<ul>
+  <li>autenticación del sistema solicitante;</li>
+  <li>autorización según operación y paciente;</li>
+  <li>protección de la confidencialidad e integridad de los documentos;</li>
+  <li>registro de auditoría de las operaciones;</li>
+  <li>trazabilidad de accesos y recuperaciones;</li>
+  <li>cumplimiento de las políticas de consentimiento aplicables.</li>
+</ul>
+
+<h4 id="referencias">Referencias</h4>
+
+<ul>
+  <li><a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html">IHE MHD — Provide Document Bundle ITI-65</a></li>
+  <li><a href="https://profiles.ihe.net/ITI/MHD/ITI-67.html">IHE MHD — Find Document References ITI-67</a></li>
+  <li><a href="https://profiles.ihe.net/ITI/MHD/ITI-68.html">IHE MHD — Retrieve Document ITI-68</a></li>
+  <li><a href="https://hl7.org/fhir/R4/">HL7 FHIR R4</a></li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://hl7chile.cl/">Hl7 Chile</a>.  Package hl7.fhir.cl.mhdig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Oct 22, 2026 10:20-0300">2026-10-22</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+             Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Tabla de contenidos</a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="qa.html">Reporte QA</a> |
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://hl7chile.cl/fhir/ig/mhd/history.html">Historial de versiones</a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

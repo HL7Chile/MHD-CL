@@ -1,16 +1,16 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
    <id value="hl7.fhir.cl.mhdig"/>
-   <language value="en"/>
+   <language value="es"/>
    <text>
       <status value="generated"/>
-      <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+      <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
          <p class="res-header-id">
-            <b>Generated Narrative: ImplementationGuide hl7.fhir.cl.mhdig</b>
+            <b>Generated Narrative: GuiaDeImplementacion hl7.fhir.cl.mhdig</b>
          </p>
          <a name="hl7.fhir.cl.mhdig"> </a>
          <a name="hchl7.fhir.cl.mhdig"> </a>
          <div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%">
-            <p style="margin-bottom: 0px">Language: en</p>
+            <p style="margin-bottom: 0px">Language: es</p>
          </div>
          <h2>MHDTransIGChile</h2>
          <p>The official URL for this implementation guide is: </p>
@@ -25,7 +25,7 @@
    <name value="MHDTransIGChile"/>
    <title value="Guía MHD para el Intercambio de Información de Salud en Chile"/>
    <status value="draft"/>
-   <date value="2026-10-15T12:40:59-03:00"/>
+   <date value="2026-10-22T10:20:43-03:00"/>
    <publisher value="Hl7 Chile"/>
    <contact>
       <name value="Hl7 Chile"/>
@@ -74,7 +74,7 @@
    <dependsOn id="ihe_iti_mhd">
       <uri value="https://profiles.ihe.net/ITI/MHD/ImplementationGuide/ihe.iti.mhd"/>
       <packageId value="ihe.iti.mhd"/>
-      <version value="4.2.5-comment"/>
+      <version value="4.2.5"/>
    </dependsOn>
    <definition>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
@@ -82,12 +82,10 @@
       </extension>
       
       
-      
-      <grouping id="-dyn-capabilitystatement" name="CapabilityStatement"/>
-      
-      
-      
-      
+      <grouping id="-dyn-capabilitystatement">
+         <name value="Behavior: Capability Statements"/>
+         <description value="The following artifacts define the specific capabilities that different types of systems are expected to have in order to comply with this implementation guide.  Systems conforming to this implementation guide are expected to declare conformance to one or more of the following capability statements."/>
+      </grouping>
       
       
       
@@ -99,21 +97,27 @@
       
       
       
-      
-      <grouping id="-str-profile" name="ResourceProfile"/>
-      
-      
-      <grouping id="-term-valueset" name="ValueSet"/>
-      
+      <grouping id="-str-profile">
+         <name value="Structures: Resource Profiles"/>
+         <description value="These define constraints on FHIR resources for systems conforming to this implementation guide."/>
+      </grouping>
       
       
-      
-      
-      
-      
+      <grouping id="-term-valueset">
+         <name value="Terminology: Value Sets"/>
+         <description value="These define sets of codes used by systems conforming to this implementation guide."/>
+      </grouping>
       
       
       
+      
+      
+      
+      
+      <grouping id="-ex-example">
+         <name value="Example: Example Instances"/>
+         <description value="These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like."/>
+      </grouping>
       
       
       
@@ -298,6 +302,114 @@
          <exampleBoolean value="false"/>
          <groupingId value="-term-valueset"/>
       </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Bundle"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Bundle-bundle-mhd-referencia-documental-ejemplo.html"/>
+         </extension>
+         <reference>
+            <reference value="Bundle/bundle-mhd-referencia-documental-ejemplo"/>
+         </reference>
+         <name value="Bundle MHD con referencia documental de ejemplo"/>
+         <description value="Bundle transaction que vincula el DocumentReference generado previamente."/>
+         <exampleCanonical value="https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/BundleMhd"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Bundle"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Bundle-BundleDocumentoIpsEjemplo.html"/>
+         </extension>
+         <reference>
+            <reference value="Bundle/BundleDocumentoIpsEjemplo"/>
+         </reference>
+         <name value="Bundle documento IPS Chile de ejemplo"/>
+         <description value="Bundle de tipo document: Composition como primera entrada, seguido del paciente, el autor y los recursos clínicos referenciados por las secciones."/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="List"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="List-EjemploListMhd.html"/>
+         </extension>
+         <reference>
+            <reference value="List/EjemploListMhd"/>
+         </reference>
+         <name value="Ejemplo mínimo de List MHD"/>
+         <description value="Ejemplo mínimo de List como SubmissionSet MHD con una referencia documental."/>
+         <exampleCanonical value="https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/ListMhd"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Patient"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Patient-Paciente-Interno.html"/>
+         </extension>
+         <reference>
+            <reference value="Patient/Paciente-Interno"/>
+         </reference>
+         <name value="Paciente-Interno"/>
+         <description value="Ejemplo de paciente Chileno conforme al perfil PacienteCLIps, con rut y nombre oficial."/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Practitioner"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Practitioner-PrestadorCLInline.html"/>
+         </extension>
+         <reference>
+            <reference value="Practitioner/PrestadorCLInline"/>
+         </reference>
+         <name value="PrestadorCLInline"/>
+         <description value="Ejemplo inline de profesional argentino conforme al perfil PrestadorArg."/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DocumentReference"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DocumentReference-ReferDocEjemplo.html"/>
+         </extension>
+         <reference>
+            <reference value="DocumentReference/ReferDocEjemplo"/>
+         </reference>
+         <name value="Referencia documental mínima para DocumentoArg"/>
+         <description value="Ejemplo de DocumentReference MHD que referencia un documento clínico FHIR DocumentoArg."/>
+         <exampleCanonical value="https://hl7chile.cl/fhir/ig/mhd/StructureDefinition/ReferenciaDocumental"/>
+         <groupingId value="-ex-example"/>
+      </resource>
       <page>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
             <valueUrl value="toc.html"/>
@@ -347,16 +459,7 @@
          </page>
          <page>
             <nameUrl value="artifacts.html"/>
-            <title value="Artifacts Summary">
-               <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                  <extension url="lang">
-                     <valueCode value="en"/>
-                  </extension>
-                  <extension url="content">
-                     <valueString value="Artifacts Summary"/>
-                  </extension>
-               </extension>
-            </title>
+            <title value="Artifacts Summary"/>
             <generation value="html"/>
             <page>
                <nameUrl value="CapabilityStatement-MHDCliente.html"/>
@@ -391,6 +494,36 @@
             <page>
                <nameUrl value="ValueSet-VSTipoDocumento.html"/>
                <title value="Tipos de Documento Clínico para DocumentReference"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Bundle-BundleDocumentoIpsEjemplo.html"/>
+               <title value="Bundle documento IPS Chile de ejemplo"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Bundle-bundle-mhd-referencia-documental-ejemplo.html"/>
+               <title value="Bundle MHD con referencia documental de ejemplo"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="List-EjemploListMhd.html"/>
+               <title value="Ejemplo mínimo de List MHD"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Patient-Paciente-Interno.html"/>
+               <title value="Paciente-Interno"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Practitioner-PrestadorCLInline.html"/>
+               <title value="PrestadorCLInline"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="DocumentReference-ReferDocEjemplo.html"/>
+               <title value="Referencia documental mínima para DocumentoArg"/>
                <generation value="generated"/>
             </page>
          </page>
@@ -449,10 +582,6 @@
       </parameter>
       <parameter>
          <code value="path-pages"/>
-         <value value="input/assets"/>
-      </parameter>
-      <parameter>
-         <code value="path-pages"/>
          <value value="input/images"/>
       </parameter>
       <parameter>
@@ -472,15 +601,19 @@
          <value value="pin-multiples"/>
       </parameter>
       <parameter>
+         <code value="auto-oid-root"/>
+         <value value="2.16.840.1.113883.2.22.40.14"/>
+      </parameter>
+      <parameter>
          <code value="autoload-resources"/>
          <value value="true"/>
       </parameter>
       <parameter>
-         <code value="path-liquid-template"/>
+         <code value="path-liquid"/>
          <value value="template/liquid"/>
       </parameter>
       <parameter>
-         <code value="path-liquid-template"/>
+         <code value="path-liquid"/>
          <value value="input/liquid"/>
       </parameter>
       <parameter>
@@ -562,10 +695,6 @@
       <parameter>
          <code value="tabbed-snapshots"/>
          <value value="true"/>
-      </parameter>
-      <parameter>
-         <code value="i18n-default-lang"/>
-         <value value="en"/>
       </parameter>
    </definition>
 </ImplementationGuide>

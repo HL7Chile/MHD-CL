@@ -1,10 +1,41 @@
 ---
 ---
-<html lang="en"><title>Redirect File</title><body>
-<!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
-<script type="text/javascript">
-// 7ee24a23-ba72-432f-816a-76a4817c0528
-langs=["en"]
-</script>
-<script type="text/javascript" src="{{site.data.info.assets}}assets/js/lang-redirects.js"></script>
-</body></html>
+<!-- get modelType -->
+{% include fragment-modelType.html id='BundleMhd' %}
+
+{% include fragment-pagebegin.html %}
+<div style="counter-reset: section 6" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-profile-navtabs.html type='StructureDefinition' id='BundleMhd' active='example' %}
+
+  <a name="root"> </a>
+  <h2 id="root">{{modelType}}: BundleMhd - Examples</h2>
+{% include fragment-simpletable.html %}
+
+   <!-- insert intro if present -->
+    {% include fragment-intro.html type='StructureDefinition' id='BundleMhd' %}
+
+{% assign basepath = page.path | replace: '-examples.html', '.html' %}
+{% if site.data.pages[basepath].examples.size > 0 %}
+  <p>Examples for the BundleMhd Profile.</p>
+  <table style="grid">
+    <tbody>
+      {% for example in site.data.pages[basepath].examples %}
+        <tr>
+          <td>
+            <a href="{{example.url}}">{{example.title | escape_once}}</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% else %}
+  <p><b>No examples are currently available for the {{id}} Profile.</b></p>
+{% endif %}
+
+<!-- insert notes if present -->
+{% include fragment-notes.html type='StructureDefinition' id='BundleMhd' %}
+
+</div>
+{% assign includetabscripts = 'true' %}
+{% include fragment-pageend.html %}

@@ -2,7 +2,7 @@
     "package-id": "hl7.fhir.cl.mhdig",
     "version": "0.1.0",
     "desc": "Versión de desarrollo de la guía de implementación del Intercambio de Información de Salud en Chile",
-    "path": "https://hl7chile.cl/fhir/ig/mhd/0.1.0",
+    "path": "https://hl7chile.cl/fhir/ig/mhd/0.1.0-draft",
     "mode": "working",
     "changes": "changes.html",
     "status": "draft",
@@ -13,5 +13,6 @@
     "registry-country": "CL",
     "registry-authority": "HL7 Chile",
     "category": "Clinical Documents",
+    "title": "Guía de Implementación del Intercambio de Información de Salud en Chile (MHD)",
     "introduction": "La Guía de Implementación del Intercambio de Información de Salud en Chile (MHD) proporciona un marco para la interoperabilidad de la información de salud en el país, facilitando el intercambio seguro y eficiente de datos clínicos entre diferentes sistemas y organizaciones de atención médica."
 }

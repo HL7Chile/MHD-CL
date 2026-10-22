@@ -250,7 +250,7 @@
   },
   {
     "url" : "http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode",
-    "version" : "1.5.0",
+    "version" : "1.6.0",
     "status" : "active",
     "name" : "IHE_FormatCode_vs",
     "title" : "IHE ValueSet of Format Codes for use with Document Sharing",
@@ -285,6 +285,8 @@
     "title" : "Categorías de Documento Clínico para DocumentReference",
     "description" : "Categorías generales de documentos clínicos codificadas en LOINC para ser usadas en DocumentReference.category.",
     "systems" : ["http://loinc.org"],
+    "oids" : ["2.16.840.1.113883.2.22.40.14.48.1"],
+    "sources" : ["2.16.840.1.113883.2.22.40.14.48.1"],
     "uses" : {
     },
     "StructureDefinition-ReferenciaDocumental.html" : "ReferenciaDocumental"
@@ -297,13 +299,15 @@
     "title" : "Tipos de Documento Clínico para DocumentReference",
     "description" : "Tipos documentales clínicos codificados en LOINC para ser usados en DocumentReference.type.",
     "systems" : ["http://loinc.org"],
+    "oids" : ["2.16.840.1.113883.2.22.40.14.48.2"],
+    "sources" : ["2.16.840.1.113883.2.22.40.14.48.2"],
     "uses" : {
     },
     "StructureDefinition-ReferenciaDocumental.html" : "ReferenciaDocumental"
   },
   {
     "url" : "https://profiles.ihe.net/ITI/MHD/ValueSet/DocumentReferenceStats",
-    "version" : "4.2.5-comment",
+    "version" : "4.2.5",
     "status" : "active",
     "name" : "DocumentReferenceStats",
     "title" : "MHD DocumentReference status codes",
@@ -315,7 +319,7 @@
   },
   {
     "url" : "https://profiles.ihe.net/ITI/MHD/ValueSet/MHDlistTypesVS",
-    "version" : "4.2.5-comment",
+    "version" : "4.2.5",
     "status" : "active",
     "name" : "MHDlistTypesVS",
     "title" : "MHD List Types ValueSet",
@@ -327,7 +331,7 @@
   },
   {
     "url" : "https://profiles.ihe.net/ITI/MHD/ValueSet/MHDprovideFolderActions",
-    "version" : "4.2.5-comment",
+    "version" : "4.2.5",
     "status" : "active",
     "name" : "MHDprovideFolderActions",
     "title" : "MHD Folder List Types ValueSet",
@@ -339,7 +343,7 @@
   },
   {
     "url" : "https://profiles.ihe.net/ITI/MHD/ValueSet/MHDprovidePatientActions",
-    "version" : "4.2.5-comment",
+    "version" : "4.2.5",
     "status" : "active",
     "name" : "MHDprovidePatientActions",
     "title" : "MHD Patient Types ValueSet",

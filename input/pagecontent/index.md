@@ -4,7 +4,7 @@
 
 Esta Guía de Implementación define los requisitos para el intercambio de documentos clínicos mediante el estándar HL7® FHIR®, utilizando como base el perfil **Mobile access to Health Documents (MHD)** desarrollado por IHE.
 
-La guía adapta los perfiles, actores y transacciones definidos por IHE MHD al contexto argentino, incorporando los requisitos nacionales de identificación de pacientes, profesionales y organizaciones establecidos por la **Guía de Implementación Core Argentina (Core AR)**.
+La guía adapta los perfiles, actores y transacciones definidos por IHE MHD al contexto Chileno, incorporando los requisitos nacionales de identificación de pacientes, profesionales y organizaciones establecidos por la **Guía de Implementación Core de Chile (CL Core)**.
 
 Su propósito es facilitar el registro, consulta y recuperación interoperable de documentos clínicos entre sistemas de información de salud.
 
@@ -50,11 +50,11 @@ Esta guía reutiliza y restringe los perfiles definidos por IHE MHD, principalme
 
 La implementación local mantiene la compatibilidad con las transacciones definidas por IHE MHD.
 
-##### Core Argentina (Core AR)
+##### Core Chilena (CL Core)
 
-Core AR proporciona las definiciones nacionales utilizadas para representar las entidades fundamentales del sistema de salud argentino.
+CL Core proporciona las definiciones nacionales utilizadas para representar las entidades fundamentales del sistema de salud chileno.
 
-Esta guía utiliza perfiles y terminologías de Core AR para:
+Esta guía utiliza perfiles y terminologías de CL Core para:
 
 - Identificación de pacientes.
 - Identificación de profesionales de salud.
@@ -69,22 +69,34 @@ Cuando un recurso definido por IHE MHD referencia a un paciente, profesional u o
 La relación entre las Guías de Implementación puede resumirse de la siguiente manera:
 
 - **HL7 FHIR R4** proporciona el estándar base de interoperabilidad.
-- **Core AR** define los requisitos nacionales para las entidades fundamentales.
+- **International Patient Summary** proporciona un resumen de la historia clínica del paciente.
+- **CL Core** define los requisitos nacionales para las entidades fundamentales.
+- **Resumen Clínico de Chile** proporciona una chilenización del proyecto de IPS, tomando la core de Chile como base.
 - **IHE MHD** define el modelo internacional para el intercambio de documentos clínicos.
-- **Esta guía** combina y restringe ambos conjuntos de definiciones para su aplicación en el contexto argentino.
+- **Esta guía** combina y restringe ambos conjuntos de definiciones para su aplicación en el contexto chileno.
 
-```mermaid
-flowchart TB
+<div class="mermaid">
+graph TD
     FHIR["HL7 FHIR R4"]
-    CORE["Core Argentina"]
+    IPS["HL7 FHIR IPS"]
+    CORE["HL7 Chile Core"]
+    CLIPS["Resumen Clínico de Chile"]
     MHD["IHE MHD"]
-    LOCAL["Guía MHD Argentina"]
+    LOCAL["Guía MHD Chile"]
 
     FHIR --> CORE
+    FHIR --> IPS
     FHIR --> MHD
-    CORE --> LOCAL
+    CORE --> CLIPS
+    IPS --> CLIPS
+    CLIPS --> LOCAL
     MHD --> LOCAL
+</div>
 
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
 
 Los requerimientos de conformidad establecen las funcionalidades esperadas para aplicaciones cliente y servidor, identificando los perfiles y las interacciones que deben implementar.
 

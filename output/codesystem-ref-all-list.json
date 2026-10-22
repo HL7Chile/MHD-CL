@@ -33,7 +33,7 @@
     "oids" : ["2.16.840.1.113883.4.642.4.8"],
     "uses" : {
     },
-    "https://profiles.ihe.net/ITI/MHD/4.2.5-comment/ValueSet-DocumentReferenceStats.html" : "MHD DocumentReference status codes"
+    "https://profiles.ihe.net/ITI/MHD/4.2.5/ValueSet-DocumentReferenceStats.html" : "MHD DocumentReference status codes"
   },
   {
     "url" : "http://hl7.org/fhir/document-relationship-type",
@@ -57,9 +57,9 @@
     "oids" : ["2.16.840.1.113883.4.642.4.625"],
     "uses" : {
     },
-    "https://profiles.ihe.net/ITI/MHD/4.2.5-comment/ValueSet-MHDprovidePatientActions.html" : "MHD Patient Types ValueSet",
-    "https://profiles.ihe.net/ITI/MHD/4.2.5-comment/ValueSet-MHDprovideFolderActions.html" : "MHD Folder List Types ValueSet",
-    "http://hl7.org/fhir/R4/valueset-http-verb.html" : "HTTPVerb"
+    "https://profiles.ihe.net/ITI/MHD/4.2.5/ValueSet-MHDprovideFolderActions.html" : "MHD Folder List Types ValueSet",
+    "http://hl7.org/fhir/R4/valueset-http-verb.html" : "HTTPVerb",
+    "https://profiles.ihe.net/ITI/MHD/4.2.5/ValueSet-MHDprovidePatientActions.html" : "MHD Patient Types ValueSet"
   },
   {
     "url" : "http://hl7.org/fhir/list-mode",
@@ -110,7 +110,7 @@
   },
   {
     "url" : "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
-    "version" : "1.5.0",
+    "version" : "1.6.0",
     "status" : "active",
     "name" : "IHE_FormatCode_codesystem",
     "title" : "IHE Format Code set for use with Document Sharing",
@@ -118,7 +118,7 @@
     "oids" : ["1.3.6.1.4.1.19376.1.2.3"],
     "uses" : {
     },
-    "https://profiles.ihe.net/fhir/ihe.formatcode.fhir/1.5.0/ValueSet-formatcode.html" : "IHE ValueSet of Format Codes for use with Document Sharing"
+    "https://profiles.ihe.net/fhir/ihe.formatcode.fhir/1.6.0/ValueSet-formatcode.html" : "IHE ValueSet of Format Codes for use with Document Sharing"
   },
   {
     "url" : "http://loinc.org",
@@ -130,8 +130,8 @@
     "oids" : ["2.16.840.1.113883.6.1"],
     "uses" : {
     },
-    "ValueSet-VSTipoDocumento.html" : "Tipos de Documento Clínico para DocumentReference",
-    "ValueSet-VSCategoriaDoc.html" : "Categorías de Documento Clínico para DocumentReference"
+    "ValueSet-VSCategoriaDoc.html" : "Categorías de Documento Clínico para DocumentReference",
+    "ValueSet-VSTipoDocumento.html" : "Tipos de Documento Clínico para DocumentReference"
   },
   {
     "url" : "http://snomed.info/sct",
@@ -143,8 +143,8 @@
     "oids" : ["2.16.840.1.113883.6.96"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-c80-facilitycodes.html" : "Facility Type Code Value Set",
-    "http://hl7.org/fhir/R4/valueset-c80-practice-codes.html" : "Practice Setting Code Value Set"
+    "http://hl7.org/fhir/R4/valueset-c80-practice-codes.html" : "Practice Setting Code Value Set",
+    "http://hl7.org/fhir/R4/valueset-c80-facilitycodes.html" : "Facility Type Code Value Set"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/common-tags",
@@ -204,18 +204,18 @@
     "oids" : ["2.16.840.1.113883.4.642.1.1407"],
     "uses" : {
     },
-    "https://profiles.ihe.net/fhir/ihe.formatcode.fhir/1.5.0/ValueSet-formatcode.html" : "IHE ValueSet of Format Codes for use with Document Sharing"
+    "https://profiles.ihe.net/fhir/ihe.formatcode.fhir/1.6.0/ValueSet-formatcode.html" : "IHE ValueSet of Format Codes for use with Document Sharing"
   },
   {
     "url" : "https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes",
-    "version" : "4.2.5-comment",
+    "version" : "4.2.5",
     "status" : "active",
     "name" : "MHDlistTypes",
     "title" : "MHD List Types",
     "description" : "To use the List resource for two different use-cases we define a code-system with the types of List needed in MHD",
     "uses" : {
     },
-    "https://profiles.ihe.net/ITI/MHD/4.2.5-comment/ValueSet-MHDlistTypesVS.html" : "MHD List Types ValueSet"
+    "https://profiles.ihe.net/ITI/MHD/4.2.5/ValueSet-MHDlistTypesVS.html" : "MHD List Types ValueSet"
   },
   {
     "url" : "urn:ietf:bcp:47",
