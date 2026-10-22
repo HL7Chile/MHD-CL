@@ -5,7 +5,7 @@
   <img
     src="MDH.png"
     alt="Esquema General de Recursos en MHD"
-    style="display:block; float:none; width:70%; height:auto; margin:0 auto;"
+    style="display:block; float:none; width:100%; height:auto; margin:0 auto;"
   />
 </div>
 

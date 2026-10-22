@@ -1,3 +1,0 @@
-URL,Version,Status,OIDs,Name,Title,Description,Uses,Used,Sources
-https://hl7chile.cl/fhir/ig/mhd/ValueSet/VSCategoriaDoc,0.1.0,active,"2.16.840.1.113883.2.22.40.14.48.1",VSCategoriaDoc,Categorías de Documento Clínico para DocumentReference,"Categorías generales de documentos clínicos codificadas en LOINC para ser usadas en DocumentReference.category.","StructureDefinition/ReferenciaDocumental","LOINC"
-https://hl7chile.cl/fhir/ig/mhd/ValueSet/VSTipoDocumento,0.1.0,active,"2.16.840.1.113883.2.22.40.14.48.2",VSTipoDocumento,Tipos de Documento Clínico para DocumentReference,"Tipos documentales clínicos codificados en LOINC para ser usados en DocumentReference.type.","StructureDefinition/ReferenciaDocumental","LOINC"
