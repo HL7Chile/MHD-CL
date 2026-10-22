@@ -1,10 +1,47 @@
 ---
 ---
-<html lang="en"><title>Redirect File</title><body>
-<!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
-<script type="text/javascript">
-// b87e87d8-7587-48d4-9b00-46db21438132
-langs=["en"]
-</script>
-<script type="text/javascript" src="{{site.data.info.assets}}assets/js/lang-redirects.js"></script>
-</body></html>
+{% include fragment-pagebegin.html %}
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-base-navtabs.html type='CapabilityStatement' id='MHDCliente' active='content' %}
+  <a name="root"> </a>
+
+  <h2 id="root">CapabilityStatement: {{site.data.pages[page.path].title | escape_once}}
+{% if site.data.resources[resource_].experimental == true %}(Experimental){% endif %}
+  </h2>
+
+{% include fragment-resourceTable.html %}
+
+{%if site.data.resources[resource_].description %}
+<p>
+{{site.data.resources[resource_].description|markdownify}}
+</p>
+{% endif %}
+{%if site.data.resources[resource_].purpose %}
+<p>
+{{site.data.resources[resource_].purpose|markdownify}}
+</p>
+{% endif %}
+  <!-- insert intro if present -->
+  {% include fragment-intro.html type='CapabilityStatement' id='MHDCliente' %}
+
+<!--  <p>
+  Formats: <a href="CapabilityStatement-MHDCliente.xml.html">XML</a>, <a href="CapabilityStatement-MHDCliente.json.html">JSON</a>, <a href="CapabilityStatement-MHDCliente.ttl.html">Turtle</a>
+  </p>-->
+{% unless example %}
+  {% if 'CapabilityStatement' == 'CapabilityStatement' %}
+  <p>
+      <a href="MHDCliente.openapi.json" no-download="true">Raw OpenAPI-Swagger Definition file</a> | <a href="MHDCliente.openapi.json" download>Download</a>
+  </p>
+  {% endif %}
+{% endunless %}
+
+  {% include CapabilityStatement-MHDCliente-html.xhtml %}
+
+  <!-- insert notes if present -->
+  {% include fragment-notes.html type='CapabilityStatement' id='MHDCliente' %}
+
+  {%include CapabilityStatement-MHDCliente-history.xhtml%}
+
+</div>
+{% include fragment-pageend.html %}

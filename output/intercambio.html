@@ -1,8 +1,1369 @@
-<html lang="en"><title>Redirect File</title><body>
-<!--ReleaseHeader--><p id="publish-box">Guía MHD para el Intercambio de Información de Salud en Chile - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://hl7chile.cl/fhir/ig/mhd/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
-<script type="text/javascript">
-// b87e87d8-7587-48d4-9b00-46db21438132
-langs=["en"]
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>HL7.FHIR.CL.MHDIG\Esquemas de transacciones FHIR MHD - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <link href="fhir.css" rel="stylesheet" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet" />
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet" />
+    <link href="assets/css/pygments-manni.css" rel="stylesheet" />
+    <link href="assets/css/jquery-ui.css" rel="stylesheet" />
+    <link href="assets/css/prism.css" rel="stylesheet" /> <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/hl7chile.css" rel="stylesheet" />
+<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-HLBNC861DJ" async>
 </script>
-<script type="text/javascript" src="assets/js/lang-redirects.js"></script>
-</body></html>
+
+    <script type="text/javascript" src="fhir-table-scripts.js">
+    </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png" />
+    <link rel="shortcut icon" href="assets/ico/favicon.png" />
+</head>
+
+<!-- JORGE MANSILLA -->
+<!-- Google tag (gtag.js) -->
+<!-- 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KDP1SHWXWT"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-KDP1SHWXWT');
+</script>
+-->
+<!-- Franco: Nota Para Mansilla Revisa este script genera errores al subir en Build -->
+
+
+
+<body onload="document.body.style.opacity='1'">
+    
+    <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">
+        h2 {
+            --heading-prefix:"2"
+        }
+        
+        h3,
+        h4,
+        h5,
+        h6 {
+            --heading-prefix:"2"
+        }
+    </style>
+    <div id="segment-header" class="segment">
+        <!-- segment-header -->
+        <div class="container">
+            <!-- container -->
+            <!-- Placeholder for child template header declarations -->
+
+<div id="project-nav">
+    <a id="hl7chile-logo" no-external="true" href="http://hl7chile.cl">
+        <img height="71" alt="Visitar HL7 Chile" src="assets/images/hl7chile-logo.png" />
+    </a>
+</div>
+<div id="family-nav">
+    <a id="hl7-fhir-logo" no-external="true" href="https://www.hl7.org/"><img height="60" alt="Visitar HL7 FHIR Internacional" src="assets/images/LOGO_FHIR.svg" /> </a>
+</div>
+
+<!--
+<div id="hl7-search">
+  <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+</div>
+--> 
+            <div id="ig-status">
+                <p><span style="font-size:12pt;font-weight:bold">Guía MHD para el Intercambio de Información de Salud en Chile</span>
+                    <br/>
+                    <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img alt="Chile flag" src="assets/images/chl.svg" height="16" title="Chile"/>
+ 
+                    </span>
+                </p>
+            </div>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">
+        <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">
+            <!-- container -->
+            <!-- HEADER CONTENT -->
+
+            <nav class="navbar navbar-inverse">
+                <!--status-bar-->
+                <div class="container">
+                    <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+                    <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+                    <div class="nav-collapse collapse navbar-inverse-collapse">
+                        <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="intercambio.html">Intercambio</a>
+  </li>
+  <li>
+    <a href="transacciones-mhd.html">Transacciones</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="seguridad.html">Aspectos de Seguridad</a>
+  </li>
+  <li>
+    <a href="cambios.html">Historial de Versiones</a>
+  </li>
+</ul>
+                    </div>
+                    <!-- /.nav-collapse -->
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- /.navbar -->
+            <!-- /HEADER CONTENT -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /segment-navbar -->
+    <!--status-bar-->
+    
+    <div id="segment-breadcrumb" class="segment">
+        <!-- segment-breadcrumb -->
+        <div class="container">
+            <!-- container -->
+            <ul class="breadcrumb">
+                <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Esquemas de transacciones FHIR MHD</b></li> 
+            </ul>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">
+        <!-- segment-content -->
+        <div class="container">
+            <!-- container -->
+            <div class="row">
+                <div class="inner-wrapper">
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Guía MHD para el Intercambio de Información de Salud en Chile - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://hl7chile.cl/fhir/ig/mhd/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Esquemas de transacciones FHIR MHD</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#arquitectura-mhd-para-la-publicación-búsqueda-y-recuperación-de-un-documento-ips" id="markdown-toc-arquitectura-mhd-para-la-publicación-búsqueda-y-recuperación-de-un-documento-ips">Arquitectura MHD para la publicación, búsqueda y recuperación de un documento IPS</a></li>
+  <li><a href="#documentreference-e-ips-en-una-arquitectura-mhd" id="markdown-toc-documentreference-e-ips-en-una-arquitectura-mhd">DocumentReference e IPS en una arquitectura MHD</a></li>
+</ul>
+
+</div>
+<h3 id="arquitectura-mhd-para-la-publicación-búsqueda-y-recuperación-de-un-documento-ips">Arquitectura MHD para la publicación, búsqueda y recuperación de un documento IPS</h3>
+
+<div style="display:block; clear:both; width:100%; text-align:center; margin-bottom:25px;">
+  <img src="MDH.png" alt="Esquema General de Recursos en MHD" style="display:block; float:none; width:70%; height:auto; margin:0 auto;" />
+</div>
+
+<div style="clear:both;"></div>
+
+<h4 id="introducción">Introducción</h4>
+
+<p>La arquitectura presentada describe cómo utilizar el perfil <strong>Mobile access to Health Documents (MHD)</strong> de IHE para publicar, localizar y recuperar un <strong>International Patient Summary (IPS)</strong> representado mediante recursos HL7 FHIR.</p>
+
+<p>El modelo separa dos tipos de información:</p>
+
+<ul>
+  <li>Los <strong>metadatos documentales</strong>, utilizados para registrar, identificar y buscar el IPS.</li>
+  <li>El <strong>contenido clínico completo</strong>, correspondiente al documento IPS propiamente tal.</li>
+</ul>
+
+<p>Esta separación permite que un sistema consumidor primero busque los metadatos de los documentos disponibles y, posteriormente, recupere únicamente el documento que necesita.</p>
+
+<p>La arquitectura considera tres actores principales:</p>
+
+<ol>
+  <li><strong>Document Source</strong>, que produce y publica el IPS.</li>
+  <li><strong>MHD Responder</strong>, que registra los metadatos y conserva el contenido recuperable.</li>
+  <li><strong>Document Consumer</strong>, que busca y recupera el IPS para utilizarlo clínicamente.</li>
+</ol>
+
+<h4 id="visión-general-del-proceso">Visión general del proceso</h4>
+
+<p>El flujo completo se desarrolla en tres etapas:</p>
+
+<ol>
+  <li>El <strong>Document Source</strong> genera el IPS y lo publica mediante la transacción <strong>ITI-65 Provide Document Bundle</strong>.</li>
+  <li>El <strong>Document Consumer</strong> busca los metadatos del IPS mediante la transacción <strong>ITI-67 Find Document References</strong>.</li>
+  <li>Después de seleccionar un resultado, el consumidor utiliza la URL indicada en <code class="language-plaintext highlighter-rouge">DocumentReference.content.attachment.url</code> para recuperar el documento mediante <strong>ITI-68 Retrieve Document</strong>.</li>
+</ol>
+
+<p>En términos generales, el proceso puede resumirse de la siguiente manera:</p>
+
+<blockquote>
+  <p>El recurso <code class="language-plaintext highlighter-rouge">List</code> agrupa los elementos correspondientes a un envío documental; <code class="language-plaintext highlighter-rouge">DocumentReference</code> describe e identifica el IPS; y el recurso <code class="language-plaintext highlighter-rouge">Bundle</code> o <code class="language-plaintext highlighter-rouge">Binary</code> contiene el documento clínico completo que podrá ser recuperado por el consumidor.</p>
+</blockquote>
+
+<h4 id="actores-de-la-arquitectura">Actores de la arquitectura</h4>
+
+<h5 id="document-source">Document Source</h5>
+
+<p>El <strong>Document Source</strong> es el sistema que produce y publica el documento clínico. Puede corresponder, por ejemplo, a una ficha clínica electrónica, una plataforma hospitalaria o cualquier aplicación capaz de generar un IPS conforme a FHIR.</p>
+
+<p>Sus principales responsabilidades son:</p>
+
+<ul>
+  <li>Generar el documento IPS.</li>
+  <li>Construir sus metadatos documentales.</li>
+  <li>Asignar los identificadores necesarios para mantener la trazabilidad.</li>
+  <li>Crear el <code class="language-plaintext highlighter-rouge">DocumentReference</code> que describe el documento.</li>
+  <li>Crear el <code class="language-plaintext highlighter-rouge">List</code> que representa el conjunto de envío o <code class="language-plaintext highlighter-rouge">SubmissionSet</code>.</li>
+  <li>Enviar estos recursos al MHD Responder mediante ITI-65.</li>
+</ul>
+
+<h5 id="mhd-responder">MHD Responder</h5>
+
+<p>El <strong>MHD Responder</strong> recibe la publicación documental y proporciona los servicios de búsqueda y recuperación. Conceptualmente, está formado por dos componentes:</p>
+
+<ul>
+  <li>Un <strong>índice o registro documental</strong>, que almacena metadatos FHIR y permite realizar búsquedas.</li>
+  <li>Un <strong>repositorio de documentos</strong>, que conserva el contenido completo del IPS.</li>
+</ul>
+
+<p>Esta separación es lógica. Una implementación puede mantener ambos componentes en una misma plataforma o distribuirlos en servicios diferentes.</p>
+
+<h5 id="document-consumer">Document Consumer</h5>
+
+<p>El <strong>Document Consumer</strong> es el sistema que necesita consultar documentos clínicos previamente publicados. Puede ser una ficha clínica electrónica, una aplicación clínica, un portal profesional u otro sistema autorizado.</p>
+
+<p>Sus responsabilidades son:</p>
+
+<ul>
+  <li>Buscar recursos <code class="language-plaintext highlighter-rouge">DocumentReference</code> mediante ITI-67.</li>
+  <li>Evaluar los metadatos obtenidos.</li>
+  <li>Seleccionar el documento requerido.</li>
+  <li>Obtener su dirección de recuperación.</li>
+  <li>Recuperar el IPS completo mediante ITI-68.</li>
+  <li>Procesar el IPS y presentar su información clínica al usuario correspondiente.</li>
+</ul>
+
+<h4 id="componentes-del-mhd-responder">Componentes del MHD Responder</h4>
+
+<h5 id="índice-o-registro-documental">Índice o registro documental</h5>
+
+<p>El índice almacena la información necesaria para organizar y localizar los documentos. En la arquitectura se representa mediante los recursos <code class="language-plaintext highlighter-rouge">List</code> y <code class="language-plaintext highlighter-rouge">DocumentReference</code>.</p>
+
+<p>El índice no necesita contener toda la información clínica del IPS. Su propósito es conservar metadatos tales como:</p>
+
+<ul>
+  <li>Paciente al que pertenece el documento.</li>
+  <li>Tipo y categoría documental.</li>
+  <li>Estado del documento.</li>
+  <li>Fecha de creación o publicación.</li>
+  <li>Autor y organización responsable.</li>
+  <li>Identificadores documentales.</li>
+  <li>Relación con el conjunto de envío.</li>
+  <li>Dirección desde la que se puede recuperar el contenido completo.</li>
+</ul>
+
+<h5 id="repositorio-de-documentos">Repositorio de documentos</h5>
+
+<p>El repositorio conserva el contenido completo del IPS. La arquitectura muestra dos alternativas:</p>
+
+<ul>
+  <li><strong>Opción A:</strong> almacenar el IPS como un <code class="language-plaintext highlighter-rouge">Bundle</code> FHIR de tipo <code class="language-plaintext highlighter-rouge">document</code>.</li>
+  <li><strong>Opción B:</strong> almacenar el IPS serializado dentro de un recurso <code class="language-plaintext highlighter-rouge">Binary</code>.</li>
+</ul>
+
+<p>En ambos casos, <code class="language-plaintext highlighter-rouge">DocumentReference.content.attachment.url</code> debe conducir al recurso que contiene el documento recuperable.</p>
+
+<h4 id="recursos-fhir-involucrados">Recursos FHIR involucrados</h4>
+
+<h5 id="list-como-submissionset">List como SubmissionSet</h5>
+
+<p>El recurso <code class="language-plaintext highlighter-rouge">List</code> representa el <strong>conjunto de envío documental</strong> o <code class="language-plaintext highlighter-rouge">SubmissionSet</code>. No contiene directamente el documento clínico; su función es agrupar las referencias documentales publicadas como parte de una misma operación.</p>
+
+<p>Entre sus principales elementos se encuentran:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">List.identifier</code>: identificador del conjunto de envío.</li>
+  <li><code class="language-plaintext highlighter-rouge">List.source</code>: sistema, profesional u organización responsable del envío.</li>
+  <li><code class="language-plaintext highlighter-rouge">List.subject</code>: paciente relacionado con los documentos.</li>
+  <li><code class="language-plaintext highlighter-rouge">List.entry.item</code>: referencias a uno o más recursos <code class="language-plaintext highlighter-rouge">DocumentReference</code> incluidos en el envío.</li>
+</ul>
+
+<p>Por lo tanto, un <code class="language-plaintext highlighter-rouge">List</code> puede agrupar uno o varios documentos relacionados y mantener la trazabilidad de la publicación como una unidad lógica.</p>
+
+<p>La relación principal se expresa de la siguiente manera:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>List.entry.item.reference -&gt; DocumentReference/{id}
+</code></pre></div></div>
+
+<h5 id="documentreference-como-metadato-del-ips">DocumentReference como metadato del IPS</h5>
+
+<p>El recurso <code class="language-plaintext highlighter-rouge">DocumentReference</code> representa la descripción documental del IPS. Contiene los datos utilizados por los consumidores para buscarlo, reconocerlo y determinar cómo recuperarlo.</p>
+
+<p>Entre los metadatos relevantes se encuentran:</p>
+
+<ul>
+  <li>Tipo y categoría del documento.</li>
+  <li>Estado documental.</li>
+  <li>Paciente relacionado.</li>
+  <li>Autor o autores.</li>
+  <li>Organización custodio.</li>
+  <li>Fecha del documento.</li>
+  <li>Identificador maestro.</li>
+  <li>Otros identificadores locales o de repositorio.</li>
+  <li>Formato y tipo de contenido.</li>
+  <li>URL de recuperación.</li>
+</ul>
+
+<p>Los elementos fundamentales para vincular los metadatos con el contenido son:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DocumentReference.content.attachment.contentType
+DocumentReference.content.attachment.url
+</code></pre></div></div>
+
+<p>El elemento <code class="language-plaintext highlighter-rouge">contentType</code> informa el formato del contenido, mientras que <code class="language-plaintext highlighter-rouge">url</code> indica dónde se puede recuperar.</p>
+
+<p>Ejemplos conceptuales:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DocumentReference.content.attachment.url -&gt; Bundle/ips-001
+</code></pre></div></div>
+
+<p>o bien:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DocumentReference.content.attachment.url -&gt; Binary/ips-bin-001
+</code></pre></div></div>
+
+<h5 id="bundle-ips">Bundle IPS</h5>
+
+<p>Cuando se utiliza la opción FHIR nativa, el IPS se conserva como un recurso <code class="language-plaintext highlighter-rouge">Bundle</code> cuyo tipo es <code class="language-plaintext highlighter-rouge">document</code>:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Bundle.type = document
+</code></pre></div></div>
+
+<p>Este <code class="language-plaintext highlighter-rouge">Bundle</code> constituye el documento clínico completo. Debe contener una <code class="language-plaintext highlighter-rouge">Composition</code> como primera entrada y todos los recursos clínicos referenciados por ella.</p>
+
+<p>La estructura general es:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Bundle IPS
+  ├── Composition IPS
+  ├── Patient
+  ├── Condition
+  ├── AllergyIntolerance
+  ├── MedicationStatement
+  ├── Observation
+  ├── Procedure
+  ├── Organization
+  └── Otros recursos clínicos requeridos
+</code></pre></div></div>
+
+<p>El perfil IPS aplicable debe declararse en <code class="language-plaintext highlighter-rouge">Bundle.meta.profile</code>. Además, el <code class="language-plaintext highlighter-rouge">Bundle.identifier</code> permite identificar de manera persistente el documento. Para facilitar la trazabilidad, dicho identificador debe ser coherente con el identificador maestro declarado en el <code class="language-plaintext highlighter-rouge">DocumentReference</code>.</p>
+
+<h5 id="composition-ips">Composition IPS</h5>
+
+<p>La <code class="language-plaintext highlighter-rouge">Composition</code> es la raíz clínica y narrativa del documento. Define su organización interna y establece el contexto clínico del IPS.</p>
+
+<p>Entre sus elementos se encuentran:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Composition.subject</code>: referencia al paciente.</li>
+  <li><code class="language-plaintext highlighter-rouge">Composition.author</code>: autor o autores del documento.</li>
+  <li><code class="language-plaintext highlighter-rouge">Composition.custodian</code>: organización responsable de su custodia.</li>
+  <li><code class="language-plaintext highlighter-rouge">Composition.status</code>: estado de la composición.</li>
+  <li><code class="language-plaintext highlighter-rouge">Composition.section</code>: secciones clínicas que estructuran el resumen.</li>
+</ul>
+
+<p>Las secciones pueden incluir, entre otros antecedentes:</p>
+
+<ul>
+  <li>Alergias e intolerancias.</li>
+  <li>Problemas o condiciones de salud.</li>
+  <li>Medicamentos.</li>
+  <li>Procedimientos.</li>
+  <li>Resultados y observaciones.</li>
+  <li>Antecedentes clínicos relevantes.</li>
+</ul>
+
+<p>Cada sección referencia los recursos clínicos incorporados en el mismo <code class="language-plaintext highlighter-rouge">Bundle</code> documental.</p>
+
+<h5 id="binary-como-documento-serializado">Binary como documento serializado</h5>
+
+<p>En la segunda alternativa, el IPS completo se serializa en JSON o XML y se almacena en un recurso <code class="language-plaintext highlighter-rouge">Binary</code>.</p>
+
+<p>Sus elementos principales son:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Binary.contentType</code>: formato del documento serializado.</li>
+  <li><code class="language-plaintext highlighter-rouge">Binary.data</code>: contenido del IPS codificado en Base64.</li>
+</ul>
+
+<p>Ejemplos de tipos de contenido:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>application/fhir+json
+application/fhir+xml
+</code></pre></div></div>
+
+<p>En esta alternativa, <code class="language-plaintext highlighter-rouge">DocumentReference.content.attachment.url</code> apunta al recurso <code class="language-plaintext highlighter-rouge">Binary</code>:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DocumentReference.content.attachment.url -&gt; Binary/{id}
+</code></pre></div></div>
+
+<p>Al recuperar el <code class="language-plaintext highlighter-rouge">Binary</code>, el consumidor debe decodificar <code class="language-plaintext highlighter-rouge">Binary.data</code> y procesar el <code class="language-plaintext highlighter-rouge">Bundle</code> IPS contenido en él.</p>
+
+<h4 id="relación-entre-los-recursos">Relación entre los recursos</h4>
+
+<p>La arquitectura establece la siguiente cadena de relaciones:</p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">List</code> representa el conjunto de envío.</li>
+  <li><code class="language-plaintext highlighter-rouge">List.entry.item</code> referencia uno o más <code class="language-plaintext highlighter-rouge">DocumentReference</code>.</li>
+  <li>Cada <code class="language-plaintext highlighter-rouge">DocumentReference</code> describe un documento IPS.</li>
+  <li><code class="language-plaintext highlighter-rouge">DocumentReference.content.attachment.url</code> apunta al contenido recuperable.</li>
+  <li>El contenido puede estar representado directamente por un <code class="language-plaintext highlighter-rouge">Bundle</code> documental o almacenado dentro de un <code class="language-plaintext highlighter-rouge">Binary</code>.</li>
+  <li>El <code class="language-plaintext highlighter-rouge">Bundle</code> IPS contiene una <code class="language-plaintext highlighter-rouge">Composition</code> como primera entrada.</li>
+  <li>La <code class="language-plaintext highlighter-rouge">Composition</code> referencia los recursos clínicos contenidos en el documento.</li>
+</ol>
+
+<p>La cadena conceptual puede expresarse como:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>List
+  -&gt; DocumentReference
+     -&gt; Bundle IPS o Binary
+        -&gt; Composition IPS
+           -&gt; recursos clínicos del paciente
+</code></pre></div></div>
+
+<h4 id="publicación-mediante-iti-65-provide-document-bundle">Publicación mediante ITI-65 Provide Document Bundle</h4>
+
+<p>La transacción <strong>ITI-65 Provide Document Bundle</strong> permite que el Document Source publique el conjunto documental en el MHD Responder.</p>
+
+<p>La solicitud se realiza mediante un <code class="language-plaintext highlighter-rouge">Bundle</code> FHIR de tipo <code class="language-plaintext highlighter-rouge">transaction</code>. Este paquete de publicación puede incorporar:</p>
+
+<ul>
+  <li>Un <code class="language-plaintext highlighter-rouge">List</code> que representa el <code class="language-plaintext highlighter-rouge">SubmissionSet</code>.</li>
+  <li>Uno o más recursos <code class="language-plaintext highlighter-rouge">DocumentReference</code>.</li>
+  <li>El contenido de cada documento, representado mediante un <code class="language-plaintext highlighter-rouge">Bundle</code> IPS o un <code class="language-plaintext highlighter-rouge">Binary</code>, según la alternativa adoptada.</li>
+</ul>
+
+<p>El proceso de publicación es el siguiente:</p>
+
+<ol>
+  <li>El Document Source genera el IPS.</li>
+  <li>Crea el <code class="language-plaintext highlighter-rouge">DocumentReference</code> con los metadatos del documento.</li>
+  <li>Define en <code class="language-plaintext highlighter-rouge">content.attachment.url</code> la referencia al contenido recuperable.</li>
+  <li>Crea el <code class="language-plaintext highlighter-rouge">List</code> y agrega la referencia al <code class="language-plaintext highlighter-rouge">DocumentReference</code> en <code class="language-plaintext highlighter-rouge">entry.item</code>.</li>
+  <li>Incorpora los recursos en un <code class="language-plaintext highlighter-rouge">Bundle</code> de tipo <code class="language-plaintext highlighter-rouge">transaction</code>.</li>
+  <li>Envía el paquete al MHD Responder mediante ITI-65.</li>
+  <li>El MHD Responder registra los metadatos y conserva el documento.</li>
+</ol>
+
+<p>El propósito de esta transacción es que el envío se procese como una unidad coherente, manteniendo las relaciones entre el conjunto de envío, los metadatos y el contenido documental.</p>
+
+<h4 id="búsqueda-mediante-iti-67-find-document-references">Búsqueda mediante ITI-67 Find Document References</h4>
+
+<p>La transacción <strong>ITI-67 Find Document References</strong> permite buscar documentos utilizando los metadatos almacenados en el índice.</p>
+
+<p>El consumidor realiza una búsqueda sobre el recurso <code class="language-plaintext highlighter-rouge">DocumentReference</code>, aplicando criterios tales como:</p>
+
+<ul>
+  <li>Paciente.</li>
+  <li>Tipo documental.</li>
+  <li>Categoría.</li>
+  <li>Estado.</li>
+  <li>Fecha.</li>
+  <li>Autor.</li>
+  <li>Organización custodio.</li>
+  <li>Identificadores.</li>
+</ul>
+
+<p>Ejemplo conceptual de búsqueda por paciente y estado:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET [base]/DocumentReference?subject=Patient/123&amp;status=current
+</span></code></pre></div></div>
+
+<p>La respuesta corresponde a un <code class="language-plaintext highlighter-rouge">Bundle</code> FHIR de tipo <code class="language-plaintext highlighter-rouge">searchset</code> que contiene los <code class="language-plaintext highlighter-rouge">DocumentReference</code> coincidentes:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Bundle (type = searchset)
+  ├── DocumentReference 1
+  ├── DocumentReference 2
+  └── DocumentReference N
+</code></pre></div></div>
+
+<p>Cada resultado entrega los metadatos necesarios para que el consumidor evalúe el documento y obtenga su URL de recuperación.</p>
+
+<p>La búsqueda no devuelve necesariamente el IPS completo. Devuelve principalmente los recursos <code class="language-plaintext highlighter-rouge">DocumentReference</code> que permiten identificarlo y localizarlo.</p>
+
+<h4 id="búsqueda-opcional-del-submissionset-mediante-iti-66">Búsqueda opcional del SubmissionSet mediante ITI-66</h4>
+
+<p>La transacción <strong>ITI-66 Find Document Lists</strong> permite buscar los recursos <code class="language-plaintext highlighter-rouge">List</code> utilizados como conjuntos de envío. Esta búsqueda es útil cuando se requiere conocer qué documentos fueron publicados conjuntamente o recuperar información sobre el contexto del envío.</p>
+
+<p>ITI-66 complementa la búsqueda documental, pero no reemplaza la búsqueda de <code class="language-plaintext highlighter-rouge">DocumentReference</code> mediante ITI-67.</p>
+
+<h4 id="recuperación-mediante-iti-68-retrieve-document">Recuperación mediante ITI-68 Retrieve Document</h4>
+
+<p>Después de seleccionar un <code class="language-plaintext highlighter-rouge">DocumentReference</code>, el consumidor obtiene la dirección indicada en:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DocumentReference.content.attachment.url
+</code></pre></div></div>
+
+<p>Luego ejecuta la transacción <strong>ITI-68 Retrieve Document</strong> para recuperar el documento completo.</p>
+
+<p>Dependiendo de la alternativa de almacenamiento, la operación puede recuperar directamente un <code class="language-plaintext highlighter-rouge">Bundle</code> IPS:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET [base]/Bundle/ips-001
+</span></code></pre></div></div>
+
+<p>o un recurso <code class="language-plaintext highlighter-rouge">Binary</code>:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET [base]/Binary/ips-bin-001
+</span></code></pre></div></div>
+
+<p>Si se recupera un <code class="language-plaintext highlighter-rouge">Bundle</code>, el consumidor puede procesar directamente el documento FHIR. Si se recupera un <code class="language-plaintext highlighter-rouge">Binary</code>, debe decodificar su contenido y reconstruir el IPS serializado.</p>
+
+<h4 id="alternativas-de-almacenamiento-del-ips">Alternativas de almacenamiento del IPS</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Aspecto</th>
+      <th>Opción A: Bundle FHIR</th>
+      <th>Opción B: Binary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Representación</td>
+      <td>Recurso <code class="language-plaintext highlighter-rouge">Bundle</code> de tipo <code class="language-plaintext highlighter-rouge">document</code></td>
+      <td>Documento IPS serializado dentro de <code class="language-plaintext highlighter-rouge">Binary.data</code></td>
+    </tr>
+    <tr>
+      <td>URL de recuperación</td>
+      <td><code class="language-plaintext highlighter-rouge">Bundle/{id}</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Binary/{id}</code></td>
+    </tr>
+    <tr>
+      <td>Tipo de contenido</td>
+      <td><code class="language-plaintext highlighter-rouge">application/fhir+json</code> o <code class="language-plaintext highlighter-rouge">application/fhir+xml</code></td>
+      <td><code class="language-plaintext highlighter-rouge">application/fhir+json</code> o <code class="language-plaintext highlighter-rouge">application/fhir+xml</code></td>
+    </tr>
+    <tr>
+      <td>Procesamiento</td>
+      <td>El servidor y el consumidor manejan el IPS como recurso FHIR</td>
+      <td>El consumidor recupera y decodifica el contenido serializado</td>
+    </tr>
+    <tr>
+      <td>Ventaja principal</td>
+      <td>Representación FHIR nativa y directamente procesable</td>
+      <td>Conservación del documento como una unidad serializada</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>La alternativa seleccionada debe aplicarse de manera coherente en el <code class="language-plaintext highlighter-rouge">DocumentReference</code>, el repositorio y las capacidades declaradas por el servidor.</p>
+
+<h4 id="identificadores-y-trazabilidad">Identificadores y trazabilidad</h4>
+
+<p>Los identificadores permiten correlacionar el envío, los metadatos y el documento clínico.</p>
+
+<h5 id="identificador-del-submissionset">Identificador del SubmissionSet</h5>
+
+<p><code class="language-plaintext highlighter-rouge">List.identifier</code> identifica el conjunto de envío. Su alcance corresponde a la publicación que agrupa uno o más documentos.</p>
+
+<h5 id="identificador-maestro-del-documento">Identificador maestro del documento</h5>
+
+<p><code class="language-plaintext highlighter-rouge">DocumentReference.masterIdentifier</code> identifica de manera persistente el documento IPS descrito. No corresponde necesariamente al identificador técnico del recurso FHIR.</p>
+
+<h5 id="identificador-del-bundle-documental">Identificador del Bundle documental</h5>
+
+<p><code class="language-plaintext highlighter-rouge">Bundle.identifier</code> identifica el documento FHIR completo. Debe mantenerse una correspondencia clara entre este valor y el identificador maestro del <code class="language-plaintext highlighter-rouge">DocumentReference</code>.</p>
+
+<h5 id="identificadores-adicionales">Identificadores adicionales</h5>
+
+<p><code class="language-plaintext highlighter-rouge">DocumentReference.identifier</code> puede utilizarse para registrar identificadores locales, institucionales o asignados por el repositorio.</p>
+
+<p>Es importante distinguir entre:</p>
+
+<ul>
+  <li>El identificador lógico del recurso, como <code class="language-plaintext highlighter-rouge">DocumentReference.id</code> o <code class="language-plaintext highlighter-rouge">Bundle.id</code>.</li>
+  <li>El identificador de negocio o documental, como <code class="language-plaintext highlighter-rouge">masterIdentifier</code> o <code class="language-plaintext highlighter-rouge">Bundle.identifier</code>.</li>
+  <li>La URL utilizada para recuperar una instancia concreta del documento.</li>
+</ul>
+
+<h4 id="flujo-completo-de-extremo-a-extremo">Flujo completo de extremo a extremo</h4>
+
+<h5 id="etapa-1-producción-y-publicación">Etapa 1: producción y publicación</h5>
+
+<ol>
+  <li>El sistema productor reúne la información clínica del paciente.</li>
+  <li>Genera una <code class="language-plaintext highlighter-rouge">Composition</code> IPS.</li>
+  <li>Construye el <code class="language-plaintext highlighter-rouge">Bundle</code> documental con la <code class="language-plaintext highlighter-rouge">Composition</code> y los recursos clínicos referenciados.</li>
+  <li>Crea el <code class="language-plaintext highlighter-rouge">DocumentReference</code> que describe el IPS.</li>
+  <li>Configura <code class="language-plaintext highlighter-rouge">content.attachment.url</code> para apuntar al <code class="language-plaintext highlighter-rouge">Bundle</code> o <code class="language-plaintext highlighter-rouge">Binary</code> recuperable.</li>
+  <li>Crea el <code class="language-plaintext highlighter-rouge">List</code> que representa el conjunto de envío.</li>
+  <li>Publica los recursos mediante ITI-65.</li>
+</ol>
+
+<h5 id="etapa-2-registro-y-almacenamiento">Etapa 2: registro y almacenamiento</h5>
+
+<ol>
+  <li>El MHD Responder recibe el paquete de publicación.</li>
+  <li>Registra el <code class="language-plaintext highlighter-rouge">List</code> y los <code class="language-plaintext highlighter-rouge">DocumentReference</code> en el índice documental.</li>
+  <li>Almacena el contenido IPS en el repositorio.</li>
+  <li>Mantiene las referencias necesarias entre los recursos.</li>
+</ol>
+
+<h5 id="etapa-3-búsqueda">Etapa 3: búsqueda</h5>
+
+<ol>
+  <li>El consumidor consulta <code class="language-plaintext highlighter-rouge">DocumentReference</code> mediante ITI-67.</li>
+  <li>El MHD Responder devuelve un <code class="language-plaintext highlighter-rouge">Bundle</code> de tipo <code class="language-plaintext highlighter-rouge">searchset</code>.</li>
+  <li>El consumidor examina los metadatos y selecciona el documento apropiado.</li>
+  <li>Obtiene la URL desde <code class="language-plaintext highlighter-rouge">content.attachment.url</code>.</li>
+</ol>
+
+<h5 id="etapa-4-recuperación-y-uso">Etapa 4: recuperación y uso</h5>
+
+<ol>
+  <li>El consumidor invoca la URL de recuperación mediante ITI-68.</li>
+  <li>El repositorio devuelve el <code class="language-plaintext highlighter-rouge">Bundle</code> IPS o el <code class="language-plaintext highlighter-rouge">Binary</code> correspondiente.</li>
+  <li>El consumidor procesa el documento.</li>
+  <li>La información del IPS queda disponible para su uso clínico.</li>
+</ol>
+
+<h4 id="resumen-de-transacciones">Resumen de transacciones</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Transacción</th>
+      <th>Nombre</th>
+      <th>Propósito</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ITI-65</td>
+      <td>Provide Document Bundle</td>
+      <td>Publicar el conjunto de envío, sus metadatos y los documentos asociados.</td>
+    </tr>
+    <tr>
+      <td>ITI-66</td>
+      <td>Find Document Lists</td>
+      <td>Buscar los <code class="language-plaintext highlighter-rouge">List</code> que representan conjuntos de envío.</td>
+    </tr>
+    <tr>
+      <td>ITI-67</td>
+      <td>Find Document References</td>
+      <td>Buscar los metadatos de documentos registrados.</td>
+    </tr>
+    <tr>
+      <td>ITI-68</td>
+      <td>Retrieve Document</td>
+      <td>Recuperar el contenido completo de un documento seleccionado.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="consideraciones-de-implementación">Consideraciones de implementación</h4>
+
+<p>Para mantener la coherencia de la arquitectura, una implementación debe asegurar que:</p>
+
+<ul>
+  <li>Cada <code class="language-plaintext highlighter-rouge">List.entry.item</code> resuelva al <code class="language-plaintext highlighter-rouge">DocumentReference</code> correspondiente.</li>
+  <li>Cada <code class="language-plaintext highlighter-rouge">DocumentReference.content.attachment.url</code> permita recuperar el documento correcto.</li>
+  <li>El <code class="language-plaintext highlighter-rouge">contentType</code> declarado coincida con el formato efectivamente recuperado.</li>
+  <li>El <code class="language-plaintext highlighter-rouge">Bundle</code> IPS sea de tipo <code class="language-plaintext highlighter-rouge">document</code>.</li>
+  <li>La primera entrada del <code class="language-plaintext highlighter-rouge">Bundle</code> documental corresponda a la <code class="language-plaintext highlighter-rouge">Composition</code>.</li>
+  <li>Los recursos referenciados por la <code class="language-plaintext highlighter-rouge">Composition</code> estén incluidos y sean resolubles dentro del documento.</li>
+  <li>Los identificadores documentales se mantengan estables y coherentes.</li>
+  <li>Las búsquedas se realicen sobre los metadatos y no sobre el contenido completo del IPS.</li>
+  <li>La recuperación entregue el documento asociado al <code class="language-plaintext highlighter-rouge">DocumentReference</code> seleccionado.</li>
+  <li>Los servicios apliquen los controles de autenticación, autorización, auditoría y protección de datos requeridos por el contexto de uso.</li>
+</ul>
+
+<h4 id="conclusión">Conclusión</h4>
+
+<p>La arquitectura MHD permite administrar documentos IPS separando claramente la función de <strong>registro y búsqueda de metadatos</strong> de la función de <strong>almacenamiento y recuperación del contenido clínico completo</strong>.</p>
+
+<p>El <code class="language-plaintext highlighter-rouge">List</code> representa el conjunto de envío, el <code class="language-plaintext highlighter-rouge">DocumentReference</code> describe el documento y proporciona su dirección de recuperación, y el <code class="language-plaintext highlighter-rouge">Bundle</code> o <code class="language-plaintext highlighter-rouge">Binary</code> contiene el IPS. Mediante ITI-65 el documento se publica, mediante ITI-67 se localiza y mediante ITI-68 se recupera para su utilización clínica. ITI-66 puede utilizarse adicionalmente cuando se requiere buscar los conjuntos de envío representados por recursos <code class="language-plaintext highlighter-rouge">List</code>.</p>
+
+<h3 id="documentreference-e-ips-en-una-arquitectura-mhd">DocumentReference e IPS en una arquitectura MHD</h3>
+
+<div style="display:block; clear:both; width:100%; text-align:center; margin-bottom:25px;">
+  <img src="DocRef.png" alt="Esquema anidado de documentReference" style="display:block; float:none; width:70%; height:auto; margin:0 auto;" />
+</div>
+
+<h4 id="introducción-1">Introducción</h4>
+
+<p>La arquitectura presentada explica la relación entre un recurso <code class="language-plaintext highlighter-rouge">DocumentReference</code> y un documento <strong>International Patient Summary (IPS)</strong> dentro del perfil <strong>Mobile access to Health Documents (MHD)</strong> de IHE.</p>
+
+<p>El concepto central es que <code class="language-plaintext highlighter-rouge">DocumentReference</code> <strong>no es el documento clínico IPS</strong>. Su función es registrar e indexar sus metadatos para permitir que otros sistemas puedan buscarlo, identificarlo y recuperar su contenido completo.</p>
+
+<p>El IPS propiamente tal se conserva como un documento FHIR compuesto por:</p>
+
+<ul>
+  <li>Un <code class="language-plaintext highlighter-rouge">Bundle</code> de tipo <code class="language-plaintext highlighter-rouge">document</code>.</li>
+  <li>Una <code class="language-plaintext highlighter-rouge">Composition</code> como primera entrada.</li>
+  <li>Los recursos clínicos referenciados por esa <code class="language-plaintext highlighter-rouge">Composition</code>.</li>
+</ul>
+
+<p>Como alternativa, el <code class="language-plaintext highlighter-rouge">Bundle</code> IPS completo puede almacenarse serializado dentro de un recurso <code class="language-plaintext highlighter-rouge">Binary</code>.</p>
+
+<h4 id="principio-fundamental">Principio fundamental</h4>
+
+<p>La arquitectura separa claramente dos elementos:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Elemento</th>
+      <th>Función</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">DocumentReference</code></td>
+      <td>Describe, identifica e indexa el documento IPS.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Bundle</code> IPS o <code class="language-plaintext highlighter-rouge">Binary</code></td>
+      <td>Contiene el documento clínico completo que será recuperado.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Por lo tanto:</p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">DocumentReference</code> permite encontrar el IPS, pero no sustituye al IPS.</p>
+</blockquote>
+
+<p>La relación entre ambos se establece principalmente mediante:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DocumentReference.content.attachment.url
+</code></pre></div></div>
+
+<p>Este elemento debe apuntar al documento completo recuperable y no solamente a la <code class="language-plaintext highlighter-rouge">Composition</code>.</p>
+
+<h4 id="participantes-de-la-arquitectura">Participantes de la arquitectura</h4>
+
+<p>La arquitectura considera tres participantes principales:</p>
+
+<ol>
+  <li><strong>Sistema fuente o Document Source</strong>.</li>
+  <li><strong>Servidor MHD o Document Recipient</strong>.</li>
+  <li><strong>Consumidor o Document Consumer</strong>.</li>
+</ol>
+
+<h5 id="sistema-fuente-o-document-source">Sistema fuente o Document Source</h5>
+
+<p>El <strong>Document Source</strong> es el sistema que crea y publica el IPS. Puede corresponder a una ficha clínica electrónica, un sistema hospitalario o cualquier plataforma capaz de construir un documento IPS válido.</p>
+
+<p>Sus principales responsabilidades son:</p>
+
+<ul>
+  <li>Reunir la información clínica del paciente.</li>
+  <li>Generar la <code class="language-plaintext highlighter-rouge">Composition</code> IPS.</li>
+  <li>Construir el <code class="language-plaintext highlighter-rouge">Bundle</code> documental completo.</li>
+  <li>Crear el <code class="language-plaintext highlighter-rouge">DocumentReference</code> con los metadatos del IPS.</li>
+  <li>Mantener la concordancia entre los identificadores del documento.</li>
+  <li>Publicar los recursos mediante la transacción ITI-65.</li>
+</ul>
+
+<p>El producto clínico generado por este actor es un <code class="language-plaintext highlighter-rouge">Bundle</code> FHIR cuyo tipo debe ser:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Bundle.type = document
+</code></pre></div></div>
+
+<h5 id="servidor-mhd-o-document-recipient">Servidor MHD o Document Recipient</h5>
+
+<p>El <strong>Document Recipient</strong> recibe la publicación y proporciona los servicios necesarios para registrar, buscar y recuperar documentos.</p>
+
+<p>En la arquitectura se distinguen dos funciones internas:</p>
+
+<ul>
+  <li><strong>Índice documental:</strong> registra los recursos <code class="language-plaintext highlighter-rouge">DocumentReference</code> y sus metadatos.</li>
+  <li><strong>Almacenamiento documental:</strong> conserva el contenido IPS como <code class="language-plaintext highlighter-rouge">Bundle</code> o <code class="language-plaintext highlighter-rouge">Binary</code>.</li>
+</ul>
+
+<p>Ambas funciones pueden implementarse en un mismo servidor o distribuirse en componentes diferentes. Lo relevante es que las referencias entre los metadatos y el contenido sean válidas y resolubles.</p>
+
+<h5 id="consumidor-o-document-consumer">Consumidor o Document Consumer</h5>
+
+<p>El <strong>Document Consumer</strong> corresponde al sistema que necesita localizar y utilizar el IPS. Puede ser un HIS, un portal clínico, una ficha clínica electrónica, una aplicación móvil u otro sistema autorizado.</p>
+
+<p>Sus responsabilidades son:</p>
+
+<ul>
+  <li>Buscar <code class="language-plaintext highlighter-rouge">DocumentReference</code> mediante ITI-67.</li>
+  <li>Examinar los metadatos encontrados.</li>
+  <li>Seleccionar el IPS apropiado.</li>
+  <li>Obtener la URL del documento.</li>
+  <li>Recuperar el IPS completo mediante ITI-68.</li>
+  <li>Procesar y presentar la información clínica.</li>
+</ul>
+
+<h4 id="el-índice-documental">El índice documental</h4>
+
+<p>El índice documental almacena los recursos <code class="language-plaintext highlighter-rouge">DocumentReference</code>. Estos recursos contienen información que permite clasificar y localizar los documentos disponibles sin tener que recuperar todo su contenido clínico.</p>
+
+<p>En la arquitectura, el <code class="language-plaintext highlighter-rouge">DocumentReference</code> del IPS incluye al menos los siguientes conceptos:</p>
+
+<ul>
+  <li>Estado del documento.</li>
+  <li>Tipo documental.</li>
+  <li>Paciente al que pertenece.</li>
+  <li>Identificador maestro.</li>
+  <li>Dirección del contenido recuperable.</li>
+  <li>Autor.</li>
+  <li>Organización custodio.</li>
+</ul>
+
+<p>También puede incorporar categorías, fechas, formatos, contexto clínico y otros identificadores necesarios para la búsqueda y trazabilidad.</p>
+
+<h4 id="elementos-principales-de-documentreference">Elementos principales de DocumentReference</h4>
+
+<h5 id="estado-documental">Estado documental</h5>
+
+<p>El estado del documento se registra en:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DocumentReference.status
+</code></pre></div></div>
+
+<p>En el ejemplo se utiliza:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DocumentReference.status = current
+</code></pre></div></div>
+
+<p>Esto indica que el documento corresponde a la versión vigente dentro del ciclo documental definido por el sistema.</p>
+
+<h5 id="tipo-documental">Tipo documental</h5>
+
+<p>El tipo permite reconocer que el documento corresponde a un resumen clínico del paciente o IPS:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DocumentReference.type
+</code></pre></div></div>
+
+<p>La imagen utiliza como ejemplo el código LOINC:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>60591-5 | Patient summary Document
+</code></pre></div></div>
+
+<p>Este código permite expresar semánticamente que el contenido corresponde a un documento de resumen del paciente.</p>
+
+<h5 id="paciente">Paciente</h5>
+
+<p>La relación con el paciente se expresa mediante:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DocumentReference.subject -&gt; Patient/{id}
+</code></pre></div></div>
+
+<p>Este elemento es fundamental para buscar todos los documentos asociados a una persona determinada.</p>
+
+<h5 id="autor-y-custodio">Autor y custodio</h5>
+
+<p>El <code class="language-plaintext highlighter-rouge">DocumentReference</code> puede identificar quién creó el documento y qué organización es responsable de su custodia.</p>
+
+<p>Los elementos involucrados son:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DocumentReference.author
+DocumentReference.custodian
+</code></pre></div></div>
+
+<p>Dependiendo del elemento y del perfil aplicable, estas referencias pueden relacionarse con recursos como <code class="language-plaintext highlighter-rouge">PractitionerRole</code> y <code class="language-plaintext highlighter-rouge">Organization</code>.</p>
+
+<p>Conceptualmente:</p>
+
+<ul>
+  <li>El <strong>autor</strong> representa a quien participa en la creación del documento.</li>
+  <li>El <strong>custodio</strong> representa a la organización responsable de mantenerlo y ponerlo a disposición.</li>
+</ul>
+
+<h5 id="identificador-maestro">Identificador maestro</h5>
+
+<p>El identificador maestro del documento se registra en:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DocumentReference.masterIdentifier
+</code></pre></div></div>
+
+<p>Este identificador debe corresponder al identificador documental declarado en:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Bundle.identifier
+</code></pre></div></div>
+
+<p>La igualdad corresponde al par formado por <code class="language-plaintext highlighter-rouge">system</code> y <code class="language-plaintext highlighter-rouge">value</code>, no a una referencia FHIR entre recursos.</p>
+
+<p>Ejemplo conceptual:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DocumentReference.masterIdentifier.system = http://hospital.example.org/identifiers/ips
+DocumentReference.masterIdentifier.value  = IPS-2026-0001
+
+Bundle.identifier.system = http://hospital.example.org/identifiers/ips
+Bundle.identifier.value  = IPS-2026-0001
+</code></pre></div></div>
+
+<p>Esta concordancia permite demostrar que el <code class="language-plaintext highlighter-rouge">DocumentReference</code> describe precisamente el <code class="language-plaintext highlighter-rouge">Bundle</code> documental recuperado.</p>
+
+<h5 id="dirección-del-documento-completo">Dirección del documento completo</h5>
+
+<p>La dirección de recuperación se declara en:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DocumentReference.content.attachment.url
+</code></pre></div></div>
+
+<p>Esta URL puede apuntar a una de las dos representaciones válidas mostradas en la arquitectura:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Bundle/ips-001
+</code></pre></div></div>
+
+<p>o:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Binary/ips-bin-001
+</code></pre></div></div>
+
+<p>El destino debe contener el IPS completo.</p>
+
+<h4 id="representación-del-ips-mediante-bundle">Representación del IPS mediante Bundle</h4>
+
+<p>La primera alternativa consiste en almacenar el IPS como un recurso <code class="language-plaintext highlighter-rouge">Bundle</code> FHIR nativo.</p>
+
+<p>Sus características esenciales son:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Bundle.type = document
+Bundle.meta.profile = perfil IPS aplicable
+Bundle.entry[0].resource = Composition IPS
+</code></pre></div></div>
+
+<p>El <code class="language-plaintext highlighter-rouge">Bundle</code> representa la unidad documental completa. Debe contener tanto la estructura narrativa definida por la <code class="language-plaintext highlighter-rouge">Composition</code> como los recursos clínicos referenciados por ella.</p>
+
+<p>Ejemplo de organización interna:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Bundle/ips-001
+  ├── entry[0]: Composition IPS
+  ├── Patient
+  ├── Condition
+  ├── AllergyIntolerance
+  ├── MedicationStatement
+  ├── Observation
+  ├── Organization
+  └── Otros recursos clínicos requeridos
+</code></pre></div></div>
+
+<p>El perfil IPS aplicable debe declararse mediante su URL canónica en <code class="language-plaintext highlighter-rouge">Bundle.meta.profile</code>.</p>
+
+<h4 id="la-composition-dentro-del-ips">La Composition dentro del IPS</h4>
+
+<p>La <code class="language-plaintext highlighter-rouge">Composition</code> es la cabecera clínica y organizativa del documento. Define el paciente, los autores, el custodio, el estado y las secciones clínicas que conforman el resumen.</p>
+
+<p>Entre sus elementos relevantes se encuentran:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Composition.subject</code>: referencia al paciente.</li>
+  <li><code class="language-plaintext highlighter-rouge">Composition.author</code>: autor o autores del IPS.</li>
+  <li><code class="language-plaintext highlighter-rouge">Composition.custodian</code>: organización custodio.</li>
+  <li><code class="language-plaintext highlighter-rouge">Composition.status</code>: estado de la composición.</li>
+  <li><code class="language-plaintext highlighter-rouge">Composition.section</code>: secciones del resumen clínico.</li>
+</ul>
+
+<p>Las secciones de la <code class="language-plaintext highlighter-rouge">Composition</code> pueden referenciar recursos como:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Condition</code> para problemas o diagnósticos.</li>
+  <li><code class="language-plaintext highlighter-rouge">AllergyIntolerance</code> para alergias e intolerancias.</li>
+  <li><code class="language-plaintext highlighter-rouge">MedicationStatement</code> para antecedentes de medicamentos.</li>
+  <li><code class="language-plaintext highlighter-rouge">Observation</code> para resultados y observaciones clínicas.</li>
+  <li><code class="language-plaintext highlighter-rouge">Organization</code> para organizaciones participantes.</li>
+  <li>Otros recursos exigidos o permitidos por el perfil IPS.</li>
+</ul>
+
+<h5 id="por-qué-no-se-debe-apuntar-solamente-a-composition">Por qué no se debe apuntar solamente a Composition</h5>
+
+<p>La <code class="language-plaintext highlighter-rouge">Composition</code> no constituye por sí sola el documento IPS completo. Es solamente la estructura clínica que encabeza y organiza el documento.</p>
+
+<p>El IPS completo corresponde al <code class="language-plaintext highlighter-rouge">Bundle</code> documental que contiene:</p>
+
+<ol>
+  <li>La <code class="language-plaintext highlighter-rouge">Composition</code>.</li>
+  <li>El <code class="language-plaintext highlighter-rouge">Patient</code>.</li>
+  <li>Los recursos clínicos referenciados.</li>
+  <li>Las organizaciones, autores y demás participantes necesarios.</li>
+</ol>
+
+<p>Por esta razón, lo siguiente es incorrecto para representar el contenido completo:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DocumentReference.content.attachment.url -&gt; Composition/{id}
+</code></pre></div></div>
+
+<p>La referencia debe conducir al documento completo:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DocumentReference.content.attachment.url -&gt; Bundle/ips-001
+</code></pre></div></div>
+
+<p>La regla se puede resumir así:</p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">Composition</code> encabeza el IPS, pero el IPS clínico completo vive en el <code class="language-plaintext highlighter-rouge">Bundle</code> de tipo <code class="language-plaintext highlighter-rouge">document</code>.</p>
+</blockquote>
+
+<h4 id="representación-del-ips-mediante-binary">Representación del IPS mediante Binary</h4>
+
+<p>La segunda alternativa consiste en serializar el <code class="language-plaintext highlighter-rouge">Bundle</code> IPS completo en JSON o XML y almacenarlo dentro de un recurso <code class="language-plaintext highlighter-rouge">Binary</code>.</p>
+
+<p>En ese caso:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DocumentReference.content.attachment.url -&gt; Binary/ips-bin-001
+</code></pre></div></div>
+
+<p>El recurso <code class="language-plaintext highlighter-rouge">Binary</code> contiene:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Binary.contentType</code>: formato de serialización del IPS.</li>
+  <li><code class="language-plaintext highlighter-rouge">Binary.data</code>: documento codificado en Base64.</li>
+</ul>
+
+<p>Ejemplos de tipos de contenido:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>application/fhir+json
+application/fhir+xml
+</code></pre></div></div>
+
+<p>Después de recuperar el <code class="language-plaintext highlighter-rouge">Binary</code>, el consumidor debe:</p>
+
+<ol>
+  <li>Decodificar el contenido Base64.</li>
+  <li>Interpretar el JSON o XML resultante.</li>
+  <li>Procesar el <code class="language-plaintext highlighter-rouge">Bundle</code> IPS completo.</li>
+</ol>
+
+<p>Aunque se utilice <code class="language-plaintext highlighter-rouge">Binary</code>, el contenido clínico sigue siendo un <code class="language-plaintext highlighter-rouge">Bundle</code> IPS de tipo <code class="language-plaintext highlighter-rouge">document</code>; solamente cambia la manera en que se almacena y entrega.</p>
+
+<h4 id="comparación-de-las-dos-opciones">Comparación de las dos opciones</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Aspecto</th>
+      <th>Bundle FHIR nativo</th>
+      <th>IPS serializado en Binary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Recurso recuperado</td>
+      <td><code class="language-plaintext highlighter-rouge">Bundle</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Binary</code></td>
+    </tr>
+    <tr>
+      <td>Contenido</td>
+      <td>Documento FHIR directamente representado como recurso</td>
+      <td><code class="language-plaintext highlighter-rouge">Bundle</code> IPS serializado y codificado en Base64</td>
+    </tr>
+    <tr>
+      <td>URL de ejemplo</td>
+      <td><code class="language-plaintext highlighter-rouge">Bundle/ips-001</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Binary/ips-bin-001</code></td>
+    </tr>
+    <tr>
+      <td>Procesamiento del consumidor</td>
+      <td>Procesa directamente el <code class="language-plaintext highlighter-rouge">Bundle</code></td>
+      <td>Decodifica el <code class="language-plaintext highlighter-rouge">Binary</code> y luego procesa el <code class="language-plaintext highlighter-rouge">Bundle</code></td>
+    </tr>
+    <tr>
+      <td>Unidad clínica</td>
+      <td><code class="language-plaintext highlighter-rouge">Bundle</code> de tipo <code class="language-plaintext highlighter-rouge">document</code></td>
+      <td>El mismo <code class="language-plaintext highlighter-rouge">Bundle</code> documental contenido en <code class="language-plaintext highlighter-rouge">Binary.data</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>La alternativa seleccionada debe declararse de forma coherente en <code class="language-plaintext highlighter-rouge">DocumentReference.content.attachment.contentType</code> y <code class="language-plaintext highlighter-rouge">DocumentReference.content.attachment.url</code>.</p>
+
+<h4 id="publicación-mediante-iti-65">Publicación mediante ITI-65</h4>
+
+<p>El sistema fuente publica el IPS en el servidor MHD mediante la transacción:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ITI-65 Provide Document Bundle
+</code></pre></div></div>
+
+<p>El proceso conceptual es el siguiente:</p>
+
+<ol>
+  <li>El Document Source genera el <code class="language-plaintext highlighter-rouge">Bundle</code> IPS.</li>
+  <li>Crea el <code class="language-plaintext highlighter-rouge">DocumentReference</code> que indexará el documento.</li>
+  <li>Iguala <code class="language-plaintext highlighter-rouge">DocumentReference.masterIdentifier</code> con <code class="language-plaintext highlighter-rouge">Bundle.identifier</code>.</li>
+  <li>Configura <code class="language-plaintext highlighter-rouge">content.attachment.url</code> para apuntar al <code class="language-plaintext highlighter-rouge">Bundle</code> o al <code class="language-plaintext highlighter-rouge">Binary</code>.</li>
+  <li>Incorpora los recursos requeridos en el paquete de publicación.</li>
+  <li>Envía la transacción al Document Recipient.</li>
+  <li>El servidor registra los metadatos y almacena el contenido recuperable.</li>
+</ol>
+
+<p>El resultado esperado es que el IPS quede disponible tanto para búsquedas documentales como para recuperación posterior.</p>
+
+<h4 id="búsqueda-mediante-iti-67">Búsqueda mediante ITI-67</h4>
+
+<p>El consumidor localiza los documentos mediante:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ITI-67 Find Document References
+</code></pre></div></div>
+
+<p>Esta transacción consulta los recursos <code class="language-plaintext highlighter-rouge">DocumentReference</code> del índice documental.</p>
+
+<p>Los criterios de búsqueda pueden incluir:</p>
+
+<ul>
+  <li>Paciente.</li>
+  <li>Estado documental.</li>
+  <li>Tipo.</li>
+  <li>Categoría.</li>
+  <li>Fecha.</li>
+  <li>Autor.</li>
+  <li>Custodio.</li>
+  <li>Identificadores.</li>
+</ul>
+
+<p>Ejemplo conceptual de búsqueda:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET [base]/DocumentReference?subject=Patient/123&amp;status=current&amp;type=http://loinc.org|60591-5
+</span></code></pre></div></div>
+
+<p>La respuesta corresponde a un <code class="language-plaintext highlighter-rouge">Bundle</code> FHIR de tipo <code class="language-plaintext highlighter-rouge">searchset</code>:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Bundle (type = searchset)
+  ├── DocumentReference 1
+  ├── DocumentReference 2
+  └── DocumentReference N
+</code></pre></div></div>
+
+<p>El consumidor recibe metadatos, no necesariamente el documento IPS completo. Luego debe examinar los resultados, seleccionar el documento adecuado y utilizar su URL de recuperación.</p>
+
+<h4 id="recuperación-mediante-iti-68">Recuperación mediante ITI-68</h4>
+
+<p>Una vez seleccionado el <code class="language-plaintext highlighter-rouge">DocumentReference</code>, el consumidor utiliza:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DocumentReference.content.attachment.url
+</code></pre></div></div>
+
+<p>para ejecutar:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ITI-68 Retrieve Document
+</code></pre></div></div>
+
+<p>Si la URL apunta a un <code class="language-plaintext highlighter-rouge">Bundle</code>, la recuperación puede representarse conceptualmente como:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET [base]/Bundle/ips-001
+</span></code></pre></div></div>
+
+<p>Si apunta a un <code class="language-plaintext highlighter-rouge">Binary</code>:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET [base]/Binary/ips-bin-001
+</span></code></pre></div></div>
+
+<p>El resultado final debe permitir al consumidor obtener el documento IPS FHIR completo.</p>
+
+<h4 id="flujo-completo-de-extremo-a-extremo-1">Flujo completo de extremo a extremo</h4>
+
+<h5 id="1-generación">1. Generación</h5>
+
+<ol>
+  <li>El sistema fuente reúne la información clínica.</li>
+  <li>Genera la <code class="language-plaintext highlighter-rouge">Composition</code> IPS.</li>
+  <li>Construye el <code class="language-plaintext highlighter-rouge">Bundle</code> de tipo <code class="language-plaintext highlighter-rouge">document</code>.</li>
+  <li>Incluye la <code class="language-plaintext highlighter-rouge">Composition</code> como primera entrada.</li>
+  <li>Incorpora los recursos clínicos referenciados.</li>
+</ol>
+
+<h5 id="2-indexación">2. Indexación</h5>
+
+<ol>
+  <li>El sistema fuente crea el <code class="language-plaintext highlighter-rouge">DocumentReference</code>.</li>
+  <li>Declara el paciente en <code class="language-plaintext highlighter-rouge">subject</code>.</li>
+  <li>Declara el tipo documental, por ejemplo LOINC <code class="language-plaintext highlighter-rouge">60591-5</code>.</li>
+  <li>Declara el autor y el custodio.</li>
+  <li>Asigna el identificador maestro.</li>
+  <li>Configura la URL hacia el IPS completo.</li>
+</ol>
+
+<h5 id="3-publicación">3. Publicación</h5>
+
+<ol>
+  <li>El Document Source envía los recursos mediante ITI-65.</li>
+  <li>El MHD Recipient registra el <code class="language-plaintext highlighter-rouge">DocumentReference</code>.</li>
+  <li>El contenido IPS queda almacenado como <code class="language-plaintext highlighter-rouge">Bundle</code> o <code class="language-plaintext highlighter-rouge">Binary</code>.</li>
+</ol>
+
+<h5 id="4-búsqueda">4. Búsqueda</h5>
+
+<ol>
+  <li>El consumidor ejecuta ITI-67.</li>
+  <li>El servidor devuelve un <code class="language-plaintext highlighter-rouge">Bundle</code> de tipo <code class="language-plaintext highlighter-rouge">searchset</code>.</li>
+  <li>El consumidor revisa los <code class="language-plaintext highlighter-rouge">DocumentReference</code> encontrados.</li>
+  <li>Selecciona el documento correspondiente.</li>
+</ol>
+
+<h5 id="5-recuperación">5. Recuperación</h5>
+
+<ol>
+  <li>El consumidor obtiene <code class="language-plaintext highlighter-rouge">content.attachment.url</code>.</li>
+  <li>Ejecuta ITI-68 sobre esa dirección.</li>
+  <li>Recupera el <code class="language-plaintext highlighter-rouge">Bundle</code> IPS o el <code class="language-plaintext highlighter-rouge">Binary</code>.</li>
+  <li>Procesa el documento para su uso clínico.</li>
+</ol>
+
+<h4 id="reglas-clave">Reglas clave</h4>
+
+<h5 id="regla-1-documentreference-indexa-el-ips">Regla 1: DocumentReference indexa el IPS</h5>
+
+<p><code class="language-plaintext highlighter-rouge">DocumentReference</code> contiene metadatos y facilita la búsqueda, pero no reemplaza al documento clínico.</p>
+
+<h5 id="regla-2-attachmenturl-apunta-al-documento-completo">Regla 2: attachment.url apunta al documento completo</h5>
+
+<p><code class="language-plaintext highlighter-rouge">DocumentReference.content.attachment.url</code> debe apuntar al <code class="language-plaintext highlighter-rouge">Bundle</code> IPS completo o al <code class="language-plaintext highlighter-rouge">Binary</code> que lo contiene.</p>
+
+<h5 id="regla-3-los-identificadores-deben-concordar">Regla 3: los identificadores deben concordar</h5>
+
+<p>El par <code class="language-plaintext highlighter-rouge">system</code> y <code class="language-plaintext highlighter-rouge">value</code> de <code class="language-plaintext highlighter-rouge">DocumentReference.masterIdentifier</code> debe concordar con el identificador documental expresado en <code class="language-plaintext highlighter-rouge">Bundle.identifier</code>.</p>
+
+<h5 id="regla-4-el-ips-vive-en-el-bundle">Regla 4: el IPS vive en el Bundle</h5>
+
+<p>La <code class="language-plaintext highlighter-rouge">Composition</code> encabeza y estructura el documento, pero el IPS clínico completo corresponde al <code class="language-plaintext highlighter-rouge">Bundle</code> de tipo <code class="language-plaintext highlighter-rouge">document</code>.</p>
+
+<h4 id="lista-de-verificación-para-la-implementación">Lista de verificación para la implementación</h4>
+
+<p>Antes de publicar un IPS, se debe comprobar que:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">DocumentReference.status</code> tenga un valor válido.</li>
+  <li><code class="language-plaintext highlighter-rouge">DocumentReference.type</code> identifique correctamente el resumen clínico.</li>
+  <li><code class="language-plaintext highlighter-rouge">DocumentReference.subject</code> referencie al paciente correcto.</li>
+  <li><code class="language-plaintext highlighter-rouge">DocumentReference.masterIdentifier</code> esté informado.</li>
+  <li><code class="language-plaintext highlighter-rouge">Bundle.identifier</code> sea coherente con el identificador maestro.</li>
+  <li><code class="language-plaintext highlighter-rouge">DocumentReference.content.attachment.url</code> sea resoluble.</li>
+  <li>La URL apunte al documento completo y no solamente a <code class="language-plaintext highlighter-rouge">Composition</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">DocumentReference.content.attachment.contentType</code> coincida con el formato recuperado.</li>
+  <li>El IPS sea un <code class="language-plaintext highlighter-rouge">Bundle</code> de tipo <code class="language-plaintext highlighter-rouge">document</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">Bundle.meta.profile</code> declare el perfil IPS aplicable.</li>
+  <li>La primera entrada del <code class="language-plaintext highlighter-rouge">Bundle</code> contenga la <code class="language-plaintext highlighter-rouge">Composition</code>.</li>
+  <li>La <code class="language-plaintext highlighter-rouge">Composition</code> referencie al paciente correcto.</li>
+  <li>Los recursos clínicos referenciados estén incluidos en el documento.</li>
+  <li>El autor y el custodio estén representados de acuerdo con el perfil aplicable.</li>
+  <li>El documento pueda encontrarse mediante ITI-67.</li>
+  <li>El documento pueda recuperarse mediante ITI-68.</li>
+</ul>
+
+<h4 id="conclusión-1">Conclusión</h4>
+
+<p>En una arquitectura MHD, el <code class="language-plaintext highlighter-rouge">DocumentReference</code> actúa como el registro documental del IPS. Permite describirlo, identificarlo, asociarlo con un paciente y proporcionar la URL desde la que puede recuperarse.</p>
+
+<p>El contenido clínico completo no reside en el <code class="language-plaintext highlighter-rouge">DocumentReference</code> ni únicamente en la <code class="language-plaintext highlighter-rouge">Composition</code>. Reside en un <code class="language-plaintext highlighter-rouge">Bundle</code> FHIR de tipo <code class="language-plaintext highlighter-rouge">document</code>, encabezado por la <code class="language-plaintext highlighter-rouge">Composition</code> y acompañado por todos los recursos clínicos referenciados. Como alternativa técnica, ese <code class="language-plaintext highlighter-rouge">Bundle</code> puede almacenarse serializado dentro de un <code class="language-plaintext highlighter-rouge">Binary</code>.</p>
+
+<p>El sistema fuente publica el documento mediante ITI-65, el consumidor localiza su <code class="language-plaintext highlighter-rouge">DocumentReference</code> mediante ITI-67 y finalmente recupera el IPS completo mediante ITI-68.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://hl7chile.cl/">Hl7 Chile</a>.  Package hl7.fhir.cl.mhdig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Oct 22, 2026 10:20-0300">2026-10-22</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+             Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Tabla de contenidos</a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="qa.html">Reporte QA</a> |
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://hl7chile.cl/fhir/ig/mhd/history.html">Historial de versiones</a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

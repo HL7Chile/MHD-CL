@@ -17,7 +17,7 @@
 
 #hl7-nav {
   line-height: 50px;
-  float: var(--ig-left);
+  float: left;
   margin-top: 4px;
 }
 
@@ -26,12 +26,12 @@
 }
 
 #hl7-logo {
-  float: var(--ig-left);
+  float: left;
   margin-left: 6px;
 }
 #hl7-search {
   line-height: 50px;
-  float: var(--ig-right);
+  float: right;
   margin-top: 4px;
   color: maroon;
 }

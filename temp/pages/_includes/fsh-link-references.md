@@ -1,3 +1,4 @@
+[BundleDocumentoIpsEjemplo]: Bundle-BundleDocumentoIpsEjemplo.html
 [bundle-mhd-referencia-documental-ejemplo]: Bundle-bundle-mhd-referencia-documental-ejemplo.html
 [BundleMhd]: StructureDefinition-BundleMhd.html
 [MHDCliente]: CapabilityStatement-MHDCliente.html

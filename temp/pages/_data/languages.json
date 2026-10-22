@@ -1,11 +1,6 @@
 {
-  "ig" : "en",
-  "hasTranslations" : true,
-  "defLang" : "en",
-  "langs" : [{
-    "code" : "en",
-    "rtl" : false,
-    "display" : "English",
-    "display-en" : "English"
-  }]
+  "ig" : "es",
+  "hasTranslations" : false,
+  "defLang" : null,
+  "langs" : []
 }

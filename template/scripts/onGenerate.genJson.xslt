@@ -43,19 +43,9 @@
         <xsl:with-param name="property" select="'excludemap'"/>
       </xsl:call-template>
     </xsl:variable>
-    <xsl:variable name="excludeflags">
-      <xsl:call-template name="getParameter">
-        <xsl:with-param name="name" select="'excludeflags'"/>
-      </xsl:call-template>
-    </xsl:variable>
     <xsl:variable name="shownav">
       <xsl:call-template name="getBoolean">
         <xsl:with-param name="property" select="'shownav'"/>
-      </xsl:call-template>
-    </xsl:variable>
-    <xsl:variable name="openehr">
-      <xsl:call-template name="getBoolean">
-        <xsl:with-param name="property" select="'openehr'"/>
       </xsl:call-template>
     </xsl:variable>
     <xsl:variable name="fcp">
@@ -68,16 +58,6 @@
         <xsl:with-param name="name" select="'fmm-definition'"/>
       </xsl:call-template>
     </xsl:variable>
-    <xsl:variable name="togglechanges">
-      <xsl:call-template name="getBoolean">
-        <xsl:with-param name="property" select="'toggle-changes'"/>
-      </xsl:call-template>
-    </xsl:variable>
-    <xsl:variable name="oldartifacts">
-      <xsl:call-template name="getBoolean">
-        <xsl:with-param name="property" select="'old-artifacts'"/>
-      </xsl:call-template>
-    </xsl:variable>
     <xsl:value-of select="concat('{&#xa;',
     '  &quot;releaselabel&quot;:&quot;', $releaselabel, '&quot;,&#xa;',
     '  &quot;copyrightyear&quot;:&quot;', $copyrightyear, '&quot;,&#xa;',
@@ -87,11 +67,7 @@
     '  &quot;excludettl&quot;:&quot;', $excludettl, '&quot;,&#xa;',
     '  &quot;excludelogbinaryformat&quot;:&quot;', $excludelogbinaryformat, '&quot;,&#xa;',
     '  &quot;excludemap&quot;:&quot;', $excludemap, '&quot;,&#xa;',
-    '  &quot;excludeflags&quot;:&quot;', $excludeflags, '&quot;,&#xa;',
-    '  &quot;openehr&quot;:&quot;', $openehr, '&quot;,&#xa;',
     '  &quot;fcpspec&quot;:&quot;', $fcp, '&quot;,&#xa;',
-    '  &quot;togglechanges&quot;:&quot;', $togglechanges, '&quot;,&#xa;',
-    '  &quot;oldartifacts&quot;:&quot;', $oldartifacts, '&quot;,&#xa;',
     '  &quot;fmm-definition&quot;:&quot;', $fmm, '&quot;&#xa;}')"/>
   </xsl:template>
 	<xsl:template name="getParameter">

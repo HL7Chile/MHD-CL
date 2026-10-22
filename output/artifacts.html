@@ -1,8 +1,433 @@
-<html lang="en"><title>Redirect File</title><body>
-<!--ReleaseHeader--><p id="publish-box">Guía MHD para el Intercambio de Información de Salud en Chile - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://hl7chile.cl/fhir/ig/mhd/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
-<script type="text/javascript">
-// b87e87d8-7587-48d4-9b00-46db21438132
-langs=["en"]
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>HL7.FHIR.CL.MHDIG\Artifacts Summary - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <link href="fhir.css" rel="stylesheet" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet" />
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet" />
+    <link href="assets/css/pygments-manni.css" rel="stylesheet" />
+    <link href="assets/css/jquery-ui.css" rel="stylesheet" />
+    <link href="assets/css/prism.css" rel="stylesheet" /> <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/hl7chile.css" rel="stylesheet" />
+<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-HLBNC861DJ" async>
 </script>
-<script type="text/javascript" src="assets/js/lang-redirects.js"></script>
-</body></html>
+
+    <script type="text/javascript" src="fhir-table-scripts.js">
+    </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png" />
+    <link rel="shortcut icon" href="assets/ico/favicon.png" />
+</head>
+
+<!-- JORGE MANSILLA -->
+<!-- Google tag (gtag.js) -->
+<!-- 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KDP1SHWXWT"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-KDP1SHWXWT');
+</script>
+-->
+<!-- Franco: Nota Para Mansilla Revisa este script genera errores al subir en Build -->
+
+
+
+<body onload="document.body.style.opacity='1'">
+    
+    <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">
+        h2 {
+            --heading-prefix:"6"
+        }
+        
+        h3,
+        h4,
+        h5,
+        h6 {
+            --heading-prefix:"6.0"
+        }
+    </style>
+    <div id="segment-header" class="segment">
+        <!-- segment-header -->
+        <div class="container">
+            <!-- container -->
+            <!-- Placeholder for child template header declarations -->
+
+<div id="project-nav">
+    <a id="hl7chile-logo" no-external="true" href="http://hl7chile.cl">
+        <img height="71" alt="Visitar HL7 Chile" src="assets/images/hl7chile-logo.png" />
+    </a>
+</div>
+<div id="family-nav">
+    <a id="hl7-fhir-logo" no-external="true" href="https://www.hl7.org/"><img height="60" alt="Visitar HL7 FHIR Internacional" src="assets/images/LOGO_FHIR.svg" /> </a>
+</div>
+
+<!--
+<div id="hl7-search">
+  <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+</div>
+--> 
+            <div id="ig-status">
+                <p><span style="font-size:12pt;font-weight:bold">Guía MHD para el Intercambio de Información de Salud en Chile</span>
+                    <br/>
+                    <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img alt="Chile flag" src="assets/images/chl.svg" height="16" title="Chile"/>
+ 
+                    </span>
+                </p>
+            </div>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">
+        <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">
+            <!-- container -->
+            <!-- HEADER CONTENT -->
+
+            <nav class="navbar navbar-inverse">
+                <!--status-bar-->
+                <div class="container">
+                    <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+                    <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+                    <div class="nav-collapse collapse navbar-inverse-collapse">
+                        <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="intercambio.html">Intercambio</a>
+  </li>
+  <li>
+    <a href="transacciones-mhd.html">Transacciones</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="seguridad.html">Aspectos de Seguridad</a>
+  </li>
+  <li>
+    <a href="cambios.html">Historial de Versiones</a>
+  </li>
+</ul>
+                    </div>
+                    <!-- /.nav-collapse -->
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- /.navbar -->
+            <!-- /HEADER CONTENT -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /segment-navbar -->
+    <!--status-bar-->
+    
+    <div id="segment-breadcrumb" class="segment">
+        <!-- segment-breadcrumb -->
+        <div class="container">
+            <!-- container -->
+            <ul class="breadcrumb">
+                <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li> 
+            </ul>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">
+        <!-- segment-content -->
+        <div class="container">
+            <!-- container -->
+            <div class="row">
+                <div class="inner-wrapper">
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Guía MHD para el Intercambio de Información de Salud en Chile - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://hl7chile.cl/fhir/ig/mhd/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Artifacts Summary</h2>
+  
+  
+  
+  <!--DO NOT EDIT THIS FILE - It is generated by https://github.com/HL7/ig-template-base/blob/master/scripts/createArtifactSummary.xslt and any changes made will be overwritten--><div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml"
+     class="markdown-toc">
+   <p>Contents:</p>
+   <ul>
+      <li>
+         <a href="#1">Behavior: Capability Statements</a>
+      </li>
+      <li>
+         <a href="#2">Structures: Resource Profiles</a>
+      </li>
+      <li>
+         <a href="#3">Terminology: Value Sets</a>
+      </li>
+      <li>
+         <a href="#4">Example: Example Instances</a>
+      </li>
+   </ul>
+</div>
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml">
+   <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
+   <a name="1"> </a>
+   <h3>Behavior: Capability Statements </h3>
+    <p>The following artifacts define the specific capabilities that different types of systems are expected to have in order to comply with this implementation guide.  Systems conforming to this implementation guide are expected to declare conformance to one or more of the following capability statements.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-MHDCliente.html"
+                  title="CapabilityStatement/MHDCliente">Capacidades para Cliente MHD</a>
+            </td>
+            <td>
+<p>CapabilityStatement que define las capacidades requeridas para los
+sistemas cliente que interactúan con el MHD Responder definido por
+esta guía.</p>
+
+<p>El cliente implementa las funciones de Document Source y Document
+Consumer definidas por IHE MHD 4.2.2, adaptadas a los perfiles y
+restricciones de esta implementación local.</p>
+
+<p>El cliente puede publicar documentos mediante ITI-65, consultar
+SubmissionSets mediante ITI-66, localizar referencias documentales
+mediante ITI-67 y recuperar documentos mediante ITI-68.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-MHDResponder.html"
+                  title="CapabilityStatement/MHDResponder">MHD Responder</a>
+            </td>
+            <td>
+<p>CapabilityStatement que define las capacidades requeridas para un servidor
+MHD conforme a la Guía MHD para HSI.</p>
+
+<p>El servidor implementa las funciones de Document Recipient y Document
+Responder definidas por IHE MHD 4.2.2, adaptadas a los perfiles locales
+de esta guía.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
+   <h3>Structures: Resource Profiles </h3>
+    <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-BundleMhd.html"
+                  title="StructureDefinition/BundleMhd">BundleMhd</a>
+            </td>
+            <td>
+<p>Perfil asociado al bundle de transacciones MHD, considerando la asociación de documentos de tipo IPS, referenciados a la Guía Core Argentna AR.FHIR.CORE</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ListMhd.html"
+                  title="StructureDefinition/ListMhd">ListMhd</a>
+            </td>
+            <td>
+<p>Perfil asociado al listado de documentos referenciados para HSI en un modelo MHD</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ReferenciaDocumental.html"
+                  title="StructureDefinition/ReferenciaDocumental">ReferenciaDocumental</a>
+            </td>
+            <td>
+<p>Perfil asociado al la refetrencia documental para HSI en un modelo MHD, consderado para transacciones asociadas a una ITI-65 e ITI-67. Se considera en el perfil la asociación de documentos de tipo IPS, referenciados a la Guía Core Argentna AR.FHIR.CORE</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
+   <h3>Terminology: Value Sets </h3>
+    <p>These define sets of codes used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-VSCategoriaDoc.html" title="ValueSet/VSCategoriaDoc">Categorías de Documento Clínico para DocumentReference</a>
+            </td>
+            <td>
+<p>Categorías generales de documentos clínicos codificadas en LOINC para ser usadas en DocumentReference.category.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-VSTipoDocumento.html" title="ValueSet/VSTipoDocumento">Tipos de Documento Clínico para DocumentReference</a>
+            </td>
+            <td>
+<p>Tipos documentales clínicos codificados en LOINC para ser usados en DocumentReference.type.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="4"> </a>
+   <h3>Example: Example Instances </h3>
+    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-bundle-mhd-referencia-documental-ejemplo.html"
+                  title="Bundle/bundle-mhd-referencia-documental-ejemplo">Bundle MHD con referencia documental de ejemplo</a>
+            </td>
+            <td>
+<p>Bundle transaction que vincula el DocumentReference generado previamente.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-BundleDocumentoIpsEjemplo.html"
+                  title="Bundle/BundleDocumentoIpsEjemplo">Bundle documento IPS Chile de ejemplo</a>
+            </td>
+            <td>
+<p>Bundle de tipo document: Composition como primera entrada, seguido del paciente, el autor y los recursos clínicos referenciados por las secciones.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="List-EjemploListMhd.html" title="List/EjemploListMhd">Ejemplo mínimo de List MHD</a>
+            </td>
+            <td>
+<p>Ejemplo mínimo de List como SubmissionSet MHD con una referencia documental.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-Paciente-Interno.html" title="Patient/Paciente-Interno">Paciente-Interno</a>
+            </td>
+            <td>
+<p>Ejemplo de paciente Chileno conforme al perfil PacienteCLIps, con rut y nombre oficial.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-PrestadorCLInline.html"
+                  title="Practitioner/PrestadorCLInline">PrestadorCLInline</a>
+            </td>
+            <td>
+<p>Ejemplo inline de profesional argentino conforme al perfil PrestadorArg.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DocumentReference-ReferDocEjemplo.html"
+                  title="DocumentReference/ReferDocEjemplo">Referencia documental mínima para DocumentoArg</a>
+            </td>
+            <td>
+<p>Ejemplo de DocumentReference MHD que referencia un documento clínico FHIR DocumentoArg.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://hl7chile.cl/">Hl7 Chile</a>.  Package hl7.fhir.cl.mhdig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Oct 22, 2026 10:20-0300">2026-10-22</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+             Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Tabla de contenidos</a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="qa.html">Reporte QA</a> |
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://hl7chile.cl/fhir/ig/mhd/history.html">Historial de versiones</a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

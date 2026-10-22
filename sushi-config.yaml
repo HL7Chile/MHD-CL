@@ -27,7 +27,7 @@ language: es
 dependencies:
    hl7.fhir.cl.clcore: 1.9.4
    hl7.fhir.cl.clips: current
-   ihe.iti.mhd: 4.2.5-comment
+   ihe.iti.mhd: 4.2.5
 #   hl7.fhir.cl.clips: 0.4.4
 #
 #

@@ -13,12 +13,10 @@
     "name" : "MHDTransIGChile",
     "title" : "Guía MHD para el Intercambio de Información de Salud en Chile",
     "titlelang" : {
-      "en" : "Guía MHD para el Intercambio de Información de Salud en Chile"
     },
-    "date" : "2026-10-16T16:15:28-03:00",
+    "date" : "2026-10-22T10:20:43-03:00",
     "description" : "Esta guía de implementación describe los esquemas de transacciones FHIR MHD para el intercambio de información de salud en Chile, asociado a las guías IHE MHD y Core-AR.",
     "descriptionlang" : {
-      "en" : "Esta guía de implementación describe los esquemas de transacciones FHIR MHD para el intercambio de información de salud en Chile, asociado a las guías IHE MHD y Core-AR."
     },
     "jurisdictions" : [{
       "code" : "CL",
@@ -32,11 +30,20 @@
       "status" : "Draft"
     }
   },
-  "Bundle/bundle-mhd-referencia-documental-ejemplo" : {
+  "Bundle/BundleDocumentoIpsEjemplo" : {
     "history" : false,
     "testplan" : false,
     "testscript" : false,
     "index" : 1,
+    "source" : "fsh-generated/resources/Bundle-BundleDocumentoIpsEjemplo.json",
+    "sourceTail" : "Bundle-BundleDocumentoIpsEjemplo.json",
+    "path" : "Bundle-BundleDocumentoIpsEjemplo.html"
+  },
+  "Bundle/bundle-mhd-referencia-documental-ejemplo" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 2,
     "source" : "fsh-generated/resources/Bundle-bundle-mhd-referencia-documental-ejemplo.json",
     "sourceTail" : "Bundle-bundle-mhd-referencia-documental-ejemplo.json",
     "path" : "Bundle-bundle-mhd-referencia-documental-ejemplo.html"
@@ -45,7 +52,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 2,
+    "index" : 3,
     "source" : "fsh-generated/resources/CapabilityStatement-MHDCliente.json",
     "sourceTail" : "CapabilityStatement-MHDCliente.json",
     "path" : "CapabilityStatement-MHDCliente.html",
@@ -55,13 +62,11 @@
     "name" : "MHDCliente",
     "title" : "Capacidades para Cliente MHD",
     "titlelang" : {
-      "en" : "Capacidades para Cliente MHD"
     },
     "experimental" : false,
     "date" : "2026-09-02",
     "description" : "CapabilityStatement que define las capacidades requeridas para los\nsistemas cliente que interactúan con el MHD Responder definido por\nesta guía.\n\nEl cliente implementa las funciones de Document Source y Document\nConsumer definidas por IHE MHD 4.2.2, adaptadas a los perfiles y\nrestricciones de esta implementación local.\n\nEl cliente puede publicar documentos mediante ITI-65, consultar\nSubmissionSets mediante ITI-66, localizar referencias documentales\nmediante ITI-67 y recuperar documentos mediante ITI-68.",
     "descriptionlang" : {
-      "en" : "CapabilityStatement que define las capacidades requeridas para los\nsistemas cliente que interactúan con el MHD Responder definido por\nesta guía.\n\nEl cliente implementa las funciones de Document Source y Document\nConsumer definidas por IHE MHD 4.2.2, adaptadas a los perfiles y\nrestricciones de esta implementación local.\n\nEl cliente puede publicar documentos mediante ITI-65, consultar\nSubmissionSets mediante ITI-66, localizar referencias documentales\nmediante ITI-67 y recuperar documentos mediante ITI-68."
     },
     "jurisdictions" : [{
       "code" : "CL",
@@ -79,7 +84,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 3,
+    "index" : 4,
     "source" : "fsh-generated/resources/CapabilityStatement-MHDResponder.json",
     "sourceTail" : "CapabilityStatement-MHDResponder.json",
     "path" : "CapabilityStatement-MHDResponder.html",
@@ -89,13 +94,11 @@
     "name" : "MHDResponder",
     "title" : "MHD Responder",
     "titlelang" : {
-      "en" : "MHD Responder"
     },
     "experimental" : false,
     "date" : "2026-09-02",
     "description" : "CapabilityStatement que define las capacidades requeridas para un servidor\nMHD conforme a la Guía MHD para HSI.\n\nEl servidor implementa las funciones de Document Recipient y Document\nResponder definidas por IHE MHD 4.2.2, adaptadas a los perfiles locales\nde esta guía.",
     "descriptionlang" : {
-      "en" : "CapabilityStatement que define las capacidades requeridas para un servidor\nMHD conforme a la Guía MHD para HSI.\n\nEl servidor implementa las funciones de Document Recipient y Document\nResponder definidas por IHE MHD 4.2.2, adaptadas a los perfiles locales\nde esta guía."
     },
     "jurisdictions" : [{
       "code" : "CL",
@@ -113,7 +116,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 4,
+    "index" : 5,
     "source" : "fsh-generated/resources/DocumentReference-ReferDocEjemplo.json",
     "sourceTail" : "DocumentReference-ReferDocEjemplo.json",
     "path" : "DocumentReference-ReferDocEjemplo.html",
@@ -125,7 +128,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 5,
+    "index" : 6,
     "source" : "fsh-generated/resources/List-EjemploListMhd.json",
     "sourceTail" : "List-EjemploListMhd.json",
     "path" : "List-EjemploListMhd.html",
@@ -137,7 +140,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 6,
+    "index" : 7,
     "source" : "fsh-generated/resources/Patient-Paciente-Interno.json",
     "sourceTail" : "Patient-Paciente-Interno.json",
     "path" : "Patient-Paciente-Interno.html",
@@ -149,7 +152,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 7,
+    "index" : 8,
     "source" : "fsh-generated/resources/Practitioner-PrestadorCLInline.json",
     "sourceTail" : "Practitioner-PrestadorCLInline.json",
     "path" : "Practitioner-PrestadorCLInline.html",
@@ -161,7 +164,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 8,
+    "index" : 9,
     "source" : "fsh-generated/resources/StructureDefinition-BundleMhd.json",
     "sourceTail" : "StructureDefinition-BundleMhd.json",
     "path" : "StructureDefinition-BundleMhd.html",
@@ -172,7 +175,6 @@
     "date" : "2026-10-14",
     "description" : "Perfil asociado al bundle de transacciones MHD, considerando la asociación de documentos de tipo IPS, referenciados a la Guía Core Argentna AR.FHIR.CORE",
     "descriptionlang" : {
-      "en" : "Perfil asociado al bundle de transacciones MHD, considerando la asociación de documentos de tipo IPS, referenciados a la Guía Core Argentna AR.FHIR.CORE"
     },
     "jurisdictions" : [{
       "code" : "CL",
@@ -190,7 +192,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 9,
+    "index" : 10,
     "source" : "fsh-generated/resources/StructureDefinition-ListMhd.json",
     "sourceTail" : "StructureDefinition-ListMhd.json",
     "path" : "StructureDefinition-ListMhd.html",
@@ -198,10 +200,9 @@
     "identifiers" : "OID:2.16.840.1.113883.2.22.40.14.42.2",
     "version" : "0.1.0",
     "name" : "ListMhd",
-    "date" : "2026-10-16T16:15:28-03:00",
+    "date" : "2026-10-22T10:20:43-03:00",
     "description" : "Perfil asociado al listado de documentos referenciados para HSI en un modelo MHD",
     "descriptionlang" : {
-      "en" : "Perfil asociado al listado de documentos referenciados para HSI en un modelo MHD"
     },
     "jurisdictions" : [{
       "code" : "CL",
@@ -219,7 +220,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 10,
+    "index" : 11,
     "source" : "fsh-generated/resources/StructureDefinition-ReferenciaDocumental.json",
     "sourceTail" : "StructureDefinition-ReferenciaDocumental.json",
     "path" : "StructureDefinition-ReferenciaDocumental.html",
@@ -227,10 +228,9 @@
     "identifiers" : "OID:2.16.840.1.113883.2.22.40.14.42.3",
     "version" : "0.1.0",
     "name" : "ReferenciaDocumental",
-    "date" : "2026-10-16T16:15:28-03:00",
+    "date" : "2026-10-22T10:20:43-03:00",
     "description" : "Perfil asociado al la refetrencia documental para HSI en un modelo MHD, consderado para transacciones asociadas a una ITI-65 e ITI-67. Se considera en el perfil la asociación de documentos de tipo IPS, referenciados a la Guía Core Argentna AR.FHIR.CORE",
     "descriptionlang" : {
-      "en" : "Perfil asociado al la refetrencia documental para HSI en un modelo MHD, consderado para transacciones asociadas a una ITI-65 e ITI-67. Se considera en el perfil la asociación de documentos de tipo IPS, referenciados a la Guía Core Argentna AR.FHIR.CORE"
     },
     "jurisdictions" : [{
       "code" : "CL",
@@ -248,7 +248,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 11,
+    "index" : 12,
     "source" : "fsh-generated/resources/ValueSet-VSCategoriaDoc.json",
     "sourceTail" : "ValueSet-VSCategoriaDoc.json",
     "path" : "ValueSet-VSCategoriaDoc.html",
@@ -258,13 +258,11 @@
     "name" : "VSCategoriaDoc",
     "title" : "Categorías de Documento Clínico para DocumentReference",
     "titlelang" : {
-      "en" : "Categorías de Documento Clínico para DocumentReference"
     },
     "experimental" : false,
-    "date" : "2026-10-16T16:15:28-03:00",
+    "date" : "2026-10-22T10:20:43-03:00",
     "description" : "Categorías generales de documentos clínicos codificadas en LOINC para ser usadas en DocumentReference.category.",
     "descriptionlang" : {
-      "en" : "Categorías generales de documentos clínicos codificadas en LOINC para ser usadas en DocumentReference.category."
     },
     "jurisdictions" : [{
       "code" : "CL",
@@ -282,7 +280,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 12,
+    "index" : 13,
     "source" : "fsh-generated/resources/ValueSet-VSTipoDocumento.json",
     "sourceTail" : "ValueSet-VSTipoDocumento.json",
     "path" : "ValueSet-VSTipoDocumento.html",
@@ -292,13 +290,11 @@
     "name" : "VSTipoDocumento",
     "title" : "Tipos de Documento Clínico para DocumentReference",
     "titlelang" : {
-      "en" : "Tipos de Documento Clínico para DocumentReference"
     },
     "experimental" : false,
-    "date" : "2026-10-16T16:15:28-03:00",
+    "date" : "2026-10-22T10:20:43-03:00",
     "description" : "Tipos documentales clínicos codificados en LOINC para ser usados en DocumentReference.type.",
     "descriptionlang" : {
-      "en" : "Tipos documentales clínicos codificados en LOINC para ser usados en DocumentReference.type."
     },
     "jurisdictions" : [{
       "code" : "CL",

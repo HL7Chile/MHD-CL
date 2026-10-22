@@ -1,10 +1,36 @@
 ---
 ---
-<html lang="en"><title>Redirect File</title><body>
+
+{% if 'xml' == 'xml' %}
+{% assign section = '7' %}
+{% elsif 'xml' == 'json' %}
+{% assign section = '8' %}
+{% else %}
+{% assign section = '9' %}
+{% endif %}
+
+{% include fragment-pagebegin.html %}
+<div style="counter-reset: section {{section}}" class="col-12">
 <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
-<script type="text/javascript">
-// b87e87d8-7587-48d4-9b00-46db21438132
-langs=["en"]
-</script>
-<script type="text/javascript" src="{{site.data.info.assets}}assets/js/lang-redirects.js"></script>
-</body></html>
+{% include fragment-base-navtabs.html type='ValueSet' id='VSCategoriaDoc' active='xml' %}
+
+<a name="root"> </a>
+{% if site.data.artifacts[page.path].example %}
+  {% assign example = 'Example ' %}
+{% endif %}
+{% assign prefix = site.data.artifacts[page.path].type %}
+<h2 id="root">{{example}}{{prefix}}: {{site.data.pages[page.path].title | escape_once}}</h2>
+{% include fragment-simpletable.html %}
+
+<p><a href="ValueSet-VSCategoriaDoc.xml" no-download="true">Raw xml</a> | <a href="ValueSet-VSCategoriaDoc.xml" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  {% include fragment-intro.html type='ValueSet' id='VSCategoriaDoc' %}
+
+  {% include ValueSet-VSCategoriaDoc-xml-html.xhtml %}
+
+  <!-- insert notes if present -->
+  {% include fragment-notes.html type='ValueSet' id='VSCategoriaDoc' %}
+
+</div>
+{% include fragment-pageend.html %}

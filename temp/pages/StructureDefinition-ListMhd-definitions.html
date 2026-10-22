@@ -1,10 +1,51 @@
 ---
 ---
-<html lang="en"><title>Redirect File</title><body>
-<!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
-<script type="text/javascript">
-// b87e87d8-7587-48d4-9b00-46db21438132
-langs=["en"]
-</script>
-<script type="text/javascript" src="{{site.data.info.assets}}assets/js/lang-redirects.js"></script>
-</body></html>
+<!-- get modelType -->
+{% include fragment-modelType.html id='ListMhd' %}
+
+{% include fragment-pagebegin.html %}
+<div style="counter-reset: section 4" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-profile-navtabs.html type='StructureDefinition' id='ListMhd' active='definition' %}
+
+<a name="root"> </a>
+<h2 id="root">{{modelType}}: ListMhd - Detailed Descriptions</h2>
+{% include fragment-simpletable.html %}
+
+<p>Definitions for the ListMhd {{modelType | downcase}}.</p>
+
+  <!-- insert intro if present -->
+  {% include fragment-intro.html type='StructureDefinition' id='ListMhd' %}
+
+  <div id="tabs">
+    <ul>
+      <li>
+        <a href="#tabs-key">Key Elements Table</a>
+      </li>
+      <li>
+        <a href="#tabs-diff">Differential Elements Table</a>
+      </li>
+      <li>
+        <a href="#tabs-snap">Snapshot Elements Table</a>
+      </li>
+    </ul>
+    <a name="tabs-key"> </a>
+    <div id="tabs-key">
+      {%include StructureDefinition-ListMhd-dict-key.xhtml%}
+    </div>
+    <a name="tabs-diff"> </a>
+    <div id="tabs-diff">
+      {%include StructureDefinition-ListMhd-dict-diff.xhtml%}
+    </div>
+    <a name="tabs-snap"> </a>
+    <div id="tabs-snap">
+      {%include StructureDefinition-ListMhd-dict.xhtml%}
+    </div>
+  </div>
+
+  <!-- insert notes if present -->
+  {% include fragment-notes.html type='StructureDefinition' id='ListMhd' %}
+
+</div>
+{% assign includetabscripts = 'true' %}
+{% include fragment-pageend.html %}

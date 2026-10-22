@@ -1,40 +1,41 @@
-# hl7.fhir.cl.mhdig#0.1.0: Guía MHD para el Intercambio de Información de Salud en Chile(en)
+# hl7.fhir.cl.mhdig#0.1.0: Guía MHD para el Intercambio de Información de Salud en Chile
 
 ## Pages
 
-* [HL7.FHIR.CL.MHDIG\ - FHIR v4.0.1](en/index.md)
-* [HL7.FHIR.CL.MHDIG\ - FHIR v4.0.1](en/artifacts.md)
-* [HL7.FHIR.CL.MHDIG\ - FHIR v4.0.1](en/cambios.md)
-* [HL7.FHIR.CL.MHDIG\ - FHIR v4.0.1](en/intercambio.md)
-* [HL7.FHIR.CL.MHDIG\ - FHIR v4.0.1](en/seguridad.md)
-* [HL7.FHIR.CL.MHDIG\ - FHIR v4.0.1](en/transacciones-mhd.md)
+* [HL7.FHIR.CL.MHDIG\Inicio - FHIR v4.0.1](index.md)
+* [HL7.FHIR.CL.MHDIG\Artifacts Summary - FHIR v4.0.1](artifacts.md)
+* [HL7.FHIR.CL.MHDIG\Historial de Versiones - FHIR v4.0.1](cambios.md)
+* [HL7.FHIR.CL.MHDIG\Esquemas de transacciones FHIR MHD - FHIR v4.0.1](intercambio.md)
+* [HL7.FHIR.CL.MHDIG\Aspectos de Seguridad - FHIR v4.0.1](seguridad.md)
+* [HL7.FHIR.CL.MHDIG\Transacciones asociadas a MHD - FHIR v4.0.1](transacciones-mhd.md)
 
 ## Resources
 
 ### ValueSets
 
-* [Categorías de Documento Clínico para DocumentReference](en/ValueSet-VSCategoriaDoc.md)
-* [Tipos de Documento Clínico para DocumentReference](en/ValueSet-VSTipoDocumento.md)
+* [Categorías de Documento Clínico para DocumentReference](ValueSet-VSCategoriaDoc.md)
+* [Tipos de Documento Clínico para DocumentReference](ValueSet-VSTipoDocumento.md)
 
 ### Resource Profiles
 
-* [BundleMhd](en/StructureDefinition-BundleMhd.md)
-* [ListMhd](en/StructureDefinition-ListMhd.md)
-* [ReferenciaDocumental](en/StructureDefinition-ReferenciaDocumental.md)
+* [BundleMhd](StructureDefinition-BundleMhd.md)
+* [ListMhd](StructureDefinition-ListMhd.md)
+* [ReferenciaDocumental](StructureDefinition-ReferenciaDocumental.md)
 
 ### CapabilityStatements
 
-* [Capacidades para Cliente MHD](en/CapabilityStatement-MHDCliente.md)
-* [MHD Responder](en/CapabilityStatement-MHDResponder.md)
+* [Capacidades para Cliente MHD](CapabilityStatement-MHDCliente.md)
+* [MHD Responder](CapabilityStatement-MHDResponder.md)
 
 ### ImplementationGuides
 
-* [Guía MHD para el Intercambio de Información de Salud en Chile](en/ImplementationGuide-hl7.fhir.cl.mhdig.md)
+* [Guía MHD para el Intercambio de Información de Salud en Chile](index.md)
 
 ### Examples
 
-* [bundle-mhd-referencia-documental-ejemplo (Bundle)](en/Bundle-bundle-mhd-referencia-documental-ejemplo.md)
-* [ReferDocEjemplo (DocumentReference)](en/DocumentReference-ReferDocEjemplo.md)
-* [EjemploListMhd (List)](en/List-EjemploListMhd.md)
-* [Paciente-Interno (Patient)](en/Patient-Paciente-Interno.md)
-* [PrestadorCLInline (Practitioner)](en/Practitioner-PrestadorCLInline.md)
+* [BundleDocumentoIpsEjemplo (Bundle)](Bundle-BundleDocumentoIpsEjemplo.md)
+* [bundle-mhd-referencia-documental-ejemplo (Bundle)](Bundle-bundle-mhd-referencia-documental-ejemplo.md)
+* [ReferDocEjemplo (DocumentReference)](DocumentReference-ReferDocEjemplo.md)
+* [EjemploListMhd (List)](List-EjemploListMhd.md)
+* [Paciente-Interno (Patient)](Patient-Paciente-Interno.md)
+* [PrestadorCLInline (Practitioner)](Practitioner-PrestadorCLInline.md)

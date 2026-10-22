@@ -1,5 +1,13 @@
 [
   {
+    "outputFile": "Bundle-BundleDocumentoIpsEjemplo.json",
+    "fshName": "BundleDocumentoIpsEjemplo",
+    "fshType": "Instance",
+    "fshFile": "ejemplos/documentoIPS.fsh",
+    "startLine": 14,
+    "endLine": 45
+  },
+  {
     "outputFile": "Bundle-bundle-mhd-referencia-documental-ejemplo.json",
     "fshName": "BundleMhdEjemplo",
     "fshType": "Instance",
@@ -77,7 +85,7 @@
     "fshType": "Profile",
     "fshFile": "docRef.fsh",
     "startLine": 5,
-    "endLine": 127
+    "endLine": 140
   },
   {
     "outputFile": "ValueSet-VSCategoriaDoc.json",

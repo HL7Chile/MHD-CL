@@ -87,6 +87,16 @@ Description: "Perfil asociado al la refetrencia documental para HSI en un modelo
 
 * content 1..1 MS
 
+// * content ^slicing.discriminator.type = #value
+// * content ^slicing.discriminator.path = "contentType"
+// * content ^slicing.rules = #open
+// * content ^slicing.description = "Tipos de contenido de documentos referenciados, puede ser un archivo adjunto o un documento referenciado en un repositorio FHIR"
+// * content ^slicing.ordered = false
+
+// * content contains Pdf 1..1 MS FhirDocument 1..1 MS
+
+// * content[FhirDocument]
+
   * ^short = "Contenido del documento (IPS u otro) nacional referenciado con url reltiva en caso de ser X-Road, o url absoluta en caso de ser un repositorio FHIR. Se define como un campo obligatorio, y se recomienda usar el valor 'Attachment' para indicar que el contenido del documento referenciado es un archivo adjunto que contiene el documento clínico en formato digital."
   * ^definition = "Contenido del documento (IPS u otro) nacional referenciado con url referencial. Se define como un campo obligatorio, y se recomienda usar el valor 'Attachment' para indicar que el contenido del documento referenciado es un archivo adjunto que contiene el documento clínico en formato digital."
   * attachment 1..1 MS
@@ -108,6 +118,9 @@ Description: "Perfil asociado al la refetrencia documental para HSI en un modelo
       * ^definition = "Título del archivo adjunto que contiene el documento (IPS u otro) nacional referenciado. Se define como un campo opcional, y se recomienda usar el valor 'string' para indicar el título del archivo adjunto que contiene el documento clínico en formato digital."
       * ^example[0].label = "Ejemplo de Título del documento contenido referenciado via X-Road"
       * ^example[0].valueString =  "IPS-001"
+
+
+
 /*
 * content.extension contains ContentDoc  named ContentDoc 0..* MS
 * content.extension[ContentDoc] ^short = "Extensiones del documento IPS nacional referenciado a Server FHIR"

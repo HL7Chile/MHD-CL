@@ -316,7 +316,7 @@ Title: "Referencia documental recuperable mediante X-Road"
 - [ ] La instancia declara el canonical correcto de `ReferenciaDocumental` en `meta.profile`.
 - [ ] `masterIdentifier` es único, estable y específico de la versión documental.
 - [ ] `status`, `type`, `category`, `subject`, `date` y al menos un `author` están presentes.
-- [ ] El paciente cumple el perfil `PacienteArg`.
+- [ ] El paciente cumple el perfil `PacienteCl`.
 - [ ] Existe exactamente un `content` y un `attachment`.
 - [ ] No se utiliza `attachment.data`.
 - [ ] `attachment.contentType` es `application/fhir+json`.
