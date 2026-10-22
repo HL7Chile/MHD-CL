@@ -75,28 +75,9 @@ La relación entre las Guías de Implementación puede resumirse de la siguiente
 - **IHE MHD** define el modelo internacional para el intercambio de documentos clínicos.
 - **Esta guía** combina y restringe ambos conjuntos de definiciones para su aplicación en el contexto chileno.
 
-<div class="mermaid">
-graph TD
-    FHIR["HL7 FHIR R4"]
-    IPS["HL7 FHIR IPS"]
-    CORE["HL7 Chile Core"]
-    CLIPS["Resumen Clínico de Chile"]
-    MHD["IHE MHD"]
-    LOCAL["Guía MHD Chile"]
-
-    FHIR --> CORE
-    FHIR --> IPS
-    FHIR --> MHD
-    CORE --> CLIPS
-    IPS --> CLIPS
-    CLIPS --> LOCAL
-    MHD --> LOCAL
+<div style="text-align: center;">
+  <img src="relacion-guias.svg" alt="Diagrama de relación entre HL7 FHIR R4, HL7 FHIR IPS, HL7 Chile Core, Resumen Clínico de Chile, IHE MHD y la Guía MHD Chile" style="max-width: 100%;"/>
 </div>
-
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.esm.min.mjs';
-  mermaid.initialize({ startOnLoad: true });
-</script>
 
 Los requerimientos de conformidad establecen las funcionalidades esperadas para aplicaciones cliente y servidor, identificando los perfiles y las interacciones que deben implementar.
 

@@ -7,7 +7,7 @@
     "canonical": "https://hl7chile.cl/fhir/ig/CoreCL/",
     "base": "fhir.base.template",
     "dependencies": {
-        "fhir.base.template": "1.0.0"
+        "fhir.base.template": "current"
     },
     "version": "0.1.0"
 }

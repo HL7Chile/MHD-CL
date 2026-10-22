@@ -44,7 +44,7 @@ Description: "Ejemplo de DocumentReference MHD que referencia un documento clín
 // Puede apuntar a Bundle document o Binary.
 
 * content.attachment.contentType = #application/fhir+json
-* content.attachment.url = "Bundle-BundleDocumentoIpsEjemplo.json"
+* content.attachment.url = "urn:uuid:3e1f5c8b-0d4a-4f9e-9c6b-2d7e5f8a1b2c"
 * content.attachment.title = "Documento IPS Chileno mínimo"
 * content.attachment.creation = "2026-07-06T10:30:00-03:00"
 

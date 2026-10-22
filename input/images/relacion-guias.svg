@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 370" width="600" height="370" font-family="Arial, Helvetica, sans-serif" font-size="14">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
+    </marker>
+  </defs>
+  <g fill="#ececff" stroke="#9370db" stroke-width="1.5">
+    <rect x="225" y="10" width="150" height="44" rx="4"/>
+    <rect x="45" y="110" width="150" height="44" rx="4"/>
+    <rect x="225" y="110" width="150" height="44" rx="4"/>
+    <rect x="425" y="110" width="150" height="44" rx="4"/>
+    <rect x="115" y="210" width="190" height="44" rx="4"/>
+    <rect x="225" y="310" width="150" height="44" rx="4"/>
+  </g>
+  <g fill="#333" text-anchor="middle" dominant-baseline="middle">
+    <text x="300" y="32">HL7 FHIR R4</text>
+    <text x="120" y="132">HL7 Chile Core</text>
+    <text x="300" y="132">HL7 FHIR IPS</text>
+    <text x="500" y="132">IHE MHD</text>
+    <text x="210" y="232">Resumen Clínico de Chile</text>
+    <text x="300" y="332">Guía MHD Chile</text>
+  </g>
+  <g stroke="#333" stroke-width="1.5" fill="none" marker-end="url(#arrow)">
+    <line x1="250" y1="54" x2="150" y2="108"/>
+    <line x1="300" y1="54" x2="300" y2="108"/>
+    <line x1="350" y1="54" x2="470" y2="108"/>
+    <line x1="120" y1="154" x2="170" y2="208"/>
+    <line x1="290" y1="154" x2="250" y2="208"/>
+    <line x1="230" y1="254" x2="270" y2="308"/>
+    <line x1="480" y1="154" x2="360" y2="308"/>
+  </g>
+</svg>

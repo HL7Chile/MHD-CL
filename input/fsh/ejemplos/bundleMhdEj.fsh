@@ -22,6 +22,11 @@ Description: "Bundle transaction que vincula el DocumentReference generado previ
 * entry[DocumentRefs].request.method = #POST
 * entry[DocumentRefs].request.url = "DocumentReference"
 
+* entry[FhirDocuments].fullUrl = "urn:uuid:3e1f5c8b-0d4a-4f9e-9c6b-2d7e5f8a1b2c"
+* entry[FhirDocuments].resource = BundleDocumentoIpsEjemplo
+* entry[FhirDocuments].request.method = #POST
+* entry[FhirDocuments].request.url = "Bundle"
+
 // Paciente
 * entry[Patient].fullUrl = "urn:uuid:991a7102-d221-498d-9157-c4192934e3b7"
 * entry[Patient].resource = Paciente-Interno
