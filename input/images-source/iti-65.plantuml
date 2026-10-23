@@ -23,7 +23,7 @@ note over Source, Recipient
   • List (SubmissionSet)
   • DocumentReference
   • Documento clínico
-  • Recursos Core AR, si corresponde
+  • Recursos CL Core, si corresponde
 end note
 
 Recipient -> Recipient : Validar Bundle y perfiles
