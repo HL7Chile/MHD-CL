@@ -3,8 +3,8 @@ Alias: LNC = http://loinc.org
 Instance: ReferDocEjemplo
 InstanceOf: ReferenciaDocumental
 Usage: #example
-Title: "Referencia documental mínima para DocumentoArg"
-Description: "Ejemplo de DocumentReference MHD que referencia un documento clínico FHIR DocumentoArg."
+Title: "Referencia documental mínima para Resumen de Paciente de Chile"
+Description: "Ejemplo de DocumentReference MHD que referencia un documento clínico FHIR Resumen de Paciente de Chile"
 
 // Perfil
 * meta.profile = Canonical(ReferenciaDocumental)

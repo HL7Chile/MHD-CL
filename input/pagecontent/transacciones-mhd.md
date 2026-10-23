@@ -2,7 +2,7 @@
 
 Esta página describe las transacciones utilizadas para registrar, buscar y recuperar documentos clínicos mediante **IHE Mobile access to Health Documents (MHD)** sobre **HL7 FHIR R4**.
 
-La implementación utiliza los perfiles de **IHE MHD** para el intercambio documental y los perfiles de **Core AR** para representar las entidades nacionales, como pacientes, profesionales y organizaciones.
+La implementación utiliza los perfiles de **IHE MHD** para el intercambio documental y los perfiles de **CL Core** para representar las entidades nacionales, como pacientes, profesionales y organizaciones.
 
 #### Contenido
 
@@ -168,7 +168,7 @@ Accept: application/fhir+json
 Ejemplo:
 
 ```http
-GET [base]/DocumentReference?patient.identifier=http://www.renaper.gob.ar/dni|25486731&status=current
+GET [base]/DocumentReference?patient.identifier=https://www.registrocivil.cl/run|9999999-9&status=current
 ```
 
 ##### Diagrama de secuencia

@@ -6,7 +6,7 @@ Alias: $mothers-family = http://hl7.org/fhir/StructureDefinition/humanname-mothe
 Instance: PrestadorCLInline
 InstanceOf: PrestadorClIps
 Usage: #example
-Description: "Ejemplo inline de profesional argentino conforme al perfil PrestadorArg."
+Description: "Ejemplo inline de profesional chileno conforme al perfil PrestadorCL"
 
 * identifier[run].use = #official
 * identifier[run].type.coding

@@ -49,8 +49,8 @@ pages:
     title: Esquemas de transacciones FHIR MHD
   transacciones-mhd.md:
     title: Transacciones asociadas a MHD
-  seguridad.md:
-    title: Aspectos de Seguridad
+  # seguridad.md:
+  #   title: Aspectos de Seguridad
   cambios.md:
     title: Historial de Versiones
 #   implementation.xml:
@@ -88,7 +88,7 @@ menu:
   Intercambio: intercambio.html
   Transacciones: transacciones-mhd.html
   Artifacts: artifacts.html
-  Aspectos de Seguridad: seguridad.html
+  # Aspectos de Seguridad: seguridad.html
   Historial de Versiones: cambios.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮

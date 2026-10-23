@@ -33,7 +33,7 @@ La arquitectura debe aplicar los siguientes principios:
 | Evidencia del intercambio | Firma de mensajes, registro y sellado de tiempo | X-Road |
 | Autenticación de aplicación o usuario | OAuth, IUA, OpenID Connect o mecanismo institucional equivalente | Plataforma de identidad y aplicación |
 | Autorización clínica | Rol, organización, paciente, propósito de uso, consentimiento y tipo de documento | Servicio MHD |
-| Validación de contenido | Validación FHIR, perfiles MHD, perfiles Core AR y reglas de negocio | Servidor FHIR/MHD |
+| Validación de contenido | Validación FHIR, perfiles MHD, perfiles CL Core y reglas de negocio | Servidor FHIR/MHD |
 | Protección del repositorio | Cifrado, control de acceso, respaldo y gestión de claves | Repositorio FHIR y documental |
 | Auditoría clínica y de seguridad | `AuditEvent`, registros ATNA/BALP, SIEM y correlación con X-Road | Aplicaciones e infraestructura |
 
