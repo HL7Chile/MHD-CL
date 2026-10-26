@@ -11,8 +11,8 @@ Description: "Ejemplo de DocumentReference MHD que referencia un documento clín
 
 // Identificador principal del documento clínico referenciado.
 // Debe coincidir idealmente con el identificador del documento publicado.
-* masterIdentifier.system = "https://repositorio.hsi.ar/documentos/ips"
-* masterIdentifier.value = "IPS-ARG-2026-00001"
+* masterIdentifier.system = "https://fhirserver.hl7chile.cl/fhir/DocumentReference"
+* masterIdentifier.value = "IPS-CL-2026-00001"
 
 // Estado de la referencia documental
 * status = #current

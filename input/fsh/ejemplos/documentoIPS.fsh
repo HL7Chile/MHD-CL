@@ -17,7 +17,7 @@ Usage: #example
 Title: "Bundle documento IPS Chile de ejemplo"
 Description: "Bundle de tipo document: Composition como primera entrada, seguido del paciente, el autor y los recursos clínicos referenciados por las secciones."
 
-* identifier.system = "http://hsisalud.org/documentos"
+* identifier.system = "https://fhirserver.hl7chile.cl/fhir/Bundle"
 * identifier.value = "DOC-IPS-CL-0001"
 * type = #document
 * timestamp = "2026-07-06T10:30:00-03:00"
@@ -54,7 +54,7 @@ Usage: #inline
 Title: "Composition IPS Chile de ejemplo"
 Description: "Composition del documento IPS; sus secciones referencian las entradas del Bundle por fullUrl."
 
-* identifier.system = "http://hsisalud.org/documentos"
+* identifier.system = "https://fhirserver.hl7chile.cl/fhir/Composition"
 * identifier.value = "DOC-IPS-CL-0001"
 
 * status = #final
@@ -116,7 +116,7 @@ Usage: #inline
 
 // En InmunizacionArg, location.reference está restringido a 0..0.
 // Se usa location.identifier.
-* location.identifier.system = "http://refes.msal.gob.ar"
+* location.identifier.system = "https://vacunas.minsal.cl"
 * location.identifier.value = "REFES-0001"
 * location.display = "Centro de Salud de Ejemplo"
 

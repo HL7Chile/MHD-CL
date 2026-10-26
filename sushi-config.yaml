@@ -9,7 +9,7 @@ name: MHDTransIGChile
 title: Guía MHD para el Intercambio de Información de Salud en Chile
 description: Esta guía de implementación describe los esquemas de transacciones FHIR MHD para el intercambio de información de salud en Chile, asociado a las guías IHE MHD y Core-AR.
 status: draft # draft | active | retired | unknown
-version: 0.1.0
+version: 0.1.0-draft
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2026+
 releaseLabel: ci-build

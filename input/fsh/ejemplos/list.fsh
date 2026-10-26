@@ -21,7 +21,7 @@ Description: "Ejemplo mínimo de List como SubmissionSet MHD con una referencia 
 
 // Opcional, pero útil porque tu perfil restringe subject a PacienteArg
 * subject.reference = "urn:uuid:991a7102-d221-498d-9157-c4192934e3b7"
-* subject.display = "Paciente argentino de ejemplo"
+* subject.display = "Paciente Chileno de ejemplo"
 
 // Entrada del listado: referencia a un DocumentReference que cumple ReferenciaDocumental
 * entry[0].item.reference = "urn:uuid:32ab6cfe-8cdf-4c75-a831-47be8b5668fa"

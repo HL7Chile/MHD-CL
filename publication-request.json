@@ -1,6 +1,6 @@
 {
     "package-id": "hl7.fhir.cl.mhdig",
-    "version": "0.1.0",
+    "version": "0.1.0-draft",
     "desc": "Versión de desarrollo de la guía de implementación del Intercambio de Información de Salud en Chile",
     "path": "https://hl7chile.cl/fhir/ig/mhd/0.1.0-draft",
     "mode": "working",
