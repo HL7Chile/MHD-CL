@@ -62,7 +62,7 @@ Esta guía utiliza perfiles y terminologías de CL Core para:
 - Representación de datos demográficos.
 - Uso de sistemas de identificación y terminologías nacionales.
 
-Cuando un recurso definido por IHE MHD referencia a un paciente, profesional u organización, se deben utilizar los perfiles correspondientes definidos por Core AR, siempre que sean aplicables.
+Cuando un recurso definido por IHE MHD referencia a un paciente, profesional u organización, se deben utilizar los perfiles correspondientes definidos por CL Core, siempre que sean aplicables.
 
 #### Relación entre las guías
 

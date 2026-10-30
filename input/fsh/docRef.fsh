@@ -5,7 +5,8 @@
 Profile: ReferenciaDocumental
 Id: ReferenciaDocumental
 Parent: MinimalDocumentReference
-Description: "Perfil asociado al la refetrencia documental para HSI en un modelo MHD, consderado para transacciones asociadas a una ITI-65 e ITI-67. Se considera en el perfil la asociación de documentos de tipo IPS, referenciados a la Guía Core Argentna AR.FHIR.CORE"
+Title: "Perfil asociado a la referencia documental"
+Description: "Perfil asociado al la refetrencia documental para un modelo MHD, consderado para transacciones asociadas a una ITI-65 e ITI-67. Se considera en el perfil la asociación de documentos de tipo IPS, referenciados a la Guía Core de Chile"
 
 * ^status = #draft
 * ^publisher = "HL7 Chile"
@@ -103,12 +104,19 @@ Description: "Perfil asociado al la refetrencia documental para HSI en un modelo
     * ^short = "Definición del archivo adjunto que contiene el documento referenciado"
     * ^definition = "Definición del archivo adjunto que contiene el documento (IPS u otro) nacional referenciado. Se define como un campo obligatorio, y se recomienda usar el valor 'Attachment' para indicar que el contenido del documento referenciado es un archivo adjunto que contiene el documento clínico en formato digital."
     * contentType 1..1 MS
-    * contentType = #application/fhir+json        
+      * ^short = "Tipo de contenido del archivo adjunto que contiene el documento  referenciado"
+      * ^definition = "Tipo de contenido del archivo adjunto que contiene el documento (IPS u otro) nacional referenciado. Se define como un campo obligatorio, y se recomienda usar el valor 'application/fhir+json' para indicar que el contenido del documento referenciado es un archivo adjunto que contiene el documento clínico en formato digital."
+      * ^example[0].label = "Ejemplo de tipo de contenido FHIR del archivo adjunto que contiene el documento referenciado"
+      * ^example[0].valueCode =  #application/fhir+json
+      * ^example[1].label = "Ejemplo de tipo de contenido PDF del archivo adjunto que contiene el documento referenciado"
+      * ^example[1].valueCode =  #application/pdf
     * url 1..1 MS
       * ^short = "URL del archivo adjunto que contiene el documento  referenciado, en formato FHIR IPS, Binary IPS u otro documnento en esos formatos."
       * ^definition = "URL del archivo adjunto que contiene el documento (IPS u otro) nacional referenciado puede ser un binary o un Bundle tipo document"
-      * ^example[0].label = "Ejemplo de IPS referenciado en X-Road"
-      * ^example[0].valueUrl =  "/pba/tndXroad/santamarina/docs/ips-xxx"
+      * ^example[0].label = "Ejemplo de IPS referenciado en Repo FHIR como bundle"
+      * ^example[0].valueUrl =  "https://repo-fhir.example.com/Bundle/ips-xxx"
+      * ^example[1].label = "Ejemplo de Documento referenciado en Repo FHIR como Binary"
+      * ^example[1].valueUrl =  "https://repo-fhir.example.com/Binary/ips-xxx"
       
     * hash 0..1 MS
       * ^short = "Hash del archivo adjunto que contiene el documento IPS nacional referenciado"

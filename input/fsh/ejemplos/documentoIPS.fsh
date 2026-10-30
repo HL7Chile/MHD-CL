@@ -106,7 +106,7 @@ Usage: #inline
 * id = "inmunizacion-1"
 * status = #completed
 
-* vaccineCode = CVX#207 "COVID-19, mRNA, LNP-S, PF, 100 mcg/0.5mL dose or 50 mcg/0.25mL dose"
+* vaccineCode = CVX#207 "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 100 mcg/0.5mL dose or 50 mcg/0.25mL dose"
 
 * patient.reference = "urn:uuid:991a7102-d221-498d-9157-c4192934e3b7"
 * patient.display = "Pablo Fernandez Perez"

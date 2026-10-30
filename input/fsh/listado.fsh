@@ -3,7 +3,8 @@
 Profile: ListMhd
 Parent: SubmissionSet
 Id: ListMhd
-Description: "Perfil asociado al listado de documentos referenciados para HSI en un modelo MHD"
+Title: "Perfil asociado al listado de documentos referenciados"
+Description: "Perfil asociado al listado de documentos referenciados para un modelo MHD"
 * ^status = #draft
 * ^publisher = "HL7 Chile"
 * ^contact.name =  "HL7 Chile"

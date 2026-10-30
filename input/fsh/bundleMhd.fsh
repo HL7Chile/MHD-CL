@@ -6,6 +6,7 @@ Alias: $BundleDocAR = https://conectaton.msal.gob.ar/StructureDefinition/BundleD
 Profile: BundleMhd
 Parent: MinimalProvideDocumentBundle
 Id: BundleMhd
+Title: "Perfil asociado al bundle de transacciones MHD"
 Description: "Perfil asociado al bundle de transacciones MHD, considerando la asociación de documentos de tipo IPS, referenciados a la Guía Core Chilena (CL-Core)"
 * ^status = #draft
 * ^date = "2026-10-14"

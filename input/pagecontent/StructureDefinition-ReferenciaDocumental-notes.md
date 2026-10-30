@@ -324,7 +324,6 @@ Title: "Referencia documental recuperable mediante X-Road"
 - [ ] La URL no se reutiliza para entregar otra versión del documento.
 - [ ] Si se usa una URL relativa, la guía define explícitamente su base de resolución.
 - [ ] Si el recurso se entrega mediante ITI-67, se evalúa la exigencia MHD de utilizar una URL completa.
-- [ ] Si se usa X-Road, están definidos el Security Server, `serviceId`, ruta, `X-Road-Client`, autorización y MIME type de respuesta.
 - [ ] Si se informa `hash`, se calculó como SHA-1 sobre los bytes correctos y se codificó en Base64.
 - [ ] El contenido recuperado se valida contra el perfil FHIR que corresponda, por ejemplo un perfil IPS de `Bundle` tipo `document`.
 
