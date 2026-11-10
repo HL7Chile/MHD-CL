@@ -4,6 +4,9 @@ ValueSet: VSCategoriaDoc
 Id: VSCategoriaDoc
 Title: "Categorías de Documento Clínico para DocumentReference"
 Description: "Categorías generales de documentos clínicos codificadas en LOINC para ser usadas en DocumentReference.category."
+
+* insert SetCopyrightLOINC
+
 * ^status = #active
 * ^experimental = false
 * ^publisher = "HL7 Chile"
@@ -21,6 +24,9 @@ ValueSet: VSTipoDocumento
 Id: VSTipoDocumento
 Title: "Tipos de Documento Clínico para DocumentReference"
 Description: "Tipos documentales clínicos codificados en LOINC para ser usados en DocumentReference.type."
+
+* insert SetCopyrightLOINC
+
 * ^status = #active
 * ^experimental = false
 * ^publisher = "HL7 Chile"

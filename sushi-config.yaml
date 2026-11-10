@@ -8,11 +8,11 @@ canonical: https://hl7chile.cl/fhir/ig/mhd
 name: MHDTransIGChile
 title: Guía MHD para el Intercambio de Información de Salud en Chile
 description: Esta guía de implementación describe los esquemas de transacciones FHIR MHD para el intercambio de información de salud en Chile, asociado a las guías IHE MHD y Core-AR.
-status: draft # draft | active | retired | unknown
-version: 0.1.0-draft
+status: active # draft | active | retired | unknown
+version: 0.1.0-ballot1
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2026+
-releaseLabel: ci-build
+releaseLabel: ballot
 license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 jurisdiction: urn:iso:std:iso:3166#CL "Chile" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
@@ -26,7 +26,7 @@ publisher:
 language: en
 dependencies:
    hl7.fhir.cl.clcore: 1.9.4
-   hl7.fhir.cl.clips: current
+   hl7.fhir.cl.clips: 1.0.0-ballot1
    ihe.iti.mhd: 4.2.5
 #   hl7.fhir.cl.clips: 0.4.4
 #
